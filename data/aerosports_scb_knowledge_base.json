@@ -1,0 +1,1168 @@
+{
+  "metadata": {
+    "company": "AeroSports Trampoline Parks",
+    "location": "Scarborough",
+    "version": "2.0",
+    "created_at": "2025-02-20",
+    "total_chunks": 93,
+    "chatbot_config": {
+      "tone": "professional_and_friendly",
+      "fallback_actions": [
+        "suggest_booking_links",
+        "suggest_calling_park",
+        "redirect_to_email",
+        "upsell_related_packages"
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "id": "scb_contact_001",
+      "category": "Contact",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "How do I contact AeroSports Scarborough?",
+      "answer": "Phone: 289-454-5555 (press 3 for the park). Email: events.scb@aerosportsparks.ca. Address: 45 Milne Ave, Scarborough, ON.",
+      "tags": [
+        "contact",
+        "phone",
+        "email",
+        "address"
+      ]
+    },
+    {
+      "id": "scb_hours_002",
+      "category": "Contact",
+      "subcategory": "Hours",
+      "location": "Scarborough",
+      "question": "What are the hours for AeroSports Scarborough?",
+      "answer": "Sun-Thur: 10am-8pm. Fri-Sat: 10am-10pm.",
+      "tags": [
+        "hours",
+        "schedule",
+        "open",
+        "close"
+      ]
+    },
+    {
+      "id": "scb_jump_003",
+      "category": "Pricing",
+      "subcategory": "Jump Passes",
+      "location": "Scarborough",
+      "question": "How much does it cost to jump at AeroSports Scarborough?",
+      "answer": "Open Jump (Ages 6+): Premium $19.90 (90 min) | VIP $29.90 (120 min)\nOpen Jump (Ages 2+): Premium $24.90 (90 min) | VIP $29.90 (120 min)\nUnder 2: FREE with a paying adult.\n\nAll prices +tax. AeroSports socks required ($3.99+tax, reusable).",
+      "tags": [
+        "pricing",
+        "jump",
+        "passes",
+        "admission",
+        "cost"
+      ]
+    },
+    {
+      "id": "scb_socks_004",
+      "category": "Pricing",
+      "subcategory": "Required Gear",
+      "location": "Scarborough",
+      "question": "How much are AeroSports socks?",
+      "answer": "AeroSports socks are $3.99+tax. Required for ALL jumpers. They are reusable — keep them for future visits!",
+      "tags": [
+        "socks",
+        "required",
+        "gear",
+        "price"
+      ]
+    },
+    {
+      "id": "scb_gokart_005",
+      "category": "Attractions",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "How much does go karting cost at AeroSports Scarborough?",
+      "answer": "Main Track: Standalone $19.90 | Add-on $9.90 (min height: 54\" driver, 36\" passenger for dual kart)\nMini Track: Standalone $9.90 | Add-on $4.90 (min height: 36\", kids 3+)\n\nNo advance booking — first come, first served. Closed-toed shoes required on track.",
+      "tags": [
+        "go karting",
+        "racing",
+        "attractions",
+        "price"
+      ]
+    },
+    {
+      "id": "scb_glow_006",
+      "category": "Events",
+      "subcategory": "Glow Night",
+      "location": "Scarborough",
+      "question": "When is Glow Night at AeroSports Scarborough?",
+      "answer": "Scarborough has glow in the dark at ALL times! The main arena features laser lights and LED lights. No special schedule needed — enjoy the glow experience during any visit.",
+      "tags": [
+        "glow",
+        "glow night",
+        "events",
+        "dark"
+      ]
+    },
+    {
+      "id": "scb_toddler_007",
+      "category": "Events",
+      "subcategory": "Toddler Time",
+      "location": "Scarborough",
+      "question": "When is Toddler Time at AeroSports Scarborough?",
+      "answer": "Saturday mornings, 9AM-10AM. $15.90 (Ages 0-5 only). Includes 1x FREE admission for a parent. Dedicated session for young children.",
+      "tags": [
+        "toddler",
+        "toddler time",
+        "kids",
+        "saturday",
+        "young children"
+      ]
+    },
+    {
+      "id": "scb_special_008",
+      "category": "Pricing",
+      "subcategory": "Special Needs",
+      "location": "Scarborough",
+      "question": "Do you offer special needs pricing at AeroSports Scarborough?",
+      "answer": "Special Needs Pass: $19.90 for 120 minutes of play (no races included). 1 support worker included (waiver required). Valid Access 2 Card must be presented at check-in.",
+      "tags": [
+        "special needs",
+        "accessibility",
+        "discount",
+        "access 2 card"
+      ]
+    },
+    {
+      "id": "scb_bday_009",
+      "category": "Birthday Parties",
+      "subcategory": "Packages",
+      "location": "Scarborough",
+      "question": "What birthday party packages are available at AeroSports Scarborough?",
+      "answer": "Premium Party (min 10 jumpers): $39.90/jumper — 75 min courts + 45 min room. Pizza + juice box. FREE 60-min pass for GOH, add-on passes for all.\n\nVIP Party (min 10 jumpers): $44.90/jumper — 90 min courts + 60 min room. Pizza + juice box + water bottle. 50% off socks. FREE passes + glow shirt.\n\nUltimate Party (min 10 jumpers): $59.90/jumper — 120 min courts + 60 min room. Pizza + drinks + water. FREE socks, 1x go kart/jumper, 30-day pass for GOH, $50 outside food fee waived.\n\nAll prices +tax. 25% deposit required.",
+      "tags": [
+        "birthday",
+        "party",
+        "packages",
+        "celebration",
+        "pricing"
+      ]
+    },
+    {
+      "id": "scb_bday_addons_010",
+      "category": "Birthday Parties",
+      "subcategory": "Add-Ons",
+      "location": "Scarborough",
+      "question": "What add-ons are available for birthday parties at AeroSports Scarborough?",
+      "answer": "Large Pizza: $25 | Juice Boxes (10): $30 | Soft Drinks (10 cans): $20 | Physical Invitations: $0.75/each | Outside Food Fee: $50 | Go Kart Race add-on: $9.90 | Late ordering fee (within 24hrs): $20",
+      "tags": [
+        "birthday",
+        "add-ons",
+        "food",
+        "extras",
+        "pizza"
+      ]
+    },
+    {
+      "id": "scb_bday_terms_011",
+      "category": "Birthday Parties",
+      "subcategory": "Terms",
+      "location": "Scarborough",
+      "question": "What are the birthday party terms and conditions at AeroSports Scarborough?",
+      "answer": "Reschedule within 1 year, no charge. Cancel 14+ days out: store gift card. Cancel within 14 days: no refund. Package changes: 14+ days advance, subject to availability. Waivers required for all. Under 18: parent/guardian signs. Room includes plates/cups/tablecloths. Jumping area shared; room is private. No piñatas/confetti/silly string ($40 charge). Arrive 20 min early.",
+      "tags": [
+        "birthday",
+        "terms",
+        "policy",
+        "cancellation",
+        "waiver"
+      ]
+    },
+    {
+      "id": "scb_group_012",
+      "category": "Group Bookings",
+      "subcategory": "Pricing",
+      "location": "Scarborough",
+      "question": "How much does a group booking cost at AeroSports Scarborough?",
+      "answer": "Min 15 jumpers. 120 min: $25.47/jumper (25% off $33.89). Use code GROUPBOOKING25. Same pricing weekdays & weekends. Includes jump time + socks. 1x go kart race per jumper included. 25% deposit required.",
+      "tags": [
+        "group booking",
+        "pricing",
+        "discount",
+        "GROUPBOOKING25"
+      ]
+    },
+    {
+      "id": "scb_facility_013",
+      "category": "Group Bookings",
+      "subcategory": "Facility Rental",
+      "location": "Scarborough",
+      "question": "How much does a facility rental cost at AeroSports Scarborough?",
+      "answer": "60 min: Weekday $2,000 | Weekend $3,000. Up to 220 jumpers. Includes socks, all rooms, tablecloths, cutlery, unlimited go karting. Food/catering at additional cost.",
+      "tags": [
+        "facility rental",
+        "private event",
+        "exclusive",
+        "pricing"
+      ]
+    },
+    {
+      "id": "scb_room_014",
+      "category": "Group Bookings",
+      "subcategory": "Room Rental",
+      "location": "Scarborough",
+      "question": "Can I rent a room at AeroSports Scarborough?",
+      "answer": "Party Room (1-4): $100/45 min, 25-30 capacity. Birds Eye Party Arena: $200/45 min, 80 capacity. Rooms not included with group events — rent separately.",
+      "tags": [
+        "room rental",
+        "party room",
+        "corporate room"
+      ]
+    },
+    {
+      "id": "scb_camp_015",
+      "category": "Programs",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "What is Aero Camp at AeroSports Scarborough and how much does it cost?",
+      "answer": "PA Day: $69.90 full day (8:30AM-4:30PM).\nSummer/Winter/March Break: Full Day $69.90 | Full Week $299.90 | Half Day $39.90 | Half Day Week $169.90.\nHalf Day AM: 8:30AM-12:30PM. Half Day PM: 12:30PM-4:30PM (summer only).\n\nAdd-ons/day: Lunch Combo $9.90, Early Drop Off $10, Late Pick Up $10.\nAges 4-12. Supervised by trained staff. Activities: trampoline, games, crafts, contests.",
+      "tags": [
+        "camp",
+        "aero camp",
+        "kids",
+        "summer",
+        "pa day",
+        "march break",
+        "winter"
+      ]
+    },
+    {
+      "id": "scb_passes_016",
+      "category": "Pricing",
+      "subcategory": "Passes",
+      "location": "Scarborough",
+      "question": "What passes are available at AeroSports Scarborough?",
+      "answer": "All Day Pass: $39.90 (valid same day) | 30 Day Pass: $49.90+tax (60 min/visit) | 90 Day Pass: $149.90+tax (60 min/visit) | Annual Pass: $364.90+tax (60 min/visit).\n\nJump cards never expire and can be used by different jumpers. Socks ($3.99) required separately.",
+      "tags": [
+        "pass",
+        "membership",
+        "annual",
+        "30 day",
+        "90 day",
+        "all day"
+      ]
+    },
+    {
+      "id": "scb_faq_100",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Are AeroSports jump socks required?",
+      "answer": "Yes, $3.99+tax. Required for all jumpers. Reusable!",
+      "tags": [
+        "socks",
+        "required"
+      ]
+    },
+    {
+      "id": "scb_faq_101",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Is there a weight limit?",
+      "answer": "300-pound weight limit.",
+      "tags": [
+        "weight",
+        "limit",
+        "safety"
+      ]
+    },
+    {
+      "id": "scb_faq_102",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Are waivers required?",
+      "answer": "Yes, for everyone including non-jumpers. Complete online to speed up check-in. Under 18: parent/guardian signs.",
+      "tags": [
+        "waiver",
+        "check-in"
+      ]
+    },
+    {
+      "id": "scb_faq_103",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Can I leave my child unattended?",
+      "answer": "Under 12 cannot be dropped off without an adult.",
+      "tags": [
+        "children",
+        "supervision",
+        "drop off"
+      ]
+    },
+    {
+      "id": "scb_faq_104",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Do spectators have to pay?",
+      "answer": "No, non-jumpers are never charged admission.",
+      "tags": [
+        "spectator",
+        "free"
+      ]
+    },
+    {
+      "id": "scb_faq_105",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Do you have food available?",
+      "answer": "Yes! Fully stocked Snack Shack.",
+      "tags": [
+        "food",
+        "snack"
+      ]
+    },
+    {
+      "id": "scb_faq_106",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "What days are least busy?",
+      "answer": "Mondays and Tuesdays. Weekends are busiest.",
+      "tags": [
+        "busy",
+        "quiet",
+        "crowd"
+      ]
+    },
+    {
+      "id": "scb_faq_107",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Can small children come?",
+      "answer": "As long as they can walk, they can jump!",
+      "tags": [
+        "toddler",
+        "baby",
+        "young"
+      ]
+    },
+    {
+      "id": "scb_faq_108",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Do you sell gift cards?",
+      "answer": "Yes! In-park or online.",
+      "tags": [
+        "gift card"
+      ]
+    },
+    {
+      "id": "scb_faq_109",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Do jump cards expire?",
+      "answer": "No, never expire. Usable by different jumpers.",
+      "tags": [
+        "expire",
+        "jump card"
+      ]
+    },
+    {
+      "id": "scb_faq_110",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "When are refunds processed?",
+      "answer": "3-5 business days.",
+      "tags": [
+        "refund"
+      ]
+    },
+    {
+      "id": "scb_faq_111",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "Do you have single and dual karts?",
+      "answer": "Yes! Mini track for kids 3+, big track with single and dual rider karts.",
+      "tags": [
+        "go kart",
+        "dual kart"
+      ]
+    },
+    {
+      "id": "scb_faq_112",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "What's the minimum height for go karting?",
+      "answer": "Mini: 36\". Main (driver): 54\". Dual (passenger): 36\".",
+      "tags": [
+        "go kart",
+        "height"
+      ]
+    },
+    {
+      "id": "scb_faq_113",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "Do I need a jump pass for go karting?",
+      "answer": "No, buy standalone races.",
+      "tags": [
+        "go kart",
+        "standalone"
+      ]
+    },
+    {
+      "id": "scb_faq_114",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "Do both driver and passenger need a race pass?",
+      "answer": "Yes, everyone participating needs a valid race pass.",
+      "tags": [
+        "go kart",
+        "passenger"
+      ]
+    },
+    {
+      "id": "scb_faq_115",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "Are socks required for go karting?",
+      "answer": "Closed-toed shoes on track. Socks for all other attractions.",
+      "tags": [
+        "go kart",
+        "shoes"
+      ]
+    },
+    {
+      "id": "scb_faq_116",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "Can I book a specific time for go karting?",
+      "answer": "No. First come, first served. Check in on arrival.",
+      "tags": [
+        "go kart",
+        "booking"
+      ]
+    },
+    {
+      "id": "scb_faq_117",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "What is Glow?",
+      "answer": "Scarborough has glow in the dark at ALL times — laser lights and LED lights in the main arena.",
+      "tags": [
+        "glow",
+        "dark",
+        "lights"
+      ]
+    },
+    {
+      "id": "scb_faq_120",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "How do I book a group event?",
+      "answer": "Book online or by phone. 25% deposit required.",
+      "tags": [
+        "group",
+        "booking"
+      ]
+    },
+    {
+      "id": "scb_faq_121",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Is a jumpers list required?",
+      "answer": "Yes, two weeks before. Helps pre-check waivers.",
+      "tags": [
+        "jumpers list",
+        "waiver"
+      ]
+    },
+    {
+      "id": "scb_faq_122",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Is pricing same weekdays and weekends?",
+      "answer": "Group jump pricing: same. Facility rental: different.",
+      "tags": [
+        "pricing",
+        "weekday",
+        "weekend"
+      ]
+    },
+    {
+      "id": "scb_faq_123",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "What's included in group jump?",
+      "answer": "Jump time + socks. Add-ons available.",
+      "tags": [
+        "included"
+      ]
+    },
+    {
+      "id": "scb_faq_124",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Minimum jumpers for group?",
+      "answer": "15 jumpers.",
+      "tags": [
+        "minimum",
+        "15"
+      ]
+    },
+    {
+      "id": "scb_faq_125",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Are rooms included with groups?",
+      "answer": "No, rent separately.",
+      "tags": [
+        "room",
+        "included"
+      ]
+    },
+    {
+      "id": "scb_faq_126",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "What's in facility rental?",
+      "answer": "Socks, exclusive access (220 jumpers), all rooms, cutlery, unlimited go karting.",
+      "tags": [
+        "facility",
+        "included"
+      ]
+    },
+    {
+      "id": "scb_faq_127",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "How to prepare for group event?",
+      "answer": "Pay deposit, submit jumpers list 2 weeks early, ensure waivers signed.",
+      "tags": [
+        "prepare",
+        "checklist"
+      ]
+    },
+    {
+      "id": "scb_faq_128",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Group cancellation policy?",
+      "answer": "Deposits non-refundable. Rescheduling may be available.",
+      "tags": [
+        "cancel",
+        "refund"
+      ]
+    },
+    {
+      "id": "scb_faq_129",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Food and catering for groups?",
+      "answer": "Yes, at additional cost.",
+      "tags": [
+        "food",
+        "catering"
+      ]
+    },
+    {
+      "id": "scb_faq_130",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Discount code for groups?",
+      "answer": "GROUPBOOKING25 — 25% off for 15+ jumpers.",
+      "tags": [
+        "code",
+        "discount",
+        "GROUPBOOKING25"
+      ]
+    },
+    {
+      "id": "scb_faq_131",
+      "category": "FAQ",
+      "subcategory": "Group Booking",
+      "location": "Scarborough",
+      "question": "Go karting in group bookings?",
+      "answer": "1x race/jumper for group bookings. Unlimited for facility rentals.",
+      "tags": [
+        "go kart",
+        "group"
+      ]
+    },
+    {
+      "id": "scb_faq_140",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "How early should guests arrive?",
+      "answer": "20 minutes before scheduled jump time.",
+      "tags": [
+        "arrival",
+        "early"
+      ]
+    },
+    {
+      "id": "scb_faq_141",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Are socks included in party?",
+      "answer": "Varies: Premium no, VIP 50% off, Ultimate FREE.",
+      "tags": [
+        "socks",
+        "included"
+      ]
+    },
+    {
+      "id": "scb_faq_142",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Can I add extra jumpers?",
+      "answer": "Yes, at per-jumper price. Don't exceed room capacity.",
+      "tags": [
+        "extra",
+        "additional"
+      ]
+    },
+    {
+      "id": "scb_faq_143",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Forgot to pre-order add-ons?",
+      "answer": "$20 late fee for orders within 24 hours.",
+      "tags": [
+        "add-ons",
+        "late"
+      ]
+    },
+    {
+      "id": "scb_faq_144",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Attractions exclusive to party?",
+      "answer": "No, shared. Party room is private.",
+      "tags": [
+        "private",
+        "exclusive"
+      ]
+    },
+    {
+      "id": "scb_faq_145",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Can I extend time?",
+      "answer": "May be available for purchase. Ask when booking.",
+      "tags": [
+        "extend",
+        "more time"
+      ]
+    },
+    {
+      "id": "scb_faq_146",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "What if guests don't show?",
+      "answer": "Minimum still charged. Extra arrivals: additional fees.",
+      "tags": [
+        "no show"
+      ]
+    },
+    {
+      "id": "scb_faq_147",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Request specific room?",
+      "answer": "We try but can't guarantee — based on availability.",
+      "tags": [
+        "room",
+        "preference"
+      ]
+    },
+    {
+      "id": "scb_faq_148",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Area for parents to wait?",
+      "answer": "Yes, viewing area and common spaces.",
+      "tags": [
+        "parents",
+        "waiting"
+      ]
+    },
+    {
+      "id": "scb_faq_149",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Can I bring decorations?",
+      "answer": "Yes, no confetti/piñatas/silly string. $40 charge if used.",
+      "tags": [
+        "decorations"
+      ]
+    },
+    {
+      "id": "scb_faq_150",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Check-in process for parties?",
+      "answer": "Staff assists. Complete waivers beforehand. Wristbands provided.",
+      "tags": [
+        "check-in",
+        "wristband"
+      ]
+    },
+    {
+      "id": "scb_faq_151",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Dietary restrictions?",
+      "answer": "Accommodated with advance notice.",
+      "tags": [
+        "dietary",
+        "allergy"
+      ]
+    },
+    {
+      "id": "scb_faq_152",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Party runs late?",
+      "answer": "Must follow schedule. Overages may incur fees.",
+      "tags": [
+        "late",
+        "overtime"
+      ]
+    },
+    {
+      "id": "scb_faq_153",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Birthday child in jumper count?",
+      "answer": "Yes, counts toward minimum.",
+      "tags": [
+        "birthday child",
+        "count"
+      ]
+    },
+    {
+      "id": "scb_faq_154",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Invitations provided?",
+      "answer": "Digital included. Physical: $0.75/each.",
+      "tags": [
+        "invitations"
+      ]
+    },
+    {
+      "id": "scb_faq_155",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Themed props/costumes?",
+      "answer": "Yes, if safe for jumping.",
+      "tags": [
+        "costume",
+        "theme"
+      ]
+    },
+    {
+      "id": "scb_faq_156",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "What if child gets injured?",
+      "answer": "Trained staff on-site. Parents notified immediately.",
+      "tags": [
+        "injury",
+        "safety"
+      ]
+    },
+    {
+      "id": "scb_faq_157",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Tour facility before booking?",
+      "answer": "Yes! Contact us to arrange.",
+      "tags": [
+        "tour",
+        "visit"
+      ]
+    },
+    {
+      "id": "scb_faq_158",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Split party cost?",
+      "answer": "Yes, let us know in advance.",
+      "tags": [
+        "split",
+        "payment"
+      ]
+    },
+    {
+      "id": "scb_faq_159",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Help with setup/cleanup?",
+      "answer": "Yes, staff handles both.",
+      "tags": [
+        "setup",
+        "cleanup"
+      ]
+    },
+    {
+      "id": "scb_faq_160",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Options for non-jumpers?",
+      "answer": "Party room + food. No attractions. Don't count toward minimum.",
+      "tags": [
+        "non-jumper"
+      ]
+    },
+    {
+      "id": "scb_faq_161",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Book for twins/multiple kids?",
+      "answer": "Yes! Let us know to customize.",
+      "tags": [
+        "twins",
+        "multiple"
+      ]
+    },
+    {
+      "id": "scb_faq_162",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Cancellation/rescheduling policy?",
+      "answer": "Reschedule within 1 year free. Cancel 14+ days: gift card. Within 14 days: no refund.",
+      "tags": [
+        "cancel",
+        "reschedule"
+      ]
+    },
+    {
+      "id": "scb_faq_163",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Upgrade/downgrade package?",
+      "answer": "14+ days advance, subject to availability.",
+      "tags": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "id": "scb_faq_164",
+      "category": "FAQ",
+      "subcategory": "Birthday Party",
+      "location": "Scarborough",
+      "question": "Rewards for multiple parties?",
+      "answer": "Contact us about repeat booking discounts.",
+      "tags": [
+        "rewards",
+        "loyalty"
+      ]
+    },
+    {
+      "id": "scb_faq_170",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "What's included in Aero Camp?",
+      "answer": "Supervised trampolining, games, crafts, contests, group activities.",
+      "tags": [
+        "included",
+        "activities"
+      ]
+    },
+    {
+      "id": "scb_faq_171",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Book individual days or full week?",
+      "answer": "Both options available.",
+      "tags": [
+        "booking",
+        "individual"
+      ]
+    },
+    {
+      "id": "scb_faq_172",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Lunch included?",
+      "answer": "No, add Lunch Combo for $9.90/day or send packed lunch.",
+      "tags": [
+        "lunch",
+        "food"
+      ]
+    },
+    {
+      "id": "scb_faq_173",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "How to register?",
+      "answer": "Online or call. Register early — spots fill up.",
+      "tags": [
+        "register",
+        "sign up"
+      ]
+    },
+    {
+      "id": "scb_faq_174",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "What to bring?",
+      "answer": "Activewear, packed lunch (if no combo), water bottle.",
+      "tags": [
+        "bring",
+        "prepare"
+      ]
+    },
+    {
+      "id": "scb_faq_175",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Supervision during camp?",
+      "answer": "Yes, trained staff at all times.",
+      "tags": [
+        "supervision",
+        "safety"
+      ]
+    },
+    {
+      "id": "scb_faq_176",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Last-minute early drop-off/late pickup?",
+      "answer": "Usually possible. Notify ASAP.",
+      "tags": [
+        "early",
+        "late",
+        "extended"
+      ]
+    },
+    {
+      "id": "scb_faq_177",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Age requirement?",
+      "answer": "4-12 years old.",
+      "tags": [
+        "age"
+      ]
+    },
+    {
+      "id": "scb_faq_178",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Waivers for camp?",
+      "answer": "Required. Complete online or at park.",
+      "tags": [
+        "waiver"
+      ]
+    },
+    {
+      "id": "scb_faq_179",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "PA Day Camp schedule?",
+      "answer": "All PA days per school boards. Check website.",
+      "tags": [
+        "pa day",
+        "schedule"
+      ]
+    },
+    {
+      "id": "scb_faq_180",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Summer Camp schedule?",
+      "answer": "Specific summer weeks. Dates announced closer to start.",
+      "tags": [
+        "summer"
+      ]
+    },
+    {
+      "id": "scb_faq_181",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "March Break Camp?",
+      "answer": "During official March Break.",
+      "tags": [
+        "march break"
+      ]
+    },
+    {
+      "id": "scb_faq_182",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Winter Camp?",
+      "answer": "During winter holidays. Dates posted closer to season.",
+      "tags": [
+        "winter"
+      ]
+    },
+    {
+      "id": "scb_faq_183",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Parents stay during camp?",
+      "answer": "Drop-off encouraged. Let us know if child needs settling in.",
+      "tags": [
+        "parents"
+      ]
+    },
+    {
+      "id": "scb_faq_184",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Extended hours structured?",
+      "answer": "Supervised free play. Early from 7:30AM. Late past 6PM.",
+      "tags": [
+        "extended hours"
+      ]
+    },
+    {
+      "id": "scb_faq_185",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Lost and found?",
+      "answer": "Yes. Label all items.",
+      "tags": [
+        "lost"
+      ]
+    },
+    {
+      "id": "scb_faq_186",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Electronics allowed?",
+      "answer": "Leave at home recommended.",
+      "tags": [
+        "electronics",
+        "phone"
+      ]
+    },
+    {
+      "id": "scb_faq_187",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Rest periods?",
+      "answer": "Yes, breaks for rest/snacks/lunch. Quiet activities offered.",
+      "tags": [
+        "rest",
+        "break"
+      ]
+    },
+    {
+      "id": "scb_faq_188",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Child feels unwell?",
+      "answer": "Parents notified immediately. First-aid trained staff on-site.",
+      "tags": [
+        "sick",
+        "emergency"
+      ]
+    },
+    {
+      "id": "scb_faq_189",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Behavioral issues?",
+      "answer": "Staff handles calmly. Parents informed if needed.",
+      "tags": [
+        "behavior"
+      ]
+    },
+    {
+      "id": "scb_faq_190",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Lunch combo contents?",
+      "answer": "Pizza, drink, and snack.",
+      "tags": [
+        "lunch combo"
+      ]
+    },
+    {
+      "id": "scb_faq_191",
+      "category": "FAQ",
+      "subcategory": "Aero Camp",
+      "location": "Scarborough",
+      "question": "Join if miss first day?",
+      "answer": "Yes, if space available.",
+      "tags": [
+        "late",
+        "miss"
+      ]
+    }
+  ]
+}
