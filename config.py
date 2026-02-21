@@ -19,15 +19,25 @@ logger = logging.getLogger(__name__)
 # Embedding config
 # ---------------------------------------------------------------------------
 
-EMBEDDING_PROVIDER: str = os.getenv("EMBEDDING_PROVIDER", "voyage")
-
-# Voyage AI: 1024-dim;  sentence-transformers: 384-dim
-EMBEDDING_DIM: int = 1024 if EMBEDDING_PROVIDER == "voyage" else 384
+EMBEDDING_PROVIDER: str = os.getenv("EMBEDDING_PROVIDER", "local")
 
 VOYAGE_API_KEY: Optional[str] = os.getenv("VOYAGE_API_KEY")
 VOYAGE_MODEL: str = "voyage-2"
 
-LOCAL_MODEL_NAME: str = "all-MiniLM-L6-v2"
+LOCAL_MODEL_NAME: str = os.getenv("LOCAL_MODEL_NAME", "voyageai/voyage-4-nano")
+
+# Known output dimensions per local model name.
+_LOCAL_MODEL_DIMS: dict[str, int] = {
+    "voyageai/voyage-4-nano": 2048,   # Python 3.10+ required
+    "BAAI/bge-m3": 1024,              # Python 3.9 compatible, high quality
+    "all-MiniLM-L6-v2": 384,
+}
+
+# Voyage API = 1024-dim; voyage-4-nano local = 2048-dim; MiniLM = 384-dim
+EMBEDDING_DIM: int = (
+    1024 if EMBEDDING_PROVIDER == "voyage"
+    else _LOCAL_MODEL_DIMS.get(LOCAL_MODEL_NAME, 384)
+)
 
 EMBED_BATCH_SIZE: int = 128
 

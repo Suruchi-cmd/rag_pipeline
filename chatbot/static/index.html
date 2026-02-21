@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AeroBot — Test Page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f2d;
+      color: #e8eaf0;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #F00C74 0%, #8b0048 100%);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .logo-badge {
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-size: 22px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 36px 0 12px;
+      color: #F00C74;
+      border-bottom: 1px solid rgba(240,12,116,0.25);
+      padding-bottom: 6px;
+    }
+
+    .card {
+      background: #16213e;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+
+    .card p { margin: 0 0 8px; line-height: 1.6; font-size: 14px; }
+    .card p:last-child { margin: 0; }
+
+    code {
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: "Fira Code", "Cascadia Code", monospace;
+      font-size: 13px;
+      color: #39FF14;
+    }
+
+    pre {
+      background: #0a0a1e;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 16px;
+      overflow-x: auto;
+      font-family: "Fira Code", monospace;
+      font-size: 13px;
+      color: #39FF14;
+      line-height: 1.6;
+    }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+    .query-chip {
+      background: rgba(240,12,116,0.15);
+      border: 1px solid rgba(240,12,116,0.4);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: #F00C74;
+      cursor: pointer;
+      display: inline-block;
+      margin: 4px;
+      transition: background 0.2s;
+    }
+
+    .query-chip:hover {
+      background: rgba(240,12,116,0.3);
+    }
+
+    .link-btn {
+      display: inline-block;
+      background: #F00C74;
+      color: #fff;
+      padding: 9px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 4px;
+      transition: background 0.2s;
+    }
+
+    .link-btn:hover { background: #d00060; }
+
+    .link-btn.outline {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #e8eaf0;
+    }
+
+    .link-btn.outline:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .status-pill {
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .status-ok   { background: rgba(57,255,20,0.15); color: #39FF14; border: 1px solid rgba(57,255,20,0.4); }
+    .status-fail { background: rgba(240,12,116,0.15); color: #F00C74; border: 1px solid rgba(240,12,116,0.4); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-badge">🎉</div>
+  <div>
+    <h1>AeroBot — Developer Test Page</h1>
+    <p>AeroSports Scarborough Customer Chatbot · Llama 3.1 + pgvector RAG</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- Health status -->
+  <h2>Server Status <span id="health-pill" class="status-pill" style="display:none"></span></h2>
+  <div class="card">
+    <p>
+      <strong>API base:</strong> <code id="api-origin"></code> &nbsp;·&nbsp;
+      <a href="/docs" class="link-btn outline" style="padding:4px 12px;font-size:12px;">Swagger Docs</a>
+      <a href="/api/health" class="link-btn outline" style="padding:4px 12px;font-size:12px;">Health JSON</a>
+    </p>
+  </div>
+
+  <!-- Quick links -->
+  <h2>Endpoints</h2>
+  <div class="card">
+    <p><code>POST /api/chat</code> — non-streaming, full response</p>
+    <p><code>GET &nbsp;/api/chat/stream?message=…&amp;session_id=…</code> — SSE streaming</p>
+    <p><code>POST /api/chat/reset</code> — clear session history</p>
+    <p><code>GET &nbsp;/widget</code> — embeddable iframe page</p>
+  </div>
+
+  <!-- Test queries -->
+  <h2>Test Queries</h2>
+  <p style="font-size:13px; color:rgba(255,255,255,0.5); margin-bottom:12px;">
+    Click a chip to send it to the AeroBot widget →
+  </p>
+  <div id="chip-container">
+    <span class="query-chip">How much does it cost to jump?</span>
+    <span class="query-chip">What birthday packages do you have?</span>
+    <span class="query-chip">Do you have go karts?</span>
+    <span class="query-chip">Tell me about group bookings</span>
+    <span class="query-chip">What about summer camp?</span>
+    <span class="query-chip">What are your opening hours?</span>
+    <span class="query-chip">Is there a discount code?</span>
+    <span class="query-chip">What about Oakville?</span>
+  </div>
+
+  <!-- cURL examples -->
+  <h2>cURL Examples</h2>
+  <div class="card">
+    <p><strong>Non-streaming POST:</strong></p>
+    <pre>curl -s -X POST http://localhost:8000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message": "How much to jump?", "session_id": null}' | python3 -m json.tool</pre>
+  </div>
+  <div class="card">
+    <p><strong>SSE streaming GET:</strong></p>
+    <pre>curl -N "http://localhost:8000/api/chat/stream\
+?message=What+birthday+packages+do+you+have\
+&session_id=test123"</pre>
+  </div>
+  <div class="card">
+    <p><strong>Embed as iframe:</strong></p>
+    <pre>&lt;iframe
+  src="http://localhost:8000/widget"
+  width="400" height="600"
+  style="border:none; border-radius:16px;"
+  title="AeroBot Chat"
+&gt;&lt;/iframe&gt;</pre>
+  </div>
+  <div class="card">
+    <p><strong>Embed as script tag:</strong></p>
+    <pre>&lt;script src="http://localhost:8000/static/widget.js"&gt;&lt;/script&gt;</pre>
+  </div>
+
+  <!-- Links -->
+  <h2>Links</h2>
+  <a href="/docs" class="link-btn">Swagger UI</a>
+  <a href="/redoc" class="link-btn outline">ReDoc</a>
+  <a href="/widget" class="link-btn outline">Widget Only (iframe)</a>
+  <a href="/api/health" class="link-btn outline">Health Check</a>
+
+</main>
+
+<!-- AeroBot widget (floating, bottom-right) -->
+<script src="/static/widget.js"></script>
+
+<script>
+  // Show API origin
+  document.getElementById('api-origin').textContent = window.location.origin;
+
+  // Health check
+  fetch('/api/health')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var pill = document.getElementById('health-pill');
+      pill.style.display = 'inline-block';
+      if (data.status === 'ok') {
+        pill.className = 'status-pill status-ok';
+        pill.textContent = '\u2713 OK';
+      } else {
+        pill.className = 'status-pill status-fail';
+        pill.textContent = '\u26a0 Degraded — db:' + data.db + ' hf:' + data.hf_token_configured;
+      }
+    })
+    .catch(function() {
+      var pill = document.getElementById('health-pill');
+      pill.style.display = 'inline-block';
+      pill.className = 'status-pill status-fail';
+      pill.textContent = '\u2715 Unreachable';
+    });
+
+  // Chips — send directly to widget
+  document.getElementById('chip-container').addEventListener('click', function(e) {
+    if (!e.target.classList.contains('query-chip')) return;
+    var text = e.target.textContent;
+
+    // Open the widget
+    var toggle = document.getElementById('aerobot-toggle');
+    var win    = document.getElementById('aerobot-window');
+    if (win && win.classList.contains('aerobot-closed')) {
+      toggle && toggle.click();
+    }
+
+    // Small delay so the window is open before injecting the message
+    setTimeout(function() {
+      var input = document.getElementById('aerobot-input');
+      var send  = document.getElementById('aerobot-send');
+      if (input && send) {
+        input.value = text;
+        send.click();
+      }
+    }, 350);
+  });
+</script>
+
+</body>
+</html>

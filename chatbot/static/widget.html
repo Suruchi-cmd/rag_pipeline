@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AeroBot — AeroSports Scarborough</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    Widget-only page — designed to be embedded as an iframe:
+
+      <iframe
+        src="https://your-domain/widget"
+        width="400"
+        height="600"
+        style="border:none; border-radius:16px;"
+        title="AeroBot Chat"
+      ></iframe>
+
+    The widget.js script below injects the full chat UI automatically.
+  -->
+  <script src="/static/widget.js"></script>
+
+  <script>
+    // In iframe mode the chat window should start open and fill the frame.
+    document.addEventListener('DOMContentLoaded', function () {
+      // Auto-open the chat window (no floating button needed in iframe mode)
+      var toggle = document.getElementById('aerobot-toggle');
+      var win    = document.getElementById('aerobot-window');
+
+      if (toggle && win) {
+        // Hide the floating button — in iframe mode the whole frame IS the widget
+        toggle.style.display = 'none';
+
+        // Position the window to fill the iframe
+        win.style.position   = 'static';
+        win.style.width      = '100%';
+        win.style.height     = '100vh';
+        win.style.borderRadius = '0';
+        win.style.boxShadow  = 'none';
+        win.classList.remove('aerobot-closed');
+      }
+    });
+  </script>
+</body>
+</html>

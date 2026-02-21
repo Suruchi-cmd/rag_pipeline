@@ -36,18 +36,29 @@ def _get_local_model():
     if _local_model is None:
         from sentence_transformers import SentenceTransformer
 
-        _local_model = SentenceTransformer(config.LOCAL_MODEL_NAME)
-        logger.info("Local sentence-transformer loaded: %s", config.LOCAL_MODEL_NAME)
-    return _local_model
+        _local_model = SentenceTransformer(
+            config.LOCAL_MODEL_NAME,
+            device="cpu",          # ⬅️ FORCE CPU (CRITICAL)
+            trust_remote_code=True
+        )
 
+        logger.info(
+            "Local sentence-transformer loaded: %s (CPU forced)",
+            config.LOCAL_MODEL_NAME,
+        )
+
+    return _local_model
 
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
 
 
-def embed_text(text: str) -> list[float]:
-    """Embed a single string. Returns a list of floats."""
+def embed_text(text: str, input_type: str = "document") -> list[float]:
+    """
+    Embed a single string.
+    input_type is kept for API compatibility (ignored for local models).
+    """
     return embed_batch([text])[0]
 
 

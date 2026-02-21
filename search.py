@@ -113,7 +113,7 @@ def semantic_search(
     Returns:
         List of SearchResult ordered by descending similarity.
     """
-    query_vec = emb.embed_text(query)
+    query_vec = emb.embed_text(query, input_type="query")
     return _fetch(
         _SEMANTIC_SQL,
         {
@@ -142,7 +142,7 @@ def hybrid_search(
     Returns:
         List of SearchResult ordered by descending combined score.
     """
-    query_vec = emb.embed_text(query)
+    query_vec = emb.embed_text(query, input_type="query")
     return _fetch(
         _HYBRID_SQL,
         {
@@ -177,7 +177,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Search AeroSports knowledge base")
     parser.add_argument("query", nargs="?", default=None, help="Search query")
     parser.add_argument("--category", default=None, help="Filter by category")
-    parser.add_argument("--mode", choices=["semantic", "hybrid"], default="semantic")
+    parser.add_argument("--mode", choices=["semantic", "hybrid"], default="hybrid", help="Search mode (default: hybrid)")
     parser.add_argument("--top-k", type=int, default=config.DEFAULT_TOP_K)
     args = parser.parse_args()
 
