@@ -148,6 +148,16 @@ async def handle_message(
     history = conversation_store.get(session_id)
     messages = build_messages(user_message, merged, history)
 
+    logger.info(
+        "[%s] PROMPT MESSAGES (%d):\n%s",
+        session_id,
+        len(messages),
+        "\n".join(
+            f"  [{m['role'].upper()}] {m['content'][:300]}{'...' if len(m['content']) > 300 else ''}"
+            for m in messages
+        ),
+    )
+
     # ------------------------------------------------------------------
     # 3. Stream from Llama
     # ------------------------------------------------------------------
@@ -172,6 +182,8 @@ async def handle_message(
     # ------------------------------------------------------------------
     # 5. Persist conversation turn
     # ------------------------------------------------------------------
+    logger.info("[%s] RESPONSE: %s", session_id, full_response)
+
     conversation_store.add(session_id, "user", user_message)
     conversation_store.add(session_id, "assistant", full_response)
 

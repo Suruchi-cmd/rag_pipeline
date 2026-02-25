@@ -41,7 +41,7 @@ if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 
 import config  # noqa: E402  (loads DB pool, embedding config, etc.)
-from fastapi import FastAPI, Form, Query  # noqa: E402
+from fastapi import FastAPI, Form, Query, WebSocket, WebSocketDisconnect  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 from fastapi.responses import FileResponse, JSONResponse, Response  # noqa: E402
 from fastapi.staticfiles import StaticFiles  # noqa: E402
@@ -50,8 +50,7 @@ from sse_starlette.sse import EventSourceResponse  # noqa: E402
 
 from chatbot.chat_handler import handle_message  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
-from chatbot.voice_handler import handle_voice_message  # noqa: E402
-from twilio.twiml.voice_response import Gather, VoiceResponse  # noqa: E402
+from twilio.twiml.voice_response import VoiceResponse  # noqa: E402
 
 logging.basicConfig(
     level=logging.INFO,
@@ -269,50 +268,97 @@ async def health():
 # Voice routes (Twilio)
 # ---------------------------------------------------------------------------
 
-_BASE_URL = os.environ.get("BASE_URL", "")
-
-_WELCOME_MESSAGE = (
-    "Hi! You've reached AeroBot at AeroSports Scarborough. "
-    "How can I help you today?"
-)
-_VOICE_FALLBACK_MESSAGE = (
-    "I didn't catch that. "
-    "You can also reach us directly at 289-454-5555."
-)
-
-
-def _twiml_response(text: str, action_url: str) -> Response:
-    """Speak *text* then open a <Gather> to capture the next speech input."""
-    vr = VoiceResponse()
-    gather = Gather(input="speech", action=action_url, timeout=5, speechTimeout="auto")
-    gather.say(text)
-    vr.append(gather)
-    # If the caller says nothing, Gather falls through to this fallback Say.
-    vr.say(_VOICE_FALLBACK_MESSAGE)
-    return Response(content=str(vr), media_type="text/xml")
+_BASE_URL = os.environ.get("BASE_URL", "").rstrip("/")  # e.g. https://abc.ngrok-free.app
 
 
 @app.post("/voice/inbound", tags=["voice"])
-async def voice_inbound(
-    CallSid: str = Form(...),
-    SpeechResult: str = Form(default=""),
-    From: str = Form(default=""),
-):
+@app.post("/voice/inbound/", include_in_schema=False)
+async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
     """
-    Twilio webhook for inbound voice calls.
+    Twilio webhook for inbound voice calls — returns ConversationRelay TwiML.
 
     Configure in Twilio Console → Phone Numbers → your number →
     "A call comes in" → Webhook → POST → {BASE_URL}/voice/inbound
     """
-    action_url = f"{_BASE_URL}/voice/inbound"
+    logger.info("New inbound call: %s from %s", CallSid, From)
+    ws_host = _BASE_URL.replace("https://", "").replace("http://", "")
+    twiml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Connect action="{_BASE_URL}/voice/action">
+    <ConversationRelay url="wss://{ws_host}/voice/ws"
+                       welcomeGreeting="Hi! You've reached AeroBot at AeroSports Scarborough. How can I help you today?"
+                       dtmfDetection="true"
+                       interruptByDtmf="false" />
+  </Connect>
+</Response>"""
+    return Response(content=twiml, media_type="text/xml")
 
-    if not SpeechResult.strip():
-        # First POST from Twilio (no speech yet) — greet the caller.
-        logger.info("New inbound call: %s from %s", CallSid, From)
-        return _twiml_response(_WELCOME_MESSAGE, action_url)
 
-    # Subsequent turns — route speech through the RAG + LLM pipeline.
-    logger.info("[%s] Caller said: %s", CallSid, SpeechResult)
-    reply = await handle_voice_message(call_sid=CallSid, user_text=SpeechResult.strip())
-    logger.info("[%s] AeroBot replied: %s", CallSid, reply)
-    return _twiml_response(reply, action_url)
+@app.post("/voice/action", tags=["voice"])
+async def voice_action():
+    """Called by Twilio when the ConversationRelay session ends."""
+    vr = VoiceResponse()
+    vr.say("Thank you for calling AeroSports. Goodbye!")
+    vr.hangup()
+    return Response(content=str(vr), media_type="text/xml")
+
+
+@app.websocket("/voice/ws")
+async def voice_ws(websocket: WebSocket):
+    """
+    WebSocket handler for Twilio ConversationRelay.
+
+    Receives transcribed speech from Twilio, streams LLM tokens back in
+    real time. Twilio handles ASR (speech→text) and TTS (text→speech).
+    """
+    await websocket.accept()
+    call_sid: str | None = None
+    interrupted = False
+
+    try:
+        async for raw in websocket.iter_text():
+            msg = json.loads(raw)
+            msg_type = msg.get("type")
+
+            if msg_type == "setup":
+                call_sid = msg.get("callSid", str(uuid.uuid4()))
+                logger.info(
+                    "ConversationRelay connected: %s from %s",
+                    call_sid,
+                    msg.get("from"),
+                )
+
+            elif msg_type == "prompt":
+                user_text = msg.get("voicePrompt", "").strip()
+                if not user_text or not call_sid:
+                    continue
+
+                logger.info("[%s] User said: %s", call_sid, user_text)
+                interrupted = False
+
+                async for item in handle_message(call_sid, user_text):
+                    if interrupted:
+                        break
+                    if item["type"] == "token":
+                        await websocket.send_text(
+                            json.dumps({"type": "text", "token": item["content"], "last": False})
+                        )
+                    elif item["type"] == "done":
+                        await websocket.send_text(
+                            json.dumps({"type": "text", "token": "", "last": True})
+                        )
+
+            elif msg_type == "interrupt":
+                logger.info("[%s] User interrupted", call_sid)
+                interrupted = True
+
+            elif msg_type == "dtmf":
+                logger.info("[%s] DTMF: %s", call_sid, msg.get("digit"))
+
+    except WebSocketDisconnect:
+        logger.info("ConversationRelay disconnected: %s", call_sid)
+    except Exception as exc:
+        logger.error("ConversationRelay error [%s]: %s", call_sid, exc)
+    finally:
+        if call_sid:
+            conversation_store.clear(call_sid)
