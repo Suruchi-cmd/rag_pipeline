@@ -75,7 +75,7 @@ def detect_fallback(
     # --- Rule 2: booking intent ---
     if _BOOKING_RE.search(user_message):
         ctas.append(
-            f"Ready to book? Head to [{BOOKING_URL}]({BOOKING_URL}) to secure your spot!"
+            f"If you're ready to book, head to our website {BOOKING_URL} to secure your spot!"
         )
 
     # --- Rule 3: custom / large-group events ---
