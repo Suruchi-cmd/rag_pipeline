@@ -286,7 +286,9 @@ async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
 <Response>
   <Connect action="{_BASE_URL}/voice/action">
     <ConversationRelay url="wss://{ws_host}/voice/ws"
-                       welcomeGreeting="Hi! You've reached AeroBot at AeroSports Scarborough. How can I help you today?"
+                    ttsProvider="ElevenLabs" 
+                    voice="uYXf8XasLslADfZ2MB4u"
+                       welcomeGreeting="Hi! This is AeroSports Scarborough. My name is Felicia, How can I help you today?"
                        dtmfDetection="true"
                        interruptByDtmf="false" />
   </Connect>
