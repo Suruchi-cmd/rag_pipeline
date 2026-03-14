@@ -40,6 +40,9 @@ CREATE TABLE IF NOT EXISTS knowledge_chunks (
     answer       TEXT NOT NULL,
     tags         TEXT[] NOT NULL DEFAULT '{{}}',
     embedding    vector({config.EMBEDDING_DIM}),
+    sheet_name   TEXT NOT NULL DEFAULT '',
+    source       TEXT NOT NULL DEFAULT 'knowledge_base',
+    metadata     JSONB DEFAULT '{{}}'::jsonb,
     created_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -61,12 +64,19 @@ CREATE TABLE IF NOT EXISTS sync_history (
     synced_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Indexes
+-- Add new columns to existing tables (idempotent for upgrades)
+ALTER TABLE knowledge_chunks ADD COLUMN IF NOT EXISTS sheet_name TEXT NOT NULL DEFAULT '';
+ALTER TABLE knowledge_chunks ADD COLUMN IF NOT EXISTS source TEXT NOT NULL DEFAULT 'knowledge_base';
+ALTER TABLE knowledge_chunks ADD COLUMN IF NOT EXISTS metadata JSONB DEFAULT '{{}}'::jsonb;
+
+-- Indexes (must come after ALTER TABLE so columns exist on legacy tables)
 CREATE INDEX IF NOT EXISTS idx_chunks_category    ON knowledge_chunks (category);
 CREATE INDEX IF NOT EXISTS idx_chunks_subcategory ON knowledge_chunks (subcategory);
 CREATE INDEX IF NOT EXISTS idx_chunks_tags        ON knowledge_chunks USING GIN (tags);
 CREATE INDEX IF NOT EXISTS idx_chunks_embedding   ON knowledge_chunks
     USING ivfflat (embedding vector_cosine_ops) WITH (lists = 10);
+CREATE INDEX IF NOT EXISTS idx_kb_source          ON knowledge_chunks (source);
+CREATE INDEX IF NOT EXISTS idx_kb_sheet           ON knowledge_chunks (sheet_name);
 
 -- Seed sync_state with a single row if missing
 INSERT INTO sync_state (id, last_version)

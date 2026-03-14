@@ -22,7 +22,7 @@ PHONE = "289-454-5555"
 EMAIL = "events.scb@aerosportsparks.ca"
 
 # Similarity threshold below which we consider the RAG context insufficient.
-LOW_SIMILARITY_THRESHOLD = 0.50
+LOW_SIMILARITY_THRESHOLD = 0.55
 
 # ---------------------------------------------------------------------------
 # Intent patterns (compiled once at import time)
@@ -65,9 +65,9 @@ def detect_fallback(
     # --- Rule 1: no or low-confidence RAG results ---
     if not rag_results or rag_results[0].similarity_score < LOW_SIMILARITY_THRESHOLD:
         return (
-            "\n\nI wasn't able to find specific information about that in my knowledge base. "
-            f"For accurate details please call us at **{PHONE}** (press 3 for the park) "
-            f"or email **{EMAIL}** — we're happy to help!"
+            " Honestly, I'm not a hundred percent sure on that one. "
+            "You can give us a call at two eight nine, four five four, five five five five, "
+            "or shoot an email to events dot scb at aerosportsparks dot ca and they'll help you out."
         )
 
     ctas: list[str] = []
@@ -75,25 +75,26 @@ def detect_fallback(
     # --- Rule 2: booking intent ---
     if _BOOKING_RE.search(user_message):
         ctas.append(
-            f"If you're ready to book, head to our website {BOOKING_URL} to secure your spot!"
+            "You can book that on our website, aerosportsparks dot ca."
         )
 
     # --- Rule 3: custom / large-group events ---
     if _CUSTOM_EVENT_RE.search(user_message):
         ctas.append(
-            f"For custom arrangements please email **{EMAIL}** "
-            f"or call **{PHONE}** and our events team will take care of you."
+            "For that kind of thing, I'd say email events dot scb at aerosportsparks dot ca "
+            "or give us a call at two eight nine, four five four, five five five five "
+            "and the events team will sort you out."
         )
 
     # --- Rule 4: other location ---
     if _OTHER_LOCATION_RE.search(user_message):
         ctas.append(
-            f"I only have information for the Scarborough location — "
-            f"for other parks please visit [{BOOKING_URL}]({BOOKING_URL}) "
-            f"or call the specific park directly."
+            "I only have info for the Scarborough location though, "
+            "so for other parks you'd want to check aerosportsparks dot ca "
+            "or call that park directly."
         )
 
     if ctas:
-        return "\n\n" + "  \n".join(ctas)
+        return " " + " ".join(ctas)
 
     return None

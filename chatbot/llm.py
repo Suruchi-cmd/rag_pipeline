@@ -23,8 +23,9 @@ from huggingface_hub import InferenceClient
 logger = logging.getLogger(__name__)
 
 _FALLBACK_MSG = (
-    "I'm having trouble connecting right now. "
-    "Please try again in a moment, or call us at **289-454-5555** for immediate help!"
+    "I'm so sorry, I'm having a little trouble on my end right now. "
+    "Can you try calling back in just a minute? Or you can reach us "
+    "at two eight nine, four five four, five five five five. Sorry about that!"
 )
 
 
