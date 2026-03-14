@@ -76,10 +76,10 @@ aerosports-rag/
 python -m rag.setup_db && python -m rag.ingest && python -m rag.search
 
 # Chatbot
-uvicorn chatbot.server:app --host 0.0.0.0 --port 8000 --reload
+uvicorn chatbot.server:app --host 0.0.0.0 --port 3232 --reload
 
 # Both with sync on startup
-SYNC_ON_STARTUP=true uvicorn chatbot.server:app --port 8000
+SYNC_ON_STARTUP=true uvicorn chatbot.server:app --port 3232
 ```
 
 
@@ -89,8 +89,8 @@ SYNC_ON_STARTUP=true uvicorn chatbot.server:app --port 8000
 pip install fastapi uvicorn[standard] sse-starlette huggingface-hub pydantic
 
 # Start server
-uvicorn chatbot.server:app --host 0.0.0.0 --port 8000 --reload
+uvicorn chatbot.server:app --host 0.0.0.0 --port 3232 --reload
 
 # Open in browser
-open http://localhost:8000
+open http://localhost:3232
 ```

@@ -16,9 +16,16 @@ class ChunkRecord:
     answer: str
     tags: list[str]
     embedding: Optional[list[float]] = field(default=None, repr=False)
+    sheet_name: str = ''
+    source: str = 'knowledge_base'  # 'voice_script' | 'chatbot_qr' | 'knowledge_base'
+    metadata: dict = field(default_factory=dict)
 
     def embed_text(self) -> str:
-        """Text used as embedding input: question + newline + answer."""
+        """Text used as embedding input, varies by source type."""
+        if self.source == 'voice_script':
+            return self.answer  # already speakable
+        if self.source == 'chatbot_qr':
+            return f"{self.question}\n{self.answer}"
         return f"{self.question}\n{self.answer}"
 
 

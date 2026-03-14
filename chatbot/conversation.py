@@ -14,7 +14,7 @@ import time
 from dataclasses import dataclass, field
 
 SESSION_TIMEOUT: int = 30 * 60  # 30 minutes
-MAX_CONVERSATION_TURNS: int = int(os.environ.get("MAX_CONVERSATION_TURNS", "10"))
+MAX_CONVERSATION_TURNS: int = int(os.environ.get("MAX_CONVERSATION_TURNS", "30"))
 
 
 @dataclass

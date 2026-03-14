@@ -50,6 +50,7 @@ from sse_starlette.sse import EventSourceResponse  # noqa: E402
 
 from chatbot.chat_handler import handle_message  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
+from chatbot.voice_handler import handle_voice_message  # noqa: E402
 from twilio.twiml.voice_response import VoiceResponse  # noqa: E402
 
 logging.basicConfig(
@@ -286,9 +287,16 @@ async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
 <Response>
   <Connect action="{_BASE_URL}/voice/action">
     <ConversationRelay url="wss://{ws_host}/voice/ws"
-                       welcomeGreeting="Hi! You've reached AeroBot at AeroSports Scarborough. How can I help you today?"
+                    ttsProvider="ElevenLabs"
+                    voice="7EzWGsX10sAS4c9m9cPf"
+                       welcomeGreeting="Thank you for calling AeroSports Scarborough, this is Felicia. How can I help you?"
                        dtmfDetection="true"
-                       interruptByDtmf="false" />
+                       interruptByDtmf="false"
+                       interruptSensitivity="high">
+      <Language code="en-US" ttsProvider="ElevenLabs" voice="7EzWGsX10sAS4c9m9cPf">
+        <Transcription hints="AeroSports, Aerosports, Aero Sports, Scarborough, Birchmount, aerosportsparks, Aero Slam, Aero Drop, Aero Camp, Ninja Maze, Ninja Warrior, 360 Bicycle, Donut Slide, Carpet Slide, go kart, go karting, dual kart, Mini Track, Main Track, Premium Jump Pass, VIP Jump Pass, All Day Pass, 30 Day Pass, 90 Day Pass, Annual Pass, Premium Party, VIP Party, Ultimate Party, Toddler Time, PA Day Camp, March Break Camp, Parents Night Out, Homeschool Program, Special Needs Program, GROUPBOOKING25, MARCHBDAY50, MARCHBDAY100, MARCHBDAY150, Birds Eye Party Arena, GOH, jump tower, foam pit, slam basketball, dodgeball, rock walls, waiver" />
+      </Language>
+    </ConversationRelay>
   </Connect>
 </Response>"""
     return Response(content=twiml, media_type="text/xml")
@@ -336,17 +344,15 @@ async def voice_ws(websocket: WebSocket):
                 logger.info("[%s] User said: %s", call_sid, user_text)
                 interrupted = False
 
-                async for item in handle_message(call_sid, user_text):
-                    if interrupted:
-                        break
-                    if item["type"] == "token":
-                        await websocket.send_text(
-                            json.dumps({"type": "text", "token": item["content"], "last": False})
-                        )
-                    elif item["type"] == "done":
-                        await websocket.send_text(
-                            json.dumps({"type": "text", "token": "", "last": True})
-                        )
+                # Use voice handler: shorter token budget, TTS cleaning,
+                # voice-specific system prompt, voice_search() for retrieval.
+                reply = await handle_voice_message(call_sid, user_text)
+
+                if not interrupted:
+                    # Send the full reply as a single token then mark done
+                    await websocket.send_text(
+                        json.dumps({"type": "text", "token": reply, "last": True})
+                    )
 
             elif msg_type == "interrupt":
                 logger.info("[%s] User interrupted", call_sid)
