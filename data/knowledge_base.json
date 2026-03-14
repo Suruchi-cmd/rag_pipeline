@@ -1,16 +1,33 @@
 {
   "metadata": {
-    "total_chunks": 99,
+    "total_chunks": 155,
     "generated_by": "ingest.py (sheet-first)"
   },
   "chunks": [
     {
+      "id": "scb_links_003",
+      "category": "Contact",
+      "subcategory": "Links",
+      "location": "Scarborough",
+      "question": "What are the booking and waiver links?",
+      "answer": "The field link is Booking URL. The value link is https://ecom.roller.app/aerosportsscarborough/products/en/home. The field link is Birthday Booking URL. The value link is https://ecom.roller.app/aerosportsscarborough/birthdayparties/en/products. The field link is Waiver URL. The value link is https://waiver.roller.app/aerosportsscarborough/. The field link is Google Maps. The value link is https://g.page/AeroSports-scarborough. The field link is Birthday Invitations. The value link is https://aerosportsinvitation.netlify.app/invitationscarborough.",
+      "tags": [
+        "location_info",
+        "links",
+        "booking",
+        "waiver"
+      ],
+      "sheet_name": "Location Info",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
       "id": "scb_jump_003",
       "category": "Pricing",
       "subcategory": "Jump Passes",
       "location": "Scarborough",
       "question": "How much does the Premium Jump Pass cost?",
-      "answer": "The Premium Jump Pass at AeroSports Scarborough is $24.9 plus tax for 90 min of jump time. It's available for 6+. This pass includes 90 Minutes of Jump.",
+      "answer": "The Premium Jump Pass at AeroSports Scarborough is $24.90 plus tax for 90 min of jump time. It's available for 6+. This pass includes Includes access to all attractions except Go Karting.",
       "tags": [
         "jump_prices",
         "pricing",
@@ -27,7 +44,7 @@
       "subcategory": "Jump Passes",
       "location": "Scarborough",
       "question": "How much does the VIP Jump Pass cost?",
-      "answer": "The VIP Jump Pass at AeroSports Scarborough is $29.9 plus tax for 120 min of jump time. It's available for 6+. This pass includes 120 Minutes of Jump.",
+      "answer": "The VIP Jump Pass at AeroSports Scarborough is $29.90 plus tax for 120 min of jump time. It's available for 6+. This pass includes Includes access to all attractions except Go Karting.",
       "tags": [
         "jump_prices",
         "pricing",
@@ -44,7 +61,7 @@
       "subcategory": "Jump Passes",
       "location": "Scarborough",
       "question": "How much does the Premium Jump Pass cost?",
-      "answer": "The Premium Jump Pass at AeroSports Scarborough is $24.9 plus tax for 90 min of jump time. It's available for 2+. This pass includes 90 Minutes of Jump.",
+      "answer": "The Premium Jump Pass at AeroSports Scarborough is $24.90 plus tax for 90 min of jump time. It's available for 2 to 5. This pass includes Includes access to all attractions except Go Karting.",
       "tags": [
         "jump_prices",
         "pricing",
@@ -61,7 +78,7 @@
       "subcategory": "Jump Passes",
       "location": "Scarborough",
       "question": "How much does the VIP Jump Pass cost?",
-      "answer": "The VIP Jump Pass at AeroSports Scarborough is $29.9 plus tax for 120 min of jump time. It's available for 2+. This pass includes 120 Minutes of Jump.",
+      "answer": "The VIP Jump Pass at AeroSports Scarborough is $29.90 plus tax for 120 min of jump time. It's available for 2 to 5. This pass includes Includes access to all attractions except Go Karting.",
       "tags": [
         "jump_prices",
         "pricing",
@@ -77,13 +94,13 @@
       "category": "Pricing",
       "subcategory": "Jump Passes",
       "location": "Scarborough",
-      "question": "How much does the Premium Jump Pass cost?",
-      "answer": "The Premium Jump Pass at AeroSports Scarborough is $Free (Paying adult required) plus tax. It's available for Under 2.",
+      "question": "How much does the Any Pass cost?",
+      "answer": "The Any Pass at AeroSports Scarborough is $Free plus tax for Same as parent of jump time. It's available for Under 2. This pass includes A paying adult is required to accompany the child.",
       "tags": [
         "jump_prices",
         "pricing",
         "jump",
-        "premium_jump_pass"
+        "any_pass"
       ],
       "sheet_name": "Jump Prices",
       "source": "knowledge_base",
@@ -94,13 +111,13 @@
       "category": "Pricing",
       "subcategory": "Jump Passes",
       "location": "Scarborough",
-      "question": "How much does the VIP Jump Pass cost?",
-      "answer": "The VIP Jump Pass at AeroSports Scarborough is $Free (Paying adult required) plus tax. It's available for Under 2.",
+      "question": "How much does the All Day Pass cost?",
+      "answer": "The All Day Pass at AeroSports Scarborough is $39.90 plus tax for All Day of jump time. It's available for All. This pass includes Jump all day long with unlimited access to attractions.",
       "tags": [
         "jump_prices",
         "pricing",
         "jump",
-        "vip_jump_pass"
+        "all_day_pass"
       ],
       "sheet_name": "Jump Prices",
       "source": "knowledge_base",
@@ -125,119 +142,358 @@
     },
     {
       "id": "scb_gokart_005",
-      "category": "Pricing",
-      "subcategory": "Jump Passes",
+      "category": "Go Karting",
+      "subcategory": "Main Track",
       "location": "Scarborough",
-      "question": "How much does the 19.9 cost?",
-      "answer": "The 19.9 at AeroSports Scarborough is $54 inches (driver) plus tax. It's available for Standalone Race. This pass includes Dual kart passenger min: 36 inches.",
+      "question": "What are the go karting options and prices?",
+      "answer": "A Standalone Race go kart race on the Main Track track costs $19.90 plus tax. This is for guests who are not purchasing a jump pass. Up to 10 laps. For guests NOT purchasing a jump pass. Drivers must be at least 54 inches (driver) tall and closed-toed shoes are required.",
       "tags": [
-        "jump_prices",
-        "pricing",
-        "jump",
-        "19.9"
+        "go_karting",
+        "go_kart",
+        "main_track"
       ],
-      "sheet_name": "Jump Prices",
+      "sheet_name": "Go Karting",
       "source": "knowledge_base",
-      "metadata": {}
+      "metadata": {
+        "track": "Main Track",
+        "race_type": "Standalone Race"
+      }
     },
     {
       "id": "scb_gokart_005",
-      "category": "Pricing",
-      "subcategory": "Jump Passes",
+      "category": "Go Karting",
+      "subcategory": "Main Track",
       "location": "Scarborough",
-      "question": "How much does the 9.9 cost?",
-      "answer": "The 9.9 at AeroSports Scarborough is $54 inches (driver) plus tax. It's available for Add-On Race. This pass includes First come first served. No advance booking..",
+      "question": "What are the go karting options and prices?",
+      "answer": "A Add-On Race go kart race on the Main Track track costs $9.90 plus tax. This is for guests who already have a jump pass. Up to 10 laps. For guests who HAVE already purchased a jump pass. Drivers must be at least 54 inches (driver) tall and closed-toed shoes are required.",
       "tags": [
-        "jump_prices",
-        "pricing",
-        "jump",
-        "9.9"
+        "go_karting",
+        "go_kart",
+        "main_track"
       ],
-      "sheet_name": "Jump Prices",
+      "sheet_name": "Go Karting",
       "source": "knowledge_base",
-      "metadata": {}
+      "metadata": {
+        "track": "Main Track",
+        "race_type": "Add-On Race"
+      }
     },
     {
       "id": "scb_gokart_005",
-      "category": "Pricing",
-      "subcategory": "Jump Passes",
+      "category": "Go Karting",
+      "subcategory": "Mini Track",
       "location": "Scarborough",
-      "question": "How much does the 9.9 cost?",
-      "answer": "The 9.9 at AeroSports Scarborough is $36 inches plus tax. It's available for Standalone Race. This pass includes For kids as young as 3 years old.",
+      "question": "What are the go karting options and prices?",
+      "answer": "A Standalone Race go kart race on the Mini Track track costs $9.90 plus tax. This is for guests who are not purchasing a jump pass. Up to 10 laps. For guests NOT purchasing a jump pass. Drivers must be at least 36 inches tall and closed-toed shoes are required.",
       "tags": [
-        "jump_prices",
-        "pricing",
-        "jump",
-        "9.9"
+        "go_karting",
+        "go_kart",
+        "mini_track"
       ],
-      "sheet_name": "Jump Prices",
+      "sheet_name": "Go Karting",
       "source": "knowledge_base",
-      "metadata": {}
+      "metadata": {
+        "track": "Mini Track",
+        "race_type": "Standalone Race"
+      }
     },
     {
       "id": "scb_gokart_005",
-      "category": "Pricing",
-      "subcategory": "Jump Passes",
+      "category": "Go Karting",
+      "subcategory": "Mini Track",
       "location": "Scarborough",
-      "question": "How much does the 4.9 cost?",
-      "answer": "The 4.9 at AeroSports Scarborough is $36 inches plus tax. It's available for Add-On Race.",
+      "question": "What are the go karting options and prices?",
+      "answer": "A Add-On Race go kart race on the Mini Track track costs $4.90 plus tax. This is for guests who already have a jump pass. Up to 10 laps. For guests who HAVE already purchased a jump pass. Drivers must be at least 36 inches tall and closed-toed shoes are required.",
       "tags": [
-        "jump_prices",
-        "pricing",
-        "jump",
-        "4.9"
+        "go_karting",
+        "go_kart",
+        "mini_track"
       ],
-      "sheet_name": "Jump Prices",
+      "sheet_name": "Go Karting",
+      "source": "knowledge_base",
+      "metadata": {
+        "track": "Mini Track",
+        "race_type": "Add-On Race"
+      }
+    },
+    {
+      "id": "scb_toddler_007",
+      "category": "Special Programs",
+      "subcategory": "Toddler Time",
+      "location": "Scarborough",
+      "question": "What is Toddler Time?",
+      "answer": "Toddler Time at AeroSports Scarborough is available Saturday Mornings from 9am to 10am. It costs $15.90 plus tax. Ages 0 to 5 ONLY. One parent or guardian jumps free with the toddler. Great for little ones to explore trampolines in a safe environment without bigger kids around.",
+      "tags": [
+        "special_programs",
+        "toddler_time"
+      ],
+      "sheet_name": "Special Programs",
       "source": "knowledge_base",
       "metadata": {}
     },
     {
       "id": "scb_glow_006",
-      "category": "Pricing",
-      "subcategory": "Jump Passes",
+      "category": "Special Programs",
+      "subcategory": "Glow Night",
       "location": "Scarborough",
-      "question": "How much does the During regular hours cost?",
-      "answer": "The During regular hours at AeroSports Scarborough is $Same as regular admission plus tax for Scarborough has glow in the dark at all times of jump time. It's available for Glow in the dark at ALL times.",
+      "question": "What is Glow Night?",
+      "answer": "Glow Night at AeroSports Scarborough is available Every day during regular hours from During regular hours. It costs $Same as regular admission plus tax. Scarborough has glow in the dark at all times. Neon lights and glow effects are always on. No need for white or neon shirts like other locations.",
       "tags": [
-        "jump_prices",
-        "pricing",
-        "jump",
-        "during_regular_hours"
+        "special_programs",
+        "glow_night"
       ],
-      "sheet_name": "Jump Prices",
-      "source": "knowledge_base",
-      "metadata": {}
-    },
-    {
-      "id": "scb_toddler_007",
-      "category": "Pricing",
-      "subcategory": "Jump Passes",
-      "location": "Scarborough",
-      "question": "How much does the 9AM - 10AM cost?",
-      "answer": "The 9AM - 10AM at AeroSports Scarborough is $15.90 (Ages 0-5 ONLY) plus tax for Includes 1x FREE admission for a parent of jump time. It's available for Saturday Mornings. This pass includes Dedicated session for ages 0-5.",
-      "tags": [
-        "jump_prices",
-        "pricing",
-        "jump",
-        "9am_-_10am"
-      ],
-      "sheet_name": "Jump Prices",
+      "sheet_name": "Special Programs",
       "source": "knowledge_base",
       "metadata": {}
     },
     {
       "id": "scb_special_008",
-      "category": "Pricing",
-      "subcategory": "Jump Passes",
+      "category": "Special Programs",
+      "subcategory": "Special Needs Program",
       "location": "Scarborough",
-      "question": "How much does the jump pass cost?",
-      "answer": "It's available for All operating hours. This pass includes Valid Access 2 Card must be presented at check-in.",
+      "question": "What is Special Needs Program?",
+      "answer": "Special Needs Program at AeroSports Scarborough is available All operating hours from Anytime during park hours. It costs $19.90 plus tax. 120 minutes of play time, no go kart races included. One support worker admitted free with a waiver. Open to all guests with special needs.",
       "tags": [
-        "jump_prices",
-        "pricing",
-        "jump"
+        "special_programs",
+        "special_needs_program"
       ],
-      "sheet_name": "Jump Prices",
+      "sheet_name": "Special Programs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_020",
+      "category": "Attractions",
+      "subcategory": "Freestyle / Open Jump",
+      "location": "Scarborough",
+      "question": "What is Freestyle / Open Jump?",
+      "answer": "Freestyle / Open Jump at AeroSports Scarborough Wall-to-wall trampolines where you can jump, flip, and freestyle. Our main trampoline area with interconnected trampolines for bouncing fun. It is suitable for All ages. As long as a child can walk, they can jump.. Freestyle / Open Jump is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "freestyle_/_open_jump"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_021",
+      "category": "Attractions",
+      "subcategory": "Rock Walls",
+      "location": "Scarborough",
+      "question": "What is Rock Walls?",
+      "answer": "Rock Walls at AeroSports Scarborough Indoor rock climbing walls with different difficulty levels. Test your strength and push your limits climbing to the top. It is suitable for All ages. Rock Walls is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "rock_walls"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_022",
+      "category": "Attractions",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "What is Go Karting?",
+      "answer": "Go Karting at AeroSports Scarborough Indoor go kart racing on two tracks. Main track for taller riders and Mini track for younger kids. Electric karts, up to 10 laps per race. It is suitable for Main Track: must be 54 inches tall. Mini Track: must be 36 inches tall. Closed-toed shoes required.. Separate ticket or add-on. See Go Karting sheet for pricing.",
+      "tags": [
+        "attractions",
+        "go_karting"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_023",
+      "category": "Attractions",
+      "subcategory": "360 Bicycle",
+      "location": "Scarborough",
+      "question": "What is 360 Bicycle?",
+      "answer": "360 Bicycle at AeroSports Scarborough Pedal-powered thrill ride where you cycle through a full 360 degree loop in the air. A unique experience you won't find at most parks. It is suitable for All ages. 360 Bicycle is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "360_bicycle"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_024",
+      "category": "Attractions",
+      "subcategory": "Donut Slide and Carpet Slide",
+      "location": "Scarborough",
+      "question": "What is Donut Slide and Carpet Slide?",
+      "answer": "Donut Slide and Carpet Slide at AeroSports Scarborough High-speed sliding fun. Grab a tube or carpet and race down our giant slides. Great for all ages. It is suitable for All ages. Donut Slide and Carpet Slide is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "donut_slide_and_carpet_slide"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_025",
+      "category": "Attractions",
+      "subcategory": "Dodgeball",
+      "location": "Scarborough",
+      "question": "What is Dodgeball?",
+      "answer": "Dodgeball at AeroSports Scarborough Trampoline dodgeball arena where you bounce and throw. High-energy team game, great for groups and competitive fun. It is suitable for All ages. Dodgeball is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "dodgeball"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_026",
+      "category": "Attractions",
+      "subcategory": "Slam Basketball / Aero Slam",
+      "location": "Scarborough",
+      "question": "What is Slam Basketball / Aero Slam?",
+      "answer": "Slam Basketball / Aero Slam at AeroSports Scarborough Trampoline basketball hoops where you can bounce and dunk like a pro. Slam dunk your way to fun. It is suitable for All ages. Slam Basketball / Aero Slam is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "slam_basketball_/_aero_slam"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_027",
+      "category": "Attractions",
+      "subcategory": "Ninja Maze",
+      "location": "Scarborough",
+      "question": "What is Ninja Maze?",
+      "answer": "Ninja Maze at AeroSports Scarborough Obstacle course maze with twists, turns, and challenges to test your agility and ninja skills. Navigate your way through. It is suitable for All ages. Ninja Maze is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "ninja_maze"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_028",
+      "category": "Attractions",
+      "subcategory": "Jump Tower / Aero Drop",
+      "location": "Scarborough",
+      "question": "What is Jump Tower / Aero Drop?",
+      "answer": "Jump Tower / Aero Drop at AeroSports Scarborough Adrenaline-filled free-fall jump from above. Leap off the tower and land safely below. Great for thrill seekers. It is suitable for All ages. Jump Tower / Aero Drop is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "jump_tower_/_aero_drop"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_attr_029",
+      "category": "Attractions",
+      "subcategory": "Ninja Warrior",
+      "location": "Scarborough",
+      "question": "What is Ninja Warrior?",
+      "answer": "Ninja Warrior at AeroSports Scarborough Full ninja warrior obstacle course to test your strength, speed, and agility. Inspired by the TV show, suitable for all skill levels. It is suitable for All ages. Ninja Warrior is included with any jump pass at no extra cost. Included with any jump pass.",
+      "tags": [
+        "attractions",
+        "ninja_warrior"
+      ],
+      "sheet_name": "Attractions",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_bday_009_premium_party",
+      "category": "Birthday Parties",
+      "subcategory": "Premium Party",
+      "location": "Scarborough",
+      "question": "What does the Premium Party birthday package include?",
+      "answer": "The Premium Party at AeroSports Scarborough is $39.90 plus tax per jumper with a minimum of 10 jumpers. Guests get first 75 mins on the courts and last 45 mins in a private party room. Includes: Pizza: 1 Large per 5 jumpers; Drinks: 1 Juice Box per jumper; Jump Pass to birthday child: FREE 60-min pass; Guests Jumpers Add-On Pass: FREE 60-min add-on; Glow T-Shirt for Birthday Child: Yes; Digital Invitations: Yes. Room type: Party Room 1-4 (30 max).",
+      "tags": [
+        "birthday_parties",
+        "birthday",
+        "party",
+        "premium_party"
+      ],
+      "sheet_name": "Birthday Parties",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_bday_009_vip_party",
+      "category": "Birthday Parties",
+      "subcategory": "VIP Party",
+      "location": "Scarborough",
+      "question": "What does the VIP Party birthday package include?",
+      "answer": "The VIP Party at AeroSports Scarborough is $44.90 plus tax per jumper with a minimum of 10 jumpers. Guests get first 90 mins on the courts and last 60 mins in a private party room. Includes: Pizza: 1 Large per 5 jumpers; Drinks: 1 Juice Box + Water Bottle per jumper; Jump Pass to birthday child: FREE 60-min pass; Guests Jumpers Add-On Pass: FREE 60-min add-on; Glow T-Shirt for Birthday Child: Yes; Digital Invitations: Yes; Socks Discount: 50% off ($2.00). Room type: Party Room 1-4 (30 max).",
+      "tags": [
+        "birthday_parties",
+        "birthday",
+        "party",
+        "vip_party"
+      ],
+      "sheet_name": "Birthday Parties",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_bday_009_ultimate_party",
+      "category": "Birthday Parties",
+      "subcategory": "Ultimate Party",
+      "location": "Scarborough",
+      "question": "What does the Ultimate Party birthday package include?",
+      "answer": "The Ultimate Party at AeroSports Scarborough is $59.90 plus tax per jumper with a minimum of 10 jumpers. Guests get first 120 mins on the courts and last 60 mins in a private party room. Includes: Pizza: 1 Large per 5 jumpers; Drinks: 1 Juice Box OR Pop + Water Bottle per jumper; Jump Pass to birthday child: FREE 30-Day pass; Guests Jumpers Add-On Pass: FREE 60-min add-on; Glow T-Shirt for Birthday Child: Yes; Digital Invitations: Yes; Physical Invitations: Yes (FREE); Socks Discount: FREE Socks; Go Kart Race: 1x per jumper; Outside Food Fee Waived: Yes ($50 waived). Room type: Party Room 1-4 (30 max).",
+      "tags": [
+        "birthday_parties",
+        "birthday",
+        "party",
+        "ultimate_party"
+      ],
+      "sheet_name": "Birthday Parties",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_bday_addons_010",
+      "category": "Birthday Parties",
+      "subcategory": "Add-Ons",
+      "location": "Scarborough",
+      "question": "What birthday party add-ons are available?",
+      "answer": "Large Pizza (Cheese, Pepperoni, Halal Pepperoni, Vegetarian, Hawaiian) costs $25 plus tax. Juice Boxes (10 boxes) costs $30.00 plus tax. Soft Drink Cans (10 cans) costs $20.00 plus tax. Physical Birthday Invitations costs $0.75 each plus tax. Outside Food Fee costs $50.00 plus tax. Go Kart Race (add-on) costs $9.90 plus tax. Late Ordering Fee (within 24hrs) costs $20.00 plus tax.",
+      "tags": [
+        "birthday_parties",
+        "birthday",
+        "party",
+        "addons"
+      ],
+      "sheet_name": "Birthday Parties",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_bday_terms_011",
+      "category": "Birthday Parties",
+      "subcategory": "Terms & Conditions",
+      "location": "Scarborough",
+      "question": "What are the birthday party terms and conditions?",
+      "answer": "Rescheduling: Can reschedule for 1 year from booking date without charges. Cancellation (14+ days): Store gift card for refund amount. Cancellation (within 14 days): No refund provided. Package Changes: Must be 14+ days in advance, subject to availability. Waivers: Required for all jumpers. Under 18 signed by parent/guardian. Valid for 1 year. Room Supplies: Plates, cups, tablecloths included. Jumping Area: Shared with other patrons; party room is private. Prohibited Items: No piñatas, confetti, or silly string. $40 cleaning charge if used. Allergies: Advise of food allergies/sensitivities in advance. Arrival: All guests arrive 20 minutes early for check-in. Lost Items: AeroSports not responsible for lost/stolen items.",
+      "tags": [
+        "birthday_parties",
+        "birthday",
+        "party",
+        "terms",
+        "cancellation"
+      ],
+      "sheet_name": "Birthday Parties",
       "source": "knowledge_base",
       "metadata": {}
     },
@@ -247,10 +503,55 @@
       "subcategory": "Group Bookings",
       "location": "Scarborough",
       "question": "How do group bookings work?",
-      "answer": "25% off for 15+ jumpers. Required at time of booking. 25% discount on $33.89 (120 min $29.90 + socks $3.99). Pricing is the same for weekdays and weekends. Add-on options available at extra cost. SCB exclusive perk.",
+      "answer": "Applies to all group bookings. 25% off for 15 or more jumpers. Required at time of booking. 25% discount on $33.89 which is 120 min $29.90 plus socks $3.99. Pricing is the same for weekdays and weekends. Add-on options available at extra cost. Can be added on separately.",
       "tags": [
         "group_bookings",
         "group"
+      ],
+      "sheet_name": "Group Bookings",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_corporate_030",
+      "category": "Group Bookings",
+      "subcategory": "Corporate Events",
+      "location": "Scarborough",
+      "question": "How do corporate events work?",
+      "answer": "Energetic environment with trampoline courts, obstacle courses, and more. Customizable packages available.",
+      "tags": [
+        "group_bookings",
+        "corporate"
+      ],
+      "sheet_name": "Group Bookings",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_school_031",
+      "category": "Group Bookings",
+      "subcategory": "School Trips",
+      "location": "Scarborough",
+      "question": "How do school field trips work?",
+      "answer": "Minimum 15 people. Promotes active play and teamwork in a safe environment. Access to trampoline courts, obstacle courses, and more.",
+      "tags": [
+        "group_bookings",
+        "school"
+      ],
+      "sheet_name": "Group Bookings",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_fundraise_032",
+      "category": "Group Bookings",
+      "subcategory": "Fundraising",
+      "location": "Scarborough",
+      "question": "How do fundraising events work?",
+      "answer": "Great for schools, teams, troops, and community organizations. Customizable packages with promotional support included.",
+      "tags": [
+        "group_bookings",
+        "fundraise"
       ],
       "sheet_name": "Group Bookings",
       "source": "knowledge_base",
@@ -262,7 +563,7 @@
       "subcategory": "Facility Rentals",
       "location": "Scarborough",
       "question": "What does a facility rental include?",
-      "answer": "Exclusive access to entire facility. Food/catering additional cost. Included with facility rental.",
+      "answer": "Exclusive access to entire facility. Exclusive access to entire facility. Private access with dedicated staff on-site. Food and catering at additional cost. Included with facility rental.",
       "tags": [
         "group_bookings",
         "facility"
@@ -272,15 +573,15 @@
       "metadata": {}
     },
     {
-      "id": "scb_room_014",
+      "id": "scb_rooms_014",
       "category": "Group Bookings",
-      "subcategory": "Group Bookings",
+      "subcategory": "Room Rentals",
       "location": "Scarborough",
-      "question": "How do group bookings work?",
-      "answer": "25-30 people. 80 people.",
+      "question": "What are the party room options?",
+      "answer": "25 to 30 people capacity. 80 people capacity.",
       "tags": [
         "group_bookings",
-        "room"
+        "rooms"
       ],
       "sheet_name": "Group Bookings",
       "source": "knowledge_base",
@@ -299,6 +600,99 @@
         "kids"
       ],
       "sheet_name": "Aero Camp",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_passes_016",
+      "category": "Passes",
+      "subcategory": "Passes",
+      "location": "Scarborough",
+      "question": "What passes are available?",
+      "answer": "The All Day Pass is $39.90 plus tax and is valid for Valid by end of the day. The 30 Day Pass is $49.90+tax plus tax and is valid for Valid 30 days from purchase. The 90 Day Pass is $149.90+tax plus tax and is valid for Valid 90 days from purchase. The Annual Pass is $364.90+tax plus tax and is valid for Valid 365 days from purchase.",
+      "tags": [
+        "passes",
+        "pass",
+        "membership"
+      ],
+      "sheet_name": "Passes",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_promo_040",
+      "category": "Promotions",
+      "subcategory": "Promotions",
+      "location": "Scarborough",
+      "question": "Are there any current promotions or deals?",
+      "answer": "Right now we have a March Birthday Promotion!. Use code MARCHBDAY50 for $50 off on Premium Party. Up to $150 OFF on birthday parties. Book by March 31st. Host by September 30th.",
+      "tags": [
+        "promotions",
+        "promo",
+        "deal",
+        "marchbday50"
+      ],
+      "sheet_name": "Promotions",
+      "source": "knowledge_base",
+      "metadata": {
+        "code": "MARCHBDAY50",
+        "status": "Active"
+      }
+    },
+    {
+      "id": "scb_promo_040",
+      "category": "Promotions",
+      "subcategory": "Promotions",
+      "location": "Scarborough",
+      "question": "Are there any current promotions or deals?",
+      "answer": "Right now we have a March Birthday Promotion!. Use code MARCHBDAY100 for $100 off on VIP Party. Up to $150 OFF on birthday parties. Book by March 31st. Host by September 30th.",
+      "tags": [
+        "promotions",
+        "promo",
+        "deal",
+        "marchbday100"
+      ],
+      "sheet_name": "Promotions",
+      "source": "knowledge_base",
+      "metadata": {
+        "code": "MARCHBDAY100",
+        "status": "Active"
+      }
+    },
+    {
+      "id": "scb_promo_040",
+      "category": "Promotions",
+      "subcategory": "Promotions",
+      "location": "Scarborough",
+      "question": "Are there any current promotions or deals?",
+      "answer": "Right now we have a March Birthday Promotion!. Use code MARCHBDAY150 for $150 off on Ultimate Party. Up to $150 OFF on birthday parties. Book by March 31st. Host by September 30th.",
+      "tags": [
+        "promotions",
+        "promo",
+        "deal",
+        "marchbday150"
+      ],
+      "sheet_name": "Promotions",
+      "source": "knowledge_base",
+      "metadata": {
+        "code": "MARCHBDAY150",
+        "status": "Active"
+      }
+    },
+    {
+      "id": "scb_rules_050",
+      "category": "Park Rules",
+      "subcategory": "Gift Cards",
+      "location": "Scarborough",
+      "question": "What are the park rules for gift cards?",
+      "answer": "All jumpers are required to wear AeroSports Socks on all park attractions. Socks cost $3.99 and are reusable. Adults or individuals staying to watch their kids or supervise are counted as spectators and do not need to pay. Toddlers under 2 must have a parent with them who has purchased an adult jump ticket for ages 6 and up. Trampolines have a 300 pound weight limit. All jumpers must have a completed liability waiver on file. Anyone under 18 must have the waiver signed by a parent or legal guardian. Fill out the waiver online at waiver.roller.app/aerosportsscarborough or complete it on site. Anyone 18 or older can sign the waiver for themselves with a valid photo ID that includes a picture and date of birth. All purchases are final and non-refundable. Rescheduling is free of charge and can be done 24 hours or more before the reservation date. This does not apply to birthday party schedule changes. All prices shown are plus HST. Closed-toed shoes are required for Go Karting. Height restrictions apply for Go Karting. Main Track requires 54 inches. Mini Track requires 36 inches. Stand-alone Go Kart tickets are for guests NOT purchasing a jump pass. Go Kart Add-Ons are for guests who HAVE already purchased a jump pass. Children under 10 cannot be dropped off without an adult. All children under 18 need a parent or legal guardian to sign the waiver. Outside food is not allowed in the park except with certain birthday party packages. The Snack Shack sells pizza, slushies, candy, drinks, and other treats. Complimentary Wi-Fi is available for parents. We have plenty of seating throughout the facility. We hire 16 years old and older. Gift cards are available for purchase at the park or online. Jump cards never expire and can be used by different jumpers.",
+      "tags": [
+        "park_rules",
+        "rules",
+        "safety",
+        "gift_cards"
+      ],
+      "sheet_name": "Park Rules",
       "source": "knowledge_base",
       "metadata": {}
     },
@@ -1583,20 +1977,595 @@
       "metadata": {}
     },
     {
-      "id": "scb_passes_016",
-      "category": "Passes",
-      "subcategory": "Passes",
+      "id": "scb_faq_180",
+      "category": "FAQ",
+      "subcategory": "General",
       "location": "Scarborough",
-      "question": "What passes are available?",
-      "answer": "The All Day Pass is $39.90 plus tax and is valid for Valid by end of the day. The 30 Day Pass is $49.90+tax plus tax and is valid for Valid 30 days from purchase. The 90 Day Pass is $149.90+tax plus tax and is valid for Valid 90 days from purchase. The Annual Pass is $364.90+tax plus tax and is valid for Valid 365 days from purchase.",
+      "question": "What is included in the jump pass price?",
+      "answer": "Your jump pass includes access to all attractions in the park like trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and ninja maze. Go karting is the only attraction not included and needs a separate ticket or add-on.",
       "tags": [
-        "passes",
-        "pass",
-        "membership"
+        "faqs",
+        "faq",
+        "general"
       ],
-      "sheet_name": "Passes",
+      "sheet_name": "FAQs",
       "source": "knowledge_base",
       "metadata": {}
+    },
+    {
+      "id": "scb_faq_181",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "What is the address of AeroSports Scarborough?",
+      "answer": "We are located at 1120 Birchmount Rd, Scarborough, Ontario, M1K 5G4. You can find us on Google Maps by searching AeroSports Scarborough.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_182",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "What are your hours of operation?",
+      "answer": "We are open Sunday to Thursday from 10am to 8pm, and Friday to Saturday from 10am to 10pm.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_183",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "How do I book online?",
+      "answer": "You can book your jump passes online at ecom.roller.app/aerosportsscarborough. For birthday parties, visit the birthday booking page on our website or call us at 289-454-5555.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_184",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Do you have any current promotions or deals?",
+      "answer": "Check our website or ask us about current promotions. We run monthly specials including birthday party discounts and seasonal deals.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_185",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "How tall do you have to be for go karting?",
+      "answer": "For the main track, drivers must be at least 54 inches tall. For the mini track, riders must be at least 36 inches tall. Closed-toed shoes are required for all go kart riders.",
+      "tags": [
+        "faqs",
+        "faq",
+        "go_karting"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_186",
+      "category": "FAQ",
+      "subcategory": "Go Karting",
+      "location": "Scarborough",
+      "question": "How much does go karting cost?",
+      "answer": "A standalone go kart race on the main track is $19.90 and the mini track is $9.90. If you already have a jump pass, add-on races are $9.90 for the main track and $4.90 for the mini track. Each race is up to 10 laps.",
+      "tags": [
+        "faqs",
+        "faq",
+        "go_karting"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_187",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Is there a special needs program?",
+      "answer": "Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_188",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "What is glow night at Scarborough?",
+      "answer": "At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_189",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Can I host a corporate event or team building activity?",
+      "answer": "Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_190",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Can schools book field trips at AeroSports?",
+      "answer": "Absolutely! We welcome school groups, church groups, sports teams, and youth organizations. Minimum 15 people. Call 289-454-5555 or email events.scb@aerosportsparks.ca to book.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_faq_191",
+      "category": "FAQ",
+      "subcategory": "General",
+      "location": "Scarborough",
+      "question": "Can I rent the whole facility for a private event?",
+      "answer": "Yes, we offer full facility rentals. Weekday rentals are $2,000 per hour and weekend rentals are $3,000 per hour. Capacity is up to 220 jumpers with exclusive access to the entire facility including unlimited go karting.",
+      "tags": [
+        "faqs",
+        "faq",
+        "general"
+      ],
+      "sheet_name": "FAQs",
+      "source": "knowledge_base",
+      "metadata": {}
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "greeting",
+      "location": "Scarborough",
+      "question": "Information for phone callers about greeting",
+      "answer": "Thank you for calling AeroSports Scarborough! How can I help you today? Use warm, upbeat tone.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "greeting"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "greeting"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "hold",
+      "location": "Scarborough",
+      "question": "Information for phone callers about hold",
+      "answer": "One moment while I look that up for you. Use when retrieving info.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "hold"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "hold"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "transfer_to_human",
+      "location": "Scarborough",
+      "question": "Information for phone callers about transfer_to_human",
+      "answer": "Let me connect you with one of our team members who can help you with that. One moment please. Use when the question is beyond what the AI can handle.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "transfer_to_human"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "transfer_to_human"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "closing",
+      "location": "Scarborough",
+      "question": "Information for phone callers about closing",
+      "answer": "Thanks for calling AeroSports Scarborough! We look forward to seeing you. Have a great day! Always end on a positive note.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "closing"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "closing"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "address_response",
+      "location": "Scarborough",
+      "question": "Information for phone callers about address_response",
+      "answer": "We are at 1120 Birchmount Road in Scarborough. The postal code is M1K 5G4. Speak address clearly and slowly.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "address_response"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "address_response"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "hours_response",
+      "location": "Scarborough",
+      "question": "Information for phone callers about hours_response",
+      "answer": "We are open Sunday through Thursday from 10 AM to 8 PM, and Friday and Saturday from 10 AM to 10 PM. Say times clearly with AM/PM.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "hours_response"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "hours_response"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "price_overview",
+      "location": "Scarborough",
+      "question": "Information for phone callers about price_overview",
+      "answer": "Our Premium Jump Pass is $24.90 for 90 minutes, and the VIP Jump Pass is $29.90 for 120 minutes. We also have an All Day Pass for $39.90. All prices are plus tax. Aero Socks are required and cost $3.99 but they are reusable so you can bring them back next time. Give a brief summary, offer to go deeper.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "price_overview"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "price_overview"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "birthday_overview",
+      "location": "Scarborough",
+      "question": "Information for phone callers about birthday_overview",
+      "answer": "We have three birthday party packages. The Premium Party starts at $39.90 per jumper with 75 minutes of jump time and 45 minutes in a private party room. The VIP Party is $44.90 per jumper with 90 minutes of jump time and 60 minutes of room time. And the Ultimate Party is $59.90 per jumper with 120 minutes of jump time, 60 minutes of room time, plus go karting for every jumper. All packages include pizza and drinks. Minimum 10 jumpers. Would you like more details on any package? Pause between packages for clarity.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "birthday_overview"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "birthday_overview"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "gokart_overview",
+      "location": "Scarborough",
+      "question": "Information for phone callers about gokart_overview",
+      "answer": "We have go karting on two tracks. The main track is for riders 54 inches or taller and costs $19.90 for a standalone race or $9.90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller and costs $9.90 standalone or $4.90 as an add-on. Each race is up to 10 laps. Just remember you need closed-toed shoes for go karting. Mention height requirements clearly.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "gokart_overview"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "gokart_overview"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "booking_redirect",
+      "location": "Scarborough",
+      "question": "Information for phone callers about booking_redirect",
+      "answer": "You can book online at our website aerosportsparks.ca or I can help you with that right now. Would you like to proceed? Guide toward booking.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "booking_redirect"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "booking_redirect"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "waiver_info",
+      "location": "Scarborough",
+      "question": "Information for phone callers about waiver_info",
+      "answer": "Everyone who enters the park needs a signed waiver, including non-jumpers. You can fill it out online ahead of time at our website to save time at check-in. For anyone under 18, a parent or legal guardian must sign the waiver. Emphasize online waiver to reduce wait times.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "waiver_info"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "waiver_info"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "group_booking",
+      "location": "Scarborough",
+      "question": "Information for phone callers about group_booking",
+      "answer": "For groups of 15 or more, we offer 25% off with the code GROUPBOOKING25. That brings the price down to about $25.47 per person for 120 minutes including socks. Would you like to book a group visit? Emphasize the savings.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "group_booking"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "group_booking"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "promo_march_bday",
+      "location": "Scarborough",
+      "question": "Information for phone callers about promo_march_bday",
+      "answer": "Right now we have a March Birthday Promotion with up to $150 off birthday parties. Use code MARCHBDAY50 for $50 off a Premium party, MARCHBDAY100 for $100 off a VIP party, or MARCHBDAY150 for $150 off an Ultimate party. You need to book by March 31st and host by September 30th. Only share if promo status is Active.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "promo_march_bday"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "promo_march_bday"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "camp_overview",
+      "location": "Scarborough",
+      "question": "Information for phone callers about camp_overview",
+      "answer": "We offer AeroCamp for kids ages 4 to 12. Full day camp runs from 8:30 AM to 4:30 PM and costs $69.90 per day or $299.90 for a full week. We also have half-day options for $39.90. Activities include trampolines, games, challenges, crafts, and group activities. Early drop-off from 7:30 AM and late pick-up past 6 PM are available for $10 each. Mention current camp availability if applicable.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "camp_overview"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "camp_overview"
+      }
+    },
+    {
+      "id": "scb_voice_060",
+      "category": "Voice Scripts",
+      "subcategory": "cannot_answer",
+      "location": "Scarborough",
+      "question": "Information for phone callers about cannot_answer",
+      "answer": "That is a great question. I do not have that specific information right now, but I can have someone from our team get back to you. Can I get your name and phone number? Collect callback info when unsure.",
+      "tags": [
+        "voice_call_scripts",
+        "voice",
+        "phone",
+        "cannot_answer"
+      ],
+      "sheet_name": "Voice Call Scripts",
+      "source": "voice_script",
+      "metadata": {
+        "scenario": "cannot_answer"
+      }
+    },
+    {
+      "id": "scb_qr_070",
+      "category": "Quick Replies",
+      "subcategory": "what_to_do",
+      "location": "Scarborough",
+      "question": "What can I do at AeroSports Scarborough?",
+      "answer": "AeroSports Scarborough has tons of activities! We have wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, a jump tower, and go karting. Everything except go karting is included in your jump pass.",
+      "tags": [
+        "chatbot_quick_replies",
+        "chatbot",
+        "quick_reply",
+        "what_to_do"
+      ],
+      "sheet_name": "Chatbot Quick Replies",
+      "source": "chatbot_qr",
+      "metadata": {
+        "intent": "what_to_do"
+      }
+    },
+    {
+      "id": "scb_qr_070",
+      "category": "Quick Replies",
+      "subcategory": "how_much",
+      "location": "Scarborough",
+      "question": "How much does it cost?",
+      "answer": "A 90-minute Premium Jump Pass is $24.90 and a 120-minute VIP Jump Pass is $29.90. The All Day Pass is $39.90. AeroSports grip socks are required and cost $3.99 but are reusable. All prices are plus tax. Go karting is separate starting at $9.90. Would you like to book?",
+      "tags": [
+        "chatbot_quick_replies",
+        "chatbot",
+        "quick_reply",
+        "how_much"
+      ],
+      "sheet_name": "Chatbot Quick Replies",
+      "source": "chatbot_qr",
+      "metadata": {
+        "intent": "how_much"
+      }
+    },
+    {
+      "id": "scb_qr_070",
+      "category": "Quick Replies",
+      "subcategory": "what_age",
+      "location": "Scarborough",
+      "question": "What age can kids come?",
+      "answer": "All ages are welcome! As long as your child can walk, they can jump. Kids under 2 get in free with a paying adult. We also have Toddler Time on Saturday mornings from 9 to 10 AM exclusively for ages 5 and under at $15.90, and one parent jumps free.",
+      "tags": [
+        "chatbot_quick_replies",
+        "chatbot",
+        "quick_reply",
+        "what_age"
+      ],
+      "sheet_name": "Chatbot Quick Replies",
+      "source": "chatbot_qr",
+      "metadata": {
+        "intent": "what_age"
+      }
+    },
+    {
+      "id": "scb_qr_070",
+      "category": "Quick Replies",
+      "subcategory": "party_info",
+      "location": "Scarborough",
+      "question": "Tell me about birthday parties",
+      "answer": "We have 3 birthday packages starting at $39.90 per jumper with a minimum of 10 kids. All packages include pizza, drinks, a private party room, a glow t-shirt for the birthday child, and digital invitations. The Ultimate Package also includes go karting, free 30 day pass and free socks for everyone! Want details on a specific package?",
+      "tags": [
+        "chatbot_quick_replies",
+        "chatbot",
+        "quick_reply",
+        "party_info"
+      ],
+      "sheet_name": "Chatbot Quick Replies",
+      "source": "chatbot_qr",
+      "metadata": {
+        "intent": "party_info"
+      }
+    },
+    {
+      "id": "scb_qr_070",
+      "category": "Quick Replies",
+      "subcategory": "directions",
+      "location": "Scarborough",
+      "question": "Where are you located?",
+      "answer": "We are at 1120 Birchmount Road in Scarborough, ON M1K 5G4. You can find us on Google Maps by searching AeroSports Scarborough. Our phone number is 289-454-5555.",
+      "tags": [
+        "chatbot_quick_replies",
+        "chatbot",
+        "quick_reply",
+        "directions"
+      ],
+      "sheet_name": "Chatbot Quick Replies",
+      "source": "chatbot_qr",
+      "metadata": {
+        "intent": "directions"
+      }
+    },
+    {
+      "id": "scb_qr_070",
+      "category": "Quick Replies",
+      "subcategory": "safety",
+      "location": "Scarborough",
+      "question": "Is it safe for my kids?",
+      "answer": "Safety is our top priority. We have trained staff, park rules posted throughout, and a 300 pound weight limit on trampolines. All jumpers need a signed waiver. Kids under 10 must have an adult present. Spectators are always free and we have comfy seating and free Wi-Fi for parents.",
+      "tags": [
+        "chatbot_quick_replies",
+        "chatbot",
+        "quick_reply",
+        "safety"
+      ],
+      "sheet_name": "Chatbot Quick Replies",
+      "source": "chatbot_qr",
+      "metadata": {
+        "intent": "safety"
+      }
     }
   ]
 }

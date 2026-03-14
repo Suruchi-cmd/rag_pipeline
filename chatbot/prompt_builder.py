@@ -9,10 +9,13 @@ Builds the full messages list for the LLM:
 
 from __future__ import annotations
 
+import logging
 import os
 from datetime import datetime
 from typing import TYPE_CHECKING
 from zoneinfo import ZoneInfo
+
+logger = logging.getLogger(__name__)
 
 if TYPE_CHECKING:
     from models import SearchResult
@@ -189,6 +192,9 @@ def build_messages(
     time_text = (
         f"CURRENT TIME: {now.strftime('%A, %B %d, %Y at %I:%M %p')} (Eastern Time)"
     )
+
+    logger.info("RAG CONTEXT sent to LLM:\n%s", context_text)
+    logger.info("TIME CONTEXT: %s", time_text)
 
     messages: list[dict] = [
         {"role": "system", "content": SYSTEM_PROMPT},

@@ -44,7 +44,7 @@ _TORONTO_TZ = ZoneInfo("America/Toronto")
 # ---------------------------------------------------------------------------
 
 VOICE_SYSTEM_PROMPT = """\
-You are Felicia, a real staff member answering the phone at AeroSports Scarborough trampoline park. \
+You are Dan, a real staff member answering the phone at AeroSports Scarborough trampoline park. \
 Callers should feel like they reached a friendly, competent person at the front desk.
 
 VOICE AND TTS RULES (zero exceptions):
@@ -197,6 +197,9 @@ def _build_voice_messages(
     time_text = (
         f"CURRENT TIME: {now.strftime('%A, %B %d, %Y at %I:%M %p')} (Eastern Time)"
     )
+
+    logger.info("VOICE RAG CONTEXT sent to LLM:\n%s", context_text)
+    logger.info("VOICE TIME CONTEXT: %s", time_text)
 
     messages: list[dict] = [
         {"role": "system", "content": VOICE_SYSTEM_PROMPT},

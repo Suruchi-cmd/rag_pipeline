@@ -456,12 +456,16 @@ def build_attraction_chunks(rows: list[dict]) -> list[ChunkRecord]:
 
 
 def build_birthday_chunks(rows: list[dict]) -> list[ChunkRecord]:
-    """Birthday Parties → one chunk per package + add-ons + terms.
+    """Birthday Parties → pivoted layout: columns are party types, rows are features.
 
-    Handles composite sheets with sub-tables (packages, add-ons, terms).
+    Sub-tables: packages (scb_bday_*), add-ons (scb_bday_addons_*), terms (scb_bday_terms_*).
     """
     chunks: list[ChunkRecord] = []
-    # Group rows by chunk_id
+
+    # Detect party-type columns (everything except chunk_id and field)
+    party_cols = [k for k in rows[0].keys() if k not in ('chunk_id', 'field')] if rows else []
+
+    # Split rows into groups by chunk_id
     groups: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
         if _skip_row(row):
@@ -472,46 +476,108 @@ def build_birthday_chunks(rows: list[dict]) -> list[ChunkRecord]:
         groups[cid].append(row)
 
     for cid, group_rows in groups.items():
-        parts = []
-        for row in group_rows:
-            # Try to build a natural sentence from available fields
-            name = _get(row, 'package') or _get(row, 'name') or _get(row, 'item') or _get(row, 'addon') or _get(row, 'add_on')
-            price = _get(row, 'price') or _get(row, 'cost')
-            jump_time = _get(row, 'jump_time') or _get(row, 'duration')
-            room_time = _get(row, 'room_time')
-            includes = _get(row, 'includes') or _get(row, 'description') or _get(row, 'details')
-            min_jumpers = _get(row, 'min_jumpers') or _get(row, 'minimum')
-            notes = _get(row, 'notes') or _get(row, 'terms')
+        if 'addons' in cid.lower():
+            # Add-ons sub-table: field = item name, first party col = price
+            parts = []
+            for row in group_rows:
+                item = _get(row, 'field')
+                price = str(row.get(party_cols[0], '')).strip() if party_cols else ''
+                if item and price:
+                    parts.append(f"{item} costs {_price_spoken(str(price))}.")
+                elif item:
+                    parts.append(f"{item}.")
+            if parts:
+                chunks.append(_chunk(
+                    chunk_id=cid,
+                    category='Birthday Parties',
+                    subcategory='Add-Ons',
+                    question='What birthday party add-ons are available?',
+                    answer=' '.join(parts),
+                    tags=_make_tags('Birthday Parties', 'birthday', 'party', 'addons'),
+                    sheet_name='Birthday Parties',
+                ))
 
-            if name and price:
-                sentence = f"The {name} is {_price_spoken(price)} per jumper"
-                if jump_time:
-                    sentence += f" with {jump_time} of jump time"
-                if room_time:
-                    sentence += f" and {room_time} in a private party room"
-                sentence += "."
-                parts.append(sentence)
-            elif name:
-                parts.append(f"The {name}.")
+        elif 'terms' in cid.lower():
+            # Terms sub-table: field = policy, first party col = details
+            parts = []
+            for row in group_rows:
+                policy = _get(row, 'field')
+                details = str(row.get(party_cols[0], '')).strip() if party_cols else ''
+                if policy and details:
+                    parts.append(f"{policy}: {details}")
+                    if not parts[-1].endswith('.'):
+                        parts[-1] += '.'
+            if parts:
+                chunks.append(_chunk(
+                    chunk_id=cid,
+                    category='Birthday Parties',
+                    subcategory='Terms & Conditions',
+                    question='What are the birthday party terms and conditions?',
+                    answer=' '.join(parts),
+                    tags=_make_tags('Birthday Parties', 'birthday', 'party', 'terms', 'cancellation'),
+                    sheet_name='Birthday Parties',
+                ))
 
-            if includes:
-                parts.append(includes if includes.endswith('.') else includes + '.')
-            if min_jumpers:
-                parts.append(f"Minimum {min_jumpers} jumpers.")
-            if notes:
-                parts.append(notes if notes.endswith('.') else notes + '.')
+        else:
+            # Packages sub-table (pivoted): one chunk per party type column
+            for col in party_cols:
+                features: dict[str, str] = {}
+                for row in group_rows:
+                    field_name = _get(row, 'field')
+                    value = str(row.get(col, '')).strip()
+                    if field_name and value:
+                        features[field_name] = value
 
-        if parts:
-            subcategory = 'Add-Ons' if 'addon' in cid.lower() else 'Birthday Packages'
-            chunks.append(_chunk(
-                chunk_id=cid,
-                category='Birthday Parties',
-                subcategory=subcategory,
-                question='What are the birthday party packages?' if 'addon' not in cid.lower() else 'What birthday party add-ons are available?',
-                answer=' '.join(parts),
-                tags=_make_tags('Birthday Parties', 'birthday', 'party'),
-                sheet_name='Birthday Parties',
-            ))
+                if not features:
+                    continue
+
+                parts = []
+                price = features.get('Price Per Jumper', '')
+                min_j = features.get('Minimum Jumpers', '')
+                courts = features.get('Courts Access', '')
+                room = features.get('Party Room Access', '')
+
+                intro = f"The {col} at AeroSports Scarborough"
+                if price:
+                    intro += f" is {_price_spoken(price)} per jumper"
+                if min_j:
+                    intro += f" with a minimum of {min_j} jumpers"
+                intro += "."
+                parts.append(intro)
+
+                if courts and room:
+                    parts.append(f"Guests get {courts.lower()} on the courts and {room.lower()} in a private party room.")
+                elif courts:
+                    parts.append(f"Guests get {courts.lower()} on the courts.")
+
+                # Collect all inclusions
+                include_items = []
+                for feat_key in ('Pizza', 'Drinks', 'Jump Pass to birthday child',
+                                 'Guests Jumpers Add-On Pass', 'Glow T-Shirt for Birthday Child',
+                                 'Digital Invitations', 'Physical Invitations',
+                                 'Socks Discount', 'Go Kart Race', 'Outside Food Fee Waived'):
+                    val = features.get(feat_key, '')
+                    if val and val.lower() not in ('no', 'n/a', ''):
+                        include_items.append(f"{feat_key}: {val}")
+
+                if include_items:
+                    parts.append("Includes: " + "; ".join(include_items) + ".")
+
+                room_type = features.get('Room Type', '')
+                if room_type:
+                    parts.append(f"Room type: {room_type}.")
+
+                chunk_id = f"{cid}_{col.lower().replace(' ', '_')}"
+                chunks.append(_chunk(
+                    chunk_id=chunk_id,
+                    category='Birthday Parties',
+                    subcategory=col,
+                    question=f'What does the {col} birthday package include?',
+                    answer=' '.join(parts),
+                    tags=_make_tags('Birthday Parties', 'birthday', 'party', col.lower().replace(' ', '_')),
+                    sheet_name='Birthday Parties',
+                ))
+
     return chunks
 
 
