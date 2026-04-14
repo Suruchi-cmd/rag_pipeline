@@ -31,9 +31,10 @@ logger = logging.getLogger(__name__)
 _SEMANTIC_SQL = """
 SELECT
     id, category, subcategory, location, question, answer, tags,
+    sheet_name, source, metadata,
     1 - (embedding <=> %(query_vec)s::vector) AS similarity
 FROM knowledge_chunks
-WHERE (%(category)s IS NULL OR category = %(category)s)
+WHERE (%(categories)s IS NULL OR category = ANY(%(categories)s))
 ORDER BY embedding <=> %(query_vec)s::vector
 LIMIT %(top_k)s;
 """
@@ -44,6 +45,7 @@ _HYBRID_SQL = """
 WITH base AS (
     SELECT
         id, category, subcategory, location, question, answer, tags,
+        sheet_name, source, metadata,
         1 - (embedding <=> %(query_vec)s::vector) AS semantic_score,
         (
             SELECT COUNT(*)::float / GREATEST(array_length(tags, 1), 1)
@@ -52,13 +54,28 @@ WITH base AS (
                OR lower(t) LIKE '%%' || lower(%(query)s) || '%%'
         ) AS keyword_score
     FROM knowledge_chunks
-    WHERE (%(category)s IS NULL OR category = %(category)s)
+    WHERE (%(categories)s IS NULL OR category = ANY(%(categories)s))
 )
 SELECT
     id, category, subcategory, location, question, answer, tags,
+    sheet_name, source, metadata,
     (%(semantic_w)s * semantic_score + %(keyword_w)s * keyword_score) AS similarity
 FROM base
 ORDER BY similarity DESC
+LIMIT %(top_k)s;
+"""
+
+# Voice search: cosine similarity with a boost for voice_script source chunks.
+_VOICE_SQL = """
+SELECT
+    id, category, subcategory, location, question, answer, tags,
+    sheet_name, source, metadata,
+    1 - (embedding <=> %(query_vec)s::vector) AS similarity
+FROM knowledge_chunks
+WHERE 1 - (embedding <=> %(query_vec)s::vector) > 0.3
+ORDER BY
+    (CASE WHEN source = 'voice_script' THEN 0.1 ELSE 0 END)
+    + (1 - (embedding <=> %(query_vec)s::vector)) DESC
 LIMIT %(top_k)s;
 """
 
@@ -77,6 +94,9 @@ def _row_to_chunk(row: dict) -> ChunkRecord:
         question=row["question"],
         answer=row["answer"],
         tags=list(row["tags"]),
+        sheet_name=row.get("sheet_name", ""),
+        source=row.get("source", "knowledge_base"),
+        metadata=row.get("metadata") or {},
     )
 
 
@@ -99,7 +119,7 @@ def _fetch(sql: str, params: dict) -> list[SearchResult]:
 
 def semantic_search(
     query: str,
-    category: Optional[str] = None,
+    categories: Optional[list[str]] = None,
     top_k: int = config.DEFAULT_TOP_K,
 ) -> list[SearchResult]:
     """
@@ -107,7 +127,8 @@ def semantic_search(
 
     Args:
         query: Natural-language question from the user.
-        category: Optional filter (e.g. "FAQ", "Pricing", "Birthday Parties").
+        categories: Optional list of categories to filter on
+                    (e.g. ["Birthday Parties", "FAQ"]).
         top_k: Number of results to return.
 
     Returns:
@@ -118,7 +139,7 @@ def semantic_search(
         _SEMANTIC_SQL,
         {
             "query_vec": query_vec,
-            "category": category,
+            "categories": categories,
             "top_k": top_k,
         },
     )
@@ -126,7 +147,7 @@ def semantic_search(
 
 def hybrid_search(
     query: str,
-    category: Optional[str] = None,
+    categories: Optional[list[str]] = None,
     top_k: int = config.DEFAULT_TOP_K,
 ) -> list[SearchResult]:
     """
@@ -136,7 +157,7 @@ def hybrid_search(
 
     Args:
         query: Natural-language or keyword query.
-        category: Optional category filter.
+        categories: Optional list of categories to filter on.
         top_k: Number of results to return.
 
     Returns:
@@ -148,10 +169,31 @@ def hybrid_search(
         {
             "query_vec": query_vec,
             "query": query,
-            "category": category,
+            "categories": categories,
             "top_k": top_k,
             "semantic_w": config.HYBRID_SEMANTIC_WEIGHT,
             "keyword_w": config.HYBRID_KEYWORD_WEIGHT,
+        },
+    )
+
+
+def voice_search(
+    query: str,
+    top_k: int = config.DEFAULT_TOP_K,
+) -> list[SearchResult]:
+    """
+    Search with voice_script source boost for phone calls.
+
+    Uses cosine similarity with a 0.1 boost for voice_script chunks,
+    ensuring phone-optimised scripts surface first when relevant.
+    Only returns chunks with similarity > 0.3.
+    """
+    query_vec = emb.embed_text(query, input_type="query")
+    return _fetch(
+        _VOICE_SQL,
+        {
+            "query_vec": query_vec,
+            "top_k": top_k,
         },
     )
 
@@ -192,10 +234,12 @@ def main() -> None:
             if not query:
                 continue
             fn = hybrid_search if args.mode == "hybrid" else semantic_search
-            _print_results(fn(query, category=args.category, top_k=args.top_k))
+            cats = [args.category] if args.category else None
+            _print_results(fn(query, categories=cats, top_k=args.top_k))
     else:
         fn = hybrid_search if args.mode == "hybrid" else semantic_search
-        _print_results(fn(args.query, category=args.category, top_k=args.top_k))
+        cats = [args.category] if args.category else None
+        _print_results(fn(args.query, categories=cats, top_k=args.top_k))
 
     config.close_db_pool()
 

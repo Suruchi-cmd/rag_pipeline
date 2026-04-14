@@ -1,0 +1,45 @@
+2026-03-31 04:20:09,823  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA83aa946b1a9d423ced9b2d1f6b7b2602.log
+2026-03-31 04:20:09,823  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] ConversationRelay connected from +14373612990
+2026-03-31 04:20:17,469  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] User said: Hi, Dan. How are you?
+2026-03-31 04:20:18,225  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] LATENCY rag_api=756ms  docs=7
+2026-03-31 04:20:18,225  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Full messages sent to LLM (2 messages):
+2026-03-31 04:20:18,225  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:20:18,225  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:20:18,225  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] LATENCY prepare_voice_stream=757ms
+2026-03-31 04:20:18,581  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Assistant (full): I'm doing great, thanks for asking!How can I help you today?
+2026-03-31 04:20:27,971  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] User said: I just wanted to know actually, I wanted to do a birthday party tomorrow.
+2026-03-31 04:20:30,324  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] LATENCY rag_api=2083ms  docs=7
+2026-03-31 04:20:30,324  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Full messages sent to LLM (4 messages):
+2026-03-31 04:20:30,324  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:20:30,324  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:20:30,324  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[2] role=assistant content=I'm doing great, thanks for asking!How can I help you today?
+2026-03-31 04:20:30,324  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[3] role=user content=I just wanted to know actually, I wanted to do a birthday party tomorrow.
+2026-03-31 04:20:30,324  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] LATENCY prepare_voice_stream=2353ms
+2026-03-31 04:20:31,611  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Assistant (full): We're on Birchmount Road in Scarborough, and we'd be happy to host your child's birthday party.Which package are you thinking of booking?We've got the VIP Party, Premium Party, or Ultimate Party optio
+2026-03-31 04:20:56,942  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] User said: Anything if fine.
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] LATENCY rag_api=2638ms  docs=7
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Full messages sent to LLM (6 messages):
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[2] role=assistant content=I'm doing great, thanks for asking!How can I help you today?
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[3] role=user content=I just wanted to know actually, I wanted to do a birthday party tomorrow.
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[4] role=assistant content=We're on Birchmount Road in Scarborough, and we'd be happy to host your child's birthday party.Which package are you thinking of booking?We've got the VIP Party, Premium Party, or Ultimate Party options available.Do you already know which one you'd like to book, or would you like me to explain each 
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602]   msg[5] role=user content=Anything if fine.
+2026-03-31 04:20:59,894  INFO      chatbot.voice_handler  [CA83aa946b1a9d423ced9b2d1f6b7b2602] LATENCY prepare_voice_stream=2952ms
+2026-03-31 04:21:02,167  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Assistant (full): So all three packages include pizza, drinks, a private party room, a glow t-shirt for the birthday child, and digital invitations.The Premium Party is our most basic package, starting at 39 90 per jum
+2026-03-31 04:21:18,854  INFO      chatbot.server  [CA83aa946b1a9d423ced9b2d1f6b7b2602] Session log closed

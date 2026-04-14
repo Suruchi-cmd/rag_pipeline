@@ -8,9 +8,8 @@ Flow:
 4. Group rows by chunk_id (avoid re-embedding same chunk multiple times)
 5. For each chunk group:
    - DELETE: remove from DB
-   - UPDATE/ADD on FAQs: re-fetch full Q+A from FAQs sheet, re-embed, upsert
-   - UPDATE/ADD on data sheets: re-fetch ALL rows for that chunk_id from
-     source sheet, rebuild structured text, re-embed, upsert
+   - Promotions status change to non-Active: DELETE the chunk
+   - UPDATE/ADD: re-read source sheet, rebuild via chunk_builder, re-embed, upsert
 6. Mark all processed rows synced=TRUE, synced_at=now in the sheet
 7. Update sync_state.last_version + last_synced_at in DB
 8. Append to sync_history
@@ -24,6 +23,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import sys
 from collections import defaultdict
@@ -34,6 +34,7 @@ import psycopg2
 
 import config
 import embedding as emb
+from chunk_builder import build_chunks_from_sheet
 from models import ChangeLogEntry, ChunkRecord
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s  %(message)s")
@@ -53,41 +54,60 @@ COL_SYNCED_AT  = 9   # J
 
 HEADER_ROW = 0
 
-# Maps chunk_id prefix → category for non-FAQ chunks
+# Maps chunk_id prefix → category
 CATEGORY_MAP = {
-    "contact":  "Contact",
-    "hours":    "Contact",
-    "jump":     "Pricing",
-    "socks":    "Pricing",
-    "gokart":   "Attractions",
-    "glow":     "Events",
-    "toddler":  "Events",
-    "special":  "Accessibility",
-    "bday":     "Birthday Parties",
-    "group":    "Group Bookings",
-    "facility": "Group Bookings",
-    "room":     "Group Bookings",
-    "camp":     "Aero Camp",
-    "passes":   "Passes",
-    "faq":      "FAQ",
+    "contact":   "Contact",
+    "hours":     "Contact",
+    "links":     "Contact",
+    "jump":      "Pricing",
+    "socks":     "Pricing",
+    "gokart":    "Go Karting",
+    "glow":      "Special Programs",
+    "toddler":   "Special Programs",
+    "special":   "Special Programs",
+    "attr":      "Attractions",
+    "bday":      "Birthday Parties",
+    "group":     "Group Bookings",
+    "corporate": "Group Bookings",
+    "school":    "Group Bookings",
+    "fundraise": "Group Bookings",
+    "facility":  "Group Bookings",
+    "rooms":     "Group Bookings",
+    "camp":      "Aero Camp",
+    "passes":    "Passes",
+    "promo":     "Promotions",
+    "rules":     "Park Rules",
+    "faq":       "FAQ",
+    "voice":     "Voice Scripts",
+    "qr":        "Quick Replies",
 }
 
-# Maps chunk_id prefix → natural-language question for non-FAQ chunks
+# Maps chunk_id prefix → natural-language question
 QUESTION_MAP = {
-    "contact":  "How do I contact AeroSports Scarborough?",
-    "hours":    "What are the hours for AeroSports Scarborough?",
-    "jump":     "What are the jump prices at AeroSports Scarborough?",
-    "socks":    "Do I need special socks for jumping?",
-    "gokart":   "What are the go karting options and prices?",
-    "glow":     "What is Glow at AeroSports?",
-    "toddler":  "What is Toddler Time at AeroSports?",
-    "special":  "What are the special needs accommodations?",
-    "bday":     "What are the birthday party packages?",
-    "group":    "How do group bookings work?",
-    "facility": "What does a facility rental include?",
-    "room":     "What are the party room options?",
-    "camp":     "What is Aero Camp?",
-    "passes":   "What passes are available?",
+    "contact":   "How do I contact AeroSports Scarborough?",
+    "hours":     "What are the hours for AeroSports Scarborough?",
+    "links":     "What are the booking and waiver links?",
+    "jump":      "What are the jump prices at AeroSports Scarborough?",
+    "socks":     "Do I need special socks for jumping?",
+    "gokart":    "What are the go karting options and prices?",
+    "glow":      "What is Glow at AeroSports?",
+    "toddler":   "What is Toddler Time at AeroSports?",
+    "special":   "What are the special programs at AeroSports?",
+    "attr":      "What attractions are available at AeroSports Scarborough?",
+    "bday":      "What are the birthday party packages?",
+    "group":     "How do group bookings work?",
+    "corporate": "How do corporate events work?",
+    "school":    "How do school field trips work?",
+    "fundraise": "How do fundraising events work?",
+    "facility":  "What does a facility rental include?",
+    "rooms":     "What are the party room options?",
+    "camp":      "What is Aero Camp?",
+    "passes":    "What passes are available?",
+    "promo":     "Are there any current promotions or deals?",
+    "rules":     "What are the park rules?",
+    "faq":       "Frequently asked questions",
+    "voice":     "Information for phone callers",
+    "qr":        "Quick response for common questions",
 }
 
 
@@ -131,10 +151,12 @@ def _upsert_chunk(conn, chunk: ChunkRecord) -> None:
         cur.execute(
             """
             INSERT INTO knowledge_chunks
-                (id, category, subcategory, location, question, answer, tags, embedding)
+                (id, category, subcategory, location, question, answer, tags, embedding,
+                 sheet_name, source, metadata)
             VALUES
                 (%(id)s, %(category)s, %(subcategory)s, %(location)s,
-                 %(question)s, %(answer)s, %(tags)s, %(embedding)s::vector)
+                 %(question)s, %(answer)s, %(tags)s, %(embedding)s::vector,
+                 %(sheet_name)s, %(source)s, %(metadata)s::jsonb)
             ON CONFLICT (id) DO UPDATE SET
                 category    = EXCLUDED.category,
                 subcategory = EXCLUDED.subcategory,
@@ -143,6 +165,9 @@ def _upsert_chunk(conn, chunk: ChunkRecord) -> None:
                 answer      = EXCLUDED.answer,
                 tags        = EXCLUDED.tags,
                 embedding   = EXCLUDED.embedding,
+                sheet_name  = EXCLUDED.sheet_name,
+                source      = EXCLUDED.source,
+                metadata    = EXCLUDED.metadata,
                 updated_at  = CURRENT_TIMESTAMP
             """,
             {
@@ -154,6 +179,9 @@ def _upsert_chunk(conn, chunk: ChunkRecord) -> None:
                 "answer":      chunk.answer,
                 "tags":        chunk.tags,
                 "embedding":   chunk.embedding,
+                "sheet_name":  chunk.sheet_name,
+                "source":      chunk.source,
+                "metadata":    json.dumps(chunk.metadata),
             },
         )
 
@@ -229,7 +257,6 @@ def _mark_synced_batch(spreadsheet, row_indices: list[int]) -> None:
     sheet = spreadsheet.worksheet(config.CHANGE_LOG_SHEET)
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
-    # Build batch updates: [(row, col, value), ...]
     cells_to_update = []
     for row_index in row_indices:
         cells_to_update.append({
@@ -246,7 +273,7 @@ def _mark_synced_batch(spreadsheet, row_indices: list[int]) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Chunk builders
+# Chunk rebuilding via chunk_builder
 # ---------------------------------------------------------------------------
 
 
@@ -256,118 +283,24 @@ def _get_chunk_prefix(chunk_id: str) -> str:
     return parts[1] if len(parts) >= 2 else "general"
 
 
-def _fetch_chunk_from_faqs_sheet(spreadsheet, chunk_id: str) -> Optional[ChunkRecord]:
-    """
-    Read the FAQs sheet and rebuild a ChunkRecord for the given chunk_id.
-    FAQs columns: chunk_id | category | question | answer
-    """
-    try:
-        sheet = spreadsheet.worksheet("FAQs")
-    except Exception:
-        logger.error("FAQs sheet not found")
-        return None
-
-    rows = sheet.get_all_values()
-    for row in rows[1:]:
-        if not row:
-            continue
-        row = row + [""] * 4
-        if row[0].strip() == chunk_id:
-            category = row[1].strip() or "FAQ"
-            question = row[2].strip()
-            answer = row[3].strip()
-
-            if not question and not answer:
-                logger.warning("FAQ %r has no question or answer", chunk_id)
-                return None
-
-            return ChunkRecord(
-                id=chunk_id,
-                category=category,
-                subcategory=category,
-                location="Scarborough",
-                question=question,
-                answer=answer,
-                tags=["faq", category.lower().replace(" ", "_")],
-            )
-    logger.warning("FAQ %r not found in FAQs sheet", chunk_id)
-    return None
-
-
-def _fetch_chunk_from_data_sheet(
+def _rebuild_chunk_from_sheet(
     spreadsheet, sheet_name: str, chunk_id: str
 ) -> Optional[ChunkRecord]:
-    """
-    Re-reads the source sheet, finds ALL rows for the given chunk_id,
-    and rebuilds the chunk as structured text.
-
-    Handles sub-tables (Birthday Parties, Group Bookings, Aero Camp)
-    by detecting rows where col A = "chunk_id" as sub-table headers.
-    """
+    """Re-read the source sheet and rebuild the specific chunk via chunk_builder."""
     try:
-        sheet = spreadsheet.worksheet(sheet_name)
+        worksheet = spreadsheet.worksheet(sheet_name)
     except Exception:
         logger.error("Sheet %r not found", sheet_name)
         return None
 
-    all_rows = sheet.get_all_values()
-    if not all_rows:
-        return None
+    rows = worksheet.get_all_records()
+    all_chunks = build_chunks_from_sheet(sheet_name, rows)
+    for chunk in all_chunks:
+        if chunk.id == chunk_id:
+            return chunk
 
-    # ── Collect all rows belonging to this chunk_id ──
-    current_headers = all_rows[0]
-    chunk_rows: list[dict[str, str]] = []
-
-    for i, row in enumerate(all_rows):
-        if i == 0:
-            continue
-
-        # Detect sub-table header rows
-        if row and row[0].strip().lower() == "chunk_id":
-            current_headers = row
-            continue
-
-        row_chunk_id = row[0].strip() if row else ""
-        if not row_chunk_id or row_chunk_id != chunk_id:
-            continue
-
-        # Build header → value dict for this row
-        row_dict = {}
-        for col_idx, header in enumerate(current_headers):
-            header_clean = header.strip()
-            if not header_clean or header_clean.lower() == "chunk_id":
-                continue
-            val = row[col_idx].strip() if col_idx < len(row) else ""
-            if val:
-                row_dict[header_clean] = val
-        if row_dict:
-            chunk_rows.append(row_dict)
-
-    if not chunk_rows:
-        logger.warning("No rows found for %r in %r", chunk_id, sheet_name)
-        return None
-
-    # ── Build structured text ──
-    text_parts = []
-    for row_dict in chunk_rows:
-        parts = [f"{k}: {v}" for k, v in row_dict.items()]
-        text_parts.append(" | ".join(parts))
-
-    answer_text = "\n".join(text_parts)
-
-    prefix = _get_chunk_prefix(chunk_id)
-    category = CATEGORY_MAP.get(prefix, sheet_name or "General")
-    question = QUESTION_MAP.get(prefix, f"Information about {chunk_id}")
-
-    return ChunkRecord(
-        id=chunk_id,
-        category=category,
-        subcategory=prefix,
-        location="Scarborough",
-        question=question,
-        answer=answer_text,
-        tags=[prefix, sheet_name.lower().replace(" ", "_")],
-    )
+    logger.warning("Chunk %r not found after rebuilding sheet %r", chunk_id, sheet_name)
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -383,16 +316,23 @@ def _resolve_chunk_group(
 
     Instead of patching field-by-field, we:
     1. Determine the final action (DELETE wins, otherwise rebuild)
-    2. Re-fetch the entire chunk from the source sheet
+    2. Re-fetch the entire chunk from the source sheet via chunk_builder
     3. Re-embed once
     4. Upsert once
-
-    This means if 5 fields changed on the same chunk, we do 1 fetch + 1 embed
-    instead of 5.
     """
 
-    # Check if any entry in the group is a DELETE
+    # Check if any entry is a DELETE
     has_delete = any(e.change_type == "DELETE" for e in entries)
+
+    # Handle Promotions status changes: non-Active → DELETE
+    if not has_delete:
+        for e in entries:
+            if (e.field_changed.lower() == "status"
+                    and e.new_value.lower() != "active"
+                    and _get_chunk_prefix(chunk_id) == "promo"):
+                has_delete = True
+                logger.info("Promotion %r status changed to %r — treating as DELETE", chunk_id, e.new_value)
+                break
 
     if has_delete:
         if not dry_run:
@@ -403,17 +343,12 @@ def _resolve_chunk_group(
         logger.info("DELETE %r (%d change log rows)", chunk_id, len(entries))
         return True
 
-    # Determine source sheet from the entries
-    # All entries for the same chunk_id should come from the same sheet,
-    # but take the most recent one to be safe
+    # Determine source sheet from entries
     last_entry = entries[-1]
     sheet_name = last_entry.sheet_name
 
-    # ── Fetch the full chunk from source ──
-    if sheet_name == "FAQs" or chunk_id.startswith("scb_faq_"):
-        chunk = _fetch_chunk_from_faqs_sheet(spreadsheet, chunk_id)
-    else:
-        chunk = _fetch_chunk_from_data_sheet(spreadsheet, sheet_name, chunk_id)
+    # Rebuild the chunk using chunk_builder (same logic as ingest)
+    chunk = _rebuild_chunk_from_sheet(spreadsheet, sheet_name, chunk_id)
 
     if chunk is None:
         logger.error(
@@ -472,8 +407,7 @@ def sync(force: bool = False, dry_run: bool = False) -> None:
             logger.info("No unsynced rows. Updated version to %s.", sheet_version)
             return
 
-        # ── Group entries by chunk_id ──
-        # Preserves order: processes chunks in the order of their first appearance
+        # Group entries by chunk_id
         grouped: dict[str, list[tuple[ChangeLogEntry, int]]] = defaultdict(list)
         for entry, sheet_row in zip(entries, row_indices):
             grouped[entry.chunk_id].append((entry, sheet_row))

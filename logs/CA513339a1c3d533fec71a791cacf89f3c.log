@@ -1,0 +1,136 @@
+2026-03-31 05:57:30,153  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA513339a1c3d533fec71a791cacf89f3c.log
+2026-03-31 05:57:30,153  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] ConversationRelay connected from +14373612990
+2026-03-31 05:57:44,586  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] User said: Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 05:57:46,244  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY rag_api=1659ms  docs=7
+2026-03-31 05:57:46,244  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] Full messages sent to LLM (2 messages):
+2026-03-31 05:57:46,245  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 05:57:46,245  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[1] role=user content=Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 05:57:46,245  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY prepare_voice_stream=1659ms
+2026-03-31 05:57:47,073  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY silence_to_first_reply=2488ms
+2026-03-31 05:57:47,544  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Assistant (full): For go karting, each race is up to ten laps and lasts about three minutes. So, to get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need 
+2026-03-31 05:58:05,766  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] User said: 1 way she's only 3 minutes.
+2026-03-31 05:58:08,348  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY rag_api=2225ms  docs=7
+2026-03-31 05:58:08,348  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] Full messages sent to LLM (4 messages):
+2026-03-31 05:58:08,348  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 05:58:08,348  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[1] role=user content=Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 05:58:08,348  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[2] role=assistant content=For go karting, each race is up to ten laps and lasts about three minutes. So, to get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be thirty-six races in total.
+2026-03-31 05:58:08,348  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[3] role=user content=1 way she's only 3 minutes.
+2026-03-31 05:58:08,349  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY prepare_voice_stream=2582ms
+2026-03-31 05:58:09,047  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY silence_to_first_reply=3281ms
+2026-03-31 05:58:09,589  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Assistant (full): So each race is about three minutes long. To get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would
+2026-03-31 05:58:30,413  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] User said: Okay. Now you're just giving me wrong hunters or wrong hunters.
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY rag_api=2561ms  docs=7
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] Full messages sent to LLM (6 messages):
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[1] role=user content=Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[2] role=assistant content=For go karting, each race is up to ten laps and lasts about three minutes. So, to get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be thirty-six races in total.
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[3] role=user content=1 way she's only 3 minutes.
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[4] role=assistant content=So each race is about three minutes long. To get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be twenty minutes per race, so that's around four races in an hour.
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[5] role=user content=Okay. Now you're just giving me wrong hunters or wrong hunters.
+2026-03-31 05:58:33,356  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY prepare_voice_stream=2944ms
+2026-03-31 05:58:34,031  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY silence_to_first_reply=3618ms
+2026-03-31 05:58:34,664  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Assistant (full): Let me recalculate correctly. If each race is about 3 minutes long, then to get a full hour of racing time (60 minutes), we can divide 60 by 3. That's 20 races in an hour. So, you would need to buy mu
+2026-03-31 05:58:59,611  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] User said: Okay. So mean, you don't have any package that has that gives me ultimate Go Kart.
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY rag_api=1494ms  docs=7
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] Full messages sent to LLM (8 messages):
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[1] role=user content=Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[2] role=assistant content=For go karting, each race is up to ten laps and lasts about three minutes. So, to get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be thirty-six races in total.
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[3] role=user content=1 way she's only 3 minutes.
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[4] role=assistant content=So each race is about three minutes long. To get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be twenty minutes per race, so that's around four races in an hour.
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[5] role=user content=Okay. Now you're just giving me wrong hunters or wrong hunters.
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[6] role=assistant content=Let me recalculate correctly. If each race is about 3 minutes long, then to get a full hour of racing time (60 minutes), we can divide 60 by 3. That's 20 races in an hour. So, you would need to buy multiple race passes for 20 laps to get a full hour of go karting.
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[7] role=user content=Okay. So mean, you don't have any package that has that gives me ultimate Go Kart.
+2026-03-31 05:59:01,550  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY prepare_voice_stream=1940ms
+2026-03-31 05:59:02,447  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY silence_to_first_reply=2837ms
+2026-03-31 05:59:02,757  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Assistant (full): We do have packages and options for go karting, but it looks like we don't have one specifically designed for 20 laps or a full hour of racing time. However, I can suggest checking out our website at 
+2026-03-31 05:59:24,125  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] User said: Okay. That's fine.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY rag_api=2133ms  docs=7
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] Full messages sent to LLM (10 messages):
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[1] role=user content=Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[2] role=assistant content=For go karting, each race is up to ten laps and lasts about three minutes. So, to get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be thirty-six races in total.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[3] role=user content=1 way she's only 3 minutes.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[4] role=assistant content=So each race is about three minutes long. To get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be twenty minutes per race, so that's around four races in an hour.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[5] role=user content=Okay. Now you're just giving me wrong hunters or wrong hunters.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[6] role=assistant content=Let me recalculate correctly. If each race is about 3 minutes long, then to get a full hour of racing time (60 minutes), we can divide 60 by 3. That's 20 races in an hour. So, you would need to buy multiple race passes for 20 laps to get a full hour of go karting.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[7] role=user content=Okay. So mean, you don't have any package that has that gives me ultimate Go Kart.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[8] role=assistant content=We do have packages and options for go karting, but it looks like we don't have one specifically designed for 20 laps or a full hour of racing time. However, I can suggest checking out our website at aerosportsparks dot ca to see if there's anything that might fit what you're looking for.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[9] role=user content=Okay. That's fine.
+2026-03-31 05:59:26,554  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY prepare_voice_stream=2429ms
+2026-03-31 05:59:27,228  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY silence_to_first_reply=3103ms
+2026-03-31 05:59:27,460  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Assistant (full): No worries. If you have any other questions or need help with anything else, feel free to ask. Have a great day!
+2026-03-31 05:59:37,835  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] User said: My brother he only has 1 leg.
+2026-03-31 05:59:39,536  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY rag_api=1400ms  docs=7
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] Full messages sent to LLM (12 messages):
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[1] role=user content=Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[2] role=assistant content=For go karting, each race is up to ten laps and lasts about three minutes. So, to get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be thirty-six races in total.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[3] role=user content=1 way she's only 3 minutes.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[4] role=assistant content=So each race is about three minutes long. To get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be twenty minutes per race, so that's around four races in an hour.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[5] role=user content=Okay. Now you're just giving me wrong hunters or wrong hunters.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[6] role=assistant content=Let me recalculate correctly. If each race is about 3 minutes long, then to get a full hour of racing time (60 minutes), we can divide 60 by 3. That's 20 races in an hour. So, you would need to buy multiple race passes for 20 laps to get a full hour of go karting.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[7] role=user content=Okay. So mean, you don't have any package that has that gives me ultimate Go Kart.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[8] role=assistant content=We do have packages and options for go karting, but it looks like we don't have one specifically designed for 20 laps or a full hour of racing time. However, I can suggest checking out our website at aerosportsparks dot ca to see if there's anything that might fit what you're looking for.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[9] role=user content=Okay. That's fine.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[10] role=assistant content=No worries. If you have any other questions or need help with anything else, feel free to ask. Have a great day!
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[11] role=user content=My brother he only has 1 leg.
+2026-03-31 05:59:39,537  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY prepare_voice_stream=1702ms
+2026-03-31 05:59:40,343  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY silence_to_first_reply=2508ms
+2026-03-31 05:59:40,787  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Assistant (full): We've got a special needs program that might be perfect for your brother. It's designed for guests with special needs and includes 120 minutes of play time in the park, without go karting. We also adm
+2026-03-31 06:00:00,876  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] User said: Put if he doesn't have a leg room, will he be able to jump?
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY rag_api=2103ms  docs=7
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] Full messages sent to LLM (14 messages):
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[1] role=user content=Then can you tell me that if I wanted to do go karting for the full 1 hour, can I do that?
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[2] role=assistant content=For go karting, each race is up to ten laps and lasts about three minutes. So, to get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be thirty-six races in total.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[3] role=user content=1 way she's only 3 minutes.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[4] role=assistant content=So each race is about three minutes long. To get a full hour of racing time, you'd need to buy multiple race passes. If you want to know how many races you'd need for an hour, let me see... That would be twenty minutes per race, so that's around four races in an hour.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[5] role=user content=Okay. Now you're just giving me wrong hunters or wrong hunters.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[6] role=assistant content=Let me recalculate correctly. If each race is about 3 minutes long, then to get a full hour of racing time (60 minutes), we can divide 60 by 3. That's 20 races in an hour. So, you would need to buy multiple race passes for 20 laps to get a full hour of go karting.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[7] role=user content=Okay. So mean, you don't have any package that has that gives me ultimate Go Kart.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[8] role=assistant content=We do have packages and options for go karting, but it looks like we don't have one specifically designed for 20 laps or a full hour of racing time. However, I can suggest checking out our website at aerosportsparks dot ca to see if there's anything that might fit what you're looking for.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[9] role=user content=Okay. That's fine.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[10] role=assistant content=No worries. If you have any other questions or need help with anything else, feel free to ask. Have a great day!
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[11] role=user content=My brother he only has 1 leg.
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[12] role=assistant content=We've got a special needs program that might be perfect for your brother. It's designed for guests with special needs and includes 120 minutes of play time in the park, without go karting. We also admit one support worker free with a waiver. Would you like to know more about it?
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c]   msg[13] role=user content=Put if he doesn't have a leg room, will he be able to jump?
+2026-03-31 06:00:03,367  INFO      chatbot.voice_handler  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY prepare_voice_stream=2491ms
+2026-03-31 06:00:04,401  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] LATENCY silence_to_first_reply=3526ms
+2026-03-31 06:00:05,360  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Assistant (full): If the person doesn't have enough leg room to comfortably jump on the trampoline, they might not be able to participate in open jump. However, according to the information provided, there's no specifi
+2026-03-31 06:00:39,016  INFO      chatbot.server  [CA513339a1c3d533fec71a791cacf89f3c] Session log closed

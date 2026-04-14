@@ -1,0 +1,230 @@
+2026-03-31 17:29:02,175  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA273913643130b19e7f3e695f130cfda9.log
+2026-03-31 17:29:02,175  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] ConversationRelay connected from +14374383992
+2026-03-31 17:29:11,271  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Again, how are you today?
+2026-03-31 17:29:14,418  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=3148ms  docs=7
+2026-03-31 17:29:14,419  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (2 messages):
+2026-03-31 17:29:14,419  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:29:14,419  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Again, how are you today?
+2026-03-31 17:29:14,419  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=3148ms
+2026-03-31 17:29:16,320  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=5049ms
+2026-03-31 17:29:16,499  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:29:26,020  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: So I want to do for birthday party.
+2026-03-31 17:29:29,715  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=3437ms  docs=7
+2026-03-31 17:29:29,715  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (4 messages):
+2026-03-31 17:29:29,715  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:29:29,715  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Again, how are you today?
+2026-03-31 17:29:29,715  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:29:29,715  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=So I want to do for birthday party.
+2026-03-31 17:29:29,715  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=3695ms
+2026-03-31 17:29:30,519  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=4500ms
+2026-03-31 17:29:30,999  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might 
+2026-03-31 17:29:53,283  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=3214ms  docs=7
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (6 messages):
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Again, how are you today?
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=So I want to do for birthday party.
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=assistant content=We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each package?
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:29:56,966  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=3683ms
+2026-03-31 17:29:57,734  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=4451ms
+2026-03-31 17:29:58,225  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make
+2026-03-31 17:30:18,878  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:30:22,336  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=3080ms  docs=7
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (8 messages):
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Again, how are you today?
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=So I want to do for birthday party.
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=assistant content=We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each package?
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=assistant content=We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make it a really special day for the birthday kid. Would you like to know more about the Ultimate Party?
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:30:22,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=3459ms
+2026-03-31 17:30:23,097  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=4219ms
+2026-03-31 17:30:23,417  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:30:35,913  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Are you sure you offer a burger?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=1157ms  docs=7
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (10 messages):
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Again, how are you today?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=So I want to do for birthday party.
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=assistant content=We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each package?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=assistant content=We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make it a really special day for the birthday kid. Would you like to know more about the Ultimate Party?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[8] role=assistant content=I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[9] role=user content=Are you sure you offer a burger?
+2026-03-31 17:30:37,365  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=1451ms
+2026-03-31 17:30:37,365  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Of your birthday party?
+2026-03-31 17:30:40,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=2656ms  docs=7
+2026-03-31 17:30:40,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (11 messages):
+2026-03-31 17:30:40,337  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Again, how are you today?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=So I want to do for birthday party.
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=assistant content=We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each package?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=assistant content=We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make it a really special day for the birthday kid. Would you like to know more about the Ultimate Party?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[8] role=assistant content=I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[9] role=user content=Are you sure you offer a burger?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[10] role=user content=Of your birthday party?
+2026-03-31 17:30:40,338  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=2973ms
+2026-03-31 17:30:41,152  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=3788ms
+2026-03-31 17:30:41,660  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): We don't actually offer burgers as part of our birthday parties. I'm not sure what the "alternate birthday party" is either, to be honest. That's not something we have here at AeroSports Scarborough. 
+2026-03-31 17:30:58,987  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Okay. I want to book a birthday party for up to the sun.
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=2400ms  docs=7
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (13 messages):
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Again, how are you today?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=So I want to do for birthday party.
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=assistant content=We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each package?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=assistant content=We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make it a really special day for the birthday kid. Would you like to know more about the Ultimate Party?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[8] role=assistant content=I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[9] role=user content=Are you sure you offer a burger?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[10] role=user content=Of your birthday party?
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[11] role=assistant content=We don't actually offer burgers as part of our birthday parties. I'm not sure what the "alternate birthday party" is either, to be honest. That's not something we have here at AeroSports Scarborough. If you'd like to book a birthday party with us, I'd be happy to help with that!
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[12] role=user content=Okay. I want to book a birthday party for up to the sun.
+2026-03-31 17:31:01,705  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=2718ms
+2026-03-31 17:31:02,472  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=3485ms
+2026-03-31 17:31:03,174  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): I think there might be some confusion. We don't actually have a "birthday party for up to the sun" package. We do have three packages: Premium, VIP, and Ultimate, which include time on our trampolines
+2026-03-31 17:31:24,443  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Okay. What's the process to book a birthday party, ma'am?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=3244ms  docs=7
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (14 messages):
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=assistant content=I'm doing great, thanks for asking! It's a lovely evening here at AeroSports Scarborough. How can I help you today?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=user content=So I want to do for birthday party.
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=assistant content=We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each package?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=assistant content=We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make it a really special day for the birthday kid. Would you like to know more about the Ultimate Party?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=assistant content=I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[8] role=user content=Are you sure you offer a burger?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[9] role=user content=Of your birthday party?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[10] role=assistant content=We don't actually offer burgers as part of our birthday parties. I'm not sure what the "alternate birthday party" is either, to be honest. That's not something we have here at AeroSports Scarborough. If you'd like to book a birthday party with us, I'd be happy to help with that!
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[11] role=user content=Okay. I want to book a birthday party for up to the sun.
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[12] role=assistant content=I think there might be some confusion. We don't actually have a "birthday party for up to the sun" package. We do have three packages: Premium, VIP, and Ultimate, which include time on our trampolines, food, and other fun activities. If you're interested in booking a party with us, I'd be happy to h
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[13] role=user content=Okay. What's the process to book a birthday party, ma'am?
+2026-03-31 17:31:27,977  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=3534ms
+2026-03-31 17:31:28,967  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=4524ms
+2026-03-31 17:31:29,617  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): To book a birthday party with us, we just need to know which package you're interested in and how many jumpers will be attending. We also require a deposit to secure the booking. If you already know w
+2026-03-31 17:31:58,921  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Okay. I want to book VIP birthday package, and I have 27 cares in that.
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=4882ms  docs=7
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (14 messages):
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=assistant content=We've got two awesome party packages: the VIP Party and the Premium Party. They both include time on our trampolines, a private party room, and some great food options. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each package?
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=assistant content=We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make it a really special day for the birthday kid. Would you like to know more about the Ultimate Party?
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=assistant content=I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=user content=Are you sure you offer a burger?
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=user content=Of your birthday party?
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[8] role=assistant content=We don't actually offer burgers as part of our birthday parties. I'm not sure what the "alternate birthday party" is either, to be honest. That's not something we have here at AeroSports Scarborough. If you'd like to book a birthday party with us, I'd be happy to help with that!
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[9] role=user content=Okay. I want to book a birthday party for up to the sun.
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[10] role=assistant content=I think there might be some confusion. We don't actually have a "birthday party for up to the sun" package. We do have three packages: Premium, VIP, and Ultimate, which include time on our trampolines, food, and other fun activities. If you're interested in booking a party with us, I'd be happy to h
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[11] role=user content=Okay. What's the process to book a birthday party, ma'am?
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[12] role=assistant content=To book a birthday party with us, we just need to know which package you're interested in and how many jumpers will be attending. We also require a deposit to secure the booking. If you already know which package you'd like to book, I can take some details from you over the phone and transfer you to
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[13] role=user content=Okay. I want to book VIP birthday package, and I have 27 cares in that.
+2026-03-31 17:32:04,140  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=5219ms
+2026-03-31 17:32:04,140  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Birthday party.
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=3890ms  docs=7
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (14 messages):
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Is there only 2 birthday parties on the website? It shows you guys have 3 birthday parties.
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=We actually do have three party packages: Premium, VIP, and Ultimate. The Ultimate Party is our most popular one - it includes go-karting for every jumper, free socks, and a few other extras that make it a really special day for the birthday kid. Would you like to know more about the Ultimate Party?
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=assistant content=I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=user content=Are you sure you offer a burger?
+2026-03-31 17:32:08,324  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=user content=Of your birthday party?
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=assistant content=We don't actually offer burgers as part of our birthday parties. I'm not sure what the "alternate birthday party" is either, to be honest. That's not something we have here at AeroSports Scarborough. If you'd like to book a birthday party with us, I'd be happy to help with that!
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[8] role=user content=Okay. I want to book a birthday party for up to the sun.
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[9] role=assistant content=I think there might be some confusion. We don't actually have a "birthday party for up to the sun" package. We do have three packages: Premium, VIP, and Ultimate, which include time on our trampolines, food, and other fun activities. If you're interested in booking a party with us, I'd be happy to h
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[10] role=user content=Okay. What's the process to book a birthday party, ma'am?
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[11] role=assistant content=To book a birthday party with us, we just need to know which package you're interested in and how many jumpers will be attending. We also require a deposit to secure the booking. If you already know which package you'd like to book, I can take some details from you over the phone and transfer you to
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[12] role=user content=Okay. I want to book VIP birthday package, and I have 27 cares in that.
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[13] role=user content=Birthday party.
+2026-03-31 17:32:08,325  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=4184ms
+2026-03-31 17:32:09,094  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=4954ms
+2026-03-31 17:32:09,875  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): The VIP Party is a popular choice for birthdays. For 27 jumpers, the total cost would be 44. 90 per jumper, which comes out to 1,234. 70 plus tax. That's our base price of 449 times 27 jumpers. We als
+2026-03-31 17:32:36,610  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] User said: Sure. Sure.
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY rag_api=3519ms  docs=7
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] Full messages sent to LLM (14 messages):
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[1] role=user content=Okay. If I want to book a burger, alternate birthday party, what do I have to do?
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[2] role=assistant content=I'm not sure what an "alternate birthday party" is. Could you tell me a bit more about that? We do offer burgers as part of our party packages, though - would you like to know more about those?
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[3] role=user content=Are you sure you offer a burger?
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[4] role=user content=Of your birthday party?
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[5] role=assistant content=We don't actually offer burgers as part of our birthday parties. I'm not sure what the "alternate birthday party" is either, to be honest. That's not something we have here at AeroSports Scarborough. If you'd like to book a birthday party with us, I'd be happy to help with that!
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[6] role=user content=Okay. I want to book a birthday party for up to the sun.
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[7] role=assistant content=I think there might be some confusion. We don't actually have a "birthday party for up to the sun" package. We do have three packages: Premium, VIP, and Ultimate, which include time on our trampolines, food, and other fun activities. If you're interested in booking a party with us, I'd be happy to h
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[8] role=user content=Okay. What's the process to book a birthday party, ma'am?
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[9] role=assistant content=To book a birthday party with us, we just need to know which package you're interested in and how many jumpers will be attending. We also require a deposit to secure the booking. If you already know which package you'd like to book, I can take some details from you over the phone and transfer you to
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[10] role=user content=Okay. I want to book VIP birthday package, and I have 27 cares in that.
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[11] role=user content=Birthday party.
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[12] role=assistant content=The VIP Party is a popular choice for birthdays. For 27 jumpers, the total cost would be 44. 90 per jumper, which comes out to 1,234. 70 plus tax. That's our base price of 449 times 27 jumpers. We also include food, digital invitations, and other perks with this package. Would you like me to transfe
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9]   msg[13] role=user content=Sure. Sure.
+2026-03-31 17:32:40,461  INFO      chatbot.voice_handler  [CA273913643130b19e7f3e695f130cfda9] LATENCY prepare_voice_stream=3852ms
+2026-03-31 17:32:41,305  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] LATENCY silence_to_first_reply=4695ms
+2026-03-31 17:32:42,018  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Assistant (full): I'll go ahead and transfer you to our party planning team. They'll be able to take care of all the details and answer any questions you may have about your booking. Please hold for just a moment while
+2026-03-31 17:32:57,308  INFO      chatbot.server  [CA273913643130b19e7f3e695f130cfda9] Session log closed

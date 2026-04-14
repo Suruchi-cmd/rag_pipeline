@@ -1,0 +1,49 @@
+2026-04-09 22:01:22,695  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA752666998ad936061ae5ce114dea697e.log
+2026-04-09 22:01:22,695  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] ConversationRelay connected from +14373612990
+2026-04-09 22:01:30,281  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] User said: Hello?
+2026-04-09 22:01:30,894  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] LATENCY rag_api=611ms  docs=7
+2026-04-09 22:01:30,894  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] Full messages sent to LLM (2 messages):
+2026-04-09 22:01:30,894  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-09 22:01:30,894  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[1] role=user content=Hello?
+2026-04-09 22:01:30,895  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] LATENCY prepare_voice_stream=611ms
+2026-04-09 22:01:31,105  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] LATENCY silence_to_first_reply=824ms
+2026-04-09 22:01:31,105  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] Assistant (full): How can I help you?
+2026-04-09 22:01:38,622  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] User said: I want to book a birthday party there.
+2026-04-09 22:01:41,931  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] LATENCY rag_api=3061ms  docs=7
+2026-04-09 22:01:41,931  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] Full messages sent to LLM (4 messages):
+2026-04-09 22:01:41,931  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-09 22:01:41,931  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[1] role=user content=Hello?
+2026-04-09 22:01:41,931  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[2] role=assistant content=How can I help you?
+2026-04-09 22:01:41,931  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[3] role=user content=I want to book a birthday party there.
+2026-04-09 22:01:41,931  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] LATENCY prepare_voice_stream=3308ms
+2026-04-09 22:01:42,734  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] LATENCY silence_to_first_reply=4112ms
+2026-04-09 22:01:43,348  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] Assistant (full): We've got three different packages to choose from: Premium, VIP, and Ultimate. They all come with food, drinks, and a private room for the kids to hang out in after they're done jumping around. Which 
+2026-04-09 22:02:05,997  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] User said: Yeah. So what are the differences?
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] LATENCY rag_api=2990ms  docs=7
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] Full messages sent to LLM (6 messages):
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[1] role=user content=Hello?
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[2] role=assistant content=How can I help you?
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[3] role=user content=I want to book a birthday party there.
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[4] role=assistant content=We've got three different packages to choose from: Premium, VIP, and Ultimate. They all come with food, drinks, and a private room for the kids to hang out in after they're done jumping around. Which one sounds like it might be a good fit for you? Or would you like me to tell you more about each pac
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e]   msg[5] role=user content=Yeah. So what are the differences?
+2026-04-09 22:02:09,301  INFO      chatbot.voice_handler  [CA752666998ad936061ae5ce114dea697e] LATENCY prepare_voice_stream=3302ms
+2026-04-09 22:02:09,977  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] LATENCY silence_to_first_reply=3980ms
+2026-04-09 22:02:12,254  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] Assistant (full): So, the Premium Party is our most basic package, starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room. The VIP Party is 44. 90 per jumper with 90 minutes o
+2026-04-09 22:03:36,427  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] Finalized abandoned call in DB
+2026-04-09 22:03:36,427  INFO      chatbot.server  [CA752666998ad936061ae5ce114dea697e] Session log closed

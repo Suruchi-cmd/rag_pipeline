@@ -1,0 +1,549 @@
+2026-04-10 00:23:22,744  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA40e61fe9846b2fed16066e5ab726f417.log
+2026-04-10 00:23:22,745  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] ConversationRelay connected from +14373612990
+2026-04-10 00:23:30,205  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Hi, Dan. How are you?
+2026-04-10 00:23:32,905  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=2697ms  docs=7
+2026-04-10 00:23:32,905  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (2 messages):
+2026-04-10 00:23:32,905  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:23:32,905  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:23:32,905  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=2697ms
+2026-04-10 00:23:35,107  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=4901ms
+2026-04-10 00:23:35,223  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): I'm good, thanks for asking! What can I help you with today?
+2026-04-10 00:23:42,441  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Hi. Is he open today?
+2026-04-10 00:23:43,552  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=941ms  docs=7
+2026-04-10 00:23:43,553  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (4 messages):
+2026-04-10 00:23:43,553  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:23:43,553  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:23:43,553  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-04-10 00:23:43,553  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Hi. Is he open today?
+2026-04-10 00:23:43,553  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1110ms
+2026-04-10 00:23:44,317  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=1876ms
+2026-04-10 00:23:44,686  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): Yeah so we're actually open right now. We're on Birchmount Road in Scarborough and our hours are 10 AM to 10 PM today, since it's a Friday. So yeah, you're good to come on by!
+2026-04-10 00:23:58,389  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: What time is it right now?
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1448ms  docs=7
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (6 messages):
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Hi. Is he open today?
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Yeah so we're actually open right now. We're on Birchmount Road in Scarborough and our hours are 10 AM to 10 PM today, since it's a Friday. So yeah, you're good to come on by!
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=What time is it right now?
+2026-04-10 00:24:00,108  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1718ms
+2026-04-10 00:24:00,906  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2517ms
+2026-04-10 00:24:01,343  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): It's currently 12:24 AM on Friday, April 10th. We're actually closed at the moment, but we'll be opening up again at 10 AM today. If you want to plan a visit for later, I'd be happy to help with that!
+2026-04-10 00:24:20,793  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:24:22,844  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1707ms  docs=7
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (8 messages):
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Hi. Is he open today?
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Yeah so we're actually open right now. We're on Birchmount Road in Scarborough and our hours are 10 AM to 10 PM today, since it's a Friday. So yeah, you're good to come on by!
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=What time is it right now?
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=It's currently 12:24 AM on Friday, April 10th. We're actually closed at the moment, but we'll be opening up again at 10 AM today. If you want to plan a visit for later, I'd be happy to help with that!
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:24:22,845  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=2049ms
+2026-04-10 00:24:23,628  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2834ms
+2026-04-10 00:24:24,566  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): I hear you, that's a lot of "what's the whats"! Let me break it down for you. We've got tons of activities here at AeroSports Scarborough. We have wall-to-wall trampolines, a ninja warrior course, nin
+2026-04-10 00:24:55,923  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: So how much is it for jumping?
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=2558ms  docs=7
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (10 messages):
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Hi. Is he open today?
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Yeah so we're actually open right now. We're on Birchmount Road in Scarborough and our hours are 10 AM to 10 PM today, since it's a Friday. So yeah, you're good to come on by!
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=What time is it right now?
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=It's currently 12:24 AM on Friday, April 10th. We're actually closed at the moment, but we'll be opening up again at 10 AM today. If you want to plan a visit for later, I'd be happy to help with that!
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=I hear you, that's a lot of "what's the whats"! Let me break it down for you. We've got tons of activities here at AeroSports Scarborough. We have wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, a jump t
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So how much is it for jumping?
+2026-04-10 00:24:58,810  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=2886ms
+2026-04-10 00:24:59,696  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=3773ms
+2026-04-10 00:25:00,123  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): A 90-minute Premium Jump Pass is 24 90, and a 120-minute VIP Jump Pass is 29. 90. The All Day Pass is 39. 90. Plus tax, of course. Would you like to book one or learn more about our jump passes?
+2026-04-10 00:25:17,009  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: So what can I do with this jump pass?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1778ms  docs=7
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (12 messages):
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Hi. Is he open today?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Yeah so we're actually open right now. We're on Birchmount Road in Scarborough and our hours are 10 AM to 10 PM today, since it's a Friday. So yeah, you're good to come on by!
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=What time is it right now?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=It's currently 12:24 AM on Friday, April 10th. We're actually closed at the moment, but we'll be opening up again at 10 AM today. If you want to plan a visit for later, I'd be happy to help with that!
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=I hear you, that's a lot of "what's the whats"! Let me break it down for you. We've got tons of activities here at AeroSports Scarborough. We have wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, a jump t
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So how much is it for jumping?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=A 90-minute Premium Jump Pass is 24 90, and a 120-minute VIP Jump Pass is 29. 90. The All Day Pass is 39. 90. Plus tax, of course. Would you like to book one or learn more about our jump passes?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=So what can I do with this jump pass?
+2026-04-10 00:25:19,089  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=2077ms
+2026-04-10 00:25:19,899  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2890ms
+2026-04-10 00:25:20,432  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): With your jump pass, you have access to wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, and a jump towe
+2026-04-10 00:25:42,990  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: So how much are we quoting?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1533ms  docs=7
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Hi. Is he open today?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Yeah so we're actually open right now. We're on Birchmount Road in Scarborough and our hours are 10 AM to 10 PM today, since it's a Friday. So yeah, you're good to come on by!
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=What time is it right now?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=It's currently 12:24 AM on Friday, April 10th. We're actually closed at the moment, but we'll be opening up again at 10 AM today. If you want to plan a visit for later, I'd be happy to help with that!
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=I hear you, that's a lot of "what's the whats"! Let me break it down for you. We've got tons of activities here at AeroSports Scarborough. We have wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, a jump t
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So how much is it for jumping?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=A 90-minute Premium Jump Pass is 24 90, and a 120-minute VIP Jump Pass is 29. 90. The All Day Pass is 39. 90. Plus tax, of course. Would you like to book one or learn more about our jump passes?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=So what can I do with this jump pass?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=With your jump pass, you have access to wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, and a jump tower. Everything except go karting is included in the pass.
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=So how much are we quoting?
+2026-04-10 00:25:44,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1920ms
+2026-04-10 00:25:45,767  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2777ms
+2026-04-10 00:25:46,260  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): I'm not sure what you're referring to. Can you please clarify which activity or package you'd like a quote for? We've got trampolines, laser tag, and mini golf here at the park, among other things. Le
+2026-04-10 00:26:01,198  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: How much for a good card?
+2026-04-10 00:26:03,475  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1686ms  docs=7
+2026-04-10 00:26:03,475  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:26:03,475  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:26:03,475  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Hi. Is he open today?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=Yeah so we're actually open right now. We're on Birchmount Road in Scarborough and our hours are 10 AM to 10 PM today, since it's a Friday. So yeah, you're good to come on by!
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=What time is it right now?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=It's currently 12:24 AM on Friday, April 10th. We're actually closed at the moment, but we'll be opening up again at 10 AM today. If you want to plan a visit for later, I'd be happy to help with that!
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=I hear you, that's a lot of "what's the whats"! Let me break it down for you. We've got tons of activities here at AeroSports Scarborough. We have wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, a jump t
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=So how much is it for jumping?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=A 90-minute Premium Jump Pass is 24 90, and a 120-minute VIP Jump Pass is 29. 90. The All Day Pass is 39. 90. Plus tax, of course. Would you like to book one or learn more about our jump passes?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So what can I do with this jump pass?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=With your jump pass, you have access to wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, and a jump tower. Everything except go karting is included in the pass.
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=So how much are we quoting?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=I'm not sure what you're referring to. Can you please clarify which activity or package you'd like a quote for? We've got trampolines, laser tag, and mini golf here at the park, among other things. Let me know if you have any specific questions about pricing!
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=How much for a good card?
+2026-04-10 00:26:03,476  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=2276ms
+2026-04-10 00:26:04,352  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=3154ms
+2026-04-10 00:26:04,575  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): I'm not aware of any information about "good cards " being sold at AeroSports Scarborough. Could you please provide more context or clarify what you're referring to?
+2026-04-10 00:26:16,084  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: No. Just go kart.
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1555ms  docs=7
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=What time is it right now?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=It's currently 12:24 AM on Friday, April 10th. We're actually closed at the moment, but we'll be opening up again at 10 AM today. If you want to plan a visit for later, I'd be happy to help with that!
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=I hear you, that's a lot of "what's the whats"! Let me break it down for you. We've got tons of activities here at AeroSports Scarborough. We have wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, a jump t
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=So how much is it for jumping?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=A 90-minute Premium Jump Pass is 24 90, and a 120-minute VIP Jump Pass is 29. 90. The All Day Pass is 39. 90. Plus tax, of course. Would you like to book one or learn more about our jump passes?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=So what can I do with this jump pass?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=With your jump pass, you have access to wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, and a jump tower. Everything except go karting is included in the pass.
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So how much are we quoting?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=I'm not sure what you're referring to. Can you please clarify which activity or package you'd like a quote for? We've got trampolines, laser tag, and mini golf here at the park, among other things. Let me know if you have any specific questions about pricing!
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=How much for a good card?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=I'm not aware of any information about "good cards " being sold at AeroSports Scarborough. Could you please provide more context or clarify what you're referring to?
+2026-04-10 00:26:17,911  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=No. Just go kart.
+2026-04-10 00:26:17,912  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1827ms
+2026-04-10 00:26:18,771  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2687ms
+2026-04-10 00:26:20,022  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): Let's focus on the go-karting information. Here are the relevant points from the KNOWLEDGE BASE CONTEXT:  The main track is for riders 54 inches or taller and costs 19. 90 for a standalone race or 9. 
+2026-04-10 00:26:57,340  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=796ms  docs=7
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Okay. And what, uh, uh, what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what's the what what do you guys have?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I hear you, that's a lot of "what's the whats"! Let me break it down for you. We've got tons of activities here at AeroSports Scarborough. We have wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, a jump t
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=So how much is it for jumping?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=A 90-minute Premium Jump Pass is 24 90, and a 120-minute VIP Jump Pass is 29. 90. The All Day Pass is 39. 90. Plus tax, of course. Would you like to book one or learn more about our jump passes?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=So what can I do with this jump pass?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=With your jump pass, you have access to wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, and a jump tower. Everything except go karting is included in the pass.
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=So how much are we quoting?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=I'm not sure what you're referring to. Can you please clarify which activity or package you'd like a quote for? We've got trampolines, laser tag, and mini golf here at the park, among other things. Let me know if you have any specific questions about pricing!
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=How much for a good card?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=I'm not aware of any information about "good cards " being sold at AeroSports Scarborough. Could you please provide more context or clarify what you're referring to?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=No. Just go kart.
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=Let's focus on the go-karting information. Here are the relevant points from the KNOWLEDGE BASE CONTEXT:  The main track is for riders 54 inches or taller and costs 19. 90 for a standalone race or 9. 90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller an
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:26:58,452  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1110ms
+2026-04-10 00:26:59,311  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=1971ms
+2026-04-10 00:26:59,805  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): I'm not sure what you mean by "go k arts." Could you be referring to our indoor go kart racing on the main or mini track? If so, I can tell you that the minimum height requirements are 54 inches tall 
+2026-04-10 00:27:05,613  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User interrupted. Spoken so far: Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:05,613  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (truncated to spoken): Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:07,464  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: What is your age requirement?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1150ms  docs=7
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=So how much is it for jumping?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=A 90-minute Premium Jump Pass is 24 90, and a 120-minute VIP Jump Pass is 29. 90. The All Day Pass is 39. 90. Plus tax, of course. Would you like to book one or learn more about our jump passes?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=So what can I do with this jump pass?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=With your jump pass, you have access to wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, and a jump tower. Everything except go karting is included in the pass.
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=So how much are we quoting?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=I'm not sure what you're referring to. Can you please clarify which activity or package you'd like a quote for? We've got trampolines, laser tag, and mini golf here at the park, among other things. Let me know if you have any specific questions about pricing!
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=How much for a good card?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=I'm not aware of any information about "good cards " being sold at AeroSports Scarborough. Could you please provide more context or clarify what you're referring to?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=No. Just go kart.
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=Let's focus on the go-karting information. Here are the relevant points from the KNOWLEDGE BASE CONTEXT:  The main track is for riders 54 inches or taller and costs 19. 90 for a standalone race or 9. 90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller an
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=What is your age requirement?
+2026-04-10 00:27:08,916  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1449ms
+2026-04-10 00:27:09,726  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2261ms
+2026-04-10 00:27:09,958  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): For go karting, the minimum height requirements are: 54 inches tall for the main track and 36 inches tall for the mini track.
+2026-04-10 00:27:20,475  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Okay.
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Skipping RAG — conversational message: Okay.
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=So what can I do with this jump pass?
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=With your jump pass, you have access to wall-to-wall trampolines, a ninja warrior course, ninja maze, rock climbing walls, dodgeball, slam basketball, a 360 bicycle ride, giant slides, and a jump tower. Everything except go karting is included in the pass.
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=So how much are we quoting?
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=I'm not sure what you're referring to. Can you please clarify which activity or package you'd like a quote for? We've got trampolines, laser tag, and mini golf here at the park, among other things. Let me know if you have any specific questions about pricing!
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=How much for a good card?
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=I'm not aware of any information about "good cards " being sold at AeroSports Scarborough. Could you please provide more context or clarify what you're referring to?
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=No. Just go kart.
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=Let's focus on the go-karting information. Here are the relevant points from the KNOWLEDGE BASE CONTEXT:  The main track is for riders 54 inches or taller and costs 19. 90 for a standalone race or 9. 90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller an
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=What is your age requirement?
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=For go karting, the minimum height requirements are: 54 inches tall for the main track and 36 inches tall for the mini track.
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=Okay.
+2026-04-10 00:27:20,478  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1ms
+2026-04-10 00:27:21,263  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=788ms
+2026-04-10 00:27:21,504  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): So you're good to go on that front! Now, would you like more information about our go-karting options or is there something else I can help you with?
+2026-04-10 00:27:23,340  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User interrupted. Spoken so far: So you're good to go on that front!
+2026-04-10 00:27:23,341  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (truncated to spoken): So you're good to go on that front!
+2026-04-10 00:27:23,341  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: So
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1143ms  docs=7
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=So how much are we quoting?
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm not sure what you're referring to. Can you please clarify which activity or package you'd like a quote for? We've got trampolines, laser tag, and mini golf here at the park, among other things. Let me know if you have any specific questions about pricing!
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=How much for a good card?
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=I'm not aware of any information about "good cards " being sold at AeroSports Scarborough. Could you please provide more context or clarify what you're referring to?
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=No. Just go kart.
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=Let's focus on the go-karting information. Here are the relevant points from the KNOWLEDGE BASE CONTEXT:  The main track is for riders 54 inches or taller and costs 19. 90 for a standalone race or 9. 90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller an
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=What is your age requirement?
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=For go karting, the minimum height requirements are: 54 inches tall for the main track and 36 inches tall for the mini track.
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=Okay.
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=So you're good to go on that front!
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=So
+2026-04-10 00:27:24,759  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1417ms
+2026-04-10 00:27:25,603  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2262ms
+2026-04-10 00:27:25,816  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): What would you like to know or discuss about AeroSports Scarborough? I can provide information on their attractions, pricing, birthday party packages, and more.
+2026-04-10 00:27:27,315  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User interrupted. Spoken so far: What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:27:27,315  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (truncated to spoken): What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:27:27,315  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: okay.
+2026-04-10 00:27:27,317  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Skipping RAG — conversational message: okay.
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=How much for a good card?
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=I'm not aware of any information about "good cards " being sold at AeroSports Scarborough. Could you please provide more context or clarify what you're referring to?
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=No. Just go kart.
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Let's focus on the go-karting information. Here are the relevant points from the KNOWLEDGE BASE CONTEXT:  The main track is for riders 54 inches or taller and costs 19. 90 for a standalone race or 9. 90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller an
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=What is your age requirement?
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=For go karting, the minimum height requirements are: 54 inches tall for the main track and 36 inches tall for the mini track.
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=Okay.
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=So you're good to go on that front!
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=So
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=okay.
+2026-04-10 00:27:27,318  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=0ms
+2026-04-10 00:27:28,077  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=761ms
+2026-04-10 00:27:28,360  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User interrupted. Spoken so far: It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:27:28,361  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LLM stream cancelled (user interrupted)
+2026-04-10 00:27:28,361  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (partial/cancelled): It seems we didn't quite get into the details of your visit yet. What can I help you with today?
+2026-04-10 00:27:28,362  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (truncated to spoken): It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:27:29,609  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: So can I book now?
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1567ms  docs=7
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=No. Just go kart.
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=Let's focus on the go-karting information. Here are the relevant points from the KNOWLEDGE BASE CONTEXT:  The main track is for riders 54 inches or taller and costs 19. 90 for a standalone race or 9. 90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller an
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=What is your age requirement?
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=For go karting, the minimum height requirements are: 54 inches tall for the main track and 36 inches tall for the mini track.
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Okay.
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=So you're good to go on that front!
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=okay.
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=So can I book now?
+2026-04-10 00:27:31,436  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1825ms
+2026-04-10 00:27:32,253  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2645ms
+2026-04-10 00:27:32,476  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): Let's get started on booking. Do you already know which party package you'd like to book, or would you like me to explain our options?
+2026-04-10 00:27:42,140  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: No. Like, I want to book go karting.
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=2185ms  docs=7
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=So how much is, uh, how much is, uh, uh, what is the age requirement for a go karts?
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=Could you be referring to our indoor go kart racing on the main or mini track?
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=What is your age requirement?
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=For go karting, the minimum height requirements are: 54 inches tall for the main track and 36 inches tall for the mini track.
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=Okay.
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=So you're good to go on that front!
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=So
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=okay.
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=So can I book now?
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=Let's get started on booking. Do you already know which party package you'd like to book, or would you like me to explain our options?
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=No. Like, I want to book go karting.
+2026-04-10 00:27:44,603  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=2460ms
+2026-04-10 00:27:45,486  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=3346ms
+2026-04-10 00:27:45,942  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): So you're interested in booking go-karting at our park We have different packages and options available. Can you tell me which type of go-karting experience are you looking for? Do you know which pack
+2026-04-10 00:27:50,786  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User interrupted. Spoken so far: So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:27:50,786  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (truncated to spoken): So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:27:50,786  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Yeah.
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Skipping RAG — conversational message: Yeah.
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=What is your age requirement?
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=For go karting, the minimum height requirements are: 54 inches tall for the main track and 36 inches tall for the mini track.
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Okay.
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=So you're good to go on that front!
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=So
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=okay.
+2026-04-10 00:27:50,788  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:27:50,789  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=So can I book now?
+2026-04-10 00:27:50,789  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=Let's get started on booking. Do you already know which party package you'd like to book, or would you like me to explain our options?
+2026-04-10 00:27:50,789  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=No. Like, I want to book go karting.
+2026-04-10 00:27:50,789  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:27:50,789  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=Yeah.
+2026-04-10 00:27:50,789  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=0ms
+2026-04-10 00:27:51,510  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=724ms
+2026-04-10 00:27:51,904  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): We've got a main track and a mini track for kids. The main track is 54 inches tall, so if you or the birthday person meets that height requirement, we can get started on booking. What's the age of the
+2026-04-10 00:28:09,372  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Not for birthday. I just want to book the time slots for go karts.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1282ms  docs=7
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Okay.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=So you're good to go on that front!
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=So
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=okay.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=So can I book now?
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=Let's get started on booking. Do you already know which party package you'd like to book, or would you like me to explain our options?
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=No. Like, I want to book go karting.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=Yeah.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=We've got a main track and a mini track for kids. The main track is 54 inches tall, so if you or the birthday person meets that height requirement, we can get started on booking. What's the age of the birthday person?
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=Not for birthday. I just want to book the time slots for go karts.
+2026-04-10 00:28:10,975  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1600ms
+2026-04-10 00:28:11,817  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2445ms
+2026-04-10 00:28:12,178  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): You can book a specific time slot for go -karting online or in-person, but if you haven't booked online, it will be first come first served. Would you like to proceed with booking a time slot now?
+2026-04-10 00:28:27,092  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Oh, yeah.
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1173ms  docs=7
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=So
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=What would you like to know or discuss about AeroSports Scarborough?
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=okay.
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=So can I book now?
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=Let's get started on booking. Do you already know which party package you'd like to book, or would you like me to explain our options?
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=No. Like, I want to book go karting.
+2026-04-10 00:28:28,559  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:28:28,560  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=Yeah.
+2026-04-10 00:28:28,560  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=We've got a main track and a mini track for kids. The main track is 54 inches tall, so if you or the birthday person meets that height requirement, we can get started on booking. What's the age of the birthday person?
+2026-04-10 00:28:28,560  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=Not for birthday. I just want to book the time slots for go karts.
+2026-04-10 00:28:28,560  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=You can book a specific time slot for go -karting online or in-person, but if you haven't booked online, it will be first come first served. Would you like to proceed with booking a time slot now?
+2026-04-10 00:28:28,560  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=Oh, yeah.
+2026-04-10 00:28:28,560  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1465ms
+2026-04-10 00:28:29,387  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2295ms
+2026-04-10 00:28:29,862  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): I'm glad you're excited! However, I want to clarify that we haven't started the conversation yet. This is just the beginning of our interaction. What would you like to talk about or ask about? Maybe i
+2026-04-10 00:28:46,338  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: No. We were just talking about go karts.
+2026-04-10 00:28:47,748  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1114ms  docs=7
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=okay.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=It seems we didn't quite get into the details of your visit yet.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=So can I book now?
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=Let's get started on booking. Do you already know which party package you'd like to book, or would you like me to explain our options?
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=No. Like, I want to book go karting.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Yeah.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=We've got a main track and a mini track for kids. The main track is 54 inches tall, so if you or the birthday person meets that height requirement, we can get started on booking. What's the age of the birthday person?
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=Not for birthday. I just want to book the time slots for go karts.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=You can book a specific time slot for go -karting online or in-person, but if you haven't booked online, it will be first come first served. Would you like to proceed with booking a time slot now?
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=Oh, yeah.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=I'm glad you're excited! However, I want to clarify that we haven't started the conversation yet. This is just the beginning of our interaction. What would you like to talk about or ask about? Maybe it's related to go-karting at AeroSports Scarborough?
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=No. We were just talking about go karts.
+2026-04-10 00:28:47,749  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1409ms
+2026-04-10 00:28:48,605  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2267ms
+2026-04-10 00:28:48,771  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): Let's get back on track (pun intended). What would you like to know or discuss about the go-karting information provided?
+2026-04-10 00:29:00,123  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Nothing, actually. That's fine.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=1458ms  docs=7
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=So can I book now?
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=Let's get started on booking. Do you already know which party package you'd like to book, or would you like me to explain our options?
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=No. Like, I want to book go karting.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=Yeah.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=We've got a main track and a mini track for kids. The main track is 54 inches tall, so if you or the birthday person meets that height requirement, we can get started on booking. What's the age of the birthday person?
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Not for birthday. I just want to book the time slots for go karts.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=You can book a specific time slot for go -karting online or in-person, but if you haven't booked online, it will be first come first served. Would you like to proceed with booking a time slot now?
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=Oh, yeah.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=I'm glad you're excited! However, I want to clarify that we haven't started the conversation yet. This is just the beginning of our interaction. What would you like to talk about or ask about? Maybe it's related to go-karting at AeroSports Scarborough?
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=No. We were just talking about go karts.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=Let's get back on track (pun intended). What would you like to know or discuss about the go-karting information provided?
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=Nothing, actually. That's fine.
+2026-04-10 00:29:01,874  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1747ms
+2026-04-10 00:29:02,759  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2636ms
+2026-04-10 00:29:03,080  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): It seems like we didn't have a conversation to begin with. If you'd like to start fresh and ask me something or discuss a topic related to the provided knowledge base context, I'm here to help!
+2026-04-10 00:29:16,189  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: K. Thank you so much.
+2026-04-10 00:29:18,062  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=744ms  docs=7
+2026-04-10 00:29:18,062  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:29:18,062  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:29:18,062  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=No. Like, I want to book go karting.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=So you're interested in booking go-karting at our park We have different packages and options available.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Yeah.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=We've got a main track and a mini track for kids. The main track is 54 inches tall, so if you or the birthday person meets that height requirement, we can get started on booking. What's the age of the birthday person?
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=Not for birthday. I just want to book the time slots for go karts.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=You can book a specific time slot for go -karting online or in-person, but if you haven't booked online, it will be first come first served. Would you like to proceed with booking a time slot now?
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=Oh, yeah.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=I'm glad you're excited! However, I want to clarify that we haven't started the conversation yet. This is just the beginning of our interaction. What would you like to talk about or ask about? Maybe it's related to go-karting at AeroSports Scarborough?
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=No. We were just talking about go karts.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=Let's get back on track (pun intended). What would you like to know or discuss about the go-karting information provided?
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=Nothing, actually. That's fine.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=It seems like we didn't have a conversation to begin with. If you'd like to start fresh and ask me something or discuss a topic related to the provided knowledge base context, I'm here to help!
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=K. Thank you so much.
+2026-04-10 00:29:18,063  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1871ms
+2026-04-10 00:29:18,828  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2638ms
+2026-04-10 00:29:18,876  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): No problem at all. Have a great day!
+2026-04-10 00:29:23,655  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] User said: Bye bye.
+2026-04-10 00:29:24,847  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY rag_api=800ms  docs=7
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] Full messages sent to LLM (14 messages):
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[1] role=user content=Yeah.
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[2] role=assistant content=We've got a main track and a mini track for kids. The main track is 54 inches tall, so if you or the birthday person meets that height requirement, we can get started on booking. What's the age of the birthday person?
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[3] role=user content=Not for birthday. I just want to book the time slots for go karts.
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[4] role=assistant content=You can book a specific time slot for go -karting online or in-person, but if you haven't booked online, it will be first come first served. Would you like to proceed with booking a time slot now?
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[5] role=user content=Oh, yeah.
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[6] role=assistant content=I'm glad you're excited! However, I want to clarify that we haven't started the conversation yet. This is just the beginning of our interaction. What would you like to talk about or ask about? Maybe it's related to go-karting at AeroSports Scarborough?
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[7] role=user content=No. We were just talking about go karts.
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[8] role=assistant content=Let's get back on track (pun intended). What would you like to know or discuss about the go-karting information provided?
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[9] role=user content=Nothing, actually. That's fine.
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[10] role=assistant content=It seems like we didn't have a conversation to begin with. If you'd like to start fresh and ask me something or discuss a topic related to the provided knowledge base context, I'm here to help!
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[11] role=user content=K. Thank you so much.
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[12] role=assistant content=No problem at all. Have a great day!
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417]   msg[13] role=user content=Bye bye.
+2026-04-10 00:29:24,848  INFO      chatbot.voice_handler  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY prepare_voice_stream=1190ms
+2026-04-10 00:29:25,663  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] LATENCY silence_to_first_reply=2007ms
+2026-04-10 00:29:25,808  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Assistant (full): Have a great day and enjoy your visit to AeroSports Scarborough if you decide to come by! Bye for now!
+2026-04-10 00:29:25,810  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] End-call keyword DEFINITE match
+2026-04-10 00:29:25,812  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Sent end-session message to Twilio
+2026-04-10 00:29:32,184  INFO      chatbot.server  [CA40e61fe9846b2fed16066e5ab726f417] Session log closed

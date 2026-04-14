@@ -1,0 +1,52 @@
+2026-04-09 19:02:22,333  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA0254ae690cc79c58252450d16c4e88d7.log
+2026-04-09 19:02:22,333  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] ConversationRelay connected from +14373612990
+2026-04-09 19:02:34,276  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] User said: Hi. I have a my party, um, this weekend.
+2026-04-09 19:02:35,579  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY rag_api=1300ms  docs=7
+2026-04-09 19:02:35,579  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] Full messages sent to LLM (2 messages):
+2026-04-09 19:02:35,579  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-09 19:02:35,579  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[1] role=user content=Hi. I have a my party, um, this weekend.
+2026-04-09 19:02:35,579  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY prepare_voice_stream=1301ms
+2026-04-09 19:02:36,444  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY silence_to_first_reply=2168ms
+2026-04-09 19:02:36,639  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] Assistant (full): So you're having a party at AeroSports Scarborough this weekend? Which package did you book with us? Was it the VIP or Premium Party Package?
+2026-04-09 19:02:36,641  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] End-call keyword MAYBE — running classifier
+2026-04-09 19:02:52,045  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] User said: Uh, it was, um, alternate party. I wanted change some information.
+2026-04-09 19:02:54,550  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY rag_api=2233ms  docs=7
+2026-04-09 19:02:54,550  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] Full messages sent to LLM (4 messages):
+2026-04-09 19:02:54,550  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-09 19:02:54,550  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[1] role=user content=Hi. I have a my party, um, this weekend.
+2026-04-09 19:02:54,550  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[2] role=assistant content=So you're having a party at AeroSports Scarborough this weekend? Which package did you book with us? Was it the VIP or Premium Party Package?
+2026-04-09 19:02:54,550  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[3] role=user content=Uh, it was, um, alternate party. I wanted change some information.
+2026-04-09 19:02:54,550  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY prepare_voice_stream=2504ms
+2026-04-09 19:02:55,283  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY silence_to_first_reply=3238ms
+2026-04-09 19:02:55,708  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] Assistant (full): You booked our Ultimate Party Package, also known as the Alternate Party. Let me see what we can do to help you make those changes. Can you please tell me what specifically needs updating? Is it the g
+2026-04-09 19:03:12,819  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] User said: Um, I want to change my booking time.
+2026-04-09 19:03:14,580  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY rag_api=1430ms  docs=7
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] Full messages sent to LLM (6 messages):
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[1] role=user content=Hi. I have a my party, um, this weekend.
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[2] role=assistant content=So you're having a party at AeroSports Scarborough this weekend? Which package did you book with us? Was it the VIP or Premium Party Package?
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[3] role=user content=Uh, it was, um, alternate party. I wanted change some information.
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[4] role=assistant content=You booked our Ultimate Party Package, also known as the Alternate Party. Let me see what we can do to help you make those changes. Can you please tell me what specifically needs updating? Is it the guest count, date, or something else entirely?
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7]   msg[5] role=user content=Um, I want to change my booking time.
+2026-04-09 19:03:14,581  INFO      chatbot.voice_handler  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY prepare_voice_stream=1760ms
+2026-04-09 19:03:15,298  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] LATENCY silence_to_first_reply=2479ms
+2026-04-09 19:03:15,635  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] Assistant (full): We're open until 10 PM on Saturday, which is today. If you'd like to move your party time, we might be able to accommodate that. Can you tell me what new time slot are you looking for?
+2026-04-09 19:03:15,637  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] End-call keyword MAYBE — running classifier
+2026-04-09 19:03:16,071  ERROR     chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] send_flag_alert failed: name 'mailer' is not defined
+2026-04-09 19:03:16,071  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] Sent end-session message to Twilio
+2026-04-09 19:03:25,734  INFO      chatbot.server  [CA0254ae690cc79c58252450d16c4e88d7] Session log closed
