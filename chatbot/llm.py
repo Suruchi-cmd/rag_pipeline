@@ -29,7 +29,7 @@ _FALLBACK_MSG = (
 )
 
 _OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434/v1")
-_MODEL = os.environ.get("LLM_MODEL", "llama3.1:8b")
+_MODEL = os.environ.get("LLM_MODEL", "phi4:latest")
 
 
 _client: OpenAI | None = None

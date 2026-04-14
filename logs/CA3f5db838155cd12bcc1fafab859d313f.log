@@ -1,0 +1,49 @@
+2026-04-14 18:05:24,976  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA3f5db838155cd12bcc1fafab859d313f.log
+2026-04-14 18:05:24,976  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] ConversationRelay connected from +14373612990
+2026-04-14 18:05:32,300  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] User said: Hi, Dan. How are you?
+2026-04-14 18:05:32,602  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY rag_api=289ms  docs=7
+2026-04-14 18:05:32,602  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] Full messages sent to LLM (2 messages):
+2026-04-14 18:05:32,602  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-14 18:05:32,602  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-14 18:05:32,603  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY prepare_voice_stream=289ms
+2026-04-14 18:05:35,539  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY silence_to_first_reply=3239ms
+2026-04-14 18:05:35,725  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] Assistant (full): I'm here and ready to help! How can I assist you today at AeroSports Scarborough?
+2026-04-14 18:05:44,992  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] User said: Do you have, uh, birthday party packages?
+2026-04-14 18:05:47,397  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY rag_api=2066ms  docs=7
+2026-04-14 18:05:47,397  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] Full messages sent to LLM (4 messages):
+2026-04-14 18:05:47,397  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-14 18:05:47,398  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-14 18:05:47,398  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[2] role=assistant content=I'm here and ready to help! How can I assist you today at AeroSports Scarborough?
+2026-04-14 18:05:47,398  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[3] role=user content=Do you have, uh, birthday party packages?
+2026-04-14 18:05:47,398  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY prepare_voice_stream=2357ms
+2026-04-14 18:05:49,005  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY silence_to_first_reply=4013ms
+2026-04-14 18:05:52,314  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] Assistant (full): Yes, we offer several birthday party packages at AeroSports Scarborough! Here are the details: 1. Basic Package:  Includes a private party room for your group. - Access to all park attractions except 
+2026-04-14 18:06:46,462  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] User said: No. I want to know about all the packages.
+2026-04-14 18:06:47,275  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY rag_api=185ms  docs=7
+2026-04-14 18:06:47,275  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] Full messages sent to LLM (6 messages):
+2026-04-14 18:06:47,275  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-14 18:06:47,275  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-14 18:06:47,276  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[2] role=assistant content=I'm here and ready to help! How can I assist you today at AeroSports Scarborough?
+2026-04-14 18:06:47,276  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[3] role=user content=Do you have, uh, birthday party packages?
+2026-04-14 18:06:47,276  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[4] role=assistant content=Yes, we offer several birthday party packages at AeroSports Scarborough! Here are the details: 1. Basic Package:  Includes a private party room for your group. - Access to all park attractions except Go Karting. - Birthday cake and ice cream included. 2. Premium Package: All features of the Basic Pa
+2026-04-14 18:06:47,276  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f]   msg[5] role=user content=No. I want to know about all the packages.
+2026-04-14 18:06:47,276  INFO      chatbot.voice_handler  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY prepare_voice_stream=765ms
+2026-04-14 18:06:48,888  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] LATENCY silence_to_first_reply=2426ms
+2026-04-14 18:06:51,660  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] Assistant (full): Sure! AeroSports Scarborough offers three birthday party packages: 1. Premium Package:  Includes a private room, pizza, juice boxes for 10 kids, and a jump pass for each child. - Price: 19. 90 per chi
+2026-04-14 18:07:39,541  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] Finalized abandoned call in DB
+2026-04-14 18:07:39,541  INFO      chatbot.server  [CA3f5db838155cd12bcc1fafab859d313f] Session log closed

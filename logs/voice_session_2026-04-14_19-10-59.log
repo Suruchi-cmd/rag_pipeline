@@ -1,0 +1,1950 @@
+# Voice Session Pipeline Log
+# call_sid : CAc4c084c1931aa3014b8bdbcb9338ff50
+# started  : 2026-04-14T19:10:59.524
+# log_file : /home/aeroscbserver/Documents/rag_pipeline/logs/voice_session_2026-04-14_19-10-59.log
+
+[2026-04-14 19:10:59.524] [INCOMING_TRANSCRIPT] [Turn #1]
+────────────────────────────────────────────
+I'm Dan. How are you?
+────────────────────────────────────────────
+
+[2026-04-14 19:10:59.524] [REFINED_QUERY] [Turn #1]
+────────────────────────────────────────────
+Original : I'm Dan. How are you?
+Refined  : (unchanged)
+────────────────────────────────────────────
+
+[2026-04-14 19:10:59.706] [RAG_RESULTS] [Turn #1]
+────────────────────────────────────────────
+Retrieved 4 document(s):
+
+[1]  score=0.27380165741465146  source=voice_call_scripts.md
+## Greeting
+
+> Thank you for calling AeroSports Scarborough! How can I help you today?
+
+*Note: Use warm, upbeat tone*
+
+[2]  score=0.22326916512384964  source=voice_call_scripts.md
+## Cannot Answer
+
+> That is a great question. I do not have that specific information right now, but I can have someone from our team get back to you. Can I get your name and phone number?
+
+*Note: Collect callback info when unsure*
+
+[3]  score=0.21613359326533954  source=unanswered_questions.md
+## General
+
+**Q: What attractions do you have in the park?** `[synced]`
+
+A: We have trampoines, ninja warrior obstacle course, ninja maze, donut slide, 360 bike, Go Karting, dodgeball area in trampoline, rock walls, airbags.
+
+[4]  score=0.20721314847471684  source=voice_call_scripts.md
+## Transfer To Human
+
+> Let me connect you with one of our team members who can help you with that. One moment please.
+
+*Note: Use when the question is beyond what the AI can handle*
+────────────────────────────────────────────
+
+[2026-04-14 19:10:59.706] [LLM_CONTEXT] [Turn #1]
+────────────────────────────────────────────
+2 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings (any mention of "my booking," "my party," "I booked," wanting to change, cancel, or reschedule): acknowledge briefly and stop. Do not ask for names, dates, or package types. Do not quote rescheduling policies. Just: "Oh okay, sure" — then wait.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Sunday to Thursday ten to nine, Friday and Saturday ten to ten. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Tuesday, April 14, 2026 at 07:10 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: voice_call_scripts.md)
+## Greeting
+
+> Thank you for calling AeroSports Scarborough! How can I help you today?
+
+*Note: Use warm, upbeat tone*
+
+[2] (source: voice_call_scripts.md)
+## Cannot Answer
+
+> That is a great question. I do not have that specific information right now, but I can have someone from our team get back to you. Can I get your name and phone number?
+
+*Note: Collect callback info when unsure*
+
+[3] (source: unanswered_questions.md)
+## General
+
+**Q: What attractions do you have in the park?** `[synced]`
+
+A: We have trampoines, ninja warrior obstacle course, ninja maze, donut slide, 360 bike, Go Karting, dodgeball area in trampoline, rock walls, airbags.
+
+[4] (source: voice_call_scripts.md)
+## Transfer To Human
+
+> Let me connect you with one of our team members who can help you with that. One moment please.
+
+*Note: Use when the question is beyond what the AI can handle*
+
+
+--- msg[1]  role=user ---
+I'm Dan. How are you?
+────────────────────────────────────────────
+
+[2026-04-14 19:11:00.208] [LLM_RAW_RESPONSE] [Turn #1]
+────────────────────────────────────────────
+Hey there! I'm just a voice assistant here to help you out. How can I assist you today? 
+────────────────────────────────────────────
+
+[2026-04-14 19:11:00.208] [FINAL_RESPONSE_TO_CALLER] [Turn #1]
+────────────────────────────────────────────
+Hey there! I'm just a voice assistant here to help you out. How can I assist you today?
+────────────────────────────────────────────
+
+[2026-04-14 19:11:11.158] [INCOMING_TRANSCRIPT] [Turn #2]
+────────────────────────────────────────────
+Um, I just wanted to know about, uh, your go kart.
+────────────────────────────────────────────
+
+[2026-04-14 19:11:11.553] [REFINED_QUERY] [Turn #2]
+────────────────────────────────────────────
+Original : Um, I just wanted to know about, uh, your go kart.
+Refined  : What information is available regarding go-karting options at AeroSports Scarborough?
+────────────────────────────────────────────
+
+[2026-04-14 19:11:11.720] [RAG_RESULTS] [Turn #2]
+────────────────────────────────────────────
+Retrieved 4 document(s):
+
+[1]  score=0.7009207753955539  source=unanswered_questions.md
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there diff…
+
+[2]  score=0.6646574933724922  source=faqs.md
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at…
+
+[3]  score=0.6336786994817151  source=faqs.md
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive …
+
+[4]  score=0.623343479332649  source=faqs.md
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, …
+────────────────────────────────────────────
+
+[2026-04-14 19:11:11.720] [LLM_CONTEXT] [Turn #2]
+────────────────────────────────────────────
+4 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings (any mention of "my booking," "my party," "I booked," wanting to change, cancel, or reschedule): acknowledge briefly and stop. Do not ask for names, dates, or package types. Do not quote rescheduling policies. Just: "Oh okay, sure" — then wait.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Sunday to Thursday ten to nine, Friday and Saturday ten to ten. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Tuesday, April 14, 2026 at 07:11 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: unanswered_questions.md)
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there different pricing options for go karting during peak and off-peak hours?** `[pending]`
+
+**Q: What should I do if I need to reschedule my go karting reservation?** `[pending]`
+
+**Q: Can we enjoy go karting late into the evening on Fridays and Saturdays?** `[pending]`
+
+**Q: How many go-kart tracks are available at AeroSports Scarborough?** `[pending]`
+
+**Q: Can we request a tour of the go karting area before booking?** `[pending]`
+
+**Q: Are there any age restrictions for go karting at AeroSports Scarborough?** `[pending]`
+
+**Q: Can I reserve a private go kart track for a party of 20 people?** `[pending]`
+
+**Q: What's the difference between single and dual go karts in terms of pricing and experience?** `[pending]`
+
+**Q: What if my group needs more than 30 minutes for a go karting session?** `[pending]`
+
+**Q: Can I get a discount if I book multiple go karting sessions in one day?** `[pending]`
+
+**Q: Can I bring my own go kart helmet, or are they provided on-site?** `[pending]`
+
+**Q: How can I contact the park's accessibility coordinator for assistance with go karting?** `[pending]`
+
+**Q: Are the go karting hours flexible enough for someone with a non-traditional schedule?** `[pending]`
+
+**Q: What is the best way to reach the park for special needs accommodations?** `[pending]`
+
+**Q: Can I request a private room for a guest with mobility challenges, and how is that arranged?** `[pending]`
+
+**Q: What should I know about Park Extension 3 when visiting for the first time?** `[pending]`
+
+**Q: Is there a specific email address to use when inquiring about accessibility features?** `[pending]`
+
+**Q: How do I book a group event with specific accessibility requirements?** `[pending]`
+
+[2] (source: faqs.md)
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?**
+
+A: Absolutely! We welcome school groups, church groups, sports teams, and youth organizations. Minimum 15 people. Call 289-454-5555 or email events.scb@aerosportsparks.ca to book.
+
+**Q: Can I rent the whole facility for a private event?**
+
+A: Yes, we offer full facility rentals. Weekday rentals are $2,000 per hour and weekend rentals are $3,000 per hour. Capacity is up to 220 jumpers with exclusive access to the entire facility including unlimited go karting.
+
+[3] (source: faqs.md)
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand the park rules before dropping them off.
+
+**Q: Do spectators have to pay to watch jumpers?**
+
+A: Non-jumpers are never charged admission. Only jumpers pay for general admission.
+
+**Q: Do you have food available to purchase?**
+
+A: Yes! We have a fully stocked Snack Shack serving delicious treats.
+
+**Q: What days are the least busy?**
+
+A: Weekends are our busiest days. Mondays and Tuesdays are usually less busy.
+
+**Q: Can my small child come to the park?**
+
+A: As long as the child can walk, they can jump!
+
+**Q: Do you sell gift cards?**
+
+A: Yes! Purchase a physical gift card at the park or buy one online.
+
+**Q: Do jump cards expire?**
+
+A: No, our jump cards never expire and can be used by different jumpers.
+
+**Q: When are refunds processed?**
+
+A: Refunds take 3-5 business days to reflect in your bank account.
+
+**Q: What attractions do you have in the park?**
+
+A: We have trampoines, ninja warrior obstacle course, ninja maze, donut slide, 360 bike, Go Karting, dodgeball area in trampoline, rock walls, airbags.
+
+**Q: What is included in the jump pass price?**
+
+A: Your jump pass includes access to all attractions in the park like trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and ninja maze. Go karting is the only attraction not included and needs a separate ticket or add-on.
+
+**Q: What is the address of AeroSports Scarborough?**
+
+A: We are located at 1120 Birchmount Rd, Scarborough, Ontario, M1K 5G4. You can find us on Google Maps by searching AeroSports Scarborough.
+
+**Q: What are your hours of operation?**
+
+A: We are open Sunday to Thursday from 10am to 8pm, and Friday to Saturday from 10am to 10pm.
+
+**Q: How do I book online?**
+
+A: You can book your jump passes online at ecom.roller.app/aerosportsscarborough. For birthday parties, visit the birthday booking page on our website or call us at 289-454-5555.
+
+**Q: Do you have any current promotions or deals?**
+
+A: Check our website or ask us about current promotions. We run monthly specials including birthday party discounts and seasonal deals.
+
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?
+
+[4] (source: faqs.md)
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, every customer participating in go karting needs a valid race pass.
+
+**Q: Are AeroSports socks required for go karting?**
+
+A: Closed-toed shoes are required on the track. AeroSports socks are required for all other attractions.
+
+**Q: Can I book a specific time slot for go karting?**
+
+A: Yes you can, if you haven't booked online, it will be first come first served, but you can book a time slot in person as well.
+
+**Q: What is Glow?**
+
+A: At Scarborough, we have glow in the dark at ALL times! The main arena features laser lights and LED lights for an amazing experience.
+
+**Q: How tall do you have to be for go karting?**
+
+A: For the main track, drivers must be at least 54 inches tall. For the mini track, riders must be at least 36 inches tall. Closed-toed shoes are required for all go kart riders.
+
+**Q: How much does go karting cost?**
+
+A: A standalone go kart race on the main track is $19.90 and the mini track is $9.90. If you already have a jump pass, add-on races are $9.90 for the main track and $4.90 for the mini track. Each race is up to 10 laps.
+
+
+--- msg[1]  role=user ---
+I'm Dan. How are you?
+
+--- msg[2]  role=assistant ---
+Hey there! I'm just a voice assistant here to help you out. How can I assist you today?
+
+--- msg[3]  role=user ---
+Um, I just wanted to know about, uh, your go kart.
+────────────────────────────────────────────
+
+[2026-04-14 19:11:13.676] [LLM_RAW_RESPONSE] [Turn #2]
+────────────────────────────────────────────
+Sure thing! We have both single and dual karts available on our big track. There's also a mini track for kids as young as 3 years old. Do you need information on pricing or something else? 
+────────────────────────────────────────────
+
+[2026-04-14 19:11:13.676] [FINAL_RESPONSE_TO_CALLER] [Turn #2]
+────────────────────────────────────────────
+Sure thing! We have both single and dual karts available on our big track. There's also a mini track for kids as young as 3 years old. Do you need information on pricing or something else?
+────────────────────────────────────────────
+
+[2026-04-14 19:11:25.904] [INCOMING_TRANSCRIPT] [Turn #3]
+────────────────────────────────────────────
+Um, just pricing.
+────────────────────────────────────────────
+
+[2026-04-14 19:11:26.810] [REFINED_QUERY] [Turn #3]
+────────────────────────────────────────────
+Original : Um, just pricing.
+Refined  : What are the prices for single and dual go-karts at AeroSports Scarborough, including any available packages such as the Ultimate Pass? Additionally, is there a separate pricing structure for the mini track designed for kids aged 3 years old?
+────────────────────────────────────────────
+
+[2026-04-14 19:11:26.974] [RAG_RESULTS] [Turn #3]
+────────────────────────────────────────────
+Retrieved 4 document(s):
+
+[1]  score=0.738745782823926  source=faqs.md
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, …
+
+[2]  score=0.689627125352134  source=unanswered_questions.md
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there diff…
+
+[3]  score=0.6730249719008832  source=faqs.md
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at…
+
+[4]  score=0.6616082998256156  source=faqs.md
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive …
+────────────────────────────────────────────
+
+[2026-04-14 19:11:26.974] [LLM_CONTEXT] [Turn #3]
+────────────────────────────────────────────
+6 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings (any mention of "my booking," "my party," "I booked," wanting to change, cancel, or reschedule): acknowledge briefly and stop. Do not ask for names, dates, or package types. Do not quote rescheduling policies. Just: "Oh okay, sure" — then wait.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Sunday to Thursday ten to nine, Friday and Saturday ten to ten. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Tuesday, April 14, 2026 at 07:11 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: faqs.md)
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, every customer participating in go karting needs a valid race pass.
+
+**Q: Are AeroSports socks required for go karting?**
+
+A: Closed-toed shoes are required on the track. AeroSports socks are required for all other attractions.
+
+**Q: Can I book a specific time slot for go karting?**
+
+A: Yes you can, if you haven't booked online, it will be first come first served, but you can book a time slot in person as well.
+
+**Q: What is Glow?**
+
+A: At Scarborough, we have glow in the dark at ALL times! The main arena features laser lights and LED lights for an amazing experience.
+
+**Q: How tall do you have to be for go karting?**
+
+A: For the main track, drivers must be at least 54 inches tall. For the mini track, riders must be at least 36 inches tall. Closed-toed shoes are required for all go kart riders.
+
+**Q: How much does go karting cost?**
+
+A: A standalone go kart race on the main track is $19.90 and the mini track is $9.90. If you already have a jump pass, add-on races are $9.90 for the main track and $4.90 for the mini track. Each race is up to 10 laps.
+
+[2] (source: unanswered_questions.md)
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there different pricing options for go karting during peak and off-peak hours?** `[pending]`
+
+**Q: What should I do if I need to reschedule my go karting reservation?** `[pending]`
+
+**Q: Can we enjoy go karting late into the evening on Fridays and Saturdays?** `[pending]`
+
+**Q: How many go-kart tracks are available at AeroSports Scarborough?** `[pending]`
+
+**Q: Can we request a tour of the go karting area before booking?** `[pending]`
+
+**Q: Are there any age restrictions for go karting at AeroSports Scarborough?** `[pending]`
+
+**Q: Can I reserve a private go kart track for a party of 20 people?** `[pending]`
+
+**Q: What's the difference between single and dual go karts in terms of pricing and experience?** `[pending]`
+
+**Q: What if my group needs more than 30 minutes for a go karting session?** `[pending]`
+
+**Q: Can I get a discount if I book multiple go karting sessions in one day?** `[pending]`
+
+**Q: Can I bring my own go kart helmet, or are they provided on-site?** `[pending]`
+
+**Q: How can I contact the park's accessibility coordinator for assistance with go karting?** `[pending]`
+
+**Q: Are the go karting hours flexible enough for someone with a non-traditional schedule?** `[pending]`
+
+**Q: What is the best way to reach the park for special needs accommodations?** `[pending]`
+
+**Q: Can I request a private room for a guest with mobility challenges, and how is that arranged?** `[pending]`
+
+**Q: What should I know about Park Extension 3 when visiting for the first time?** `[pending]`
+
+**Q: Is there a specific email address to use when inquiring about accessibility features?** `[pending]`
+
+**Q: How do I book a group event with specific accessibility requirements?** `[pending]`
+
+[3] (source: faqs.md)
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?**
+
+A: Absolutely! We welcome school groups, church groups, sports teams, and youth organizations. Minimum 15 people. Call 289-454-5555 or email events.scb@aerosportsparks.ca to book.
+
+**Q: Can I rent the whole facility for a private event?**
+
+A: Yes, we offer full facility rentals. Weekday rentals are $2,000 per hour and weekend rentals are $3,000 per hour. Capacity is up to 220 jumpers with exclusive access to the entire facility including unlimited go karting.
+
+[4] (source: faqs.md)
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand the park rules before dropping them off.
+
+**Q: Do spectators have to pay to watch jumpers?**
+
+A: Non-jumpers are never charged admission. Only jumpers pay for general admission.
+
+**Q: Do you have food available to purchase?**
+
+A: Yes! We have a fully stocked Snack Shack serving delicious treats.
+
+**Q: What days are the least busy?**
+
+A: Weekends are our busiest days. Mondays and Tuesdays are usually less busy.
+
+**Q: Can my small child come to the park?**
+
+A: As long as the child can walk, they can jump!
+
+**Q: Do you sell gift cards?**
+
+A: Yes! Purchase a physical gift card at the park or buy one online.
+
+**Q: Do jump cards expire?**
+
+A: No, our jump cards never expire and can be used by different jumpers.
+
+**Q: When are refunds processed?**
+
+A: Refunds take 3-5 business days to reflect in your bank account.
+
+**Q: What attractions do you have in the park?**
+
+A: We have trampoines, ninja warrior obstacle course, ninja maze, donut slide, 360 bike, Go Karting, dodgeball area in trampoline, rock walls, airbags.
+
+**Q: What is included in the jump pass price?**
+
+A: Your jump pass includes access to all attractions in the park like trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and ninja maze. Go karting is the only attraction not included and needs a separate ticket or add-on.
+
+**Q: What is the address of AeroSports Scarborough?**
+
+A: We are located at 1120 Birchmount Rd, Scarborough, Ontario, M1K 5G4. You can find us on Google Maps by searching AeroSports Scarborough.
+
+**Q: What are your hours of operation?**
+
+A: We are open Sunday to Thursday from 10am to 8pm, and Friday to Saturday from 10am to 10pm.
+
+**Q: How do I book online?**
+
+A: You can book your jump passes online at ecom.roller.app/aerosportsscarborough. For birthday parties, visit the birthday booking page on our website or call us at 289-454-5555.
+
+**Q: Do you have any current promotions or deals?**
+
+A: Check our website or ask us about current promotions. We run monthly specials including birthday party discounts and seasonal deals.
+
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?
+
+
+--- msg[1]  role=user ---
+I'm Dan. How are you?
+
+--- msg[2]  role=assistant ---
+Hey there! I'm just a voice assistant here to help you out. How can I assist you today?
+
+--- msg[3]  role=user ---
+Um, I just wanted to know about, uh, your go kart.
+
+--- msg[4]  role=assistant ---
+Sure thing! We have both single and dual karts available on our big track. There's also a mini track for kids as young as 3 years old. Do you need information on pricing or something else?
+
+--- msg[5]  role=user ---
+Um, just pricing.
+────────────────────────────────────────────
+
+[2026-04-14 19:11:29.521] [LLM_RAW_RESPONSE] [Turn #3]
+────────────────────────────────────────────
+Got it. A standalone go kart race on the main track is 19. 90 plus tax. For the mini track, it's 9. 90 plus tax. If you already have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race lasts up to 10 laps. Need anything else? 
+────────────────────────────────────────────
+
+[2026-04-14 19:11:29.521] [FINAL_RESPONSE_TO_CALLER] [Turn #3]
+────────────────────────────────────────────
+Got it. A standalone go kart race on the main track is 19. 90 plus tax. For the mini track, it's 9. 90 plus tax. If you already have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race lasts up to 10 laps. Need anything else?
+────────────────────────────────────────────
+
+[2026-04-14 19:11:50.992] [INCOMING_TRANSCRIPT] [Turn #4]
+────────────────────────────────────────────
+No. I think that's that's it.
+────────────────────────────────────────────
+
+[2026-04-14 19:11:51.884] [REFINED_QUERY] [Turn #4]
+────────────────────────────────────────────
+Original : No. I think that's that's it.
+Refined  : What is the pricing for a standalone go kart race on both the main and mini tracks at AeroSports Scarborough, including tax? Additionally, what are the prices for add-on races if one already has a jump pass?
+────────────────────────────────────────────
+
+[2026-04-14 19:11:52.050] [RAG_RESULTS] [Turn #4]
+────────────────────────────────────────────
+Retrieved 4 document(s):
+
+[1]  score=0.7565105075481913  source=faqs.md
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, …
+
+[2]  score=0.7065410050280682  source=unanswered_questions.md
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there diff…
+
+[3]  score=0.6758579192500355  source=faqs.md
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at…
+
+[4]  score=0.6675629214679938  source=faqs.md
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive …
+────────────────────────────────────────────
+
+[2026-04-14 19:11:52.050] [LLM_CONTEXT] [Turn #4]
+────────────────────────────────────────────
+8 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings (any mention of "my booking," "my party," "I booked," wanting to change, cancel, or reschedule): acknowledge briefly and stop. Do not ask for names, dates, or package types. Do not quote rescheduling policies. Just: "Oh okay, sure" — then wait.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Sunday to Thursday ten to nine, Friday and Saturday ten to ten. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Tuesday, April 14, 2026 at 07:11 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: faqs.md)
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, every customer participating in go karting needs a valid race pass.
+
+**Q: Are AeroSports socks required for go karting?**
+
+A: Closed-toed shoes are required on the track. AeroSports socks are required for all other attractions.
+
+**Q: Can I book a specific time slot for go karting?**
+
+A: Yes you can, if you haven't booked online, it will be first come first served, but you can book a time slot in person as well.
+
+**Q: What is Glow?**
+
+A: At Scarborough, we have glow in the dark at ALL times! The main arena features laser lights and LED lights for an amazing experience.
+
+**Q: How tall do you have to be for go karting?**
+
+A: For the main track, drivers must be at least 54 inches tall. For the mini track, riders must be at least 36 inches tall. Closed-toed shoes are required for all go kart riders.
+
+**Q: How much does go karting cost?**
+
+A: A standalone go kart race on the main track is $19.90 and the mini track is $9.90. If you already have a jump pass, add-on races are $9.90 for the main track and $4.90 for the mini track. Each race is up to 10 laps.
+
+[2] (source: unanswered_questions.md)
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there different pricing options for go karting during peak and off-peak hours?** `[pending]`
+
+**Q: What should I do if I need to reschedule my go karting reservation?** `[pending]`
+
+**Q: Can we enjoy go karting late into the evening on Fridays and Saturdays?** `[pending]`
+
+**Q: How many go-kart tracks are available at AeroSports Scarborough?** `[pending]`
+
+**Q: Can we request a tour of the go karting area before booking?** `[pending]`
+
+**Q: Are there any age restrictions for go karting at AeroSports Scarborough?** `[pending]`
+
+**Q: Can I reserve a private go kart track for a party of 20 people?** `[pending]`
+
+**Q: What's the difference between single and dual go karts in terms of pricing and experience?** `[pending]`
+
+**Q: What if my group needs more than 30 minutes for a go karting session?** `[pending]`
+
+**Q: Can I get a discount if I book multiple go karting sessions in one day?** `[pending]`
+
+**Q: Can I bring my own go kart helmet, or are they provided on-site?** `[pending]`
+
+**Q: How can I contact the park's accessibility coordinator for assistance with go karting?** `[pending]`
+
+**Q: Are the go karting hours flexible enough for someone with a non-traditional schedule?** `[pending]`
+
+**Q: What is the best way to reach the park for special needs accommodations?** `[pending]`
+
+**Q: Can I request a private room for a guest with mobility challenges, and how is that arranged?** `[pending]`
+
+**Q: What should I know about Park Extension 3 when visiting for the first time?** `[pending]`
+
+**Q: Is there a specific email address to use when inquiring about accessibility features?** `[pending]`
+
+**Q: How do I book a group event with specific accessibility requirements?** `[pending]`
+
+[3] (source: faqs.md)
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?**
+
+A: Absolutely! We welcome school groups, church groups, sports teams, and youth organizations. Minimum 15 people. Call 289-454-5555 or email events.scb@aerosportsparks.ca to book.
+
+**Q: Can I rent the whole facility for a private event?**
+
+A: Yes, we offer full facility rentals. Weekday rentals are $2,000 per hour and weekend rentals are $3,000 per hour. Capacity is up to 220 jumpers with exclusive access to the entire facility including unlimited go karting.
+
+[4] (source: faqs.md)
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand the park rules before dropping them off.
+
+**Q: Do spectators have to pay to watch jumpers?**
+
+A: Non-jumpers are never charged admission. Only jumpers pay for general admission.
+
+**Q: Do you have food available to purchase?**
+
+A: Yes! We have a fully stocked Snack Shack serving delicious treats.
+
+**Q: What days are the least busy?**
+
+A: Weekends are our busiest days. Mondays and Tuesdays are usually less busy.
+
+**Q: Can my small child come to the park?**
+
+A: As long as the child can walk, they can jump!
+
+**Q: Do you sell gift cards?**
+
+A: Yes! Purchase a physical gift card at the park or buy one online.
+
+**Q: Do jump cards expire?**
+
+A: No, our jump cards never expire and can be used by different jumpers.
+
+**Q: When are refunds processed?**
+
+A: Refunds take 3-5 business days to reflect in your bank account.
+
+**Q: What attractions do you have in the park?**
+
+A: We have trampoines, ninja warrior obstacle course, ninja maze, donut slide, 360 bike, Go Karting, dodgeball area in trampoline, rock walls, airbags.
+
+**Q: What is included in the jump pass price?**
+
+A: Your jump pass includes access to all attractions in the park like trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and ninja maze. Go karting is the only attraction not included and needs a separate ticket or add-on.
+
+**Q: What is the address of AeroSports Scarborough?**
+
+A: We are located at 1120 Birchmount Rd, Scarborough, Ontario, M1K 5G4. You can find us on Google Maps by searching AeroSports Scarborough.
+
+**Q: What are your hours of operation?**
+
+A: We are open Sunday to Thursday from 10am to 8pm, and Friday to Saturday from 10am to 10pm.
+
+**Q: How do I book online?**
+
+A: You can book your jump passes online at ecom.roller.app/aerosportsscarborough. For birthday parties, visit the birthday booking page on our website or call us at 289-454-5555.
+
+**Q: Do you have any current promotions or deals?**
+
+A: Check our website or ask us about current promotions. We run monthly specials including birthday party discounts and seasonal deals.
+
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?
+
+
+--- msg[1]  role=user ---
+I'm Dan. How are you?
+
+--- msg[2]  role=assistant ---
+Hey there! I'm just a voice assistant here to help you out. How can I assist you today?
+
+--- msg[3]  role=user ---
+Um, I just wanted to know about, uh, your go kart.
+
+--- msg[4]  role=assistant ---
+Sure thing! We have both single and dual karts available on our big track. There's also a mini track for kids as young as 3 years old. Do you need information on pricing or something else?
+
+--- msg[5]  role=user ---
+Um, just pricing.
+
+--- msg[6]  role=assistant ---
+Got it. A standalone go kart race on the main track is 19. 90 plus tax. For the mini track, it's 9. 90 plus tax. If you already have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race lasts up to 10 laps. Need anything else?
+
+--- msg[7]  role=user ---
+No. I think that's that's it.
+────────────────────────────────────────────
+
+[2026-04-14 19:11:53.694] [LLM_RAW_RESPONSE] [Turn #4]
+────────────────────────────────────────────
+Great! If you have any more questions later, feel free to reach out. Have a fantastic day! 
+────────────────────────────────────────────
+
+[2026-04-14 19:11:53.694] [FINAL_RESPONSE_TO_CALLER] [Turn #4]
+────────────────────────────────────────────
+Great! If you have any more questions later, feel free to reach out. Have a fantastic day!
+────────────────────────────────────────────
+
+[2026-04-14 19:12:00.649] [INCOMING_TRANSCRIPT] [Turn #5]
+────────────────────────────────────────────
+So, um, I have an 11 year old kid, Can he do the big cards, or will he be doing the small carts?
+────────────────────────────────────────────
+
+[2026-04-14 19:12:01.510] [REFINED_QUERY] [Turn #5]
+────────────────────────────────────────────
+Original : So, um, I have an 11 year old kid, Can he do the big cards, or will he be doing the small carts?
+Refined  : Can an 11-year-old child participate in go kart races on the main track at AeroSports Scarborough, or are they required to use the mini track designed for kids as young as 3 years old?
+────────────────────────────────────────────
+
+[2026-04-14 19:12:01.692] [RAG_RESULTS] [Turn #5]
+────────────────────────────────────────────
+Retrieved 4 document(s):
+
+[1]  score=0.7150333607118082  source=faqs.md
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, …
+
+[2]  score=0.6293025458690872  source=unanswered_questions.md
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there diff…
+
+[3]  score=0.6125540003116522  source=faqs.md
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive …
+
+[4]  score=0.6118889219694785  source=faqs.md
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at…
+────────────────────────────────────────────
+
+[2026-04-14 19:12:01.692] [LLM_CONTEXT] [Turn #5]
+────────────────────────────────────────────
+10 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings (any mention of "my booking," "my party," "I booked," wanting to change, cancel, or reschedule): acknowledge briefly and stop. Do not ask for names, dates, or package types. Do not quote rescheduling policies. Just: "Oh okay, sure" — then wait.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Sunday to Thursday ten to nine, Friday and Saturday ten to ten. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Tuesday, April 14, 2026 at 07:12 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: faqs.md)
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, every customer participating in go karting needs a valid race pass.
+
+**Q: Are AeroSports socks required for go karting?**
+
+A: Closed-toed shoes are required on the track. AeroSports socks are required for all other attractions.
+
+**Q: Can I book a specific time slot for go karting?**
+
+A: Yes you can, if you haven't booked online, it will be first come first served, but you can book a time slot in person as well.
+
+**Q: What is Glow?**
+
+A: At Scarborough, we have glow in the dark at ALL times! The main arena features laser lights and LED lights for an amazing experience.
+
+**Q: How tall do you have to be for go karting?**
+
+A: For the main track, drivers must be at least 54 inches tall. For the mini track, riders must be at least 36 inches tall. Closed-toed shoes are required for all go kart riders.
+
+**Q: How much does go karting cost?**
+
+A: A standalone go kart race on the main track is $19.90 and the mini track is $9.90. If you already have a jump pass, add-on races are $9.90 for the main track and $4.90 for the mini track. Each race is up to 10 laps.
+
+[2] (source: unanswered_questions.md)
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there different pricing options for go karting during peak and off-peak hours?** `[pending]`
+
+**Q: What should I do if I need to reschedule my go karting reservation?** `[pending]`
+
+**Q: Can we enjoy go karting late into the evening on Fridays and Saturdays?** `[pending]`
+
+**Q: How many go-kart tracks are available at AeroSports Scarborough?** `[pending]`
+
+**Q: Can we request a tour of the go karting area before booking?** `[pending]`
+
+**Q: Are there any age restrictions for go karting at AeroSports Scarborough?** `[pending]`
+
+**Q: Can I reserve a private go kart track for a party of 20 people?** `[pending]`
+
+**Q: What's the difference between single and dual go karts in terms of pricing and experience?** `[pending]`
+
+**Q: What if my group needs more than 30 minutes for a go karting session?** `[pending]`
+
+**Q: Can I get a discount if I book multiple go karting sessions in one day?** `[pending]`
+
+**Q: Can I bring my own go kart helmet, or are they provided on-site?** `[pending]`
+
+**Q: How can I contact the park's accessibility coordinator for assistance with go karting?** `[pending]`
+
+**Q: Are the go karting hours flexible enough for someone with a non-traditional schedule?** `[pending]`
+
+**Q: What is the best way to reach the park for special needs accommodations?** `[pending]`
+
+**Q: Can I request a private room for a guest with mobility challenges, and how is that arranged?** `[pending]`
+
+**Q: What should I know about Park Extension 3 when visiting for the first time?** `[pending]`
+
+**Q: Is there a specific email address to use when inquiring about accessibility features?** `[pending]`
+
+**Q: How do I book a group event with specific accessibility requirements?** `[pending]`
+
+[3] (source: faqs.md)
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand the park rules before dropping them off.
+
+**Q: Do spectators have to pay to watch jumpers?**
+
+A: Non-jumpers are never charged admission. Only jumpers pay for general admission.
+
+**Q: Do you have food available to purchase?**
+
+A: Yes! We have a fully stocked Snack Shack serving delicious treats.
+
+**Q: What days are the least busy?**
+
+A: Weekends are our busiest days. Mondays and Tuesdays are usually less busy.
+
+**Q: Can my small child come to the park?**
+
+A: As long as the child can walk, they can jump!
+
+**Q: Do you sell gift cards?**
+
+A: Yes! Purchase a physical gift card at the park or buy one online.
+
+**Q: Do jump cards expire?**
+
+A: No, our jump cards never expire and can be used by different jumpers.
+
+**Q: When are refunds processed?**
+
+A: Refunds take 3-5 business days to reflect in your bank account.
+
+**Q: What attractions do you have in the park?**
+
+A: We have trampoines, ninja warrior obstacle course, ninja maze, donut slide, 360 bike, Go Karting, dodgeball area in trampoline, rock walls, airbags.
+
+**Q: What is included in the jump pass price?**
+
+A: Your jump pass includes access to all attractions in the park like trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and ninja maze. Go karting is the only attraction not included and needs a separate ticket or add-on.
+
+**Q: What is the address of AeroSports Scarborough?**
+
+A: We are located at 1120 Birchmount Rd, Scarborough, Ontario, M1K 5G4. You can find us on Google Maps by searching AeroSports Scarborough.
+
+**Q: What are your hours of operation?**
+
+A: We are open Sunday to Thursday from 10am to 8pm, and Friday to Saturday from 10am to 10pm.
+
+**Q: How do I book online?**
+
+A: You can book your jump passes online at ecom.roller.app/aerosportsscarborough. For birthday parties, visit the birthday booking page on our website or call us at 289-454-5555.
+
+**Q: Do you have any current promotions or deals?**
+
+A: Check our website or ask us about current promotions. We run monthly specials including birthday party discounts and seasonal deals.
+
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?
+
+[4] (source: faqs.md)
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?**
+
+A: Absolutely! We welcome school groups, church groups, sports teams, and youth organizations. Minimum 15 people. Call 289-454-5555 or email events.scb@aerosportsparks.ca to book.
+
+**Q: Can I rent the whole facility for a private event?**
+
+A: Yes, we offer full facility rentals. Weekday rentals are $2,000 per hour and weekend rentals are $3,000 per hour. Capacity is up to 220 jumpers with exclusive access to the entire facility including unlimited go karting.
+
+
+--- msg[1]  role=user ---
+I'm Dan. How are you?
+
+--- msg[2]  role=assistant ---
+Hey there! I'm just a voice assistant here to help you out. How can I assist you today?
+
+--- msg[3]  role=user ---
+Um, I just wanted to know about, uh, your go kart.
+
+--- msg[4]  role=assistant ---
+Sure thing! We have both single and dual karts available on our big track. There's also a mini track for kids as young as 3 years old. Do you need information on pricing or something else?
+
+--- msg[5]  role=user ---
+Um, just pricing.
+
+--- msg[6]  role=assistant ---
+Got it. A standalone go kart race on the main track is 19. 90 plus tax. For the mini track, it's 9. 90 plus tax. If you already have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race lasts up to 10 laps. Need anything else?
+
+--- msg[7]  role=user ---
+No. I think that's that's it.
+
+--- msg[8]  role=assistant ---
+Great! If you have any more questions later, feel free to reach out. Have a fantastic day!
+
+--- msg[9]  role=user ---
+So, um, I have an 11 year old kid, Can he do the big cards, or will he be doing the small carts?
+────────────────────────────────────────────
+
+[2026-04-14 19:12:04.049] [LLM_RAW_RESPONSE] [Turn #5]
+────────────────────────────────────────────
+For your 11-year-old, it depends on his height. The main track requires drivers to be at least 54 inches tall. If he meets that requirement, he can drive a kart on the main track. Otherwise, he'll need to use the mini track. Do you know how tall he is? 
+────────────────────────────────────────────
+
+[2026-04-14 19:12:04.049] [FINAL_RESPONSE_TO_CALLER] [Turn #5]
+────────────────────────────────────────────
+For your 11-year-old, it depends on his height. The main track requires drivers to be at least 54 inches tall. If he meets that requirement, he can drive a kart on the main track. Otherwise, he'll need to use the mini track. Do you know how tall he is?
+────────────────────────────────────────────
+
+[2026-04-14 19:12:20.283] [INCOMING_TRANSCRIPT] [Turn #6]
+────────────────────────────────────────────
+Yeah. Uh, I don't know, actually.
+────────────────────────────────────────────
+
+[2026-04-14 19:12:20.985] [REFINED_QUERY] [Turn #6]
+────────────────────────────────────────────
+Original : Yeah. Uh, I don't know, actually.
+Refined  : What are the height requirements for an 11-year-old child to drive a go-kart on the main track versus the mini track at AeroSports Scarborough?
+────────────────────────────────────────────
+
+[2026-04-14 19:12:21.146] [RAG_RESULTS] [Turn #6]
+────────────────────────────────────────────
+Retrieved 4 document(s):
+
+[1]  score=0.7529026340094471  source=faqs.md
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, …
+
+[2]  score=0.6584737700679433  source=unanswered_questions.md
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there diff…
+
+[3]  score=0.6266743505008274  source=park_rules.md
+## Go Karting Height
+
+Height restrictions apply for Go Karting. Main Track requires 54 inches. Mini Track requires 36 inches.
+
+[4]  score=0.6175561959280335  source=faqs.md
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive …
+────────────────────────────────────────────
+
+[2026-04-14 19:12:21.146] [LLM_CONTEXT] [Turn #6]
+────────────────────────────────────────────
+12 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings (any mention of "my booking," "my party," "I booked," wanting to change, cancel, or reschedule): acknowledge briefly and stop. Do not ask for names, dates, or package types. Do not quote rescheduling policies. Just: "Oh okay, sure" — then wait.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Sunday to Thursday ten to nine, Friday and Saturday ten to ten. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Tuesday, April 14, 2026 at 07:12 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: faqs.md)
+## Go Karting
+
+**Q: Do you have single and dual karts?**
+
+A: Yes! We have a mini track for kids as young as 3, and a big track with both single and dual rider karts.
+
+**Q: What's the minimum height requirement for go karting?**
+
+A: Mini Track: 36 inches. Main Track (driver): 54 inches. Dual Kart (passenger): 36 inches.
+
+**Q: Do I need a jump pass for go karting?**
+
+A: No! You can buy standalone go karting races without a jump pass.
+
+**Q: Do both driver and passenger need a race pass?**
+
+A: Yes, every customer participating in go karting needs a valid race pass.
+
+**Q: Are AeroSports socks required for go karting?**
+
+A: Closed-toed shoes are required on the track. AeroSports socks are required for all other attractions.
+
+**Q: Can I book a specific time slot for go karting?**
+
+A: Yes you can, if you haven't booked online, it will be first come first served, but you can book a time slot in person as well.
+
+**Q: What is Glow?**
+
+A: At Scarborough, we have glow in the dark at ALL times! The main arena features laser lights and LED lights for an amazing experience.
+
+**Q: How tall do you have to be for go karting?**
+
+A: For the main track, drivers must be at least 54 inches tall. For the mini track, riders must be at least 36 inches tall. Closed-toed shoes are required for all go kart riders.
+
+**Q: How much does go karting cost?**
+
+A: A standalone go kart race on the main track is $19.90 and the mini track is $9.90. If you already have a jump pass, add-on races are $9.90 for the main track and $4.90 for the mini track. Each race is up to 10 laps.
+
+[2] (source: unanswered_questions.md)
+## Go Karting
+
+**Q: What are the go karting operating hours at AeroSports Scarborough?** `[pending]`
+
+**Q: How can I contact the team for go karting-related inquiries?** `[pending]`
+
+**Q: Is there a maximum number of people allowed in a go karting session at once?** `[pending]`
+
+**Q: What is the latest time I can arrive for a go karting session on a weekday?** `[pending]`
+
+**Q: What is the email address for booking go karting sessions at AeroSports Scarborough?** `[pending]`
+
+**Q: Are there different pricing options for go karting during peak and off-peak hours?** `[pending]`
+
+**Q: What should I do if I need to reschedule my go karting reservation?** `[pending]`
+
+**Q: Can we enjoy go karting late into the evening on Fridays and Saturdays?** `[pending]`
+
+**Q: How many go-kart tracks are available at AeroSports Scarborough?** `[pending]`
+
+**Q: Can we request a tour of the go karting area before booking?** `[pending]`
+
+**Q: Are there any age restrictions for go karting at AeroSports Scarborough?** `[pending]`
+
+**Q: Can I reserve a private go kart track for a party of 20 people?** `[pending]`
+
+**Q: What's the difference between single and dual go karts in terms of pricing and experience?** `[pending]`
+
+**Q: What if my group needs more than 30 minutes for a go karting session?** `[pending]`
+
+**Q: Can I get a discount if I book multiple go karting sessions in one day?** `[pending]`
+
+**Q: Can I bring my own go kart helmet, or are they provided on-site?** `[pending]`
+
+**Q: How can I contact the park's accessibility coordinator for assistance with go karting?** `[pending]`
+
+**Q: Are the go karting hours flexible enough for someone with a non-traditional schedule?** `[pending]`
+
+**Q: What is the best way to reach the park for special needs accommodations?** `[pending]`
+
+**Q: Can I request a private room for a guest with mobility challenges, and how is that arranged?** `[pending]`
+
+**Q: What should I know about Park Extension 3 when visiting for the first time?** `[pending]`
+
+**Q: Is there a specific email address to use when inquiring about accessibility features?** `[pending]`
+
+**Q: How do I book a group event with specific accessibility requirements?** `[pending]`
+
+[3] (source: park_rules.md)
+## Go Karting Height
+
+Height restrictions apply for Go Karting. Main Track requires 54 inches. Mini Track requires 36 inches.
+
+[4] (source: faqs.md)
+## General
+
+**Q: Are AeroSports jump socks required?**
+
+A: Yes, AeroSports socks are required at all locations. Jump socks are available for $3.99 + tax. They are reusable, so keep yours for future visits!
+
+**Q: Is there a weight limit for the trampolines?**
+
+A: Our trampolines have a 300-pound weight limit.
+
+**Q: Are waivers required? Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand the park rules before dropping them off.
+
+**Q: Do spectators have to pay to watch jumpers?**
+
+A: Non-jumpers are never charged admission. Only jumpers pay for general admission.
+
+**Q: Do you have food available to purchase?**
+
+A: Yes! We have a fully stocked Snack Shack serving delicious treats.
+
+**Q: What days are the least busy?**
+
+A: Weekends are our busiest days. Mondays and Tuesdays are usually less busy.
+
+**Q: Can my small child come to the park?**
+
+A: As long as the child can walk, they can jump!
+
+**Q: Do you sell gift cards?**
+
+A: Yes! Purchase a physical gift card at the park or buy one online.
+
+**Q: Do jump cards expire?**
+
+A: No, our jump cards never expire and can be used by different jumpers.
+
+**Q: When are refunds processed?**
+
+A: Refunds take 3-5 business days to reflect in your bank account.
+
+**Q: What attractions do you have in the park?**
+
+A: We have trampoines, ninja warrior obstacle course, ninja maze, donut slide, 360 bike, Go Karting, dodgeball area in trampoline, rock walls, airbags.
+
+**Q: What is included in the jump pass price?**
+
+A: Your jump pass includes access to all attractions in the park like trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and ninja maze. Go karting is the only attraction not included and needs a separate ticket or add-on.
+
+**Q: What is the address of AeroSports Scarborough?**
+
+A: We are located at 1120 Birchmount Rd, Scarborough, Ontario, M1K 5G4. You can find us on Google Maps by searching AeroSports Scarborough.
+
+**Q: What are your hours of operation?**
+
+A: We are open Sunday to Thursday from 10am to 8pm, and Friday to Saturday from 10am to 10pm.
+
+**Q: How do I book online?**
+
+A: You can book your jump passes online at ecom.roller.app/aerosportsscarborough. For birthday parties, visit the birthday booking page on our website or call us at 289-454-5555.
+
+**Q: Do you have any current promotions or deals?**
+
+A: Check our website or ask us about current promotions. We run monthly specials including birthday party discounts and seasonal deals.
+
+**Q: Is there a special needs program?**
+
+A: Yes! We offer a special needs program during all operating hours for $19.90. It includes 120 minutes of play time. One support worker is admitted free with a signed waiver. Go kart races are not included.
+
+**Q: What is glow night at Scarborough?**
+
+A: At AeroSports Scarborough, we have glow in the dark all the time during regular operating hours. The neon lights and glow effects are always on, so you can enjoy the glow experience any time you visit at no extra cost.
+
+**Q: Can I host a corporate event or team building activity?**
+
+A: Yes! We offer corporate and team party packages perfect for team building, milestone celebrations, and employee rewards. Call us at 289-454-5555 or email events.scb@aerosportsparks.ca to customize your event.
+
+**Q: Can schools book field trips at AeroSports?
+
+
+--- msg[1]  role=user ---
+I'm Dan. How are you?
+
+--- msg[2]  role=assistant ---
+Hey there! I'm just a voice assistant here to help you out. How can I assist you today?
+
+--- msg[3]  role=user ---
+Um, I just wanted to know about, uh, your go kart.
+
+--- msg[4]  role=assistant ---
+Sure thing! We have both single and dual karts available on our big track. There's also a mini track for kids as young as 3 years old. Do you need information on pricing or something else?
+
+--- msg[5]  role=user ---
+Um, just pricing.
+
+--- msg[6]  role=assistant ---
+Got it. A standalone go kart race on the main track is 19. 90 plus tax. For the mini track, it's 9. 90 plus tax. If you already have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race lasts up to 10 laps. Need anything else?
+
+--- msg[7]  role=user ---
+No. I think that's that's it.
+
+--- msg[8]  role=assistant ---
+Great! If you have any more questions later, feel free to reach out. Have a fantastic day!
+
+--- msg[9]  role=user ---
+So, um, I have an 11 year old kid, Can he do the big cards, or will he be doing the small carts?
+
+--- msg[10]  role=assistant ---
+For your 11-year-old, it depends on his height. The main track requires drivers to be at least 54 inches tall. If he meets that requirement, he can drive a kart on the main track. Otherwise, he'll need to use the mini track. Do you know how tall he is?
+
+--- msg[11]  role=user ---
+Yeah. Uh, I don't know, actually.
+────────────────────────────────────────────
+
+[2026-04-14 19:12:23.296] [LLM_RAW_RESPONSE] [Turn #6]
+────────────────────────────────────────────
+No worries! You might want to check his height before deciding which track he can use. If he's at least 54 inches tall, he can go on the main track; otherwise, the mini track will be more suitable. Anything else you'd like to ask? 
+────────────────────────────────────────────
+
+[2026-04-14 19:12:23.296] [FINAL_RESPONSE_TO_CALLER] [Turn #6]
+────────────────────────────────────────────
+No worries! You might want to check his height before deciding which track he can use. If he's at least 54 inches tall, he can go on the main track; otherwise, the mini track will be more suitable. Anything else you'd like to ask?
+────────────────────────────────────────────
+
+# session ended: 2026-04-14T19:12:33.485

@@ -1,0 +1,16 @@
+2026-04-14 17:23:18,059  INFO      chatbot.server  [CA9de6361bdecb675b8ddb98c46607eb9e] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA9de6361bdecb675b8ddb98c46607eb9e.log
+2026-04-14 17:23:18,059  INFO      chatbot.server  [CA9de6361bdecb675b8ddb98c46607eb9e] ConversationRelay connected from +14373612990
+2026-04-14 17:23:25,049  INFO      chatbot.server  [CA9de6361bdecb675b8ddb98c46607eb9e] User said: Hi, Dan. How are you?
+2026-04-14 17:23:35,065  INFO      chatbot.voice_handler  [CA9de6361bdecb675b8ddb98c46607eb9e] LATENCY rag_api=10002ms  docs=0
+2026-04-14 17:23:35,076  INFO      chatbot.voice_handler  [CA9de6361bdecb675b8ddb98c46607eb9e] Full messages sent to LLM (2 messages):
+2026-04-14 17:23:35,076  INFO      chatbot.voice_handler  [CA9de6361bdecb675b8ddb98c46607eb9e]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-14 17:23:35,076  INFO      chatbot.voice_handler  [CA9de6361bdecb675b8ddb98c46607eb9e]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-14 17:23:35,076  INFO      chatbot.voice_handler  [CA9de6361bdecb675b8ddb98c46607eb9e] LATENCY prepare_voice_stream=10014ms
+2026-04-14 17:23:35,085  ERROR     chatbot.server  [CA9de6361bdecb675b8ddb98c46607eb9e] Stream error: Error code: 404 - {'error': {'message': "model 'llama3.1:8b' not found", 'type': 'not_found_error', 'param': None, 'code': None}}
+2026-04-14 17:23:48,004  INFO      chatbot.server  [CA9de6361bdecb675b8ddb98c46607eb9e] Finalized abandoned call in DB
+2026-04-14 17:23:48,004  INFO      chatbot.server  [CA9de6361bdecb675b8ddb98c46607eb9e] Session log closed

@@ -1,9 +1,12 @@
 import json
+import logging
 import re
 
 import httpx
 
+logger = logging.getLogger(__name__)
 
+RAG_URL = "http://localhost:8000/rag/retrieve"
 
 SYSTEM_PROMPT = (
     "You are a helpful customer support assistant for AeroSports Scarborough trampoline park. "
@@ -14,6 +17,26 @@ SYSTEM_PROMPT = (
     "If for any reason you cannot call the end_call function, instead emit this exact format on "
     'its own line: [END_CALL]{"summary": "...", "needs_human": true_or_false, "flag_reason": "..."}[/END_CALL]'
 )
+
+
+def _fetch_rag_context(query: str) -> str:
+    """Query the RAG service at port 8000 and return formatted context."""
+    try:
+        response = httpx.post(
+            RAG_URL,
+            json={"query": query, "top_k": 3},
+            timeout=15.0,
+        )
+        response.raise_for_status()
+        data = response.json()
+        docs = data.get("source_documents", [])
+        if not docs:
+            return ""
+        snippets = [doc["content"] for doc in docs if doc.get("content")]
+        return "\n\n---\n\n".join(snippets)
+    except Exception as e:
+        logger.warning("RAG context fetch failed: %s", e)
+        return ""
 
 _END_CALL_TOOL = {
     "type": "function",
@@ -52,12 +75,22 @@ def process_turn(call_id: int, user_message: str, conversation_history: list[dic
     conversation_history.append({"role": "user", "content": user_message})
     db.log_message(call_id, "user", user_message)
 
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}] + conversation_history
+    rag_context = _fetch_rag_context(user_message)
+    if rag_context:
+        system_content = (
+            SYSTEM_PROMPT
+            + "\n\nUse the following knowledge base excerpts to answer accurately:\n\n"
+            + rag_context
+        )
+    else:
+        system_content = SYSTEM_PROMPT
+
+    messages = [{"role": "system", "content": system_content}] + conversation_history
 
     response = httpx.post(
         "http://localhost:11434/api/chat",
         json={
-            "model": "llama3.1:8b",
+            "model": "phi4:latest",
             "messages": messages,
             "tools": [_END_CALL_TOOL],
             "stream": False,

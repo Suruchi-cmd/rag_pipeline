@@ -1,0 +1,158 @@
+2026-04-14 18:56:02,459  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA7ffcf3449437276aaf5c64711899142f.log
+2026-04-14 18:56:02,459  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] ConversationRelay connected from +14373612990
+2026-04-14 18:56:11,050  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: Hi, Dan.
+2026-04-14 18:56:12,687  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY rag_api=1634ms  docs=4
+2026-04-14 18:56:12,687  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (2 messages):
+2026-04-14 18:56:12,687  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:56:12,687  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:56:12,687  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=1634ms
+2026-04-14 18:56:12,687  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: Do you guys have birthday party packages?
+2026-04-14 18:56:13,254  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY rag_api=164ms  docs=4
+2026-04-14 18:56:13,254  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (3 messages):
+2026-04-14 18:56:13,254  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:56:13,254  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:56:13,254  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[2] role=user content=Do you guys have birthday party packages?
+2026-04-14 18:56:13,254  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=553ms
+2026-04-14 18:56:14,194  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LATENCY silence_to_first_reply=1507ms
+2026-04-14 18:56:15,937  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Assistant (full): Yeah, we do! We offer three birthday party packages: Premium, VIP, and Ultimate. Each package includes pizza, drinks, a private room, a glow t-shirt, digital invitations, and a free 60-minute add-on p
+2026-04-14 18:56:47,906  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: Yeah.
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Skipping RAG — conversational message: Yeah.
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (5 messages):
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[2] role=user content=Do you guys have birthday party packages?
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[3] role=assistant content=Yeah, we do! We offer three birthday party packages: Premium, VIP, and Ultimate. Each package includes pizza, drinks, a private room, a glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. The prices are 39. 90 per jumper for Premium, 44. 90 for VIP, and 59. 90 for 
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[4] role=user content=Yeah.
+2026-04-14 18:56:47,920  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=0ms
+2026-04-14 18:56:48,100  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LATENCY silence_to_first_reply=194ms
+2026-04-14 18:56:50,380  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Assistant (full): Perfect! So here's a quick rundown: Premium Package: 39. 90 per jumper. Includes pizza, drinks, private room, glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. - V
+2026-04-14 18:57:36,585  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: No. Like, um, so what is, uh, your best package?
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY rag_api=186ms  docs=4
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (7 messages):
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[2] role=user content=Do you guys have birthday party packages?
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[3] role=assistant content=Yeah, we do! We offer three birthday party packages: Premium, VIP, and Ultimate. Each package includes pizza, drinks, a private room, a glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. The prices are 39. 90 per jumper for Premium, 44. 90 for VIP, and 59. 90 for 
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[4] role=user content=Yeah.
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[5] role=assistant content=Perfect! So here's a quick rundown: Premium Package: 39. 90 per jumper. Includes pizza, drinks, private room, glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. - VIP Package: 44. 90 per jumper. Offers everything in the Premium package plus some extra perks like m
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[6] role=user content=No. Like, um, so what is, uh, your best package?
+2026-04-14 18:57:37,352  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=754ms
+2026-04-14 18:57:38,778  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LATENCY silence_to_first_reply=2194ms
+2026-04-14 18:57:40,109  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Assistant (full): The Ultimate Package is considered the best value because it includes additional perks like go-karting for every jumper, free socks, physical invitations, a 30-day pass for the birthday child instead 
+2026-04-14 18:58:08,699  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: No. That's fine.
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY rag_api=185ms  docs=4
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (9 messages):
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[2] role=user content=Do you guys have birthday party packages?
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[3] role=assistant content=Yeah, we do! We offer three birthday party packages: Premium, VIP, and Ultimate. Each package includes pizza, drinks, a private room, a glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. The prices are 39. 90 per jumper for Premium, 44. 90 for VIP, and 59. 90 for 
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[4] role=user content=Yeah.
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[5] role=assistant content=Perfect! So here's a quick rundown: Premium Package: 39. 90 per jumper. Includes pizza, drinks, private room, glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. - VIP Package: 44. 90 per jumper. Offers everything in the Premium package plus some extra perks like m
+2026-04-14 18:58:10,058  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[6] role=user content=No. Like, um, so what is, uh, your best package?
+2026-04-14 18:58:10,059  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[7] role=assistant content=The Ultimate Package is considered the best value because it includes additional perks like go-karting for every jumper, free socks, physical invitations, a 30-day pass for the birthday child instead of just 60 minutes, and no outside food fee. Plus, you get pop as an option with drinks. It's roughl
+2026-04-14 18:58:10,059  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[8] role=user content=No. That's fine.
+2026-04-14 18:58:10,059  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=1346ms
+2026-04-14 18:58:11,182  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LATENCY silence_to_first_reply=2483ms
+2026-04-14 18:58:11,493  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User interrupted. Spoken so far: 
+2026-04-14 18:58:11,493  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LLM stream cancelled (user interrupted)
+2026-04-14 18:58:11,493  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Assistant (partial/cancelled): Gotcha! If you have any other questions or need more details, feel free to ask.
+2026-04-14 18:58:18,224  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: Still trying to figure out, like, how uh, like, what are what are what do you mean by go karts?
+2026-04-14 18:58:18,916  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY rag_api=168ms  docs=4
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (11 messages):
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[2] role=user content=Do you guys have birthday party packages?
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[3] role=assistant content=Yeah, we do! We offer three birthday party packages: Premium, VIP, and Ultimate. Each package includes pizza, drinks, a private room, a glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. The prices are 39. 90 per jumper for Premium, 44. 90 for VIP, and 59. 90 for 
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[4] role=user content=Yeah.
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[5] role=assistant content=Perfect! So here's a quick rundown: Premium Package: 39. 90 per jumper. Includes pizza, drinks, private room, glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. - VIP Package: 44. 90 per jumper. Offers everything in the Premium package plus some extra perks like m
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[6] role=user content=No. Like, um, so what is, uh, your best package?
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[7] role=assistant content=The Ultimate Package is considered the best value because it includes additional perks like go-karting for every jumper, free socks, physical invitations, a 30-day pass for the birthday child instead of just 60 minutes, and no outside food fee. Plus, you get pop as an option with drinks. It's roughl
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[8] role=user content=No. That's fine.
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[9] role=assistant content=Gotcha! If you have any other questions or need more details, feel free to ask.
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[10] role=user content=Still trying to figure out, like, how uh, like, what are what are what do you mean by go karts?
+2026-04-14 18:58:18,917  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=679ms
+2026-04-14 18:58:20,476  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LATENCY silence_to_first_reply=2252ms
+2026-04-14 18:58:21,283  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Assistant (full): Oh, the Ultimate Package includes a go-kart race for every jumper in your party! It's one of the extra perks that make it stand out. If you have more questions about what’s included or need further de
+2026-04-14 18:58:39,957  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: Okay. Okay. Yeah. That's that's good. Thank you so much.
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY rag_api=161ms  docs=4
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (13 messages):
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[2] role=user content=Do you guys have birthday party packages?
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[3] role=assistant content=Yeah, we do! We offer three birthday party packages: Premium, VIP, and Ultimate. Each package includes pizza, drinks, a private room, a glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. The prices are 39. 90 per jumper for Premium, 44. 90 for VIP, and 59. 90 for 
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[4] role=user content=Yeah.
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[5] role=assistant content=Perfect! So here's a quick rundown: Premium Package: 39. 90 per jumper. Includes pizza, drinks, private room, glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. - VIP Package: 44. 90 per jumper. Offers everything in the Premium package plus some extra perks like m
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[6] role=user content=No. Like, um, so what is, uh, your best package?
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[7] role=assistant content=The Ultimate Package is considered the best value because it includes additional perks like go-karting for every jumper, free socks, physical invitations, a 30-day pass for the birthday child instead of just 60 minutes, and no outside food fee. Plus, you get pop as an option with drinks. It's roughl
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[8] role=user content=No. That's fine.
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[9] role=assistant content=Gotcha! If you have any other questions or need more details, feel free to ask.
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[10] role=user content=Still trying to figure out, like, how uh, like, what are what are what do you mean by go karts?
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[11] role=assistant content=Oh, the Ultimate Package includes a go-kart race for every jumper in your party! It's one of the extra perks that make it stand out. If you have more questions about what’s included or need further details, just let me know!
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[12] role=user content=Okay. Okay. Yeah. That's that's good. Thank you so much.
+2026-04-14 18:58:40,739  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=769ms
+2026-04-14 18:58:42,340  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LATENCY silence_to_first_reply=2383ms
+2026-04-14 18:58:42,944  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Assistant (full): You're welcome! I'm glad I could help. If there's anything else you need or if you want to proceed with booking the party, feel free to reach out. Have a great day!
+2026-04-14 18:58:54,778  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] User said: Bye bye.
+2026-04-14 18:58:55,587  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY rag_api=166ms  docs=4
+2026-04-14 18:58:55,587  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] Full messages sent to LLM (15 messages):
+2026-04-14 18:58:55,587  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 18:58:55,587  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[1] role=user content=Hi, Dan.
+2026-04-14 18:58:55,587  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[2] role=user content=Do you guys have birthday party packages?
+2026-04-14 18:58:55,587  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[3] role=assistant content=Yeah, we do! We offer three birthday party packages: Premium, VIP, and Ultimate. Each package includes pizza, drinks, a private room, a glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. The prices are 39. 90 per jumper for Premium, 44. 90 for VIP, and 59. 90 for 
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[4] role=user content=Yeah.
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[5] role=assistant content=Perfect! So here's a quick rundown: Premium Package: 39. 90 per jumper. Includes pizza, drinks, private room, glow t-shirt, digital invitations, and a free 60-minute add-on pass for guest jumpers. - VIP Package: 44. 90 per jumper. Offers everything in the Premium package plus some extra perks like m
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[6] role=user content=No. Like, um, so what is, uh, your best package?
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[7] role=assistant content=The Ultimate Package is considered the best value because it includes additional perks like go-karting for every jumper, free socks, physical invitations, a 30-day pass for the birthday child instead of just 60 minutes, and no outside food fee. Plus, you get pop as an option with drinks. It's roughl
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[8] role=user content=No. That's fine.
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[9] role=assistant content=Gotcha! If you have any other questions or need more details, feel free to ask.
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[10] role=user content=Still trying to figure out, like, how uh, like, what are what are what do you mean by go karts?
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[11] role=assistant content=Oh, the Ultimate Package includes a go-kart race for every jumper in your party! It's one of the extra perks that make it stand out. If you have more questions about what’s included or need further details, just let me know!
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[12] role=user content=Okay. Okay. Yeah. That's that's good. Thank you so much.
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[13] role=assistant content=You're welcome! I'm glad I could help. If there's anything else you need or if you want to proceed with booking the party, feel free to reach out. Have a great day!
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f]   msg[14] role=user content=Bye bye.
+2026-04-14 18:58:55,588  INFO      chatbot.voice_handler  [CA7ffcf3449437276aaf5c64711899142f] LATENCY prepare_voice_stream=796ms
+2026-04-14 18:58:57,188  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] LATENCY silence_to_first_reply=2410ms
+2026-04-14 18:58:57,339  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Assistant (full): Goodbye! Take care and have fun planning your party!
+2026-04-14 18:58:57,388  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] End-call keyword DEFINITE match
+2026-04-14 18:58:57,389  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Sent end-session message to Twilio
+2026-04-14 18:59:01,251  INFO      chatbot.server  [CA7ffcf3449437276aaf5c64711899142f] Session log closed
