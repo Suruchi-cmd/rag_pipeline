@@ -1,0 +1,138 @@
+2026-04-01 03:20:40,091  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA19fce886fed7a85ea64809246f5caf8b.log
+2026-04-01 03:20:40,092  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] ConversationRelay connected from +14373612990
+2026-04-01 03:20:50,191  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User said: Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:20:53,126  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY rag_api=2935ms  docs=7
+2026-04-01 03:20:53,126  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] Full messages sent to LLM (2 messages):
+2026-04-01 03:20:53,126  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 03:20:53,126  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[1] role=user content=Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:20:53,126  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY prepare_voice_stream=2935ms
+2026-04-01 03:20:55,084  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY silence_to_first_reply=4893ms
+2026-04-01 03:20:55,557  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (full): We've got trampolines, laser tag, and mini golf. We also have a ninja warrior course, clip and climb walls, dodgeball, foam pit, and go karting. Everything except go karting is included in your jump p
+2026-04-01 03:21:21,357  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User said: Um, I wanted to know actually, I want to I wanted to do it. You know what? Forget about it.
+2026-04-01 03:21:23,337  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY rag_api=1719ms  docs=7
+2026-04-01 03:21:23,337  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] Full messages sent to LLM (4 messages):
+2026-04-01 03:21:23,337  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 03:21:23,337  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[1] role=user content=Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:21:23,337  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[2] role=assistant content=We've got trampolines, laser tag, and mini golf. We also have a ninja warrior course, clip and climb walls, dodgeball, foam pit, and go karting. Everything except go karting is included in your jump pass. What sounds interesting to you?
+2026-04-01 03:21:23,337  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[3] role=user content=Um, I wanted to know actually, I want to I wanted to do it. You know what? Forget about it.
+2026-04-01 03:21:23,337  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY prepare_voice_stream=1980ms
+2026-04-01 03:21:24,136  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY silence_to_first_reply=2780ms
+2026-04-01 03:21:24,725  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (full): It can be a bit overwhelming with all the options we have. If you're still interested in coming by, I'd be happy to answer any specific questions you might have or help you plan your visit. We've got 
+2026-04-01 03:21:51,224  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User said: I don't know. My you said you have laser tag?
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY rag_api=1443ms  docs=7
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] Full messages sent to LLM (6 messages):
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[1] role=user content=Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[2] role=assistant content=We've got trampolines, laser tag, and mini golf. We also have a ninja warrior course, clip and climb walls, dodgeball, foam pit, and go karting. Everything except go karting is included in your jump pass. What sounds interesting to you?
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[3] role=user content=Um, I wanted to know actually, I want to I wanted to do it. You know what? Forget about it.
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[4] role=assistant content=It can be a bit overwhelming with all the options we have. If you're still interested in coming by, I'd be happy to answer any specific questions you might have or help you plan your visit. We've got a lot of fun activities for people of all ages. What made you want to come here in the first place?
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[5] role=user content=I don't know. My you said you have laser tag?
+2026-04-01 03:21:52,926  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY prepare_voice_stream=1703ms
+2026-04-01 03:21:53,513  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY silence_to_first_reply=2290ms
+2026-04-01 03:21:54,170  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (full): Yeah, we do! It's part of our main attractions. We've also got mini golf and go karting, like I mentioned before. If you're interested in doing something specific, it might help me give you a better i
+2026-04-01 03:22:13,141  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User said: No. I wanted to do my birthday party here, actually.
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY rag_api=3825ms  docs=7
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] Full messages sent to LLM (8 messages):
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[1] role=user content=Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[2] role=assistant content=We've got trampolines, laser tag, and mini golf. We also have a ninja warrior course, clip and climb walls, dodgeball, foam pit, and go karting. Everything except go karting is included in your jump pass. What sounds interesting to you?
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[3] role=user content=Um, I wanted to know actually, I want to I wanted to do it. You know what? Forget about it.
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[4] role=assistant content=It can be a bit overwhelming with all the options we have. If you're still interested in coming by, I'd be happy to answer any specific questions you might have or help you plan your visit. We've got a lot of fun activities for people of all ages. What made you want to come here in the first place?
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[5] role=user content=I don't know. My you said you have laser tag?
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[6] role=assistant content=Yeah, we do! It's part of our main attractions. We've also got mini golf and go karting, like I mentioned before. If you're interested in doing something specific, it might help me give you a better idea if you tell me what you're looking for. Are you thinking of laser tag or one of the other activi
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[7] role=user content=No. I wanted to do my birthday party here, actually.
+2026-04-01 03:22:17,287  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY prepare_voice_stream=4146ms
+2026-04-01 03:22:18,064  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY silence_to_first_reply=4923ms
+2026-04-01 03:22:18,751  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (full): Happy birthday to you! We'd love to have your party here at AeroSports Scarborough. Let's take a look at our packages. We've got three options: Premium, VIP, and Ultimate. Each one comes with differen
+2026-04-01 03:22:37,146  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User said: Yeah. Sure.
+2026-04-01 03:22:40,861  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY rag_api=3441ms  docs=7
+2026-04-01 03:22:40,861  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] Full messages sent to LLM (10 messages):
+2026-04-01 03:22:40,861  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[1] role=user content=Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[2] role=assistant content=We've got trampolines, laser tag, and mini golf. We also have a ninja warrior course, clip and climb walls, dodgeball, foam pit, and go karting. Everything except go karting is included in your jump pass. What sounds interesting to you?
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[3] role=user content=Um, I wanted to know actually, I want to I wanted to do it. You know what? Forget about it.
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[4] role=assistant content=It can be a bit overwhelming with all the options we have. If you're still interested in coming by, I'd be happy to answer any specific questions you might have or help you plan your visit. We've got a lot of fun activities for people of all ages. What made you want to come here in the first place?
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[5] role=user content=I don't know. My you said you have laser tag?
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[6] role=assistant content=Yeah, we do! It's part of our main attractions. We've also got mini golf and go karting, like I mentioned before. If you're interested in doing something specific, it might help me give you a better idea if you tell me what you're looking for. Are you thinking of laser tag or one of the other activi
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[7] role=user content=No. I wanted to do my birthday party here, actually.
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[8] role=assistant content=Happy birthday to you! We'd love to have your party here at AeroSports Scarborough. Let's take a look at our packages. We've got three options: Premium, VIP, and Ultimate. Each one comes with different perks and activities. Would you like me to tell you more about each package so we can figure out w
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[9] role=user content=Yeah. Sure.
+2026-04-01 03:22:40,862  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY prepare_voice_stream=3715ms
+2026-04-01 03:22:41,706  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY silence_to_first_reply=4560ms
+2026-04-01 03:22:44,719  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (full): So our Premium Party is 39 90 per jumper, with a minimum of 10 kids. It includes 75 minutes on the trampolines, followed by 45 minutes in a private party room. You get one large pizza for every five j
+2026-04-01 03:23:04,070  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User interrupted. Spoken so far: 90 per jumper,
+2026-04-01 03:23:04,070  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (truncated to spoken): 90 per jumper,
+2026-04-01 03:23:06,048  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User said: So what is the 16 add on pass?
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY rag_api=1730ms  docs=7
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] Full messages sent to LLM (12 messages):
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[1] role=user content=Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[2] role=assistant content=We've got trampolines, laser tag, and mini golf. We also have a ninja warrior course, clip and climb walls, dodgeball, foam pit, and go karting. Everything except go karting is included in your jump pass. What sounds interesting to you?
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[3] role=user content=Um, I wanted to know actually, I want to I wanted to do it. You know what? Forget about it.
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[4] role=assistant content=It can be a bit overwhelming with all the options we have. If you're still interested in coming by, I'd be happy to answer any specific questions you might have or help you plan your visit. We've got a lot of fun activities for people of all ages. What made you want to come here in the first place?
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[5] role=user content=I don't know. My you said you have laser tag?
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[6] role=assistant content=Yeah, we do! It's part of our main attractions. We've also got mini golf and go karting, like I mentioned before. If you're interested in doing something specific, it might help me give you a better idea if you tell me what you're looking for. Are you thinking of laser tag or one of the other activi
+2026-04-01 03:23:08,056  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[7] role=user content=No. I wanted to do my birthday party here, actually.
+2026-04-01 03:23:08,057  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[8] role=assistant content=Happy birthday to you! We'd love to have your party here at AeroSports Scarborough. Let's take a look at our packages. We've got three options: Premium, VIP, and Ultimate. Each one comes with different perks and activities. Would you like me to tell you more about each package so we can figure out w
+2026-04-01 03:23:08,057  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[9] role=user content=Yeah. Sure.
+2026-04-01 03:23:08,057  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[10] role=assistant content=90 per jumper,
+2026-04-01 03:23:08,057  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[11] role=user content=So what is the 16 add on pass?
+2026-04-01 03:23:08,057  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY prepare_voice_stream=2008ms
+2026-04-01 03:23:08,780  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY silence_to_first_reply=2732ms
+2026-04-01 03:23:09,299  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (full): The 16 Add-On Pass is an extra jump session that can be added to any of our packages. It's specifically for guests who are 16 years old or younger. The price for the 16 Add-On Pass is thirty-five doll
+2026-04-01 03:23:26,819  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] User said: Yeah. Sure.
+2026-04-01 03:23:30,963  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY rag_api=3842ms  docs=7
+2026-04-01 03:23:30,963  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] Full messages sent to LLM (14 messages):
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[1] role=user content=Hi, Dan. I wanted to know what you guys have over there.
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[2] role=assistant content=We've got trampolines, laser tag, and mini golf. We also have a ninja warrior course, clip and climb walls, dodgeball, foam pit, and go karting. Everything except go karting is included in your jump pass. What sounds interesting to you?
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[3] role=user content=Um, I wanted to know actually, I want to I wanted to do it. You know what? Forget about it.
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[4] role=assistant content=It can be a bit overwhelming with all the options we have. If you're still interested in coming by, I'd be happy to answer any specific questions you might have or help you plan your visit. We've got a lot of fun activities for people of all ages. What made you want to come here in the first place?
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[5] role=user content=I don't know. My you said you have laser tag?
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[6] role=assistant content=Yeah, we do! It's part of our main attractions. We've also got mini golf and go karting, like I mentioned before. If you're interested in doing something specific, it might help me give you a better idea if you tell me what you're looking for. Are you thinking of laser tag or one of the other activi
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[7] role=user content=No. I wanted to do my birthday party here, actually.
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[8] role=assistant content=Happy birthday to you! We'd love to have your party here at AeroSports Scarborough. Let's take a look at our packages. We've got three options: Premium, VIP, and Ultimate. Each one comes with different perks and activities. Would you like me to tell you more about each package so we can figure out w
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[9] role=user content=Yeah. Sure.
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[10] role=assistant content=90 per jumper,
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[11] role=user content=So what is the 16 add on pass?
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[12] role=assistant content=The 16 Add-On Pass is an extra jump session that can be added to any of our packages. It's specifically for guests who are 16 years old or younger. The price for the 16 Add-On Pass is thirty-five dollars plus tax. Would you like me to tell you more about how it works?
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b]   msg[13] role=user content=Yeah. Sure.
+2026-04-01 03:23:30,964  INFO      chatbot.voice_handler  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY prepare_voice_stream=4144ms
+2026-04-01 03:23:31,820  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] LATENCY silence_to_first_reply=5000ms
+2026-04-01 03:23:32,052  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Assistant (full): It seems like you're ready to chat about Aero Sports Scarborough. What's on your mind? Want to know more about our birthday party packages or maybe something else?
+2026-04-01 03:23:38,261  INFO      chatbot.server  [CA19fce886fed7a85ea64809246f5caf8b] Session log closed

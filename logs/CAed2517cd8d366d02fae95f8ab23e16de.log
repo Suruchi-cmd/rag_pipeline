@@ -1,0 +1,4 @@
+2026-04-09 21:48:02,553  INFO      chatbot.server  [CAed2517cd8d366d02fae95f8ab23e16de] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CAed2517cd8d366d02fae95f8ab23e16de.log
+2026-04-09 21:48:02,553  INFO      chatbot.server  [CAed2517cd8d366d02fae95f8ab23e16de] ConversationRelay connected from +14373612990
+2026-04-09 21:48:59,022  INFO      chatbot.server  [CAed2517cd8d366d02fae95f8ab23e16de] Finalized abandoned call in DB
+2026-04-09 21:48:59,022  INFO      chatbot.server  [CAed2517cd8d366d02fae95f8ab23e16de] Session log closed

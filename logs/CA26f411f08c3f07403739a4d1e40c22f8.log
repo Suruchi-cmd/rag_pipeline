@@ -1,0 +1,17 @@
+2026-04-09 22:03:52,337  INFO      chatbot.server  [CA26f411f08c3f07403739a4d1e40c22f8] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA26f411f08c3f07403739a4d1e40c22f8.log
+2026-04-09 22:03:52,337  INFO      chatbot.server  [CA26f411f08c3f07403739a4d1e40c22f8] ConversationRelay connected from +14373612990
+2026-04-09 22:04:00,190  INFO      chatbot.server  [CA26f411f08c3f07403739a4d1e40c22f8] User said: Hi. Are you guys open today?
+2026-04-09 22:04:01,247  INFO      chatbot.voice_handler  [CA26f411f08c3f07403739a4d1e40c22f8] LATENCY rag_api=1054ms  docs=7
+2026-04-09 22:04:01,247  INFO      chatbot.voice_handler  [CA26f411f08c3f07403739a4d1e40c22f8] Full messages sent to LLM (2 messages):
+2026-04-09 22:04:01,247  INFO      chatbot.voice_handler  [CA26f411f08c3f07403739a4d1e40c22f8]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-09 22:04:01,247  INFO      chatbot.voice_handler  [CA26f411f08c3f07403739a4d1e40c22f8]   msg[1] role=user content=Hi. Are you guys open today?
+2026-04-09 22:04:01,247  INFO      chatbot.voice_handler  [CA26f411f08c3f07403739a4d1e40c22f8] LATENCY prepare_voice_stream=1055ms
+2026-04-09 22:04:01,586  INFO      chatbot.server  [CA26f411f08c3f07403739a4d1e40c22f8] LATENCY silence_to_first_reply=1395ms
+2026-04-09 22:04:02,105  INFO      chatbot.server  [CA26f411f08c3f07403739a4d1e40c22f8] Assistant (full): We're actually still open until 10 PM tonight, so yeah, we're good to go for a few more hours. You can come on down and enjoy some trampolines, laser tag, or mini golf. We've got all the usual fun stu
+2026-04-09 22:05:10,885  INFO      chatbot.server  [CA26f411f08c3f07403739a4d1e40c22f8] Finalized abandoned call in DB
+2026-04-09 22:05:10,885  INFO      chatbot.server  [CA26f411f08c3f07403739a4d1e40c22f8] Session log closed

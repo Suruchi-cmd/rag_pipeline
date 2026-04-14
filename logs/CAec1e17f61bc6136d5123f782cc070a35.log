@@ -1,0 +1,321 @@
+2026-04-10 00:55:37,408  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CAec1e17f61bc6136d5123f782cc070a35.log
+2026-04-10 00:55:37,408  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] ConversationRelay connected from +14373612990
+2026-04-10 00:55:44,650  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Hi, Dan. How are you?
+2026-04-10 00:55:46,868  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=2215ms  docs=7
+2026-04-10 00:55:46,868  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (2 messages):
+2026-04-10 00:55:46,868  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:55:46,868  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:55:46,868  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=2216ms
+2026-04-10 00:55:49,898  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=5248ms
+2026-04-10 00:55:50,175  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:55:56,306  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Um, are you guys open today?
+2026-04-10 00:55:58,796  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=2247ms  docs=7
+2026-04-10 00:55:58,796  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (4 messages):
+2026-04-10 00:55:58,797  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:55:58,797  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:55:58,797  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:55:58,797  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:55:58,797  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=2489ms
+2026-04-10 00:56:01,838  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=5532ms
+2026-04-10 00:56:02,340  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:56:12,586  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Okay. So what are the prices?
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=2704ms  docs=7
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (6 messages):
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 00:56:15,645  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3057ms
+2026-04-10 00:56:18,882  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=6296ms
+2026-04-10 00:56:19,379  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 00:56:30,350  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Um, so how much for a go card?
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=3488ms  docs=7
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (8 messages):
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 00:56:34,191  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3840ms
+2026-04-10 00:56:37,457  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=7107ms
+2026-04-10 00:56:38,946  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, 
+2026-04-10 00:56:59,340  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Um, what is the age requirement for a go kart?
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=2590ms  docs=7
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (10 messages):
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 00:57:02,376  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3034ms
+2026-04-10 00:57:05,917  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=6577ms
+2026-04-10 00:57:07,289  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet t
+2026-04-10 00:57:32,724  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=3771ms  docs=7
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (12 messages):
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 00:57:37,040  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=4314ms
+2026-04-10 00:57:40,386  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=7662ms
+2026-04-10 00:57:40,890  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 00:57:52,251  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Yeah. I wanna know more.
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=6454ms  docs=7
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (14 messages):
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[12] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[13] role=user content=Yeah. I wanna know more.
+2026-04-10 00:57:59,322  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=7069ms
+2026-04-10 00:58:02,845  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=10594ms
+2026-04-10 00:58:04,146  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Sure thing! What specific package are you interested in learning about? We have three options: Premium, VIP, and Ultimate. Each one includes pizza, drinks, a private party room, glow t-shirts for the 
+2026-04-10 00:58:29,068  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: So what are the prices of these packages?
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=3356ms  docs=7
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (16 messages):
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 00:58:32,930  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[12] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[13] role=user content=Yeah. I wanna know more.
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[14] role=assistant content=Sure thing! What specific package are you interested in learning about? We have three options: Premium, VIP, and Ultimate. Each one includes pizza, drinks, a private party room, glow t-shirts for the birthday child, and digital invitations. The Ultimate Package also includes go karting, free socks, 
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[15] role=user content=So what are the prices of these packages?
+2026-04-10 00:58:32,931  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3860ms
+2026-04-10 00:58:36,227  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=7159ms
+2026-04-10 00:58:37,269  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Sure! We have three birthday party packages: The Premium Party starts at 39. 90 per jumper. - The VIP Party is 44. 90 per jumper. - The Ultimate Party is 59. 90 per jumper. Which package are you inter
+2026-04-10 00:58:56,932  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Tell me about all of them.
+2026-04-10 00:59:03,056  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=5550ms  docs=7
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (18 messages):
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[12] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[13] role=user content=Yeah. I wanna know more.
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[14] role=assistant content=Sure thing! What specific package are you interested in learning about? We have three options: Premium, VIP, and Ultimate. Each one includes pizza, drinks, a private party room, glow t-shirts for the birthday child, and digital invitations. The Ultimate Package also includes go karting, free socks, 
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[15] role=user content=So what are the prices of these packages?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[16] role=assistant content=Sure! We have three birthday party packages: The Premium Party starts at 39. 90 per jumper. - The VIP Party is 44. 90 per jumper. - The Ultimate Party is 59. 90 per jumper. Which package are you interested in learning more about?
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[17] role=user content=Tell me about all of them.
+2026-04-10 00:59:03,057  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=6122ms
+2026-04-10 00:59:06,376  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=9444ms
+2026-04-10 00:59:14,990  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Sure! We have three birthday party packages: Premium, VIP, and Ultimate. Premium Package: Costs 39. 90 per jumper with a minimum of 10 kids (base price 399). It includes 75 minutes on the trampoline c
+2026-04-10 01:01:12,000  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Okay. So can I book the party?
+2026-04-10 01:01:15,095  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=2644ms  docs=7
+2026-04-10 01:01:15,095  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (20 messages):
+2026-04-10 01:01:15,095  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[12] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[13] role=user content=Yeah. I wanna know more.
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[14] role=assistant content=Sure thing! What specific package are you interested in learning about? We have three options: Premium, VIP, and Ultimate. Each one includes pizza, drinks, a private party room, glow t-shirts for the birthday child, and digital invitations. The Ultimate Package also includes go karting, free socks, 
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[15] role=user content=So what are the prices of these packages?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[16] role=assistant content=Sure! We have three birthday party packages: The Premium Party starts at 39. 90 per jumper. - The VIP Party is 44. 90 per jumper. - The Ultimate Party is 59. 90 per jumper. Which package are you interested in learning more about?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[17] role=user content=Tell me about all of them.
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[18] role=assistant content=Sure! We have three birthday party packages: Premium, VIP, and Ultimate. Premium Package: Costs 39. 90 per jumper with a minimum of 10 kids (base price 399). It includes 75 minutes on the trampoline courts followed by 45 minutes in a private party room. Food includes one large pizza for every five j
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[19] role=user content=Okay. So can I book the party?
+2026-04-10 01:01:15,096  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3094ms
+2026-04-10 01:01:18,577  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=6577ms
+2026-04-10 01:01:19,062  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need details on any of them!
+2026-04-10 01:01:29,908  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: No. I already know. I wanna book an ultimate party.
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=3184ms  docs=7
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (22 messages):
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, are you guys open today?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Okay. So what are the prices?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, so how much for a go card?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[12] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[13] role=user content=Yeah. I wanna know more.
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[14] role=assistant content=Sure thing! What specific package are you interested in learning about? We have three options: Premium, VIP, and Ultimate. Each one includes pizza, drinks, a private party room, glow t-shirts for the birthday child, and digital invitations. The Ultimate Package also includes go karting, free socks, 
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[15] role=user content=So what are the prices of these packages?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[16] role=assistant content=Sure! We have three birthday party packages: The Premium Party starts at 39. 90 per jumper. - The VIP Party is 44. 90 per jumper. - The Ultimate Party is 59. 90 per jumper. Which package are you interested in learning more about?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[17] role=user content=Tell me about all of them.
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[18] role=assistant content=Sure! We have three birthday party packages: Premium, VIP, and Ultimate. Premium Package: Costs 39. 90 per jumper with a minimum of 10 kids (base price 399). It includes 75 minutes on the trampoline courts followed by 45 minutes in a private party room. Food includes one large pizza for every five j
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[19] role=user content=Okay. So can I book the party?
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[20] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need details on any of them!
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[21] role=user content=No. I already know. I wanna book an ultimate party.
+2026-04-10 01:01:33,432  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3523ms
+2026-04-10 01:01:36,834  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=6926ms
+2026-04-10 01:01:37,806  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Got it! For the Ultimate birthday party, you can use code MARCHBDAY150 to get 150 off if you book by March 31st and host your party by September 30th. Would you like to proceed with booking or need mo
+2026-04-10 01:01:52,359  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: I wanna proceed with booking.
+2026-04-10 01:01:55,804  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=3036ms  docs=7
+2026-04-10 01:01:55,804  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (22 messages):
+2026-04-10 01:01:55,804  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 01:01:55,804  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Um, are you guys open today?
+2026-04-10 01:01:55,804  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Yeah, we're open today. We stay open until 10 PM on Fridays and Saturdays. So you've got plenty of time to come by!
+2026-04-10 01:01:55,804  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Okay. So what are the prices?
+2026-04-10 01:01:55,804  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Um, so how much for a go card?
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=Yeah. I wanna know more.
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[12] role=assistant content=Sure thing! What specific package are you interested in learning about? We have three options: Premium, VIP, and Ultimate. Each one includes pizza, drinks, a private party room, glow t-shirts for the birthday child, and digital invitations. The Ultimate Package also includes go karting, free socks, 
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[13] role=user content=So what are the prices of these packages?
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[14] role=assistant content=Sure! We have three birthday party packages: The Premium Party starts at 39. 90 per jumper. - The VIP Party is 44. 90 per jumper. - The Ultimate Party is 59. 90 per jumper. Which package are you interested in learning more about?
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[15] role=user content=Tell me about all of them.
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[16] role=assistant content=Sure! We have three birthday party packages: Premium, VIP, and Ultimate. Premium Package: Costs 39. 90 per jumper with a minimum of 10 kids (base price 399). It includes 75 minutes on the trampoline courts followed by 45 minutes in a private party room. Food includes one large pizza for every five j
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[17] role=user content=Okay. So can I book the party?
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[18] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need details on any of them!
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[19] role=user content=No. I already know. I wanna book an ultimate party.
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[20] role=assistant content=Got it! For the Ultimate birthday party, you can use code MARCHBDAY150 to get 150 off if you book by March 31st and host your party by September 30th. Would you like to proceed with booking or need more details?
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[21] role=user content=I wanna proceed with booking.
+2026-04-10 01:01:55,805  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3444ms
+2026-04-10 01:01:59,331  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY silence_to_first_reply=6973ms
+2026-04-10 01:01:59,920  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Assistant (full): Do you already know which party package you'd like to book? If so, let me know and I can help guide you through the next steps. Otherwise, I can provide more details on each of our packages.
+2026-04-10 01:02:12,876  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] User said: Oh, thank you so much. Bye bye.
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY rag_api=3150ms  docs=7
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] Full messages sent to LLM (22 messages):
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[0] role=system content=    
+<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+<absolute_rules>
+These rules override everything else
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[1] role=user content=Okay. So what are the prices?
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[2] role=assistant content=Which activity are you asking about? We have different prices for jump passes, go karting, birthday parties, and camps. Let me know which one you're interested in!
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[3] role=user content=Um, so how much for a go card?
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[4] role=assistant content=Oh, it looks like you might have meant to ask about the price of a go kart race. A standalone go kart race on the main track is 19. 90 and on the mini track is 9. 90. If you already have a jump pass, an add-on race costs 4. 90 for the mini track or 9. 90 for the main track. Which one are you interes
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[5] role=user content=Um, what is the age requirement for a go kart?
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[6] role=assistant content=The minimum height requirement for the main track is 54 inches tall, and for the mini track, it's 36 inches tall. So, if you're asking about age based on height, most kids around 8-10 years old meet the main track requirement, while younger kids who are at least 3 years old can usually ride the mini
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[7] role=user content=Okay. So, uh, also, I wanted to book a birthday party here.
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[8] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need more details on any of them!
+2026-04-10 01:02:16,395  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[9] role=user content=Yeah. I wanna know more.
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[10] role=assistant content=Sure thing! What specific package are you interested in learning about? We have three options: Premium, VIP, and Ultimate. Each one includes pizza, drinks, a private party room, glow t-shirts for the birthday child, and digital invitations. The Ultimate Package also includes go karting, free socks, 
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[11] role=user content=So what are the prices of these packages?
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[12] role=assistant content=Sure! We have three birthday party packages: The Premium Party starts at 39. 90 per jumper. - The VIP Party is 44. 90 per jumper. - The Ultimate Party is 59. 90 per jumper. Which package are you interested in learning more about?
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[13] role=user content=Tell me about all of them.
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[14] role=assistant content=Sure! We have three birthday party packages: Premium, VIP, and Ultimate. Premium Package: Costs 39. 90 per jumper with a minimum of 10 kids (base price 399). It includes 75 minutes on the trampoline courts followed by 45 minutes in a private party room. Food includes one large pizza for every five j
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[15] role=user content=Okay. So can I book the party?
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[16] role=assistant content=Do you already know which party package you'd like to book? We have three options: Premium, VIP, and Ultimate. Let me know if you need details on any of them!
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[17] role=user content=No. I already know. I wanna book an ultimate party.
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[18] role=assistant content=Got it! For the Ultimate birthday party, you can use code MARCHBDAY150 to get 150 off if you book by March 31st and host your party by September 30th. Would you like to proceed with booking or need more details?
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[19] role=user content=I wanna proceed with booking.
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[20] role=assistant content=Do you already know which party package you'd like to book? If so, let me know and I can help guide you through the next steps. Otherwise, I can provide more details on each of our packages.
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35]   msg[21] role=user content=Oh, thank you so much. Bye bye.
+2026-04-10 01:02:16,396  INFO      chatbot.voice_handler  [CAec1e17f61bc6136d5123f782cc070a35] LATENCY prepare_voice_stream=3518ms
+2026-04-10 01:02:19,079  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Finalized abandoned call in DB
+2026-04-10 01:02:19,079  INFO      chatbot.server  [CAec1e17f61bc6136d5123f782cc070a35] Session log closed

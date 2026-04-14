@@ -1,0 +1,136 @@
+2026-04-03 16:47:41,333  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA4ebb6c92e637453faecadda9871c18fc.log
+2026-04-03 16:47:41,334  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] ConversationRelay connected from +14373612990
+2026-04-03 16:47:48,336  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] User said: Hi, Dan. How are you?
+2026-04-03 16:47:50,777  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY rag_api=2438ms  docs=7
+2026-04-03 16:47:50,782  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] Full messages sent to LLM (2 messages):
+2026-04-03 16:47:50,782  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-03 16:47:50,782  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-03 16:47:50,782  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY prepare_voice_stream=2446ms
+2026-04-03 16:47:54,999  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY silence_to_first_reply=6664ms
+2026-04-03 16:47:55,211  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Assistant (full): I'm doing great, thanks for asking! It's a beautiful day here at AeroSports Scarborough. How can I help you today?
+2026-04-03 16:48:04,683  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] User said: I wanted to book a birthday party.
+2026-04-03 16:48:06,823  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY rag_api=1880ms  docs=7
+2026-04-03 16:48:06,824  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] Full messages sent to LLM (4 messages):
+2026-04-03 16:48:06,824  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-03 16:48:06,824  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-03 16:48:06,824  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a beautiful day here at AeroSports Scarborough. How can I help you today?
+2026-04-03 16:48:06,824  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[3] role=user content=I wanted to book a birthday party.
+2026-04-03 16:48:06,824  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY prepare_voice_stream=2140ms
+2026-04-03 16:48:07,660  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY silence_to_first_reply=2977ms
+2026-04-03 16:48:08,171  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Assistant (full): We've got three awesome party packages to choose from : Premium, VIP, and Ultimate. They all come with pizza, drinks, a private party room, and some cool perks for the birthday child. Which one are yo
+2026-04-03 16:48:26,351  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] User said: yes. Tell me what.
+2026-04-03 16:48:30,040  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY rag_api=3434ms  docs=7
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] Full messages sent to LLM (6 messages):
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a beautiful day here at AeroSports Scarborough. How can I help you today?
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[3] role=user content=I wanted to book a birthday party.
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[4] role=assistant content=We've got three awesome party packages to choose from : Premium, VIP, and Ultimate. They all come with pizza, drinks, a private party room, and some cool perks for the birthday child. Which one are you thinking of booking? Or would you like me to tell you more about each option?
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[5] role=user content=yes. Tell me what.
+2026-04-03 16:48:30,041  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY prepare_voice_stream=3690ms
+2026-04-03 16:48:30,881  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY silence_to_first_reply=4530ms
+2026-04-03 16:48:32,625  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Assistant (full): So our Premium Party is 39 90 per jumper, with a minimum of 10 kids. It's got 75 minutes on the trampolines and 45 minutes in the private party room. The birthday child gets a glow t-shirt, digital in
+2026-04-03 16:49:20,960  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] User said: Okay. I think I'm not interested in that. Can I just do go karting?
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY rag_api=2760ms  docs=7
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] Full messages sent to LLM (8 messages):
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a beautiful day here at AeroSports Scarborough. How can I help you today?
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[3] role=user content=I wanted to book a birthday party.
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[4] role=assistant content=We've got three awesome party packages to choose from : Premium, VIP, and Ultimate. They all come with pizza, drinks, a private party room, and some cool perks for the birthday child. Which one are you thinking of booking? Or would you like me to tell you more about each option?
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[5] role=user content=yes. Tell me what.
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[6] role=assistant content=So our Premium Party is 39 90 per jumper, with a minimum of 10 kids. It's got 75 minutes on the trampolines and 45 minutes in the private party room. The birthday child gets a glow t-shirt, digital invitations, and a free 60-minute jump pass. Our VIP Party is 44. 90 per jumper, also with a minimum o
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[7] role=user content=Okay. I think I'm not interested in that. Can I just do go karting?
+2026-04-03 16:49:24,033  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY prepare_voice_stream=3073ms
+2026-04-03 16:49:24,848  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY silence_to_first_reply=3887ms
+2026-04-03 16:49:25,590  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Assistant (full): Go-karting is super fun! We've got two tracks: the main track and the mini track. The main track is for kids 36 inches tall or taller, and it's 9. 90 per person for up to 10 laps. The mini track is fo
+2026-04-03 16:49:52,485  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] User said: No. So, uh, how much is it if I wanna do get a jump pass, and then I also want to do go karts?
+2026-04-03 16:49:55,056  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY rag_api=2213ms  docs=7
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] Full messages sent to LLM (10 messages):
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a beautiful day here at AeroSports Scarborough. How can I help you today?
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[3] role=user content=I wanted to book a birthday party.
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[4] role=assistant content=We've got three awesome party packages to choose from : Premium, VIP, and Ultimate. They all come with pizza, drinks, a private party room, and some cool perks for the birthday child. Which one are you thinking of booking? Or would you like me to tell you more about each option?
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[5] role=user content=yes. Tell me what.
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[6] role=assistant content=So our Premium Party is 39 90 per jumper, with a minimum of 10 kids. It's got 75 minutes on the trampolines and 45 minutes in the private party room. The birthday child gets a glow t-shirt, digital invitations, and a free 60-minute jump pass. Our VIP Party is 44. 90 per jumper, also with a minimum o
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[7] role=user content=Okay. I think I'm not interested in that. Can I just do go karting?
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[8] role=assistant content=Go-karting is super fun! We've got two tracks: the main track and the mini track. The main track is for kids 36 inches tall or taller, and it's 9. 90 per person for up to 10 laps. The mini track is for younger kids, but you'll need to check our height requirements first. Would you like me to tell yo
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[9] role=user content=No. So, uh, how much is it if I wanna do get a jump pass, and then I also want to do go karts?
+2026-04-03 16:49:55,057  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY prepare_voice_stream=2572ms
+2026-04-03 16:49:55,826  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY silence_to_first_reply=3341ms
+2026-04-03 16:49:56,561  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Assistant (full): So for a 90-minute Premium Jump Pass, that's 24. 90 plus tax. And then you'd add the cost of go-karting on top of that. We've got two options: it's either 9. 90 per person if you're not buying a jump 
+2026-04-03 16:50:23,268  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] User said: I don't know. I Actually, I have more than 15 people, so I'd rather just do you guys have any group booking packages?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY rag_api=1419ms  docs=7
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] Full messages sent to LLM (12 messages):
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a beautiful day here at AeroSports Scarborough. How can I help you today?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[3] role=user content=I wanted to book a birthday party.
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[4] role=assistant content=We've got three awesome party packages to choose from : Premium, VIP, and Ultimate. They all come with pizza, drinks, a private party room, and some cool perks for the birthday child. Which one are you thinking of booking? Or would you like me to tell you more about each option?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[5] role=user content=yes. Tell me what.
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[6] role=assistant content=So our Premium Party is 39 90 per jumper, with a minimum of 10 kids. It's got 75 minutes on the trampolines and 45 minutes in the private party room. The birthday child gets a glow t-shirt, digital invitations, and a free 60-minute jump pass. Our VIP Party is 44. 90 per jumper, also with a minimum o
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[7] role=user content=Okay. I think I'm not interested in that. Can I just do go karting?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[8] role=assistant content=Go-karting is super fun! We've got two tracks: the main track and the mini track. The main track is for kids 36 inches tall or taller, and it's 9. 90 per person for up to 10 laps. The mini track is for younger kids, but you'll need to check our height requirements first. Would you like me to tell yo
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[9] role=user content=No. So, uh, how much is it if I wanna do get a jump pass, and then I also want to do go karts?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[10] role=assistant content=So for a 90-minute Premium Jump Pass, that's 24. 90 plus tax. And then you'd add the cost of go-karting on top of that. We've got two options: it's either 9. 90 per person if you're not buying a jump pass, or 4. 90 if you already have a jump pass. Which one sounds like what you're looking for?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[11] role=user content=I don't know. I Actually, I have more than 15 people, so I'd rather just do you guys have any group booking packages?
+2026-04-03 16:50:24,982  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY prepare_voice_stream=1714ms
+2026-04-03 16:50:25,772  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY silence_to_first_reply=2504ms
+2026-04-03 16:50:27,069  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Assistant (full): Yeah, we've got some great options for groups larger than 15. We've got a few different packages that include jump time, food, and private rooms. Our most popular one is the Ultimate Package, it's 39.
+2026-04-03 16:51:05,798  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] User said: Okay. No. I actually want a group booking. Do you have any group booking options?
+2026-04-03 16:51:07,906  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY rag_api=1803ms  docs=7
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] Full messages sent to LLM (14 messages):
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[2] role=assistant content=I'm doing great, thanks for asking! It's a beautiful day here at AeroSports Scarborough. How can I help you today?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[3] role=user content=I wanted to book a birthday party.
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[4] role=assistant content=We've got three awesome party packages to choose from : Premium, VIP, and Ultimate. They all come with pizza, drinks, a private party room, and some cool perks for the birthday child. Which one are you thinking of booking? Or would you like me to tell you more about each option?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[5] role=user content=yes. Tell me what.
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[6] role=assistant content=So our Premium Party is 39 90 per jumper, with a minimum of 10 kids. It's got 75 minutes on the trampolines and 45 minutes in the private party room. The birthday child gets a glow t-shirt, digital invitations, and a free 60-minute jump pass. Our VIP Party is 44. 90 per jumper, also with a minimum o
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[7] role=user content=Okay. I think I'm not interested in that. Can I just do go karting?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[8] role=assistant content=Go-karting is super fun! We've got two tracks: the main track and the mini track. The main track is for kids 36 inches tall or taller, and it's 9. 90 per person for up to 10 laps. The mini track is for younger kids, but you'll need to check our height requirements first. Would you like me to tell yo
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[9] role=user content=No. So, uh, how much is it if I wanna do get a jump pass, and then I also want to do go karts?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[10] role=assistant content=So for a 90-minute Premium Jump Pass, that's 24. 90 plus tax. And then you'd add the cost of go-karting on top of that. We've got two options: it's either 9. 90 per person if you're not buying a jump pass, or 4. 90 if you already have a jump pass. Which one sounds like what you're looking for?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[11] role=user content=I don't know. I Actually, I have more than 15 people, so I'd rather just do you guys have any group booking packages?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[12] role=assistant content=Yeah, we've got some great options for groups larger than 15. We've got a few different packages that include jump time, food, and private rooms. Our most popular one is the Ultimate Package, it's 39. 90 per jumper with a minimum of 10 kids. It includes pizza, drinks, a private party room, a glow t-
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc]   msg[13] role=user content=Okay. No. I actually want a group booking. Do you have any group booking options?
+2026-04-03 16:51:07,907  INFO      chatbot.voice_handler  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY prepare_voice_stream=2109ms
+2026-04-03 16:51:08,786  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] LATENCY silence_to_first_reply=2988ms
+2026-04-03 16:51:09,778  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Assistant (full): We've got some great options for group bookings. Our minimum group size is 15 jumpers, and we offer a discounted rate of 25. 47 per jumper for 120 minutes of jump time. This includes Aero Socks, but a
+2026-04-03 16:51:37,736  INFO      chatbot.server  [CA4ebb6c92e637453faecadda9871c18fc] Session log closed

@@ -1,0 +1,18 @@
+2026-03-31 05:48:06,564  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA5c2e1724181180f5a7eddec14736e1a3.log
+2026-03-31 05:48:06,564  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] ConversationRelay connected from +14373612990
+2026-03-31 05:48:08,786  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] User interrupted. Spoken so far: Thank you for calling AeroSports Scarborough, this is Dan. How can I help you?
+2026-03-31 05:48:08,786  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] Assistant (truncated to spoken): Thank you for calling AeroSports Scarborough, this is Dan. How can I help you?
+2026-03-31 05:48:10,442  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] User said: Thank you for calling
+2026-03-31 05:48:12,795  INFO      chatbot.voice_handler  [CA5c2e1724181180f5a7eddec14736e1a3] LATENCY rag_api=2353ms  docs=7
+2026-03-31 05:48:12,795  INFO      chatbot.voice_handler  [CA5c2e1724181180f5a7eddec14736e1a3] Full messages sent to LLM (2 messages):
+2026-03-31 05:48:12,795  INFO      chatbot.voice_handler  [CA5c2e1724181180f5a7eddec14736e1a3]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 05:48:12,796  INFO      chatbot.voice_handler  [CA5c2e1724181180f5a7eddec14736e1a3]   msg[1] role=user content=Thank you for calling
+2026-03-31 05:48:12,796  INFO      chatbot.voice_handler  [CA5c2e1724181180f5a7eddec14736e1a3] LATENCY prepare_voice_stream=2353ms
+2026-03-31 05:48:14,581  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] LATENCY silence_to_first_reply=4138ms
+2026-03-31 05:48:14,732  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] Assistant (full): You're welcome! Thank you for calling AeroSports Scarborough! How can I help you today?
+2026-03-31 05:48:17,617  INFO      chatbot.server  [CA5c2e1724181180f5a7eddec14736e1a3] Session log closed

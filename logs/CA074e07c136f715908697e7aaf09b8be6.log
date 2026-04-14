@@ -1,0 +1,228 @@
+2026-04-07 22:10:17,643  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA074e07c136f715908697e7aaf09b8be6.log
+2026-04-07 22:10:17,643  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] ConversationRelay connected from +14373612990
+2026-04-07 22:10:25,367  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: Hi, Dan. How are you?
+2026-04-07 22:10:30,170  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=4803ms  docs=7
+2026-04-07 22:10:30,171  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (2 messages):
+2026-04-07 22:10:30,171  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:10:30,171  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:10:30,171  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=4804ms
+2026-04-07 22:10:34,710  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=9343ms
+2026-04-07 22:10:34,815  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:10:42,135  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: I wanted to know what
+2026-04-07 22:10:43,724  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=1412ms  docs=7
+2026-04-07 22:10:43,725  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (4 messages):
+2026-04-07 22:10:43,725  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:10:43,725  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:10:43,725  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=assistant content=I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:10:43,725  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=user content=I wanted to know what
+2026-04-07 22:10:43,725  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=1590ms
+2026-04-07 22:10:43,725  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: birthday packages you have.
+2026-04-07 22:10:46,123  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=2239ms  docs=7
+2026-04-07 22:10:46,124  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (5 messages):
+2026-04-07 22:10:46,124  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:10:46,124  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:10:46,124  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=assistant content=I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:10:46,124  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=user content=I wanted to know what
+2026-04-07 22:10:46,124  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=birthday packages you have.
+2026-04-07 22:10:46,124  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=2399ms
+2026-04-07 22:10:46,902  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=3177ms
+2026-04-07 22:10:48,007  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 9
+2026-04-07 22:11:23,292  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: Yeah. So what are the differences between these packages?
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=4179ms  docs=7
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (7 messages):
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=assistant content=I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=user content=I wanted to know what
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=birthday packages you have.
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=assistant content=We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 90 minutes of jump time and 60 minutes of room time, and the Ultimate Party for 59. 90 per jumper wit
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=user content=Yeah. So what are the differences between these packages?
+2026-04-07 22:11:27,774  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=4482ms
+2026-04-07 22:11:28,520  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=5228ms
+2026-04-07 22:11:30,192  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes
+2026-04-07 22:12:17,330  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: Okay.
+2026-04-07 22:12:17,330  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Skipping RAG — conversational message: Okay.
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (9 messages):
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=assistant content=I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=user content=I wanted to know what
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=birthday packages you have.
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=assistant content=We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 90 minutes of jump time and 60 minutes of room time, and the Ultimate Party for 59. 90 per jumper wit
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=user content=Yeah. So what are the differences between these packages?
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[7] role=assistant content=So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes of jumping and 60 minutes in the party room. And then the Ultimate Party gives you the most time, w
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[8] role=user content=Okay.
+2026-04-07 22:12:17,331  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=0ms
+2026-04-07 22:12:17,980  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=650ms
+2026-04-07 22:12:18,124  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): So which package sounds most appealing to you? Or would you like me to explain any other details before making a decision?
+2026-04-07 22:12:18,718  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User interrupted. Spoken so far: So which package sounds most appealing to you?
+2026-04-07 22:12:18,718  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (truncated to spoken): So which package sounds most appealing to you?
+2026-04-07 22:12:25,065  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: Okay. So I cannot have Ultimate party sorry. I cannot have
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=2216ms  docs=7
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (11 messages):
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=assistant content=I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=user content=I wanted to know what
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=birthday packages you have.
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=assistant content=We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 90 minutes of jump time and 60 minutes of room time, and the Ultimate Party for 59. 90 per jumper wit
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=user content=Yeah. So what are the differences between these packages?
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[7] role=assistant content=So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes of jumping and 60 minutes in the party room. And then the Ultimate Party gives you the most time, w
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[8] role=user content=Okay.
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[9] role=assistant content=So which package sounds most appealing to you?
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[10] role=user content=Okay. So I cannot have Ultimate party sorry. I cannot have
+2026-04-07 22:12:27,541  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=2476ms
+2026-04-07 22:12:27,541  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: premium party and Google cart.
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=1840ms  docs=7
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (12 messages):
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=assistant content=I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=user content=I wanted to know what
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=birthday packages you have.
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=assistant content=We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 90 minutes of jump time and 60 minutes of room time, and the Ultimate Party for 59. 90 per jumper wit
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=user content=Yeah. So what are the differences between these packages?
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[7] role=assistant content=So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes of jumping and 60 minutes in the party room. And then the Ultimate Party gives you the most time, w
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[8] role=user content=Okay.
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[9] role=assistant content=So which package sounds most appealing to you?
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[10] role=user content=Okay. So I cannot have Ultimate party sorry. I cannot have
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[11] role=user content=premium party and Google cart.
+2026-04-07 22:12:29,645  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=2104ms
+2026-04-07 22:12:30,439  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=2897ms
+2026-04-07 22:12:31,111  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): The Ultimate Party includes go karting as part of the package, so if you want to add on go karting to a Premium Party, that's an extra cost. But if you're looking for something in between, we could up
+2026-04-07 22:12:54,600  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: So VIP party also includes co credit?
+2026-04-07 22:12:56,113  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=1248ms  docs=7
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (14 messages):
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=assistant content=I'm good, thanks for asking! How can I help you today?
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=user content=I wanted to know what
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=birthday packages you have.
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=assistant content=We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 90 minutes of jump time and 60 minutes of room time, and the Ultimate Party for 59. 90 per jumper wit
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=user content=Yeah. So what are the differences between these packages?
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[7] role=assistant content=So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes of jumping and 60 minutes in the party room. And then the Ultimate Party gives you the most time, w
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[8] role=user content=Okay.
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[9] role=assistant content=So which package sounds most appealing to you?
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[10] role=user content=Okay. So I cannot have Ultimate party sorry. I cannot have
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[11] role=user content=premium party and Google cart.
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[12] role=assistant content=The Ultimate Party includes go karting as part of the package, so if you want to add on go karting to a Premium Party, that's an extra cost. But if you're looking for something in between, we could upgrade from Premium to VIP, which adds more time and perks, including go karting. Would you like me t
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[13] role=user content=So VIP party also includes co credit?
+2026-04-07 22:12:56,114  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=1514ms
+2026-04-07 22:12:56,903  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=2304ms
+2026-04-07 22:12:57,227  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): The VIP Party does include a 20 credit towards food or merchandise in our pro shop. So if you're planning on grabbing some snacks or souvenirs, that's an extra bonus with the VIP Package.
+2026-04-07 22:13:13,957  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: Snacks and souvenirs? What are those?
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=2174ms  docs=7
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (14 messages):
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=user content=I wanted to know what
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=user content=birthday packages you have.
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=assistant content=We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 90 minutes of jump time and 60 minutes of room time, and the Ultimate Party for 59. 90 per jumper wit
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=Yeah. So what are the differences between these packages?
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=assistant content=So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes of jumping and 60 minutes in the party room. And then the Ultimate Party gives you the most time, w
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=user content=Okay.
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[7] role=assistant content=So which package sounds most appealing to you?
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[8] role=user content=Okay. So I cannot have Ultimate party sorry. I cannot have
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[9] role=user content=premium party and Google cart.
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[10] role=assistant content=The Ultimate Party includes go karting as part of the package, so if you want to add on go karting to a Premium Party, that's an extra cost. But if you're looking for something in between, we could upgrade from Premium to VIP, which adds more time and perks, including go karting. Would you like me t
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[11] role=user content=So VIP party also includes co credit?
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[12] role=assistant content=The VIP Party does include a 20 credit towards food or merchandise in our pro shop. So if you're planning on grabbing some snacks or souvenirs, that's an extra bonus with the VIP Package.
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[13] role=user content=Snacks and souvenirs? What are those?
+2026-04-07 22:13:16,423  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=2466ms
+2026-04-07 22:13:17,288  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=3331ms
+2026-04-07 22:13:17,860  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): We have a Snack Shack on site that sells a variety of treats like pizza, slushies, candy, drinks, and other snacks. As for souvenirs, we don't really have any specific souvenir shop, but you can find 
+2026-04-07 22:13:45,388  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: Okay. Thank you so much. Bye bye.
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=561ms  docs=7
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (14 messages):
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=assistant content=We've got three birthday party packages: the Premium Party starting at 39. 90 per jumper with 75 minutes of jump time and 45 minutes in a private party room, the VIP Party for 44. 90 per jumper with 90 minutes of jump time and 60 minutes of room time, and the Ultimate Party for 59. 90 per jumper wit
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=user content=Yeah. So what are the differences between these packages?
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=assistant content=So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes of jumping and 60 minutes in the party room. And then the Ultimate Party gives you the most time, w
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=Okay.
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=assistant content=So which package sounds most appealing to you?
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=user content=Okay. So I cannot have Ultimate party sorry. I cannot have
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[7] role=user content=premium party and Google cart.
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[8] role=assistant content=The Ultimate Party includes go karting as part of the package, so if you want to add on go karting to a Premium Party, that's an extra cost. But if you're looking for something in between, we could upgrade from Premium to VIP, which adds more time and perks, including go karting. Would you like me t
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[9] role=user content=So VIP party also includes co credit?
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[10] role=assistant content=The VIP Party does include a 20 credit towards food or merchandise in our pro shop. So if you're planning on grabbing some snacks or souvenirs, that's an extra bonus with the VIP Package.
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[11] role=user content=Snacks and souvenirs? What are those?
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[12] role=assistant content=We have a Snack Shack on site that sells a variety of treats like pizza, slushies, candy, drinks, and other snacks. As for souvenirs, we don't really have any specific souvenir shop, but you can find some AeroSports Scarborough branded merchandise like t-shirts or hats in our gift shop near the entr
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[13] role=user content=Okay. Thank you so much. Bye bye.
+2026-04-07 22:13:46,758  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=1370ms
+2026-04-07 22:13:47,420  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=2032ms
+2026-04-07 22:13:47,564  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): You're welcome! Have a great night and enjoy your visit to AeroSports Scarborough! Bye!
+2026-04-07 22:13:56,604  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] User said: Bye bye.
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY rag_api=1979ms  docs=7
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] Full messages sent to LLM (14 messages):
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[1] role=assistant content=So, the main difference is the amount of time you get to jump and use the party room. The Premium Party has 75 minutes of jumping and 45 minutes in the party room. The VIP Party ups that to 90 minutes of jumping and 60 minutes in the party room. And then the Ultimate Party gives you the most time, w
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[2] role=user content=Okay.
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[3] role=assistant content=So which package sounds most appealing to you?
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[4] role=user content=Okay. So I cannot have Ultimate party sorry. I cannot have
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[5] role=user content=premium party and Google cart.
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[6] role=assistant content=The Ultimate Party includes go karting as part of the package, so if you want to add on go karting to a Premium Party, that's an extra cost. But if you're looking for something in between, we could upgrade from Premium to VIP, which adds more time and perks, including go karting. Would you like me t
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[7] role=user content=So VIP party also includes co credit?
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[8] role=assistant content=The VIP Party does include a 20 credit towards food or merchandise in our pro shop. So if you're planning on grabbing some snacks or souvenirs, that's an extra bonus with the VIP Package.
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[9] role=user content=Snacks and souvenirs? What are those?
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[10] role=assistant content=We have a Snack Shack on site that sells a variety of treats like pizza, slushies, candy, drinks, and other snacks. As for souvenirs, we don't really have any specific souvenir shop, but you can find some AeroSports Scarborough branded merchandise like t-shirts or hats in our gift shop near the entr
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[11] role=user content=Okay. Thank you so much. Bye bye.
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[12] role=assistant content=You're welcome! Have a great night and enjoy your visit to AeroSports Scarborough! Bye!
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6]   msg[13] role=user content=Bye bye.
+2026-04-07 22:13:58,862  INFO      chatbot.voice_handler  [CA074e07c136f715908697e7aaf09b8be6] LATENCY prepare_voice_stream=2258ms
+2026-04-07 22:13:59,640  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] LATENCY silence_to_first_reply=3036ms
+2026-04-07 22:13:59,689  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Assistant (full): No problem, have a great day!
+2026-04-07 22:14:30,923  INFO      chatbot.server  [CA074e07c136f715908697e7aaf09b8be6] Session log closed

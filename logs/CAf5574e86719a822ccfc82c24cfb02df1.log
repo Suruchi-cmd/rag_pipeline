@@ -1,0 +1,103 @@
+2026-03-31 04:31:10,752  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CAf5574e86719a822ccfc82c24cfb02df1.log
+2026-03-31 04:31:10,752  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] ConversationRelay connected from +14373612990
+2026-03-31 04:31:18,520  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] User said: Hi, Dan. How are you?
+2026-03-31 04:31:21,226  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY rag_api=2706ms  docs=7
+2026-03-31 04:31:21,226  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] Full messages sent to LLM (2 messages):
+2026-03-31 04:31:21,226  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:31:21,226  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:31:21,226  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY prepare_voice_stream=2706ms
+2026-03-31 04:31:23,520  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] Assistant (full): I'm good, thanks for asking! What can I help you with today?
+2026-03-31 04:31:31,283  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] User said: I wanna book a birthday party tomorrow.
+2026-03-31 04:31:34,233  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY rag_api=2720ms  docs=7
+2026-03-31 04:31:34,233  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] Full messages sent to LLM (4 messages):
+2026-03-31 04:31:34,233  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:31:34,233  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:31:34,233  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-03-31 04:31:34,233  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[3] role=user content=I wanna book a birthday party tomorrow.
+2026-03-31 04:31:34,233  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY prepare_voice_stream=2950ms
+2026-03-31 04:31:35,377  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] Assistant (full): We've got three different packages to choose from: Premium, VIP, and Ultimate. Which one sounds like it might be the best fit for your party? Or would you like me to explain what's included in each pa
+2026-03-31 04:31:51,807  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] User said: You can explain it to me.
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY rag_api=3339ms  docs=7
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] Full messages sent to LLM (6 messages):
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[3] role=user content=I wanna book a birthday party tomorrow.
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[4] role=assistant content=We've got three different packages to choose from: Premium, VIP, and Ultimate. Which one sounds like it might be the best fit for your party? Or would you like me to explain what's included in each package so you can decide?
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[5] role=user content=You can explain it to me.
+2026-03-31 04:31:55,542  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY prepare_voice_stream=3734ms
+2026-03-31 04:31:57,945  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] Assistant (full): So our Premium Party starts at 39. 90 per jumper, with a minimum of 10 kids. It includes pizza, drinks, a private party room, and a glow t-shirt for the birthday child. We also include digital invitat
+2026-03-31 04:32:47,014  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] User said: I don't know.
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY rag_api=3087ms  docs=7
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] Full messages sent to LLM (8 messages):
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[3] role=user content=I wanna book a birthday party tomorrow.
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[4] role=assistant content=We've got three different packages to choose from: Premium, VIP, and Ultimate. Which one sounds like it might be the best fit for your party? Or would you like me to explain what's included in each package so you can decide?
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[5] role=user content=You can explain it to me.
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[6] role=assistant content=So our Premium Party starts at 39. 90 per jumper, with a minimum of 10 kids. It includes pizza, drinks, a private party room, and a glow t-shirt for the birthday child. We also include digital invitations. Our VIP Party is 44. 90 per jumper, with the same requirements as the Premium. But it adds an 
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[7] role=user content=I don't know.
+2026-03-31 04:32:50,466  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY prepare_voice_stream=3452ms
+2026-03-31 04:32:52,339  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] Assistant (full): Let me break down the Ultimate Package a bit more since it's our most popular one. It includes go-karting, which is a big hit with kids, and it's worth about 9. 90 per person on its own. Plus, we thro
+2026-03-31 04:33:24,967  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] User said: No. That's fine. I think you've explained.
+2026-03-31 04:33:27,678  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY rag_api=2414ms  docs=7
+2026-03-31 04:33:27,678  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] Full messages sent to LLM (10 messages):
+2026-03-31 04:33:27,678  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:33:27,678  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:33:27,678  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-03-31 04:33:27,678  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[3] role=user content=I wanna book a birthday party tomorrow.
+2026-03-31 04:33:27,679  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[4] role=assistant content=We've got three different packages to choose from: Premium, VIP, and Ultimate. Which one sounds like it might be the best fit for your party? Or would you like me to explain what's included in each package so you can decide?
+2026-03-31 04:33:27,679  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[5] role=user content=You can explain it to me.
+2026-03-31 04:33:27,679  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[6] role=assistant content=So our Premium Party starts at 39. 90 per jumper, with a minimum of 10 kids. It includes pizza, drinks, a private party room, and a glow t-shirt for the birthday child. We also include digital invitations. Our VIP Party is 44. 90 per jumper, with the same requirements as the Premium. But it adds an 
+2026-03-31 04:33:27,679  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[7] role=user content=I don't know.
+2026-03-31 04:33:27,679  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[8] role=assistant content=Let me break down the Ultimate Package a bit more since it's our most popular one. It includes go-karting, which is a big hit with kids, and it's worth about 9. 90 per person on its own. Plus, we throw in free socks for everyone, which is a nice bonus. And instead of just a 60-minute pass like the o
+2026-03-31 04:33:27,679  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[9] role=user content=No. That's fine. I think you've explained.
+2026-03-31 04:33:27,679  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY prepare_voice_stream=2712ms
+2026-03-31 04:33:27,679  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] User said: Enough to me.
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY rag_api=3355ms  docs=7
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] Full messages sent to LLM (11 messages):
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[1] role=user content=Hi, Dan. How are you?
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[2] role=assistant content=I'm good, thanks for asking! What can I help you with today?
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[3] role=user content=I wanna book a birthday party tomorrow.
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[4] role=assistant content=We've got three different packages to choose from: Premium, VIP, and Ultimate. Which one sounds like it might be the best fit for your party? Or would you like me to explain what's included in each package so you can decide?
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[5] role=user content=You can explain it to me.
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[6] role=assistant content=So our Premium Party starts at 39. 90 per jumper, with a minimum of 10 kids. It includes pizza, drinks, a private party room, and a glow t-shirt for the birthday child. We also include digital invitations. Our VIP Party is 44. 90 per jumper, with the same requirements as the Premium. But it adds an 
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[7] role=user content=I don't know.
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[8] role=assistant content=Let me break down the Ultimate Package a bit more since it's our most popular one. It includes go-karting, which is a big hit with kids, and it's worth about 9. 90 per person on its own. Plus, we throw in free socks for everyone, which is a nice bonus. And instead of just a 60-minute pass like the o
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[9] role=user content=No. That's fine. I think you've explained.
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1]   msg[10] role=user content=Enough to me.
+2026-03-31 04:33:31,250  INFO      chatbot.voice_handler  [CAf5574e86719a822ccfc82c24cfb02df1] LATENCY prepare_voice_stream=3571ms
+2026-03-31 04:33:32,108  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] Assistant (full): You're welcome. No problem, have a great day.
+2026-03-31 04:33:44,894  INFO      chatbot.server  [CAf5574e86719a822ccfc82c24cfb02df1] Session log closed

@@ -83,6 +83,20 @@ def _price_spoken(price_str: str) -> str:
     return ''
 
 
+def _slugify(*parts: str) -> str:
+    """Join non-empty parts into a lowercase underscore-separated slug for IDs."""
+    slug = '_'.join(p.strip().lower().replace(' ', '_') for p in parts if p and p.strip())
+    return re.sub(r'[^a-z0-9_]', '', slug)
+
+
+def _unique_id(base_id: str, *suffix_parts: str) -> str:
+    """Build a deterministic unique chunk ID from base + distinguishing fields."""
+    suffix = _slugify(*suffix_parts)
+    if suffix:
+        return f"{base_id}_{suffix}"
+    return base_id
+
+
 def _make_tags(sheet_name: str, *extra: str) -> list[str]:
     """Build a tags list from sheet name + extras."""
     base = sheet_name.lower().replace(' ', '_')
@@ -306,7 +320,7 @@ def build_jump_price_chunks(rows: list[dict]) -> list[ChunkRecord]:
         if parts:
             answer = ' '.join(parts)
             chunks.append(_chunk(
-                chunk_id=cid,
+                chunk_id=_unique_id(cid, pass_type, ages),
                 category='Pricing',
                 subcategory='Jump Passes' if 'socks' not in cid.lower() else 'Socks',
                 question=f'How much does the {pass_type or "jump pass"} cost?',
@@ -354,7 +368,7 @@ def build_go_karting_chunks(rows: list[dict]) -> list[ChunkRecord]:
 
         answer = ' '.join(parts)
         chunks.append(_chunk(
-            chunk_id=cid,
+            chunk_id=_unique_id(cid, track, race_type),
             category='Go Karting',
             subcategory=track or 'Go Karting',
             question=f'What are the go karting options and prices?',
@@ -398,7 +412,7 @@ def build_special_program_chunks(rows: list[dict]) -> list[ChunkRecord]:
 
         if parts:
             chunks.append(_chunk(
-                chunk_id=cid,
+                chunk_id=_unique_id(cid, program),
                 category='Special Programs',
                 subcategory=program or 'Special Programs',
                 question=f'What is {program}?' if program else 'What special programs are available?',
@@ -444,7 +458,7 @@ def build_attraction_chunks(rows: list[dict]) -> list[ChunkRecord]:
 
         if parts:
             chunks.append(_chunk(
-                chunk_id=cid,
+                chunk_id=_unique_id(cid, name),
                 category='Attractions',
                 subcategory=name or 'Attractions',
                 question=f'What is {name}?' if name else 'What attractions are available?',
@@ -456,17 +470,14 @@ def build_attraction_chunks(rows: list[dict]) -> list[ChunkRecord]:
 
 
 def build_birthday_chunks(rows: list[dict]) -> list[ChunkRecord]:
-    """Birthday Parties → pivoted layout: columns are party types, rows are features.
+    """Birthday Parties — flat layout: chunk_id | package_name | field | value.
 
-    Sub-tables: packages (scb_bday_*), add-ons (scb_bday_addons_*), terms (scb_bday_terms_*).
+    Each row is already a self-contained, voice-ready text block.
+    One ChunkRecord per unique chunk_id (rows with the same chunk_id are merged).
     """
     chunks: list[ChunkRecord] = []
-
-    # Detect party-type columns (everything except chunk_id and field)
-    party_cols = [k for k in rows[0].keys() if k not in ('chunk_id', 'field')] if rows else []
-
-    # Split rows into groups by chunk_id
     groups: dict[str, list[dict]] = defaultdict(list)
+
     for row in rows:
         if _skip_row(row):
             continue
@@ -475,111 +486,58 @@ def build_birthday_chunks(rows: list[dict]) -> list[ChunkRecord]:
             continue
         groups[cid].append(row)
 
+    # Question templates by chunk_id pattern
+    _questions = {
+        'premium': 'What does the Premium birthday party package include?',
+        'vip': 'What does the VIP birthday party package include?',
+        'ultimate': 'What does the Ultimate birthday party package include?',
+        'compare': 'What are the differences between birthday party packages?',
+        'addons': 'What birthday party add-ons are available?',
+        'terms': 'What are the birthday party terms and conditions?',
+    }
+
+    _subcategories = {
+        'premium': 'Premium Party',
+        'vip': 'VIP Party',
+        'ultimate': 'Ultimate Party',
+        'compare': 'Package Comparison',
+        'addons': 'Add-Ons',
+        'terms': 'Terms & Conditions',
+    }
+
     for cid, group_rows in groups.items():
-        if 'addons' in cid.lower():
-            # Add-ons sub-table: field = item name, first party col = price
-            parts = []
-            for row in group_rows:
-                item = _get(row, 'field')
-                price = str(row.get(party_cols[0], '')).strip() if party_cols else ''
-                if item and price:
-                    parts.append(f"{item} costs {_price_spoken(str(price))}.")
-                elif item:
-                    parts.append(f"{item}.")
-            if parts:
-                chunks.append(_chunk(
-                    chunk_id=cid,
-                    category='Birthday Parties',
-                    subcategory='Add-Ons',
-                    question='What birthday party add-ons are available?',
-                    answer=' '.join(parts),
-                    tags=_make_tags('Birthday Parties', 'birthday', 'party', 'addons'),
-                    sheet_name='Birthday Parties',
-                ))
+        # Merge all value fields for this chunk_id into one answer
+        parts = []
+        package_name = ''
+        for row in group_rows:
+            package_name = _get(row, 'package_name') or package_name
+            value = _get(row, 'value')
+            if value:
+                parts.append(value if value.endswith('.') else value + '.')
 
-        elif 'terms' in cid.lower():
-            # Terms sub-table: field = policy, first party col = details
-            parts = []
-            for row in group_rows:
-                policy = _get(row, 'field')
-                details = str(row.get(party_cols[0], '')).strip() if party_cols else ''
-                if policy and details:
-                    parts.append(f"{policy}: {details}")
-                    if not parts[-1].endswith('.'):
-                        parts[-1] += '.'
-            if parts:
-                chunks.append(_chunk(
-                    chunk_id=cid,
-                    category='Birthday Parties',
-                    subcategory='Terms & Conditions',
-                    question='What are the birthday party terms and conditions?',
-                    answer=' '.join(parts),
-                    tags=_make_tags('Birthday Parties', 'birthday', 'party', 'terms', 'cancellation'),
-                    sheet_name='Birthday Parties',
-                ))
+        if not parts:
+            continue
 
-        else:
-            # Packages sub-table (pivoted): one chunk per party type column
-            for col in party_cols:
-                features: dict[str, str] = {}
-                for row in group_rows:
-                    field_name = _get(row, 'field')
-                    value = str(row.get(col, '')).strip()
-                    if field_name and value:
-                        features[field_name] = value
+        answer = ' '.join(parts)
 
-                if not features:
-                    continue
+        # Determine question and subcategory from chunk_id
+        cid_lower = cid.lower()
+        prefix = next((k for k in _questions if k in cid_lower), None)
+        question = _questions.get(prefix, f'What does the {package_name} birthday package include?')
+        subcategory = _subcategories.get(prefix, package_name or 'Birthday Parties')
 
-                parts = []
-                price = features.get('Price Per Jumper', '')
-                min_j = features.get('Minimum Jumpers', '')
-                courts = features.get('Courts Access', '')
-                room = features.get('Party Room Access', '')
-
-                intro = f"The {col} at AeroSports Scarborough"
-                if price:
-                    intro += f" is {_price_spoken(price)} per jumper"
-                if min_j:
-                    intro += f" with a minimum of {min_j} jumpers"
-                intro += "."
-                parts.append(intro)
-
-                if courts and room:
-                    parts.append(f"Guests get {courts.lower()} on the courts and {room.lower()} in a private party room.")
-                elif courts:
-                    parts.append(f"Guests get {courts.lower()} on the courts.")
-
-                # Collect all inclusions
-                include_items = []
-                for feat_key in ('Pizza', 'Drinks', 'Jump Pass to birthday child',
-                                 'Guests Jumpers Add-On Pass', 'Glow T-Shirt for Birthday Child',
-                                 'Digital Invitations', 'Physical Invitations',
-                                 'Socks Discount', 'Go Kart Race', 'Outside Food Fee Waived'):
-                    val = features.get(feat_key, '')
-                    if val and val.lower() not in ('no', 'n/a', ''):
-                        include_items.append(f"{feat_key}: {val}")
-
-                if include_items:
-                    parts.append("Includes: " + "; ".join(include_items) + ".")
-
-                room_type = features.get('Room Type', '')
-                if room_type:
-                    parts.append(f"Room type: {room_type}.")
-
-                chunk_id = f"{cid}_{col.lower().replace(' ', '_')}"
-                chunks.append(_chunk(
-                    chunk_id=chunk_id,
-                    category='Birthday Parties',
-                    subcategory=col,
-                    question=f'What does the {col} birthday package include?',
-                    answer=' '.join(parts),
-                    tags=_make_tags('Birthday Parties', 'birthday', 'party', col.lower().replace(' ', '_')),
-                    sheet_name='Birthday Parties',
-                ))
+        chunks.append(_chunk(
+            chunk_id=cid,
+            category='Birthday Parties',
+            subcategory=subcategory,
+            question=question,
+            answer=answer,
+            tags=_make_tags('Birthday Parties', 'birthday', 'party',
+                            prefix or package_name.lower().replace(' ', '_')),
+            sheet_name='Birthday Parties',
+        ))
 
     return chunks
-
 
 def build_group_booking_chunks(rows: list[dict]) -> list[ChunkRecord]:
     """Group Bookings → one chunk per section (group, corporate, school, fundraise, facility, rooms)."""
@@ -786,7 +744,7 @@ def build_promotion_chunks(rows: list[dict]) -> list[ChunkRecord]:
 
         if parts:
             chunks.append(_chunk(
-                chunk_id=cid,
+                chunk_id=_unique_id(cid, code or applies_to),
                 category='Promotions',
                 subcategory='Promotions',
                 question='Are there any current promotions or deals?',
@@ -847,8 +805,10 @@ def build_faq_chunks(rows: list[dict]) -> list[ChunkRecord]:
         answer = _get(row, 'answer')
 
         if question and answer:
+            # Use first few words of question to make ID unique
+            q_slug = _slugify(*question.split()[:5])
             chunks.append(_chunk(
-                chunk_id=cid,
+                chunk_id=_unique_id(cid, q_slug),
                 category='FAQ',
                 subcategory=category,
                 question=question,
@@ -879,7 +839,7 @@ def build_voice_script_chunks(rows: list[dict]) -> list[ChunkRecord]:
                 answer += ' ' + (notes if notes.endswith('.') else notes + '.')
 
             chunks.append(_chunk(
-                chunk_id=cid,
+                chunk_id=_unique_id(cid, scenario),
                 category='Voice Scripts',
                 subcategory=scenario or 'General',
                 question=f'Information for phone callers about {scenario.lower()}' if scenario else 'Information for phone callers',
@@ -908,7 +868,7 @@ def build_chatbot_qr_chunks(rows: list[dict]) -> list[ChunkRecord]:
 
         if sample_question and response:
             chunks.append(_chunk(
-                chunk_id=cid,
+                chunk_id=_unique_id(cid, intent),
                 category='Quick Replies',
                 subcategory=intent or 'General',
                 question=sample_question,

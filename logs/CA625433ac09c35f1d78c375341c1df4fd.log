@@ -1,0 +1,31 @@
+2026-04-01 02:01:47,889  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA625433ac09c35f1d78c375341c1df4fd.log
+2026-04-01 02:01:47,889  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] ConversationRelay connected from +14373612990
+2026-04-01 02:01:56,505  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] User said: Then I wanna do my birthday party here.
+2026-04-01 02:01:59,146  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd] LATENCY rag_api=2641ms  docs=7
+2026-04-01 02:01:59,146  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd] Full messages sent to LLM (2 messages):
+2026-04-01 02:01:59,146  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 02:01:59,146  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd]   msg[1] role=user content=Then I wanna do my birthday party here.
+2026-04-01 02:01:59,146  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd] LATENCY prepare_voice_stream=2641ms
+2026-04-01 02:01:59,506  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] LATENCY silence_to_first_reply=3000ms
+2026-04-01 02:02:00,741  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] Assistant (full): We'd love to have you celebrate your special day with us! We've got two main party packages: the VIP Party and the Ultimate Party. The VIP Party is forty-four ninety per jumper, minimum ten jumpers, a
+2026-04-01 02:02:44,700  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] User said: I don't know. I don't you have, like, payment package or something as well. But
+2026-04-01 02:02:47,633  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd] LATENCY rag_api=2699ms  docs=7
+2026-04-01 02:02:47,633  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd] Full messages sent to LLM (4 messages):
+2026-04-01 02:02:47,633  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-01 02:02:47,633  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd]   msg[1] role=user content=Then I wanna do my birthday party here.
+2026-04-01 02:02:47,633  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd]   msg[2] role=assistant content=We'd love to have you celebrate your special day with us! We've got two main party packages: the VIP Party and the Ultimate Party. The VIP Party is forty-four ninety per jumper, minimum ten jumpers, and it includes a bunch of cool perks like a free glow t-shirt for the birthday kid, digital invitati
+2026-04-01 02:02:47,633  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd]   msg[3] role=user content=I don't know. I don't you have, like, payment package or something as well. But
+2026-04-01 02:02:47,633  INFO      chatbot.voice_handler  [CA625433ac09c35f1d78c375341c1df4fd] LATENCY prepare_voice_stream=2933ms
+2026-04-01 02:02:48,347  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] LATENCY silence_to_first_reply=3647ms
+2026-04-01 02:02:49,312  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] Assistant (full): So you're looking at our party packages and want to know more about them. We do have a few add-ons that can make your party even more special. For example, we've got large pizzas for twenty-five dolla
+2026-04-01 02:03:12,749  INFO      chatbot.server  [CA625433ac09c35f1d78c375341c1df4fd] Session log closed

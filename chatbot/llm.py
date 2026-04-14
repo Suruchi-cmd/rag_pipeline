@@ -1,24 +1,24 @@
 """
-HuggingFace Inference Provider client for Llama.
+Local Ollama LLM client (llama3.1:8b).
 
-Uses huggingface_hub.InferenceClient with the OpenAI-compatible chat-completions
-API, streaming via SSE.
+Uses the OpenAI-compatible API exposed by Ollama at localhost:11434.
+Streaming via SSE for chat_handler, async streaming for voice_handler.
 
 Key design decisions:
-- One fresh InferenceClient per call (lightweight, avoids stale state).
-- Sync generator for tokens — chat_handler.py bridges to async via threading.
-- 3 attempts with exponential backoff on 429 / 503.
-- HF_PROVIDER env var is optional; empty string → auto-routing.
+- One sync OpenAI client for chat_handler (threading bridge).
+- One AsyncOpenAI client for voice_handler (native async streaming).
+- 3 attempts with exponential backoff on transient errors.
 """
 
 from __future__ import annotations
 
 import logging
 import os
+import re
 import time
 from typing import Generator
 
-from huggingface_hub import InferenceClient
+from openai import AsyncOpenAI, OpenAI
 
 logger = logging.getLogger(__name__)
 
@@ -28,29 +28,43 @@ _FALLBACK_MSG = (
     "at two eight nine, four five four, five five five five. Sorry about that!"
 )
 
+_OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+_MODEL = os.environ.get("LLM_MODEL", "llama3.1:8b")
 
-def _make_client() -> InferenceClient:
-    token = os.environ.get("HF_TOKEN")
-    provider = os.environ.get("HF_PROVIDER") or None  # "" → None → auto-route
-    return InferenceClient(api_key=token, provider=provider)
+
+_client: OpenAI | None = None
+_async_client: AsyncOpenAI | None = None
+
+
+def _make_client() -> OpenAI:
+    global _client
+    if _client is None:
+        _client = OpenAI(base_url=_OLLAMA_BASE_URL, api_key="ollama")
+    return _client
+
+
+def _make_async_client() -> AsyncOpenAI:
+    global _async_client
+    if _async_client is None:
+        _async_client = AsyncOpenAI(base_url=_OLLAMA_BASE_URL, api_key="ollama")
+    return _async_client
 
 
 def generate_response(messages: list[dict]) -> Generator[str, None, None]:
     """
     Streaming token generator.
 
-    Yields str tokens as they arrive from the HuggingFace API.
-    Retries up to 3 times on 429 / 503 with exponential backoff.
+    Yields str tokens as they arrive from the Ollama API.
+    Retries up to 3 times on transient errors with exponential backoff.
     Raises on unrecoverable errors so callers can substitute the fallback message.
     """
-    model = os.environ.get("HF_MODEL", "meta-llama/Llama-3.1-8B-Instruct")
     delay = 1.0
 
     for attempt in range(3):
         try:
             client = _make_client()
             stream = client.chat.completions.create(
-                model=model,
+                model=_MODEL,
                 messages=messages,
                 stream=True,
                 max_tokens=1024,
@@ -58,8 +72,6 @@ def generate_response(messages: list[dict]) -> Generator[str, None, None]:
                 top_p=0.9,
             )
             for chunk in stream:
-                # Some HF stream frames arrive with an empty choices list
-                # (e.g. usage/stats frames at the end of the stream).
                 if not chunk.choices:
                     continue
                 delta = chunk.choices[0].delta
@@ -73,7 +85,7 @@ def generate_response(messages: list[dict]) -> Generator[str, None, None]:
             status = getattr(resp, "status_code", 0) if resp else 0
             if status in (429, 503) and attempt < 2:
                 logger.warning(
-                    "HuggingFace rate-limited (HTTP %s), retry %d/2 in %.1fs",
+                    "Ollama rate-limited (HTTP %s), retry %d/2 in %.1fs",
                     status,
                     attempt + 1,
                     delay,
@@ -81,10 +93,17 @@ def generate_response(messages: list[dict]) -> Generator[str, None, None]:
                 time.sleep(delay)
                 delay *= 2
             else:
-                logger.error("HuggingFace API error (attempt %d): %s", attempt + 1, exc)
+                logger.error("Ollama API error (attempt %d): %s", attempt + 1, exc)
                 raise
+
+
+def strip_thinking(text: str) -> str:
+    """Remove Qwen3 <think>…</think> reasoning blocks from output."""
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    text = re.sub(r"<think>.*", "", text, flags=re.DOTALL)
+    return text.strip()
 
 
 def generate_response_sync(messages: list[dict]) -> str:
     """Non-streaming convenience wrapper — collects the full response into a string."""
-    return "".join(generate_response(messages))
+    return strip_thinking("".join(generate_response(messages)))

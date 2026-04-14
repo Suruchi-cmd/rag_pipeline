@@ -1,0 +1,16 @@
+2026-04-07 22:37:41,824  INFO      chatbot.server  [CA9df1b30f0b9c01c00d40cde373bdeba3] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA9df1b30f0b9c01c00d40cde373bdeba3.log
+2026-04-07 22:37:41,824  INFO      chatbot.server  [CA9df1b30f0b9c01c00d40cde373bdeba3] ConversationRelay connected from +14373612990 (db call_id=1)
+2026-04-07 22:37:49,275  INFO      chatbot.server  [CA9df1b30f0b9c01c00d40cde373bdeba3] User said: Hi again. How are you?
+2026-04-07 22:37:51,533  INFO      chatbot.voice_handler  [CA9df1b30f0b9c01c00d40cde373bdeba3] LATENCY rag_api=2258ms  docs=7
+2026-04-07 22:37:51,533  INFO      chatbot.voice_handler  [CA9df1b30f0b9c01c00d40cde373bdeba3] Full messages sent to LLM (2 messages):
+2026-04-07 22:37:51,533  INFO      chatbot.voice_handler  [CA9df1b30f0b9c01c00d40cde373bdeba3]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:37:51,533  INFO      chatbot.voice_handler  [CA9df1b30f0b9c01c00d40cde373bdeba3]   msg[1] role=user content=Hi again. How are you?
+2026-04-07 22:37:51,533  INFO      chatbot.voice_handler  [CA9df1b30f0b9c01c00d40cde373bdeba3] LATENCY prepare_voice_stream=2258ms
+2026-04-07 22:37:54,176  INFO      chatbot.server  [CA9df1b30f0b9c01c00d40cde373bdeba3] LATENCY silence_to_reply=4901ms
+2026-04-07 22:37:54,177  INFO      chatbot.server  [CA9df1b30f0b9c01c00d40cde373bdeba3] Assistant: {"name": "end_call", "parameters": {"needs_human": False, "flag_reason": "", "summary": "Customer checked back to ask a follow-up question but didn't have any new information."}}
+2026-04-07 22:45:20,222  INFO      chatbot.server  [CA9df1b30f0b9c01c00d40cde373bdeba3] Session log closed

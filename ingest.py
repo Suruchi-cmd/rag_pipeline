@@ -85,6 +85,13 @@ def read_all_sheets() -> list[ChunkRecord]:
         all_chunks.extend(chunks)
         logger.info("%s: %d chunks", title, len(chunks))
 
+    # Verify no duplicate IDs (chunk_builder.py generates unique IDs)
+    from collections import Counter
+    id_counter = Counter(c.id for c in all_chunks)
+    dupes = {cid: n for cid, n in id_counter.items() if n > 1}
+    if dupes:
+        logger.warning("Duplicate chunk IDs found (will cause DB conflicts): %s", dupes)
+
     logger.info("Total chunks from all sheets: %d", len(all_chunks))
     return all_chunks
 

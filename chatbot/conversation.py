@@ -52,6 +52,22 @@ class ConversationStore:
                 session.messages = session.messages[-max_msgs:]
             session.last_active = time.time()
 
+    def replace_last_assistant(self, session_id: str, content: str) -> None:
+        """Replace the most recent assistant message, or append if none exists."""
+        with self._lock:
+            session = self._sessions.get(session_id)
+            if session is None:
+                return
+            # Walk backwards to find the last assistant message
+            for i in range(len(session.messages) - 1, -1, -1):
+                if session.messages[i]["role"] == "assistant":
+                    session.messages[i]["content"] = content
+                    session.last_active = time.time()
+                    return
+            # No assistant message found — append one
+            session.messages.append({"role": "assistant", "content": content})
+            session.last_active = time.time()
+
     def clear(self, session_id: str) -> None:
         """Delete the session entirely."""
         with self._lock:

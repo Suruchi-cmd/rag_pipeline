@@ -1,0 +1,149 @@
+2026-04-07 22:49:14,810  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Session log opened → /home/aeroserver/Documents/suruchi/rag_pipeline/logs/CA1dd0f26fdb2bb1d841031d57433fa6c2.log
+2026-04-07 22:49:14,810  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] ConversationRelay connected from +14373612990
+2026-04-07 22:49:21,879  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: Hi, Jen. How are you?
+2026-04-07 22:49:24,743  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=2864ms  docs=7
+2026-04-07 22:49:24,743  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (2 messages):
+2026-04-07 22:49:24,743  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:49:24,743  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:49:24,743  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=2864ms
+2026-04-07 22:49:26,285  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: Dan, how are you?
+2026-04-07 22:49:26,287  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LLM stream cancelled (user interrupted)
+2026-04-07 22:49:30,759  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=705ms  docs=7
+2026-04-07 22:49:30,760  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (3 messages):
+2026-04-07 22:49:30,760  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:49:30,760  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:49:30,760  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[2] role=user content=Dan, how are you?
+2026-04-07 22:49:30,760  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=4474ms
+2026-04-07 22:49:31,358  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY silence_to_first_reply=5073ms
+2026-04-07 22:49:31,443  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Assistant (full): I'm good, thanks! How can I help you today?
+2026-04-07 22:49:40,185  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: Um, I wanted to know about birthday parties.
+2026-04-07 22:49:43,216  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=2798ms  docs=7
+2026-04-07 22:49:43,217  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (5 messages):
+2026-04-07 22:49:43,217  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:49:43,217  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:49:43,217  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[2] role=user content=Dan, how are you?
+2026-04-07 22:49:43,217  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[3] role=assistant content=I'm good, thanks! How can I help you today?
+2026-04-07 22:49:43,217  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[4] role=user content=Um, I wanted to know about birthday parties.
+2026-04-07 22:49:43,217  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=3031ms
+2026-04-07 22:49:44,020  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY silence_to_first_reply=3834ms
+2026-04-07 22:49:44,469  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Assistant (full): We've got three different party packages at AeroSports Scarborough They all include pizza, drinks, a private party room, and digital invitations for the birthday child. The main difference is in the j
+2026-04-07 22:50:05,889  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: I don't know. What do you mean?
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=2564ms  docs=7
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (7 messages):
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[2] role=user content=Dan, how are you?
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[3] role=assistant content=I'm good, thanks! How can I help you today?
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[4] role=user content=Um, I wanted to know about birthday parties.
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[5] role=assistant content=We've got three different party packages at AeroSports Scarborough They all include pizza, drinks, a private party room, and digital invitations for the birthday child. The main difference is in the jump time and add-ons. Which package are you looking at?
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[6] role=user content=I don't know. What do you mean?
+2026-04-07 22:50:08,781  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=2892ms
+2026-04-07 22:50:08,781  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: BMW and Ultimate?
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=1601ms  docs=7
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (8 messages):
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[2] role=user content=Dan, how are you?
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[3] role=assistant content=I'm good, thanks! How can I help you today?
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[4] role=user content=Um, I wanted to know about birthday parties.
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[5] role=assistant content=We've got three different party packages at AeroSports Scarborough They all include pizza, drinks, a private party room, and digital invitations for the birthday child. The main difference is in the jump time and add-ons. Which package are you looking at?
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[6] role=user content=I don't know. What do you mean?
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[7] role=user content=BMW and Ultimate?
+2026-04-07 22:50:10,592  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=1811ms
+2026-04-07 22:50:11,372  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY silence_to_first_reply=2591ms
+2026-04-07 22:50:12,294  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Assistant (full): So we have three packages: Basic, Premium, and Ultimate. The Basic Package is 39. 90 per jumper with a minimum of 10 kids, the Premium Package is 49. 90 per jumper, and the Ultimate Package is 59. 90 
+2026-04-07 22:50:43,423  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: You said you have, um, basic packages?
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=1224ms  docs=7
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (10 messages):
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[2] role=user content=Dan, how are you?
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[3] role=assistant content=I'm good, thanks! How can I help you today?
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[4] role=user content=Um, I wanted to know about birthday parties.
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[5] role=assistant content=We've got three different party packages at AeroSports Scarborough They all include pizza, drinks, a private party room, and digital invitations for the birthday child. The main difference is in the jump time and add-ons. Which package are you looking at?
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[6] role=user content=I don't know. What do you mean?
+2026-04-07 22:50:44,912  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[7] role=user content=BMW and Ultimate?
+2026-04-07 22:50:44,913  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[8] role=assistant content=So we have three packages: Basic, Premium, and Ultimate. The Basic Package is 39. 90 per jumper with a minimum of 10 kids, the Premium Package is 49. 90 per jumper, and the Ultimate Package is 59. 90 per jumper. All packages include the things I mentioned before, but the Ultimate Package also includ
+2026-04-07 22:50:44,913  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[9] role=user content=You said you have, um, basic packages?
+2026-04-07 22:50:44,913  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=1490ms
+2026-04-07 22:50:45,602  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY silence_to_first_reply=2180ms
+2026-04-07 22:50:45,922  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Assistant (full): We actually only have two main party packages: the Ultimate Party Package and the Premium Party Package. The Basic Package isn't one of our options. Would you like to know more about the Ultimate or P
+2026-04-07 22:51:02,705  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: No. Uh, I saw there was a VIP package in your website.
+2026-04-07 22:51:06,101  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=3113ms  docs=7
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (12 messages):
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[2] role=user content=Dan, how are you?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[3] role=assistant content=I'm good, thanks! How can I help you today?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[4] role=user content=Um, I wanted to know about birthday parties.
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[5] role=assistant content=We've got three different party packages at AeroSports Scarborough They all include pizza, drinks, a private party room, and digital invitations for the birthday child. The main difference is in the jump time and add-ons. Which package are you looking at?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[6] role=user content=I don't know. What do you mean?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[7] role=user content=BMW and Ultimate?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[8] role=assistant content=So we have three packages: Basic, Premium, and Ultimate. The Basic Package is 39. 90 per jumper with a minimum of 10 kids, the Premium Package is 49. 90 per jumper, and the Ultimate Package is 59. 90 per jumper. All packages include the things I mentioned before, but the Ultimate Package also includ
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[9] role=user content=You said you have, um, basic packages?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[10] role=assistant content=We actually only have two main party packages: the Ultimate Party Package and the Premium Party Package. The Basic Package isn't one of our options. Would you like to know more about the Ultimate or Premium package?
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[11] role=user content=No. Uh, I saw there was a VIP package in your website.
+2026-04-07 22:51:06,102  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=3396ms
+2026-04-07 22:51:06,890  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY silence_to_first_reply=4185ms
+2026-04-07 22:51:08,266  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Assistant (full): Yeah, we have the VIP Birthday Party Package that's 44. 90 per jumper with a minimum of 10 jumpers. It includes 90 minutes on the trampoline courts and 60 minutes in a private party room. Food include
+2026-04-07 22:51:48,549  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] User said: Okay. Thank you so much. Bye bye.
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY rag_api=1283ms  docs=7
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Full messages sent to LLM (14 messages):
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[0] role=system content=<identity>
+You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
+</identity>
+
+<voice_rules>
+This is a live voice call processed by a te
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[1] role=user content=Hi, Jen. How are you?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[2] role=user content=Dan, how are you?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[3] role=assistant content=I'm good, thanks! How can I help you today?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[4] role=user content=Um, I wanted to know about birthday parties.
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[5] role=assistant content=We've got three different party packages at AeroSports Scarborough They all include pizza, drinks, a private party room, and digital invitations for the birthday child. The main difference is in the jump time and add-ons. Which package are you looking at?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[6] role=user content=I don't know. What do you mean?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[7] role=user content=BMW and Ultimate?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[8] role=assistant content=So we have three packages: Basic, Premium, and Ultimate. The Basic Package is 39. 90 per jumper with a minimum of 10 kids, the Premium Package is 49. 90 per jumper, and the Ultimate Package is 59. 90 per jumper. All packages include the things I mentioned before, but the Ultimate Package also includ
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[9] role=user content=You said you have, um, basic packages?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[10] role=assistant content=We actually only have two main party packages: the Ultimate Party Package and the Premium Party Package. The Basic Package isn't one of our options. Would you like to know more about the Ultimate or Premium package?
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[11] role=user content=No. Uh, I saw there was a VIP package in your website.
+2026-04-07 22:51:50,091  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[12] role=assistant content=Yeah, we have the VIP Birthday Party Package that's 44. 90 per jumper with a minimum of 10 jumpers. It includes 90 minutes on the trampoline courts and 60 minutes in a private party room. Food included is one large pizza per five jumpers, plus one juice box and one water bottle per jumper. The birth
+2026-04-07 22:51:50,092  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2]   msg[13] role=user content=Okay. Thank you so much. Bye bye.
+2026-04-07 22:51:50,092  INFO      chatbot.voice_handler  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY prepare_voice_stream=1543ms
+2026-04-07 22:51:50,760  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] LATENCY silence_to_first_reply=2212ms
+2026-04-07 22:51:50,885  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Assistant (full): You're welcome! Have a great day and enjoy your time at AeroSports Scarborough!
+2026-04-07 22:52:03,653  INFO      chatbot.server  [CA1dd0f26fdb2bb1d841031d57433fa6c2] Session log closed
