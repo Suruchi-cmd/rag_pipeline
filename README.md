@@ -438,16 +438,4 @@ Then:
 
 ---
 
-## Questions for you
-1. **What's the contract of the external RAG API beyond
-   `/rag/retrieve`?** Does it expose other endpoints (metadata,
-   health, reindex) we should call from here?
-2. **Should the web chat (`/api/chat*`) switch to the same external
-   RAG**, or is the local-pgvector path deliberate (e.g. a fallback)?
-3. **Is the legacy RAG code at the root safe to delete / move?** And
-   where does the live pgvector + ingestion actually live now — in a
-   sibling repo?
-4. **Persona name** — "Dan" (prompt) or "Rajan" (Twilio greeting)?
-5. **Deployment target** — single VM behind a tunnel, or eventually
-   behind a load balancer? That drives whether the in-memory session
-   store needs to move to Redis.
+
