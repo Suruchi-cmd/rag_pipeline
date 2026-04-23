@@ -1,0 +1,50 @@
+2026-04-14 19:45:14,372  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA0abaab61c79ab8c5f406a33115939fdb.log
+2026-04-14 19:45:14,372  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] ConversationRelay connected from +14373612990
+2026-04-14 19:45:22,645  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] User said: Ken, uh, are you guys open today?
+2026-04-14 19:45:22,838  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY rag_api=180ms  docs=4
+2026-04-14 19:45:22,838  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] Full messages sent to LLM (2 messages):
+2026-04-14 19:45:22,838  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:45:22,838  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[1] role=user content=Ken, uh, are you guys open today?
+2026-04-14 19:45:22,838  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY prepare_voice_stream=180ms
+2026-04-14 19:45:23,450  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY silence_to_first_reply=805ms
+2026-04-14 19:45:23,658  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] Assistant (full): Yeah, we're open until nine tonight. How can I help you?
+2026-04-14 19:45:32,171  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] User said: Until 9? Okay. I thought we were only open until 8.
+2026-04-14 19:45:32,871  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY rag_api=166ms  docs=4
+2026-04-14 19:45:32,871  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] Full messages sent to LLM (4 messages):
+2026-04-14 19:45:32,871  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:45:32,871  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[1] role=user content=Ken, uh, are you guys open today?
+2026-04-14 19:45:32,871  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[2] role=assistant content=Yeah, we're open until nine tonight. How can I help you?
+2026-04-14 19:45:32,871  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[3] role=user content=Until 9? Okay. I thought we were only open until 8.
+2026-04-14 19:45:32,871  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY prepare_voice_stream=687ms
+2026-04-14 19:45:33,899  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY silence_to_first_reply=1728ms
+2026-04-14 19:45:34,506  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] Assistant (full): Oh, my bad! We're open till eight on weekdays and ten on weekends. So today's a weekday, so it's till eight. Gotcha? Anything else I can help with?
+2026-04-14 19:45:46,608  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] User said: No. Thank you so much. Bye bye.
+2026-04-14 19:45:47,370  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY rag_api=178ms  docs=4
+2026-04-14 19:45:47,370  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] Full messages sent to LLM (6 messages):
+2026-04-14 19:45:47,370  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:45:47,370  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[1] role=user content=Ken, uh, are you guys open today?
+2026-04-14 19:45:47,370  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[2] role=assistant content=Yeah, we're open until nine tonight. How can I help you?
+2026-04-14 19:45:47,370  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[3] role=user content=Until 9? Okay. I thought we were only open until 8.
+2026-04-14 19:45:47,371  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[4] role=assistant content=Oh, my bad! We're open till eight on weekdays and ten on weekends. So today's a weekday, so it's till eight. Gotcha? Anything else I can help with?
+2026-04-14 19:45:47,371  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb]   msg[5] role=user content=No. Thank you so much. Bye bye.
+2026-04-14 19:45:47,371  INFO      chatbot.voice_handler  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY prepare_voice_stream=749ms
+2026-04-14 19:45:48,449  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] LATENCY silence_to_first_reply=1841ms
+2026-04-14 19:45:48,580  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] Assistant (full): You're welcome! Have a great day. Goodbye!
+2026-04-14 19:45:48,593  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] End-call keyword DEFINITE match
+2026-04-14 19:45:48,595  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] Sent end-session message to Twilio
+2026-04-14 19:45:53,055  INFO      chatbot.server  [CA0abaab61c79ab8c5f406a33115939fdb] Session log closed

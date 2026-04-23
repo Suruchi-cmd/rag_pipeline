@@ -1,0 +1,33 @@
+2026-04-16 19:12:27,990  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA8b37c26c0468116332b3b43124fed9ef.log
+2026-04-16 19:12:27,990  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] ConversationRelay connected from +14373612990
+2026-04-16 19:12:37,681  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] User said: Hi. Uh, do you guys have a laser tag at the park?
+2026-04-16 19:12:38,859  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef] LATENCY rag_api=1130ms  docs=7
+2026-04-16 19:12:38,860  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef] Full messages sent to LLM (2 messages):
+2026-04-16 19:12:38,860  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-16 19:12:38,860  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef]   msg[1] role=user content=Hi. Uh, do you guys have a laser tag at the park?
+2026-04-16 19:12:38,860  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef] LATENCY prepare_voice_stream=1130ms
+2026-04-16 19:12:41,623  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] LATENCY silence_to_first_reply=3942ms
+2026-04-16 19:12:42,378  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] Assistant (full): Yeah, we've got a high-energy laser tag arena with cool lighting and sound effects. It's not included in the jump passes though — it comes as a separate ticket or add-on. Need more info on pricing or 
+2026-04-16 19:12:58,555  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] User said: No. Thank you so much. Goodbye.
+2026-04-16 19:12:59,375  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef] LATENCY rag_api=180ms  docs=7
+2026-04-16 19:12:59,375  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef] Full messages sent to LLM (4 messages):
+2026-04-16 19:12:59,375  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-16 19:12:59,375  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef]   msg[1] role=user content=Hi. Uh, do you guys have a laser tag at the park?
+2026-04-16 19:12:59,375  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef]   msg[2] role=assistant content=Yeah, we've got a high-energy laser tag arena with cool lighting and sound effects. It's not included in the jump passes though — it comes as a separate ticket or add-on. Need more info on pricing or anything else?
+2026-04-16 19:12:59,375  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef]   msg[3] role=user content=No. Thank you so much. Goodbye.
+2026-04-16 19:12:59,375  INFO      chatbot.voice_handler  [CA8b37c26c0468116332b3b43124fed9ef] LATENCY prepare_voice_stream=807ms
+2026-04-16 19:13:00,813  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] LATENCY silence_to_first_reply=2259ms
+2026-04-16 19:13:01,165  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] Assistant (full): You're welcome! If you have any other questions later, feel free to reach out. Have a great day and goodbye!
+2026-04-16 19:13:01,178  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] End-call keyword DEFINITE match
+2026-04-16 19:13:01,179  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] Sent end-session message to Twilio
+2026-04-16 19:13:08,044  INFO      chatbot.server  [CA8b37c26c0468116332b3b43124fed9ef] Session log closed

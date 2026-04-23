@@ -1,0 +1,89 @@
+2026-04-19 13:46:11,929  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA348dbf913b43d00c55d7d6bdd76ff6a1.log
+2026-04-19 13:46:11,929  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] ConversationRelay connected from +14379716165
+2026-04-19 13:46:18,587  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] User said: Alright.
+2026-04-19 13:46:19,740  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY rag_api=1139ms  docs=7
+2026-04-19 13:46:19,740  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Full messages sent to LLM (2 messages):
+2026-04-19 13:46:19,740  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 13:46:19,740  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[1] role=user content=Alright.
+2026-04-19 13:46:19,740  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY prepare_voice_stream=1139ms
+2026-04-19 13:46:21,691  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY silence_to_first_reply=3103ms
+2026-04-19 13:46:21,691  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Assistant (full): How can I help you today?
+2026-04-19 13:46:21,876  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] User interrupted. Spoken so far: 
+2026-04-19 13:46:23,144  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] User said: How much is, uh, for, uh, children 1 children? How much is the ticket?
+2026-04-19 13:46:23,754  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY rag_api=183ms  docs=7
+2026-04-19 13:46:23,754  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Full messages sent to LLM (4 messages):
+2026-04-19 13:46:23,754  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 13:46:23,754  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[1] role=user content=Alright.
+2026-04-19 13:46:23,754  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 13:46:23,754  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[3] role=user content=How much is, uh, for, uh, children 1 children? How much is the ticket?
+2026-04-19 13:46:23,754  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY prepare_voice_stream=597ms
+2026-04-19 13:46:25,248  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY silence_to_first_reply=2104ms
+2026-04-19 13:46:25,418  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] User interrupted. Spoken so far: 
+2026-04-19 13:46:25,418  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LLM stream cancelled (user interrupted)
+2026-04-19 13:46:25,418  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Assistant (partial/cancelled): Which activity are you asking about?
+2026-04-19 13:46:27,054  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] User said: For children?
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY rag_api=173ms  docs=7
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Full messages sent to LLM (6 messages):
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[1] role=user content=Alright.
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[3] role=user content=How much is, uh, for, uh, children 1 children? How much is the ticket?
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[4] role=assistant content=Which activity are you asking about?
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[5] role=user content=For children?
+2026-04-19 13:46:27,643  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY prepare_voice_stream=586ms
+2026-04-19 13:46:28,571  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] User said: Hello?
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Skipping RAG — conversational message: Hello?
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Full messages sent to LLM (7 messages):
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[1] role=user content=Alright.
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[3] role=user content=How much is, uh, for, uh, children 1 children? How much is the ticket?
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[4] role=assistant content=Which activity are you asking about?
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[5] role=user content=For children?
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[6] role=user content=Hello?
+2026-04-19 13:46:28,585  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY prepare_voice_stream=0ms
+2026-04-19 13:46:28,587  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LLM stream cancelled (user interrupted)
+2026-04-19 13:46:29,228  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY silence_to_first_reply=657ms
+2026-04-19 13:46:29,868  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Assistant (full): I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor. They can give you the details on pricing for kids' activities. No w
+2026-04-19 13:46:43,844  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] User said: Thank you.
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Skipping RAG — conversational message: Thank you.
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Full messages sent to LLM (9 messages):
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[1] role=user content=Alright.
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[3] role=user content=How much is, uh, for, uh, children 1 children? How much is the ticket?
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[4] role=assistant content=Which activity are you asking about?
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[5] role=user content=For children?
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[6] role=user content=Hello?
+2026-04-19 13:46:43,858  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[7] role=assistant content=I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor. They can give you the details on pricing for kids' activities. No worries!
+2026-04-19 13:46:43,859  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1]   msg[8] role=user content=Thank you.
+2026-04-19 13:46:43,859  INFO      chatbot.voice_handler  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY prepare_voice_stream=0ms
+2026-04-19 13:46:43,988  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] LATENCY silence_to_first_reply=144ms
+2026-04-19 13:46:44,342  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Assistant (full): You're welcome! If there's anything else I can help with, just let me know. Otherwise, have a great day!
+2026-04-19 13:46:51,713  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Finalized abandoned call in DB
+2026-04-19 13:46:51,713  INFO      chatbot.server  [CA348dbf913b43d00c55d7d6bdd76ff6a1] Session log closed

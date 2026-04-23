@@ -39,6 +39,74 @@ logger = logging.getLogger(__name__)
 
 _TORONTO_TZ = ZoneInfo("America/Toronto")
 _VOICE_MODEL = os.environ.get("VOICE_LLM_MODEL", "phi4:latest")
+# At module level in voice_handler.py
+_booking_capture_state: dict[str, dict] = {}
+# Shape: {call_sid: {"step": "awaiting_name" | "awaiting_reason" | "done",
+#                    "name": str | None,
+#                    "reason": str | None}}
+
+def start_booking_capture(call_sid: str) -> str:
+    """Initialize capture state and return the first prompt to speak."""
+    _booking_capture_state[call_sid] = {
+        "step": "awaiting_name",
+        "name": None,
+        "reason": None,
+    }
+    return "Oh okay, no problem. I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+def get_booking_capture_state(call_sid: str) -> dict | None:
+    return _booking_capture_state.get(call_sid)
+
+def advance_booking_capture(call_sid: str, user_text: str) -> tuple[str, bool]:
+    """
+    Advance the capture state machine with the caller's latest utterance.
+    Returns (response_text, is_done).
+    """
+    state = _booking_capture_state.get(call_sid)
+    if not state:
+        return ("", True)
+
+    user_text = user_text.strip()
+
+    if state["step"] == "awaiting_name":
+        # Extract name — simple heuristic, good enough for a first pass
+        name = _extract_name(user_text)
+        state["name"] = name
+        state["step"] = "awaiting_reason"
+        return (
+            f"Thanks {name}. And just so I can let them know, what are you looking to change?",
+            False,
+        )
+
+    if state["step"] == "awaiting_reason":
+        state["reason"] = user_text[:200]
+        state["step"] = "done"
+        name = state["name"] or "there"
+        return (
+            f"Perfect, thanks {name}. Someone will give you a call back shortly to get that sorted. Have a good one!",
+            True,
+        )
+
+    return ("", True)
+
+def finalize_booking_capture(call_sid: str) -> dict | None:
+    """Pop the state and return the collected info for logging/callback queue."""
+    return _booking_capture_state.pop(call_sid, None)
+
+_NAME_STOPWORDS = {"my", "name", "is", "it's", "its", "this", "the", "i'm", "im", "am", "uh", "um"}
+
+def _extract_name(user_text: str) -> str:
+    """
+    Cheap name extraction. Strips common prefixes like 'my name is' and
+    returns the first 1-2 capitalized-ish words. Falls back to the whole
+    string if nothing obvious stands out.
+    """
+    cleaned = re.sub(r"[^\w\s'-]", "", user_text).strip()
+    words = [w for w in cleaned.split() if w.lower() not in _NAME_STOPWORDS]
+    if not words:
+        return user_text[:30] or "there"
+    # Take up to the first two remaining words, title-cased
+    return " ".join(w.capitalize() for w in words[:2])
 
 # _VOICE_MODEL = os.environ.get("VOICE_LLM_MODEL", "qwen2.5:14b-instruct-q4_K_M")
 _FAST_MODEL = os.environ.get("VOICE_FAST_MODEL", "phi4:latest")
@@ -257,7 +325,7 @@ async def _query_rag_api(query: str, top_k: int = 5) -> list[dict]:
 
 VOICE_SYSTEM_PROMPT = """\
 <identity>
-You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
 </identity>
 
 <core_rules>
@@ -294,7 +362,18 @@ Acknowledge personal details briefly and move on. If someone mentions a birthday
 </tone>
 
 <handling_specific_situations>
-Existing bookings (any mention of "my booking," "my party," "I booked," wanting to change, cancel, or reschedule): acknowledge briefly and stop. Do not ask for names, dates, or package types. Do not quote rescheduling policies. Just: "Oh okay, sure" — then wait.
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
 
 New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
 
@@ -306,7 +385,7 @@ Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer
 </handling_specific_situations>
 
 <location_and_hours>
-We're on Birchmount Road in Scarborough. Park hours: Sunday to Thursday ten to nine, Friday and Saturday ten to ten. Only mention hours if the caller asks.
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
 </location_and_hours>"""
 
 _VOICE_FALLBACK = (
@@ -358,6 +437,21 @@ _BOOKING_CAPTURE_TRIGGERS = [
     "i booked a party",
     "i already booked",
     "we already booked",
+    "change the time",
+    "change time for",
+    "change time of",
+    "move the time",
+    "i have a booking",
+    "i have a party",
+    "i have my booking",
+    "i have my party",
+    "i have my birthday",
+    "i have my birth",  # ASR often drops "day"
+    "booking tomorrow",
+    "party tomorrow",
+    "booked for tomorrow",
+    "my birthday party",
+    "my birthday booking"
 ]
 
 # Messages that the LLM can answer from conversation history alone — no RAG needed.

@@ -1,0 +1,67 @@
+2026-04-23 09:58:57,076  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA7027fd3531709484400fc4a54aeeed8b.log
+2026-04-23 09:58:57,077  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] ConversationRelay connected from +14378722225
+2026-04-23 09:59:12,985  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] User said: Go casting. It's for adults.
+2026-04-23 09:59:13,223  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY rag_api=190ms  docs=7
+2026-04-23 09:59:13,223  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] Full messages sent to LLM (2 messages):
+2026-04-23 09:59:13,223  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-23 09:59:13,223  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[1] role=user content=Go casting. It's for adults.
+2026-04-23 09:59:13,223  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY prepare_voice_stream=190ms
+2026-04-23 09:59:13,530  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY silence_to_first_reply=545ms
+2026-04-23 09:59:14,463  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] Assistant (full): Oh, you mean go karting? Yeah, it's definitely for older kids and adults. Riders need to be at least 54 inches tall for the main track or 36 inches for the mini track. And remember, closed-toed shoes 
+2026-04-23 09:59:34,866  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] User said: We are 24 and 25.
+2026-04-23 09:59:35,774  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY rag_api=185ms  docs=7
+2026-04-23 09:59:35,774  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] Full messages sent to LLM (4 messages):
+2026-04-23 09:59:35,774  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-23 09:59:35,774  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[1] role=user content=Go casting. It's for adults.
+2026-04-23 09:59:35,774  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[2] role=assistant content=Oh, you mean go karting? Yeah, it's definitely for older kids and adults. Riders need to be at least 54 inches tall for the main track or 36 inches for the mini track. And remember, closed-toed shoes are a must. How can I help with that?
+2026-04-23 09:59:35,774  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[3] role=user content=We are 24 and 25.
+2026-04-23 09:59:35,774  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY prepare_voice_stream=894ms
+2026-04-23 09:59:36,230  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] User said: Ages.
+2026-04-23 09:59:36,244  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] LLM stream cancelled (user interrupted)
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY rag_api=168ms  docs=7
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] Full messages sent to LLM (5 messages):
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[1] role=user content=Go casting. It's for adults.
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[2] role=assistant content=Oh, you mean go karting? Yeah, it's definitely for older kids and adults. Riders need to be at least 54 inches tall for the main track or 36 inches for the mini track. And remember, closed-toed shoes are a must. How can I help with that?
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[3] role=user content=We are 24 and 25.
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[4] role=user content=Ages.
+2026-04-23 09:59:38,015  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY prepare_voice_stream=1772ms
+2026-04-23 09:59:39,286  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY silence_to_first_reply=3056ms
+2026-04-23 09:59:39,454  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] User interrupted. Spoken so far: 
+2026-04-23 09:59:39,454  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] LLM stream cancelled (user interrupted)
+2026-04-23 09:59:39,454  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] Assistant (partial/cancelled): Great!
+2026-04-23 09:59:40,384  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] User said: Can I can I can
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY rag_api=168ms  docs=7
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] Full messages sent to LLM (7 messages):
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[1] role=user content=Go casting. It's for adults.
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[2] role=assistant content=Oh, you mean go karting? Yeah, it's definitely for older kids and adults. Riders need to be at least 54 inches tall for the main track or 36 inches for the mini track. And remember, closed-toed shoes are a must. How can I help with that?
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[3] role=user content=We are 24 and 25.
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[4] role=user content=Ages.
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[5] role=assistant content=Great!
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b]   msg[6] role=user content=Can I can I can
+2026-04-23 09:59:41,569  INFO      chatbot.voice_handler  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY prepare_voice_stream=1170ms
+2026-04-23 09:59:42,456  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] LATENCY silence_to_first_reply=2072ms
+2026-04-23 09:59:42,683  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] Assistant (full): Sorry, I didn't quite catch that — what can I help you with?
+2026-04-23 09:59:56,507  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] Finalized abandoned call in DB
+2026-04-23 09:59:56,507  INFO      chatbot.server  [CA7027fd3531709484400fc4a54aeeed8b] Session log closed

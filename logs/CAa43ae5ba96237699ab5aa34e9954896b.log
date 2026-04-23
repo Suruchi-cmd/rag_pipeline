@@ -1,0 +1,52 @@
+2026-04-14 19:40:44,260  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CAa43ae5ba96237699ab5aa34e9954896b.log
+2026-04-14 19:40:44,260  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] ConversationRelay connected from +14373612990
+2026-04-14 19:40:53,395  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] User said: Um, I wanted to add 2 more pizzas for my party.
+2026-04-14 19:40:54,567  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY rag_api=1125ms  docs=4
+2026-04-14 19:40:54,568  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] Full messages sent to LLM (2 messages):
+2026-04-14 19:40:54,568  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:40:54,568  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[1] role=user content=Um, I wanted to add 2 more pizzas for my party.
+2026-04-14 19:40:54,568  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY prepare_voice_stream=1125ms
+2026-04-14 19:40:56,539  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY silence_to_first_reply=3143ms
+2026-04-14 19:40:56,974  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] Assistant (full): Sure thing! Each additional pizza costs 25. 00. So two extra pizzas would be fifty dollars plus tax. Anything else you need help with?
+2026-04-14 19:40:56,987  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] End-call keyword MAYBE — running classifier
+2026-04-14 19:41:07,737  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] User said: So I wanna add it. I have a booking.
+2026-04-14 19:41:08,517  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY rag_api=185ms  docs=4
+2026-04-14 19:41:08,517  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] Full messages sent to LLM (4 messages):
+2026-04-14 19:41:08,517  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:41:08,517  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[1] role=user content=Um, I wanted to add 2 more pizzas for my party.
+2026-04-14 19:41:08,517  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[2] role=assistant content=Sure thing! Each additional pizza costs 25. 00. So two extra pizzas would be fifty dollars plus tax. Anything else you need help with?
+2026-04-14 19:41:08,517  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[3] role=user content=So I wanna add it. I have a booking.
+2026-04-14 19:41:08,517  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY prepare_voice_stream=768ms
+2026-04-14 19:41:09,695  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY silence_to_first_reply=1958ms
+2026-04-14 19:41:10,008  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] User said: I want to add it to my party.
+2026-04-14 19:41:10,058  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] LLM stream cancelled (user interrupted)
+2026-04-14 19:41:10,058  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] Assistant (partial/cancelled): Oh okay, no problem — I can have someone from our team call you back to sort that out.
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY rag_api=165ms  docs=4
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] Full messages sent to LLM (5 messages):
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[1] role=user content=Um, I wanted to add 2 more pizzas for my party.
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[2] role=assistant content=Sure thing! Each additional pizza costs 25. 00. So two extra pizzas would be fifty dollars plus tax. Anything else you need help with?
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[3] role=user content=So I wanna add it. I have a booking.
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b]   msg[4] role=user content=I want to add it to my party.
+2026-04-14 19:41:10,746  INFO      chatbot.voice_handler  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY prepare_voice_stream=689ms
+2026-04-14 19:41:11,710  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] LATENCY silence_to_first_reply=1702ms
+2026-04-14 19:41:12,362  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] Assistant (full): Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name? And just so I can let them know — what are you looking to change?
+2026-04-14 19:41:12,375  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] End-call keyword MAYBE — running classifier
+2026-04-14 19:41:13,383  ERROR     chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] send_flag_alert failed: name 'mailer' is not defined
+2026-04-14 19:41:13,384  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] Sent end-session message to Twilio
+2026-04-14 19:41:25,968  INFO      chatbot.server  [CAa43ae5ba96237699ab5aa34e9954896b] Session log closed

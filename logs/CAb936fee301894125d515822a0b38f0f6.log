@@ -1,0 +1,51 @@
+2026-04-14 19:29:05,040  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CAb936fee301894125d515822a0b38f0f6.log
+2026-04-14 19:29:05,040  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] ConversationRelay connected from +14373612990
+2026-04-14 19:29:11,745  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] User said: Hi, Dan. How are you?
+2026-04-14 19:29:12,871  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] LATENCY rag_api=1113ms  docs=4
+2026-04-14 19:29:12,871  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] Full messages sent to LLM (2 messages):
+2026-04-14 19:29:12,871  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:29:12,871  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-14 19:29:12,871  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] LATENCY prepare_voice_stream=1113ms
+2026-04-14 19:29:14,726  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] LATENCY silence_to_first_reply=2982ms
+2026-04-14 19:29:14,982  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] Assistant (full): Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-14 19:29:25,466  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] User said: I wanna know about birthday party.
+2026-04-14 19:29:26,038  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] LATENCY rag_api=169ms  docs=4
+2026-04-14 19:29:26,038  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] Full messages sent to LLM (4 messages):
+2026-04-14 19:29:26,038  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:29:26,038  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-14 19:29:26,038  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-14 19:29:26,038  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[3] role=user content=I wanna know about birthday party.
+2026-04-14 19:29:26,038  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] LATENCY prepare_voice_stream=523ms
+2026-04-14 19:29:26,858  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] LATENCY silence_to_first_reply=1392ms
+2026-04-14 19:29:28,269  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] Assistant (full): Sure thing! We have three birthday party packages: Premium at 39. 90 per jumper, VIP at 44. 90 per jumper, and Ultimate at 59. 90 per jumper. Each package requires a minimum of 10 jumpers and includes
+2026-04-14 19:30:00,284  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] User interrupted. Spoken so far: Do you already know which package you'd like?
+2026-04-14 19:30:00,284  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] Assistant (truncated to spoken): Do you already know which package you'd like?
+2026-04-14 19:30:02,741  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] User said: What are the hold on passes?
+2026-04-14 19:30:03,641  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] LATENCY rag_api=168ms  docs=4
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] Full messages sent to LLM (6 messages):
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[1] role=user content=Hi, Dan. How are you?
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[2] role=assistant content=Hey there! I'm doing well, thanks for asking. How can I help you today?
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[3] role=user content=I wanna know about birthday party.
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[4] role=assistant content=Do you already know which package you'd like?
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6]   msg[5] role=user content=What are the hold on passes?
+2026-04-14 19:30:03,642  INFO      chatbot.voice_handler  [CAb936fee301894125d515822a0b38f0f6] LATENCY prepare_voice_stream=887ms
+2026-04-14 19:30:04,635  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] LATENCY silence_to_first_reply=1894ms
+2026-04-14 19:30:05,366  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] Assistant (full): Hold on passes aren't something we offer, but if you're asking about our birthday packages, they include a FREE 60-minute add-on pass for guest jumpers. If there's anything else specific you want to k
+2026-04-14 19:30:16,892  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] Finalized abandoned call in DB
+2026-04-14 19:30:16,892  INFO      chatbot.server  [CAb936fee301894125d515822a0b38f0f6] Session log closed

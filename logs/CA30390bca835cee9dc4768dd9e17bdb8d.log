@@ -1,0 +1,532 @@
+2026-04-19 19:31:28,521  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA30390bca835cee9dc4768dd9e17bdb8d.log
+2026-04-19 19:31:28,521  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] ConversationRelay connected from +14378480244
+2026-04-19 19:31:35,851  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Hi.
+2026-04-19 19:31:36,996  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=1132ms  docs=7
+2026-04-19 19:31:36,997  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (2 messages):
+2026-04-19 19:31:36,997  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:31:36,997  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:31:36,997  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=1132ms
+2026-04-19 19:31:38,969  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=3117ms
+2026-04-19 19:31:38,969  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): How can I help you today?
+2026-04-19 19:31:39,191  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: 
+2026-04-19 19:31:40,399  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: How old do you have to be?
+2026-04-19 19:31:40,939  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=164ms  docs=7
+2026-04-19 19:31:40,939  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (4 messages):
+2026-04-19 19:31:40,939  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:31:40,939  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:31:40,939  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:31:40,939  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:31:40,940  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=526ms
+2026-04-19 19:31:42,359  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=1960ms
+2026-04-19 19:31:42,695  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: 
+2026-04-19 19:31:42,695  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LLM stream cancelled (user interrupted)
+2026-04-19 19:31:42,695  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (partial/cancelled): For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:31:42,863  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Um, to be able to go kart?
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=175ms  docs=7
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (6 messages):
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:31:43,914  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=1038ms
+2026-04-19 19:31:44,789  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=1926ms
+2026-04-19 19:31:45,745  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. 
+2026-04-19 19:32:05,887  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=168ms  docs=7
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (8 messages):
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:32:06,794  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=892ms
+2026-04-19 19:32:07,698  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=1811ms
+2026-04-19 19:32:08,736  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 
+2026-04-19 19:32:26,511  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: What is a mini track?
+2026-04-19 19:32:27,911  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=180ms  docs=7
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (10 messages):
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=What is a mini track?
+2026-04-19 19:32:27,912  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=1388ms
+2026-04-19 19:32:28,938  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2427ms
+2026-04-19 19:32:29,621  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little o
+2026-04-19 19:32:51,403  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=180ms  docs=7
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (12 messages):
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:32:52,743  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:32:52,744  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:32:52,744  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:32:52,744  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:32:52,744  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=What is a mini track?
+2026-04-19 19:32:52,744  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:32:52,744  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:32:52,744  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=1292ms
+2026-04-19 19:32:54,255  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2852ms
+2026-04-19 19:32:55,254  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): If you're driving on the main track with someone who is at least 36 inches tall as your passenger, each person needs their own race pass. So yes, you'd need to pay for both of you. If you already have
+2026-04-19 19:32:57,262  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:32:57,262  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (truncated to spoken): If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:32:57,262  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Hello?
+2026-04-19 19:32:57,275  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Skipping RAG — conversational message: Hello?
+2026-04-19 19:32:57,275  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (14 messages):
+2026-04-19 19:32:57,275  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:32:57,275  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:32:57,275  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=What is a mini track?
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Hello?
+2026-04-19 19:32:57,276  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=0ms
+2026-04-19 19:32:57,617  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=355ms
+2026-04-19 19:32:57,617  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): How can I help you today?
+2026-04-19 19:33:01,730  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Oh, can you repeat what you just said?
+2026-04-19 19:33:02,712  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=187ms  docs=7
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (16 messages):
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=What is a mini track?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Hello?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=How can I help you today?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:33:02,713  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=969ms
+2026-04-19 19:33:03,695  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=1966ms
+2026-04-19 19:33:04,395  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pa
+2026-04-19 19:33:18,351  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Another 1.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=174ms  docs=7
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (18 messages):
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=What is a mini track?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Hello?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=How can I help you today?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Another 1.
+2026-04-19 19:33:19,333  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=968ms
+2026-04-19 19:33:20,363  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2012ms
+2026-04-19 19:33:20,477  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): Of course! What would you like to know?
+2026-04-19 19:33:20,533  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: 
+2026-04-19 19:33:30,092  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=171ms  docs=7
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (20 messages):
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=What is a mini track?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Hello?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=How can I help you today?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:33:30,979  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Another 1.
+2026-04-19 19:33:30,980  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:33:30,980  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:33:30,980  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=874ms
+2026-04-19 19:33:32,026  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=1934ms
+2026-04-19 19:33:32,361  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: 
+2026-04-19 19:33:32,361  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LLM stream cancelled (user interrupted)
+2026-04-19 19:33:32,361  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (partial/cancelled): Got it!
+2026-04-19 19:33:35,653  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=168ms  docs=7
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=user content=Hi.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=assistant content=How can I help you today?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=user content=How old do you have to be?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=user content=Um, to be able to go kart?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=What is a mini track?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Hello?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=How can I help you today?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Another 1.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=Got it!
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:33:36,642  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=974ms
+2026-04-19 19:33:36,642  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Sorry. On the kiddie track with my daughter?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=168ms  docs=7
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=How can I help you today?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=How old do you have to be?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=Um, to be able to go kart?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=user content=What is a mini track?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=user content=Hello?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=assistant content=How can I help you today?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=user content=Another 1.
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=assistant content=Got it!
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:33:37,485  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=830ms
+2026-04-19 19:33:39,104  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2462ms
+2026-04-19 19:33:39,807  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid r
+2026-04-19 19:34:00,621  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=173ms  docs=7
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=For trampolines, kids need to be at least 54 inches tall.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=Um, to be able to go kart?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=What is a mini track?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=user content=Hello?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=assistant content=How can I help you today?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=user content=Another 1.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=assistant content=Got it!
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid race pass.
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:34:01,555  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=920ms
+2026-04-19 19:34:03,106  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2485ms
+2026-04-19 19:34:03,947  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): Yes, that’s correct! If your daughter is under 54 inches tall, you can both enjoy go karting together on the mini track, with you as the driver and her as a passenger. Just make sure each of you has a
+2026-04-19 19:34:18,794  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Question.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=171ms  docs=7
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=Oh, for go karting! Drivers on the main track must be at least 54 inches tall, and passengers can be as young as 36 inches on a dual kart. Riders on the mini track need to be at least 36 inches tall. Closed-toed shoes are required for all riders.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=Sorry. Can you just repeat yourself again? I wanna write this down.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=What is a mini track?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=user content=Hello?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=assistant content=How can I help you today?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=user content=Another 1.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=assistant content=Got it!
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid race pass.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=Yes, that’s correct! If your daughter is under 54 inches tall, you can both enjoy go karting together on the mini track, with you as the driver and her as a passenger. Just make sure each of you has a valid race pass.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Question.
+2026-04-19 19:34:20,111  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=1268ms
+2026-04-19 19:34:21,679  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2885ms
+2026-04-19 19:34:21,797  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): Sure, what would you like to ask?
+2026-04-19 19:34:21,949  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: 
+2026-04-19 19:34:24,393  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Can she ride her own vehicle on the mini truck if she's over 36 inches?
+2026-04-19 19:34:25,352  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=162ms  docs=7
+2026-04-19 19:34:25,352  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:34:25,352  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:34:25,352  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=Sure! For go karting, drivers on the main track must be at least 54 inches tall. Passengers can ride with a driver if they're at least 36 inches tall. On the mini track, riders need to be at least 36 inches tall. Remember, closed-toed shoes are required for everyone riding.
+2026-04-19 19:34:25,352  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=What is a mini track?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=Hello?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=assistant content=How can I help you today?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=user content=Another 1.
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=assistant content=Got it!
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid race pass.
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=Yes, that’s correct! If your daughter is under 54 inches tall, you can both enjoy go karting together on the mini track, with you as the driver and her as a passenger. Just make sure each of you has a valid race pass.
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=Question.
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=Sure, what would you like to ask?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Can she ride her own vehicle on the mini truck if she's over 36 inches?
+2026-04-19 19:34:25,353  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=911ms
+2026-04-19 19:34:26,512  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2119ms
+2026-04-19 19:34:27,171  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): Yes, if your daughter is at least 36 inches tall, she can drive her own go kart on the mini track. She’ll need a valid race pass just like anyone else participating in go karting.
+2026-04-19 19:34:45,455  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Another question. So if I am not driving with my daughter, on the minitruck, can I have my own car on the minitruck?
+2026-04-19 19:34:46,610  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=169ms  docs=7
+2026-04-19 19:34:46,610  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:34:46,610  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=The mini track is designed for younger kids and those who are shorter. It's smaller than the main track and suitable for riders who are at least 36 inches tall. It’s perfect for families with little ones who want to experience go karting!
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=Another question So if I'm 5 4 or older, and then I have a passenger that's 36 inches, do I have to pay for us both, or is it only 1 price?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=Hello?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=How can I help you today?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=user content=Another 1.
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=assistant content=Got it!
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid race pass.
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=Yes, that’s correct! If your daughter is under 54 inches tall, you can both enjoy go karting together on the mini track, with you as the driver and her as a passenger. Just make sure each of you has a valid race pass.
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Question.
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=Sure, what would you like to ask?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=Can she ride her own vehicle on the mini truck if she's over 36 inches?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=Yes, if your daughter is at least 36 inches tall, she can drive her own go kart on the mini track. She’ll need a valid race pass just like anyone else participating in go karting.
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Another question. So if I am not driving with my daughter, on the minitruck, can I have my own car on the minitruck?
+2026-04-19 19:34:46,611  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=1141ms
+2026-04-19 19:34:48,222  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2767ms
+2026-04-19 19:34:48,841  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): If you’re not riding as a passenger with your daughter and want to drive separately on the mini track, you’ll need your own valid race pass for that. Each driver requires their own pass, regardless of
+2026-04-19 19:34:57,839  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: Each driver requires their own pass, regardless of which track they choose.
+2026-04-19 19:34:57,839  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (truncated to spoken): Each driver requires their own pass, regardless of which track they choose.
+2026-04-19 19:34:57,839  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Okay.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Skipping RAG — conversational message: Okay.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=If you're driving on the main track with someone who is at least 36 inches tall as your passenger,
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=Hello?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=How can I help you today?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=Another 1.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=assistant content=Got it!
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid race pass.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=Yes, that’s correct! If your daughter is under 54 inches tall, you can both enjoy go karting together on the mini track, with you as the driver and her as a passenger. Just make sure each of you has a valid race pass.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Question.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=Sure, what would you like to ask?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Can she ride her own vehicle on the mini truck if she's over 36 inches?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=Yes, if your daughter is at least 36 inches tall, she can drive her own go kart on the mini track. She’ll need a valid race pass just like anyone else participating in go karting.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=Another question. So if I am not driving with my daughter, on the minitruck, can I have my own car on the minitruck?
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=Each driver requires their own pass, regardless of which track they choose.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Okay.
+2026-04-19 19:34:57,889  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=0ms
+2026-04-19 19:34:58,308  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=469ms
+2026-04-19 19:34:58,437  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): If you have any more questions or need further clarification, feel free to ask!
+2026-04-19 19:34:59,271  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User interrupted. Spoken so far: If you have any more questions or need further clarification,
+2026-04-19 19:34:59,271  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (truncated to spoken): If you have any more questions or need further clarification,
+2026-04-19 19:35:02,446  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Thank you. And how much what's the cost?
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=161ms  docs=7
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=How can I help you today?
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=Oh, can you repeat what you just said?
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=Another 1.
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=assistant content=Got it!
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:35:03,337  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid race pass.
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=Yes, that’s correct! If your daughter is under 54 inches tall, you can both enjoy go karting together on the mini track, with you as the driver and her as a passenger. Just make sure each of you has a valid race pass.
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Question.
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=Sure, what would you like to ask?
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Can she ride her own vehicle on the mini truck if she's over 36 inches?
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=Yes, if your daughter is at least 36 inches tall, she can drive her own go kart on the mini track. She’ll need a valid race pass just like anyone else participating in go karting.
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Another question. So if I am not driving with my daughter, on the minitruck, can I have my own car on the minitruck?
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=Each driver requires their own pass, regardless of which track they choose.
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=Okay.
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=If you have any more questions or need further clarification,
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Thank you. And how much what's the cost?
+2026-04-19 19:35:03,338  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=878ms
+2026-04-19 19:35:04,881  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2435ms
+2026-04-19 19:35:05,567  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): A standalone race on the mini track costs 9. 90 if you haven’t purchased a jump pass. If you already have a jump pass, it’s an add-on for 4. 90. Each race is up to 10 laps.
+2026-04-19 19:35:18,370  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] User said: Oh, amazing. Thank you so much.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY rag_api=195ms  docs=7
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] Full messages sent to LLM (22 messages):
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[1] role=assistant content=Sure! If you're driving on the main track and have a passenger who is at least 36 inches tall, both of you need to have valid race passes. Each person participating in go karting requires their own pass.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[2] role=user content=Another 1.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[3] role=assistant content=Of course! What would you like to know?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[4] role=user content=I've oh, okay. So if I'm on if my daughter is 30 6 in oh. So my daughter's 36 inches and higher.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[5] role=assistant content=Got it!
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[6] role=user content=Anyways, can I ride on the main track with my daughter?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[7] role=user content=Sorry. On the kiddie track with my daughter?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[8] role=assistant content=If your daughter is at least 36 inches tall , you can ride together on the mini track as a passenger. If she's over 54 inches, you both can drive on the main track, but each of you will need a valid race pass.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[9] role=user content=Oh, so most likely if I wanna participate with my daughter that's under 5 54 inches, I would have to participate with her on the mini track. Is that correct?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[10] role=assistant content=Yes, that’s correct! If your daughter is under 54 inches tall, you can both enjoy go karting together on the mini track, with you as the driver and her as a passenger. Just make sure each of you has a valid race pass.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[11] role=user content=Question.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[12] role=assistant content=Sure, what would you like to ask?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[13] role=user content=Can she ride her own vehicle on the mini truck if she's over 36 inches?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[14] role=assistant content=Yes, if your daughter is at least 36 inches tall, she can drive her own go kart on the mini track. She’ll need a valid race pass just like anyone else participating in go karting.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[15] role=user content=Another question. So if I am not driving with my daughter, on the minitruck, can I have my own car on the minitruck?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[16] role=assistant content=Each driver requires their own pass, regardless of which track they choose.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[17] role=user content=Okay.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[18] role=assistant content=If you have any more questions or need further clarification,
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[19] role=user content=Thank you. And how much what's the cost?
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[20] role=assistant content=A standalone race on the mini track costs 9. 90 if you haven’t purchased a jump pass. If you already have a jump pass, it’s an add-on for 4. 90. Each race is up to 10 laps.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d]   msg[21] role=user content=Oh, amazing. Thank you so much.
+2026-04-19 19:35:19,270  INFO      chatbot.voice_handler  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY prepare_voice_stream=886ms
+2026-04-19 19:35:20,458  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] LATENCY silence_to_first_reply=2087ms
+2026-04-19 19:35:20,837  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Assistant (full): You're welcome! If there's anything else I can help with, feel free to ask. Have a great time at the park!
+2026-04-19 19:35:23,722  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Finalized abandoned call in DB
+2026-04-19 19:35:23,722  INFO      chatbot.server  [CA30390bca835cee9dc4768dd9e17bdb8d] Session log closed

@@ -1,0 +1,47 @@
+2026-04-16 19:14:57,299  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA34a469c39bfd4897af41571427113a1e.log
+2026-04-16 19:14:57,299  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] ConversationRelay connected from +14373612990
+2026-04-16 19:15:07,412  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] User said: Hi. Um, do you guys have toddler time in the park?
+2026-04-16 19:15:07,663  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] LATENCY rag_api=203ms  docs=7
+2026-04-16 19:15:07,664  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] Full messages sent to LLM (2 messages):
+2026-04-16 19:15:07,664  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-16 19:15:07,664  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[1] role=user content=Hi. Um, do you guys have toddler time in the park?
+2026-04-16 19:15:07,664  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] LATENCY prepare_voice_stream=203ms
+2026-04-16 19:15:08,439  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] LATENCY silence_to_first_reply=1027ms
+2026-04-16 19:15:09,628  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] Assistant (full): Yeah, sure! We've got Toddler Time on Saturday mornings from 9 to 10 AM. It's just for little ones aged 5 and under, and one parent or guardian jumps free with them. The cost is 15. 90. Sounds like a 
+2026-04-16 19:15:34,817  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] User said: No. That's it. Um, Um, I so if the mom and dad are coming, does 1 of the parents have to pay for the toddler time?
+2026-04-16 19:15:36,012  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] LATENCY rag_api=169ms  docs=7
+2026-04-16 19:15:36,013  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] Full messages sent to LLM (4 messages):
+2026-04-16 19:15:36,013  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-16 19:15:36,013  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[1] role=user content=Hi. Um, do you guys have toddler time in the park?
+2026-04-16 19:15:36,013  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[2] role=assistant content=Yeah, sure! We've got Toddler Time on Saturday mornings from 9 to 10 AM. It's just for little ones aged 5 and under, and one parent or guardian jumps free with them. The cost is 15. 90. Sounds like a fun way for toddlers to explore trampolines safely. Anything else you'd like to know?
+2026-04-16 19:15:36,013  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[3] role=user content=No. That's it. Um, Um, I so if the mom and dad are coming, does 1 of the parents have to pay for the toddler time?
+2026-04-16 19:15:36,013  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] LATENCY prepare_voice_stream=1182ms
+2026-04-16 19:15:37,532  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] LATENCY silence_to_first_reply=2715ms
+2026-04-16 19:15:38,236  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] Assistant (full): Oh nice! No worries, one parent or guardian jumps free with the toddler during Toddler Time. So you're all set without any extra cost for them. Let me know if there's anything else I can help with!
+2026-04-16 19:15:48,972  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] User said: Okay.
+2026-04-16 19:15:49,020  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] Skipping RAG — conversational message: Okay.
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] Full messages sent to LLM (6 messages):
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[1] role=user content=Hi. Um, do you guys have toddler time in the park?
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[2] role=assistant content=Yeah, sure! We've got Toddler Time on Saturday mornings from 9 to 10 AM. It's just for little ones aged 5 and under, and one parent or guardian jumps free with them. The cost is 15. 90. Sounds like a fun way for toddlers to explore trampolines safely. Anything else you'd like to know?
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[3] role=user content=No. That's it. Um, Um, I so if the mom and dad are coming, does 1 of the parents have to pay for the toddler time?
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[4] role=assistant content=Oh nice! No worries, one parent or guardian jumps free with the toddler during Toddler Time. So you're all set without any extra cost for them. Let me know if there's anything else I can help with!
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e]   msg[5] role=user content=Okay.
+2026-04-16 19:15:49,021  INFO      chatbot.voice_handler  [CA34a469c39bfd4897af41571427113a1e] LATENCY prepare_voice_stream=0ms
+2026-04-16 19:15:49,082  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] Finalized abandoned call in DB
+2026-04-16 19:15:49,082  INFO      chatbot.server  [CA34a469c39bfd4897af41571427113a1e] Session log closed

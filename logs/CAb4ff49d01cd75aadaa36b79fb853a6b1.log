@@ -1,0 +1,313 @@
+2026-04-18 11:27:30,278  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CAb4ff49d01cd75aadaa36b79fb853a6b1.log
+2026-04-18 11:27:30,278  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] ConversationRelay connected from +13432618288
+2026-04-18 11:27:41,786  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:27:42,948  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=1113ms  docs=7
+2026-04-18 11:27:42,948  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (2 messages):
+2026-04-18 11:27:42,948  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:27:42,948  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:27:42,948  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=1113ms
+2026-04-18 11:27:42,948  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: To come in?
+2026-04-18 11:27:44,789  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=185ms  docs=7
+2026-04-18 11:27:44,789  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (3 messages):
+2026-04-18 11:27:44,789  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:27:44,789  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:27:44,789  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:27:44,789  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=1828ms
+2026-04-18 11:27:46,145  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=3197ms
+2026-04-18 11:27:47,074  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User interrupted. Spoken so far: Yeah, no problem!
+2026-04-18 11:27:47,074  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LLM stream cancelled (user interrupted)
+2026-04-18 11:27:47,074  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (partial/cancelled): Yeah, no problem! You can definitely walk in and visit us any day we’re open. Just keep in mind that booking online might save some wait time at check-in. If you're planning to jump, remember to grab 
+2026-04-18 11:27:47,122  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (truncated to spoken): Yeah, no problem!
+2026-04-18 11:27:47,122  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Hello?
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Skipping RAG — conversational message: Hello?
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (5 messages):
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:27:47,124  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=0ms
+2026-04-18 11:27:47,326  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=204ms
+2026-04-18 11:27:47,326  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): How can I help you today?
+2026-04-18 11:27:54,837  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Hello?
+2026-04-18 11:27:54,885  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Skipping RAG — conversational message: Hello?
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (7 messages):
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:27:54,886  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=0ms
+2026-04-18 11:27:54,998  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=161ms
+2026-04-18 11:27:55,095  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): Hi there! How can I assist you?
+2026-04-18 11:28:06,970  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=179ms  docs=7
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (9 messages):
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:28:08,120  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=1137ms
+2026-04-18 11:28:09,507  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=2537ms
+2026-04-18 11:28:10,206  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): Yeah, no problem! You don't need to book ahead for general admission — you can just walk in. If it's a birthday party or something special, then booking is recommended. Anything else I can help with?
+2026-04-18 11:28:14,250  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User interrupted. Spoken so far: You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:28:14,250  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (truncated to spoken): You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:28:14,250  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Okay.
+2026-04-18 11:28:14,264  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Skipping RAG — conversational message: Okay.
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (11 messages):
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=user content=Okay.
+2026-04-18 11:28:14,265  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=0ms
+2026-04-18 11:28:14,436  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=186ms
+2026-04-18 11:28:14,693  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:28:25,649  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:28:26,433  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=171ms  docs=7
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (13 messages):
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=user content=Okay.
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[11] role=assistant content=Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[12] role=user content=Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:28:26,434  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=737ms
+2026-04-18 11:28:28,013  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=2364ms
+2026-04-18 11:28:29,202  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): Your jump pass includes access to all attractions in the park like trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and ninja maze. Laser tag, mini g
+2026-04-18 11:28:44,347  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User interrupted. Spoken so far: Laser tag, mini golf, bazooka ball,
+2026-04-18 11:28:44,347  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (truncated to spoken): Laser tag, mini golf, bazooka ball,
+2026-04-18 11:28:45,078  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: How much is that?
+2026-04-18 11:28:46,080  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=188ms  docs=7
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (15 messages):
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=user content=Okay.
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[11] role=assistant content=Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[12] role=user content=Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[13] role=assistant content=Laser tag, mini golf, bazooka ball,
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[14] role=user content=How much is that?
+2026-04-18 11:28:46,081  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=989ms
+2026-04-18 11:28:47,721  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=2643ms
+2026-04-18 11:28:48,107  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): Those attractions need a separate ticket or add-on. If you already have a premium, VIP, or all-day jump pass, they're not included in the price.
+2026-04-18 11:29:01,625  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Okay. How much is an just a day past?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=174ms  docs=7
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (17 messages):
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=user content=Okay.
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[11] role=assistant content=Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[12] role=user content=Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[13] role=assistant content=Laser tag, mini golf, bazooka ball,
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[14] role=user content=How much is that?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[15] role=assistant content=Those attractions need a separate ticket or add-on. If you already have a premium, VIP, or all-day jump pass, they're not included in the price.
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[16] role=user content=Okay. How much is an just a day past?
+2026-04-18 11:29:02,519  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=845ms
+2026-04-18 11:29:03,149  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: And what does it include?
+2026-04-18 11:29:03,164  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LLM stream cancelled (user interrupted)
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=167ms  docs=7
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (18 messages):
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:29:04,677  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=user content=Okay.
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[11] role=assistant content=Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[12] role=user content=Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[13] role=assistant content=Laser tag, mini golf, bazooka ball,
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[14] role=user content=How much is that?
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[15] role=assistant content=Those attractions need a separate ticket or add-on. If you already have a premium, VIP, or all-day jump pass, they're not included in the price.
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[16] role=user content=Okay. How much is an just a day past?
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[17] role=user content=And what does it include?
+2026-04-18 11:29:04,678  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=1515ms
+2026-04-18 11:29:06,411  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=3262ms
+2026-04-18 11:29:07,486  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): A one-day pass includes access to trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and the ninja maze. Laser tag, mini golf, bazooka ball, and go kar
+2026-04-18 11:29:36,296  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: K. And how much is that per person?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=176ms  docs=7
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (20 messages):
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=user content=Okay.
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[11] role=assistant content=Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[12] role=user content=Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[13] role=assistant content=Laser tag, mini golf, bazooka ball,
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[14] role=user content=How much is that?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[15] role=assistant content=Those attractions need a separate ticket or add-on. If you already have a premium, VIP, or all-day jump pass, they're not included in the price.
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[16] role=user content=Okay. How much is an just a day past?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[17] role=user content=And what does it include?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[18] role=assistant content=A one-day pass includes access to trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and the ninja maze. Laser tag, mini golf, bazooka ball, and go karts are not included in your premium, VIP, or all-day jump passes and need a separate ticket or add-o
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[19] role=user content=K. And how much is that per person?
+2026-04-18 11:29:38,031  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=1687ms
+2026-04-18 11:29:39,832  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=3537ms
+2026-04-18 11:29:40,152  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): A one-day pass costs 39 90 per person. It gives you unlimited access to the attractions I mentioned for as long as we're open today.
+2026-04-18 11:29:50,218  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: Okay. Awesome.
+2026-04-18 11:29:51,361  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=164ms  docs=7
+2026-04-18 11:29:51,361  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (22 messages):
+2026-04-18 11:29:51,361  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:29:51,361  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=Hi. Um, I was wondering if you're able to just, like, walk in on a on a day, or do you have to book ahead of time?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=user content=To come in?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=assistant content=Yeah, no problem!
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=user content=Hello?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=assistant content=How can I help you today?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=user content=Hello?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=user content=Okay.
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[11] role=assistant content=Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[12] role=user content=Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[13] role=assistant content=Laser tag, mini golf, bazooka ball,
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[14] role=user content=How much is that?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[15] role=assistant content=Those attractions need a separate ticket or add-on. If you already have a premium, VIP, or all-day jump pass, they're not included in the price.
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[16] role=user content=Okay. How much is an just a day past?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[17] role=user content=And what does it include?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[18] role=assistant content=A one-day pass includes access to trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and the ninja maze. Laser tag, mini golf, bazooka ball, and go karts are not included in your premium, VIP, or all-day jump passes and need a separate ticket or add-o
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[19] role=user content=K. And how much is that per person?
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[20] role=assistant content=A one-day pass costs 39 90 per person. It gives you unlimited access to the attractions I mentioned for as long as we're open today.
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[21] role=user content=Okay. Awesome.
+2026-04-18 11:29:51,362  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=1130ms
+2026-04-18 11:29:51,362  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] User said: You.
+2026-04-18 11:29:52,531  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY rag_api=214ms  docs=7
+2026-04-18 11:29:52,531  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Full messages sent to LLM (22 messages):
+2026-04-18 11:29:52,531  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-18 11:29:52,531  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[1] role=user content=To come in?
+2026-04-18 11:29:52,531  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[2] role=assistant content=Yeah, no problem!
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[3] role=user content=Hello?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[4] role=assistant content=How can I help you today?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[5] role=user content=Hello?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[6] role=assistant content=Hi there! How can I assist you?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[7] role=user content=Hi. Um, I was wondering if, um, you're able to just walk in and, like, and, like, do do stuff, or do you have to book ahead of time?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[8] role=assistant content=You don't need to book ahead for general admission — you can just walk in.
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[9] role=user content=Okay.
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[10] role=assistant content=Great! If there's anything else you'd like to know, feel free to ask.
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[11] role=user content=Is there, um, is all the different areas a separate price or is there an inclusion fee?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[12] role=assistant content=Laser tag, mini golf, bazooka ball,
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[13] role=user content=How much is that?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[14] role=assistant content=Those attractions need a separate ticket or add-on. If you already have a premium, VIP, or all-day jump pass, they're not included in the price.
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[15] role=user content=Okay. How much is an just a day past?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[16] role=user content=And what does it include?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[17] role=assistant content=A one-day pass includes access to trampolines, dodgeball, rock walls, ninja course, slam basketball, 360 bicycle, slides, jump tower, and the ninja maze. Laser tag, mini golf, bazooka ball, and go karts are not included in your premium, VIP, or all-day jump passes and need a separate ticket or add-o
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[18] role=user content=K. And how much is that per person?
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[19] role=assistant content=A one-day pass costs 39 90 per person. It gives you unlimited access to the attractions I mentioned for as long as we're open today.
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[20] role=user content=Okay. Awesome.
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1]   msg[21] role=user content=You.
+2026-04-18 11:29:52,532  INFO      chatbot.voice_handler  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY prepare_voice_stream=1157ms
+2026-04-18 11:29:54,132  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] LATENCY silence_to_first_reply=2770ms
+2026-04-18 11:29:54,267  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Assistant (full): Gotcha! Anything else you'd like to know?
+2026-04-18 11:29:55,382  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Finalized abandoned call in DB
+2026-04-18 11:29:55,382  INFO      chatbot.server  [CAb4ff49d01cd75aadaa36b79fb853a6b1] Session log closed

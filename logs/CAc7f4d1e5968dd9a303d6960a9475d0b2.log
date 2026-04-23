@@ -1,0 +1,116 @@
+2026-04-17 20:49:56,640  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CAc7f4d1e5968dd9a303d6960a9475d0b2.log
+2026-04-17 20:49:56,640  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] ConversationRelay connected from +14374383992
+2026-04-17 20:50:07,949  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User said: Hi, Rajan. I wanted to know, uh, what are your prices for the part?
+2026-04-17 20:50:09,150  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY rag_api=1153ms  docs=7
+2026-04-17 20:50:09,151  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Full messages sent to LLM (2 messages):
+2026-04-17 20:50:09,151  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-17 20:50:09,151  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[1] role=user content=Hi, Rajan. I wanted to know, uh, what are your prices for the part?
+2026-04-17 20:50:09,151  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY prepare_voice_stream=1154ms
+2026-04-17 20:50:11,253  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY silence_to_first_reply=3304ms
+2026-04-17 20:50:12,451  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (full): Sure thing! Are you asking about birthday party packages or something else? We have three options starting at 39. 90 per jumper with a minimum of 10 kids. All include pizza, drinks, a private room, gl
+2026-04-17 20:50:20,885  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User interrupted. Spoken so far: All include pizza, drinks, a private room, glow t-shirts, and digital invites.
+2026-04-17 20:50:20,885  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (truncated to spoken): All include pizza, drinks, a private room, glow t-shirts, and digital invites.
+2026-04-17 20:50:25,670  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User said: No. I don't wanna know about that. I wanna know about the jump prices. What are your jump prices?
+2026-04-17 20:50:26,279  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY rag_api=191ms  docs=7
+2026-04-17 20:50:26,279  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Full messages sent to LLM (4 messages):
+2026-04-17 20:50:26,279  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-17 20:50:26,279  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[1] role=user content=Hi, Rajan. I wanted to know, uh, what are your prices for the part?
+2026-04-17 20:50:26,279  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[2] role=assistant content=All include pizza, drinks, a private room, glow t-shirts, and digital invites.
+2026-04-17 20:50:26,279  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[3] role=user content=No. I don't wanna know about that. I wanna know about the jump prices. What are your jump prices?
+2026-04-17 20:50:26,279  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY prepare_voice_stream=561ms
+2026-04-17 20:50:27,888  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY silence_to_first_reply=2218ms
+2026-04-17 20:50:27,888  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (full): Which activity are you asking about?
+2026-04-17 20:50:34,121  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User said: For your go karts?
+2026-04-17 20:50:34,722  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY rag_api=179ms  docs=7
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Full messages sent to LLM (6 messages):
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[1] role=user content=Hi, Rajan. I wanted to know, uh, what are your prices for the part?
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[2] role=assistant content=All include pizza, drinks, a private room, glow t-shirts, and digital invites.
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[3] role=user content=No. I don't wanna know about that. I wanna know about the jump prices. What are your jump prices?
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[4] role=assistant content=Which activity are you asking about?
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[5] role=user content=For your go karts?
+2026-04-17 20:50:34,723  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY prepare_voice_stream=585ms
+2026-04-17 20:50:36,246  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY silence_to_first_reply=2125ms
+2026-04-17 20:50:37,183  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (full): A standalone race on the main track is 19. 90, and for the mini track, it's 9. 90. If you have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race is up to 1
+2026-04-17 20:50:55,327  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User said: Okay. And, uh, what is the age requirement for the go karts?
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY rag_api=170ms  docs=7
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Full messages sent to LLM (8 messages):
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[1] role=user content=Hi, Rajan. I wanted to know, uh, what are your prices for the part?
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[2] role=assistant content=All include pizza, drinks, a private room, glow t-shirts, and digital invites.
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[3] role=user content=No. I don't wanna know about that. I wanna know about the jump prices. What are your jump prices?
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[4] role=assistant content=Which activity are you asking about?
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[5] role=user content=For your go karts?
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[6] role=assistant content=A standalone race on the main track is 19. 90, and for the mini track, it's 9. 90. If you have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race is up to 10 laps.
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[7] role=user content=Okay. And, uh, what is the age requirement for the go karts?
+2026-04-17 20:50:56,456  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY prepare_voice_stream=1081ms
+2026-04-17 20:50:57,919  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY silence_to_first_reply=2592ms
+2026-04-17 20:50:58,473  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (full): For the main track, drivers must be at least 54 inches tall. For the mini track, riders need to be at least 36 inches tall. Both require closed-toed shoes.
+2026-04-17 20:51:09,481  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User said: Okay.
+2026-04-17 20:51:09,494  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Skipping RAG — conversational message: Okay.
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Full messages sent to LLM (10 messages):
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[1] role=user content=Hi, Rajan. I wanted to know, uh, what are your prices for the part?
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[2] role=assistant content=All include pizza, drinks, a private room, glow t-shirts, and digital invites.
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[3] role=user content=No. I don't wanna know about that. I wanna know about the jump prices. What are your jump prices?
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[4] role=assistant content=Which activity are you asking about?
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[5] role=user content=For your go karts?
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[6] role=assistant content=A standalone race on the main track is 19. 90, and for the mini track, it's 9. 90. If you have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race is up to 10 laps.
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[7] role=user content=Okay. And, uh, what is the age requirement for the go karts?
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[8] role=assistant content=For the main track, drivers must be at least 54 inches tall. For the mini track, riders need to be at least 36 inches tall. Both require closed-toed shoes.
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[9] role=user content=Okay.
+2026-04-17 20:51:09,495  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY prepare_voice_stream=0ms
+2026-04-17 20:51:09,725  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY silence_to_first_reply=244ms
+2026-04-17 20:51:10,078  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (full): Got it! If you have any more questions or need further assistance, feel free to ask. Otherwise, enjoy your visit!
+2026-04-17 20:51:18,827  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User said: Hi.
+2026-04-17 20:51:18,841  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Skipping RAG — conversational message: Hi.
+2026-04-17 20:51:18,841  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Full messages sent to LLM (12 messages):
+2026-04-17 20:51:18,841  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-17 20:51:18,841  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[1] role=user content=Hi, Rajan. I wanted to know, uh, what are your prices for the part?
+2026-04-17 20:51:18,841  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[2] role=assistant content=All include pizza, drinks, a private room, glow t-shirts, and digital invites.
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[3] role=user content=No. I don't wanna know about that. I wanna know about the jump prices. What are your jump prices?
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[4] role=assistant content=Which activity are you asking about?
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[5] role=user content=For your go karts?
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[6] role=assistant content=A standalone race on the main track is 19. 90, and for the mini track, it's 9. 90. If you have a jump pass, add-on races are 9. 90 for the main track and 4. 90 for the mini track. Each race is up to 10 laps.
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[7] role=user content=Okay. And, uh, what is the age requirement for the go karts?
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[8] role=assistant content=For the main track, drivers must be at least 54 inches tall. For the mini track, riders need to be at least 36 inches tall. Both require closed-toed shoes.
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[9] role=user content=Okay.
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[10] role=assistant content=Got it! If you have any more questions or need further assistance, feel free to ask. Otherwise, enjoy your visit!
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2]   msg[11] role=user content=Hi.
+2026-04-17 20:51:18,842  INFO      chatbot.voice_handler  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY prepare_voice_stream=1ms
+2026-04-17 20:51:19,010  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] LATENCY silence_to_first_reply=183ms
+2026-04-17 20:51:19,010  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (full): How can I help you?
+2026-04-17 20:51:20,193  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] User interrupted. Spoken so far: How can I help you?
+2026-04-17 20:51:20,193  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Assistant (truncated to spoken): How can I help you?
+2026-04-17 20:51:21,190  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Finalized abandoned call in DB
+2026-04-17 20:51:21,190  INFO      chatbot.server  [CAc7f4d1e5968dd9a303d6960a9475d0b2] Session log closed

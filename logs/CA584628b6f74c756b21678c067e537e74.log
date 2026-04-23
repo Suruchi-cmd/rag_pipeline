@@ -1,0 +1,191 @@
+2026-04-21 12:12:34,795  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA584628b6f74c756b21678c067e537e74.log
+2026-04-21 12:12:34,795  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] ConversationRelay connected from +16478088839
+2026-04-21 12:12:46,452  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:12:47,615  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=1160ms  docs=7
+2026-04-21 12:12:47,615  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (2 messages):
+2026-04-21 12:12:47,615  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:12:47,615  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:12:47,615  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=1160ms
+2026-04-21 12:12:49,432  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=2980ms
+2026-04-21 12:12:50,199  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (full): Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about speci
+2026-04-21 12:13:07,479  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:13:08,333  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=182ms  docs=7
+2026-04-21 12:13:08,333  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (4 messages):
+2026-04-21 12:13:08,333  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:13:08,333  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:13:08,333  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:13:08,333  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:13:08,333  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=806ms
+2026-04-21 12:13:08,398  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: How about go kart?
+2026-04-21 12:13:08,412  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LLM stream cancelled (user interrupted)
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=170ms  docs=7
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (5 messages):
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[4] role=user content=How about go kart?
+2026-04-21 12:13:10,486  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=2075ms
+2026-04-21 12:13:12,030  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=3632ms
+2026-04-21 12:13:13,161  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (full): That's right for the trampolines—just the height requirement For go karts, it's similar: drivers on the main track need to be at least 54 inches tall, and passengers on dual karts need to be at least 
+2026-04-21 12:13:34,533  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: What is a dual card?
+2026-04-21 12:13:35,378  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=181ms  docs=7
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (7 messages):
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[4] role=user content=How about go kart?
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[5] role=assistant content=That's right for the trampolines—just the height requirement For go karts, it's similar: drivers on the main track need to be at least 54 inches tall, and passengers on dual karts need to be at least 36 inches. There’s no specific age restriction mentioned, just these height requirements. Let me kno
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[6] role=user content=What is a dual card?
+2026-04-21 12:13:35,379  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=796ms
+2026-04-21 12:13:36,840  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=2307ms
+2026-04-21 12:13:37,818  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (full): I'm not sure what you mean by "dual card ." If you're referring to something related to go karting, maybe you meant "dual karts," which are for two riders—one driver and one passenger. Each rider need
+2026-04-21 12:13:41,359  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User interrupted. Spoken so far: If you're referring to something related to go karting,
+2026-04-21 12:13:41,359  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (truncated to spoken): If you're referring to something related to go karting,
+2026-04-21 12:13:42,341  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: You said 2 cards.
+2026-04-21 12:13:43,175  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=172ms  docs=7
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (9 messages):
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[4] role=user content=How about go kart?
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[5] role=assistant content=That's right for the trampolines—just the height requirement For go karts, it's similar: drivers on the main track need to be at least 54 inches tall, and passengers on dual karts need to be at least 36 inches. There’s no specific age restriction mentioned, just these height requirements. Let me kno
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[6] role=user content=What is a dual card?
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[7] role=assistant content=If you're referring to something related to go karting,
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[8] role=user content=You said 2 cards.
+2026-04-21 12:13:43,176  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=821ms
+2026-04-21 12:13:44,498  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=2157ms
+2026-04-21 12:13:45,661  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (full): Oh, I see what you mean now. For go karts, there's an option for dual rider karts where both the driver and a passenger can ride together. Both need their own race passes—so that’s two cards—one for e
+2026-04-21 12:13:59,987  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User interrupted. Spoken so far: Both need their own race passes—so that’s two cards—one for each person participating in the go karting. If you have more questions or need further clarification, feel free to ask!
+2026-04-21 12:13:59,987  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (truncated to spoken): Both need their own race passes—so that’s two cards—one for each person participating in the go karting. If you have more questions or need further clarification, feel free to ask!
+2026-04-21 12:14:01,299  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: And that's 36 inch.
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=183ms  docs=7
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (11 messages):
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[4] role=user content=How about go kart?
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[5] role=assistant content=That's right for the trampolines—just the height requirement For go karts, it's similar: drivers on the main track need to be at least 54 inches tall, and passengers on dual karts need to be at least 36 inches. There’s no specific age restriction mentioned, just these height requirements. Let me kno
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[6] role=user content=What is a dual card?
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[7] role=assistant content=If you're referring to something related to go karting,
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[8] role=user content=You said 2 cards.
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[9] role=assistant content=Both need their own race passes—so that’s two cards—one for each person participating in the go karting. If you have more questions or need further clarification, feel free to ask!
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[10] role=user content=And that's 36 inch.
+2026-04-21 12:14:02,035  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=688ms
+2026-04-21 12:14:02,959  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=1660ms
+2026-04-21 12:14:03,641  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (full): Right, both the driver and passenger on a dual kart must be at least 36 inches tall. Each of them also needs their own race pass. Let me know if there’s anything else you’d like to know!
+2026-04-21 12:14:22,511  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: So 36 inch is the minimum requirement for the carts.
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=182ms  docs=7
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (13 messages):
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[4] role=user content=How about go kart?
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[5] role=assistant content=That's right for the trampolines—just the height requirement For go karts, it's similar: drivers on the main track need to be at least 54 inches tall, and passengers on dual karts need to be at least 36 inches. There’s no specific age restriction mentioned, just these height requirements. Let me kno
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[6] role=user content=What is a dual card?
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[7] role=assistant content=If you're referring to something related to go karting,
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[8] role=user content=You said 2 cards.
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[9] role=assistant content=Both need their own race passes—so that’s two cards—one for each person participating in the go karting. If you have more questions or need further clarification, feel free to ask!
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[10] role=user content=And that's 36 inch.
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[11] role=assistant content=Right, both the driver and passenger on a dual kart must be at least 36 inches tall. Each of them also needs their own race pass. Let me know if there’s anything else you’d like to know!
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[12] role=user content=So 36 inch is the minimum requirement for the carts.
+2026-04-21 12:14:23,418  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=893ms
+2026-04-21 12:14:24,787  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=2276ms
+2026-04-21 12:14:25,319  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: 54 inch for trampoline, then everything else should be fine. Right?
+2026-04-21 12:14:25,369  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LLM stream cancelled (user interrupted)
+2026-04-21 12:14:25,369  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (partial/cancelled): Exactly, 36 inches is the minimum height required for both drivers and passengers on the mini track or as a passenger in dual karts on the main track.
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=175ms  docs=7
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (14 messages):
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[4] role=user content=How about go kart?
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[5] role=assistant content=That's right for the trampolines—just the height requirement For go karts, it's similar: drivers on the main track need to be at least 54 inches tall, and passengers on dual karts need to be at least 36 inches. There’s no specific age restriction mentioned, just these height requirements. Let me kno
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[6] role=user content=What is a dual card?
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[7] role=assistant content=If you're referring to something related to go karting,
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[8] role=user content=You said 2 cards.
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[9] role=assistant content=Both need their own race passes—so that’s two cards—one for each person participating in the go karting. If you have more questions or need further clarification, feel free to ask!
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[10] role=user content=And that's 36 inch.
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[11] role=assistant content=Right, both the driver and passenger on a dual kart must be at least 36 inches tall. Each of them also needs their own race pass. Let me know if there’s anything else you’d like to know!
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[12] role=user content=So 36 inch is the minimum requirement for the carts.
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[13] role=user content=54 inch for trampoline, then everything else should be fine. Right?
+2026-04-21 12:14:26,400  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=1033ms
+2026-04-21 12:14:27,385  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=2065ms
+2026-04-21 12:14:28,562  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (full): Exactly! For go karts, both driver and passenger need to be at least 36 inches tall. And for the main trampoline track, jumpers must be at least 54 inches tall. Anything below these heights might have
+2026-04-21 12:14:33,732  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User interrupted. Spoken so far: 36 inches is the minimum height required for both drivers and passengers on the mini track or as a passenger in dual karts on the main track.
+2026-04-21 12:14:33,732  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (truncated to spoken): 36 inches is the minimum height required for both drivers and passengers on the mini track or as a passenger in dual karts on the main track.
+2026-04-21 12:14:37,290  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] User said: Anything else should I be aware of in terms of height wise inside the go karts?
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY rag_api=181ms  docs=7
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] Full messages sent to LLM (17 messages):
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[1] role=user content=Hi there. Is there a age restrictions for a certain part of the park?
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[2] role=assistant content=Yeah, we've got some height requirements for safety reasons. For the main trampoline track, jumpers need to be at least 54 inches tall. If you have any other questions or need more details about specific areas, just let me know!
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[3] role=user content=So all these mainly, there's no age restriction, but only a height restriction. Yes?
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[4] role=user content=How about go kart?
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[5] role=assistant content=That's right for the trampolines—just the height requirement For go karts, it's similar: drivers on the main track need to be at least 54 inches tall, and passengers on dual karts need to be at least 36 inches. There’s no specific age restriction mentioned, just these height requirements. Let me kno
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[6] role=user content=What is a dual card?
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[7] role=assistant content=If you're referring to something related to go karting,
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[8] role=user content=You said 2 cards.
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[9] role=assistant content=Both need their own race passes—so that’s two cards—one for each person participating in the go karting. If you have more questions or need further clarification, feel free to ask!
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[10] role=user content=And that's 36 inch.
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[11] role=assistant content=Right, both the driver and passenger on a dual kart must be at least 36 inches tall. Each of them also needs their own race pass. Let me know if there’s anything else you’d like to know!
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[12] role=user content=So 36 inch is the minimum requirement for the carts.
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[13] role=assistant content=Exactly, 36 inches is the minimum height required for both drivers and passengers on the mini track or as a passenger in dual karts on the main track.
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[14] role=user content=54 inch for trampoline, then everything else should be fine. Right?
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[15] role=assistant content=36 inches is the minimum height required for both drivers and passengers on the mini track or as a passenger in dual karts on the main track.
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74]   msg[16] role=user content=Anything else should I be aware of in terms of height wise inside the go karts?
+2026-04-21 12:14:38,656  INFO      chatbot.voice_handler  [CA584628b6f74c756b21678c067e537e74] LATENCY prepare_voice_stream=1317ms
+2026-04-21 12:14:40,175  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] LATENCY silence_to_first_reply=2886ms
+2026-04-21 12:14:41,163  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Assistant (full): For go karting, aside from the 36-inch requirement for passengers and the 54-inch requirement for drivers on the main track, there aren't any additional height restrictions. Just make sure everyone ha
+2026-04-21 12:14:51,613  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Finalized abandoned call in DB
+2026-04-21 12:14:51,613  INFO      chatbot.server  [CA584628b6f74c756b21678c067e537e74] Session log closed

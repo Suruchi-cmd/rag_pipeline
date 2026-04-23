@@ -1,0 +1,51 @@
+2026-04-14 20:29:41,987  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CAb775315d7eab273f3e73c4603c1f2259.log
+2026-04-14 20:29:41,987  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] ConversationRelay connected from +14374383992
+2026-04-14 20:29:53,777  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] User said: Um, I wanna come with my family in I wanna play everything. Can you tell me what you have?
+2026-04-14 20:29:54,936  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY rag_api=1145ms  docs=4
+2026-04-14 20:29:54,936  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] Full messages sent to LLM (2 messages):
+2026-04-14 20:29:54,936  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 20:29:54,936  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[1] role=user content=Um, I wanna come with my family in I wanna play everything. Can you tell me what you have?
+2026-04-14 20:29:54,936  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY prepare_voice_stream=1146ms
+2026-04-14 20:29:56,815  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY silence_to_first_reply=3038ms
+2026-04-14 20:29:58,290  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] Assistant (full): Sure thing! At AeroSports Scarborough, we've got a bunch of fun activities for everyone. You can jump on wall-to-wall trampolines, tackle our ninja warrior course and maze, rock climb, play dodgeball 
+2026-04-14 20:30:02,992  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] User interrupted. Spoken so far: You can jump on wall-to-wall trampolines,
+2026-04-14 20:30:02,992  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] Assistant (truncated to spoken): You can jump on wall-to-wall trampolines,
+2026-04-14 20:30:02,992  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] User said: What?
+2026-04-14 20:30:03,792  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY rag_api=173ms  docs=4
+2026-04-14 20:30:03,792  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] Full messages sent to LLM (4 messages):
+2026-04-14 20:30:03,792  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 20:30:03,792  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[1] role=user content=Um, I wanna come with my family in I wanna play everything. Can you tell me what you have?
+2026-04-14 20:30:03,792  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[2] role=assistant content=You can jump on wall-to-wall trampolines,
+2026-04-14 20:30:03,792  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[3] role=user content=What?
+2026-04-14 20:30:03,792  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY prepare_voice_stream=787ms
+2026-04-14 20:30:04,850  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY silence_to_first_reply=1858ms
+2026-04-14 20:30:05,445  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] User interrupted. Spoken so far: 
+2026-04-14 20:30:05,445  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] LLM stream cancelled (user interrupted)
+2026-04-14 20:30:05,445  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] Assistant (partial/cancelled): Yeah, sorry about that. At AeroSports Scarborough, we've got a lot of fun activities!
+2026-04-14 20:30:06,986  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] User said: Ma'am, that's what they're paying for it.
+2026-04-14 20:30:07,762  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY rag_api=180ms  docs=4
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] Full messages sent to LLM (6 messages):
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[0] role=system content=<identity>
+You are Dan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absol
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[1] role=user content=Um, I wanna come with my family in I wanna play everything. Can you tell me what you have?
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[2] role=assistant content=You can jump on wall-to-wall trampolines,
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[3] role=user content=What?
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[4] role=assistant content=Yeah, sorry about that. At AeroSports Scarborough, we've got a lot of fun activities!
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259]   msg[5] role=user content=Ma'am, that's what they're paying for it.
+2026-04-14 20:30:07,763  INFO      chatbot.voice_handler  [CAb775315d7eab273f3e73c4603c1f2259] LATENCY prepare_voice_stream=764ms
+2026-04-14 20:30:07,776  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] Finalized abandoned call in DB
+2026-04-14 20:30:07,776  INFO      chatbot.server  [CAb775315d7eab273f3e73c4603c1f2259] Session log closed

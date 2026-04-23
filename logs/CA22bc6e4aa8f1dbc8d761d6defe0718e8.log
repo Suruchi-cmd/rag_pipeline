@@ -1,0 +1,142 @@
+2026-04-21 19:41:19,065  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA22bc6e4aa8f1dbc8d761d6defe0718e8.log
+2026-04-21 19:41:19,065  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] ConversationRelay connected from +14378480244
+2026-04-21 19:41:39,545  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User said: Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:41:40,690  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY rag_api=1131ms  docs=7
+2026-04-21 19:41:40,690  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Full messages sent to LLM (2 messages):
+2026-04-21 19:41:40,690  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 19:41:40,690  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[1] role=user content=Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:41:40,690  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY prepare_voice_stream=1131ms
+2026-04-21 19:41:42,690  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY silence_to_first_reply=3145ms
+2026-04-21 19:41:43,420  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Assistant (full): Oh, you're asking about the Go Kart Add-On with the Ultimate Party package. With that, you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:41:49,932  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User interrupted. Spoken so far: you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:41:49,932  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Assistant (truncated to spoken): you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:41:50,476  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User said: No. No. Hello.
+2026-04-21 19:41:51,358  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY rag_api=174ms  docs=7
+2026-04-21 19:41:51,358  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Full messages sent to LLM (4 messages):
+2026-04-21 19:41:51,358  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 19:41:51,358  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[1] role=user content=Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:41:51,358  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[2] role=assistant content=you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:41:51,358  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[3] role=user content=No. No. Hello.
+2026-04-21 19:41:51,358  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY prepare_voice_stream=868ms
+2026-04-21 19:41:52,880  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY silence_to_first_reply=2404ms
+2026-04-21 19:41:52,880  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Assistant (full): How can I help you today?
+2026-04-21 19:41:53,099  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User interrupted. Spoken so far: 
+2026-04-21 19:41:58,752  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User said: Hello. No. It's not. I'm looking online right now, and it's not no birthday add on.
+2026-04-21 19:41:59,572  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY rag_api=188ms  docs=7
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Full messages sent to LLM (6 messages):
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[1] role=user content=Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[2] role=assistant content=you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[3] role=user content=No. No. Hello.
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[4] role=assistant content=How can I help you today?
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[5] role=user content=Hello. No. It's not. I'm looking online right now, and it's not no birthday add on.
+2026-04-21 19:41:59,573  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY prepare_voice_stream=807ms
+2026-04-21 19:42:01,099  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY silence_to_first_reply=2347ms
+2026-04-21 19:42:01,573  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User interrupted. Spoken so far: 
+2026-04-21 19:42:01,573  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LLM stream cancelled (user interrupted)
+2026-04-21 19:42:01,573  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Assistant (partial/cancelled): Oh okay, so you're asking about the Go Kart Race add-on for a birthday party? That’s 9.
+2026-04-21 19:42:08,081  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User said: At all. It's the pricing that I can see online It says that there's a go karting. Like, I just could do a stand alone go karting.
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY rag_api=176ms  docs=7
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Full messages sent to LLM (8 messages):
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[1] role=user content=Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[2] role=assistant content=you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[3] role=user content=No. No. Hello.
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[4] role=assistant content=How can I help you today?
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[5] role=user content=Hello. No. It's not. I'm looking online right now, and it's not no birthday add on.
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[6] role=assistant content=Oh okay, so you're asking about the Go Kart Race add-on for a birthday party? That’s 9.
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[7] role=user content=At all. It's the pricing that I can see online It says that there's a go karting. Like, I just could do a stand alone go karting.
+2026-04-21 19:42:09,030  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY prepare_voice_stream=900ms
+2026-04-21 19:42:10,507  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY silence_to_first_reply=2426ms
+2026-04-21 19:42:10,790  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User interrupted. Spoken so far: 
+2026-04-21 19:42:10,790  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LLM stream cancelled (user interrupted)
+2026-04-21 19:42:10,790  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Assistant (partial/cancelled): Got it! If you're looking at standalone Go Karting, it costs 19.
+2026-04-21 19:42:14,702  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User said: The price that I see is $19.90. I'm asking if I have access to the bike as well.
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY rag_api=171ms  docs=7
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Full messages sent to LLM (10 messages):
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[1] role=user content=Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[2] role=assistant content=you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[3] role=user content=No. No. Hello.
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[4] role=assistant content=How can I help you today?
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[5] role=user content=Hello. No. It's not. I'm looking online right now, and it's not no birthday add on.
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[6] role=assistant content=Oh okay, so you're asking about the Go Kart Race add-on for a birthday party? That’s 9.
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[7] role=user content=At all. It's the pricing that I can see online It says that there's a go karting. Like, I just could do a stand alone go karting.
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[8] role=assistant content=Got it! If you're looking at standalone Go Karting, it costs 19.
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[9] role=user content=The price that I see is $19.90. I'm asking if I have access to the bike as well.
+2026-04-21 19:42:15,613  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY prepare_voice_stream=864ms
+2026-04-21 19:42:16,639  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY silence_to_first_reply=1937ms
+2026-04-21 19:42:17,066  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Assistant (full): Yes, with any jump pass purchase, you get access to the 360 Bicycle for free. Let me know if there's anything else!
+2026-04-21 19:42:45,694  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User said: So you're saying that I have to buy a jump pass in order to get to the $3.60, or can I only buy the go karting pass and then or buy the go karting race only for $19.90, and do then do I still have access to the $3.60 bike?
+2026-04-21 19:42:47,137  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY rag_api=175ms  docs=7
+2026-04-21 19:42:47,137  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Full messages sent to LLM (12 messages):
+2026-04-21 19:42:47,137  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[1] role=user content=Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[2] role=assistant content=you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[3] role=user content=No. No. Hello.
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[4] role=assistant content=How can I help you today?
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[5] role=user content=Hello. No. It's not. I'm looking online right now, and it's not no birthday add on.
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[6] role=assistant content=Oh okay, so you're asking about the Go Kart Race add-on for a birthday party? That’s 9.
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[7] role=user content=At all. It's the pricing that I can see online It says that there's a go karting. Like, I just could do a stand alone go karting.
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[8] role=assistant content=Got it! If you're looking at standalone Go Karting, it costs 19.
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[9] role=user content=The price that I see is $19.90. I'm asking if I have access to the bike as well.
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[10] role=assistant content=Yes, with any jump pass purchase, you get access to the 360 Bicycle for free. Let me know if there's anything else!
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[11] role=user content=So you're saying that I have to buy a jump pass in order to get to the $3.60, or can I only buy the go karting pass and then or buy the go karting race only for $19.90, and do then do I still have access to the $3.60 bike?
+2026-04-21 19:42:47,138  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY prepare_voice_stream=1441ms
+2026-04-21 19:42:48,763  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY silence_to_first_reply=3069ms
+2026-04-21 19:42:49,468  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Assistant (full): If you just buy a standalone Go Kart Race for 19. 90, you won't get access to the 360 Bicycle. You'd need to purchase any jump pass to include that with your visit. Let me know if there's anything els
+2026-04-21 19:43:04,256  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] User said: That is it. Thank you so much. What Yes, please.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY rag_api=167ms  docs=7
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Full messages sent to LLM (14 messages):
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[1] role=user content=Hi, Rajon. I have a quick question. If I were to pay for only the what is it called? Sorry. It's only for the gold card in do I still have access to the $3.60 bicycle?
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[2] role=assistant content=you'd still get access to the 360 Bicycle—it’s included with any jump pass. Let me know if there's anything else!
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[3] role=user content=No. No. Hello.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[4] role=assistant content=How can I help you today?
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[5] role=user content=Hello. No. It's not. I'm looking online right now, and it's not no birthday add on.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[6] role=assistant content=Oh okay, so you're asking about the Go Kart Race add-on for a birthday party? That’s 9.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[7] role=user content=At all. It's the pricing that I can see online It says that there's a go karting. Like, I just could do a stand alone go karting.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[8] role=assistant content=Got it! If you're looking at standalone Go Karting, it costs 19.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[9] role=user content=The price that I see is $19.90. I'm asking if I have access to the bike as well.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[10] role=assistant content=Yes, with any jump pass purchase, you get access to the 360 Bicycle for free. Let me know if there's anything else!
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[11] role=user content=So you're saying that I have to buy a jump pass in order to get to the $3.60, or can I only buy the go karting pass and then or buy the go karting race only for $19.90, and do then do I still have access to the $3.60 bike?
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[12] role=assistant content=If you just buy a standalone Go Kart Race for 19. 90, you won't get access to the 360 Bicycle. You'd need to purchase any jump pass to include that with your visit. Let me know if there's anything else!
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8]   msg[13] role=user content=That is it. Thank you so much. What Yes, please.
+2026-04-21 19:43:05,644  INFO      chatbot.voice_handler  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] LATENCY prepare_voice_stream=1374ms
+2026-04-21 19:43:06,497  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Finalized abandoned call in DB
+2026-04-21 19:43:06,497  INFO      chatbot.server  [CA22bc6e4aa8f1dbc8d761d6defe0718e8] Session log closed

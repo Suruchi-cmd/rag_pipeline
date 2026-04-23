@@ -30,7 +30,6 @@ import time
 import uuid
 from contextlib import asynccontextmanager
 from typing import Optional
-
 from dotenv import load_dotenv
 
 # Load .env before any other local imports so all env vars are available.
@@ -345,7 +344,7 @@ async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
                     transcriptionProvider="deepgram"
                     ttsProvider="ElevenLabs"
                     voice="7EzWGsX10sAS4c9m9cPf"
-                       welcomeGreeting="Thank you for calling AeroSports Scarborough, this is Dan. How can I help you?"
+                       welcomeGreeting="Thank you for calling AeroSports Scarborough, this is Rajan. How can I help you?"
                        dtmfDetection="true"
                        interruptByDtmf="false"
                        interruptSensitivity="medium">
@@ -381,7 +380,7 @@ _voice_sessions: dict[str, dict] = {}
 # Twilio's ASR is already active at that point, so it can pick up the bot's
 # own voice and send it back as a PROMPT.  We skip any prompt that looks like
 # an echo of the greeting so it doesn't trigger an LLM response.
-_WELCOME_GREETING = "Thank you for calling AeroSports Scarborough, this is Dan. How can I help you?"
+_WELCOME_GREETING = "Thank you for calling AeroSports Scarborough, this is Rajan. How can I help you?"
 _WELCOME_ECHO_PREFIX = "thank you for calling aerosports"
 
 

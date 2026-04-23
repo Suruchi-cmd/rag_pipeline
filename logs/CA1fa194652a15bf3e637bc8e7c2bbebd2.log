@@ -1,0 +1,4 @@
+2026-04-14 20:33:57,162  INFO      chatbot.server  [CA1fa194652a15bf3e637bc8e7c2bbebd2] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA1fa194652a15bf3e637bc8e7c2bbebd2.log
+2026-04-14 20:33:57,162  INFO      chatbot.server  [CA1fa194652a15bf3e637bc8e7c2bbebd2] ConversationRelay connected from +14374383992
+2026-04-14 20:34:06,961  INFO      chatbot.server  [CA1fa194652a15bf3e637bc8e7c2bbebd2] Finalized abandoned call in DB
+2026-04-14 20:34:06,961  INFO      chatbot.server  [CA1fa194652a15bf3e637bc8e7c2bbebd2] Session log closed

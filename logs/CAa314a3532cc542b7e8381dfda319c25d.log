@@ -1,0 +1,49 @@
+2026-04-21 16:02:17,369  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CAa314a3532cc542b7e8381dfda319c25d.log
+2026-04-21 16:02:17,369  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] ConversationRelay connected from +16478338163
+2026-04-21 16:02:30,224  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] User said: Are kids allowed to come into the arcade after 8?
+2026-04-21 16:02:31,389  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY rag_api=1150ms  docs=7
+2026-04-21 16:02:31,389  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] Full messages sent to LLM (2 messages):
+2026-04-21 16:02:31,389  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 16:02:31,389  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[1] role=user content=Are kids allowed to come into the arcade after 8?
+2026-04-21 16:02:31,389  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY prepare_voice_stream=1151ms
+2026-04-21 16:02:34,215  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY silence_to_first_reply=3991ms
+2026-04-21 16:02:35,059  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] Assistant (full): Our park closes at 8 PM on weekdays. So, no, kids can't use the arcade past closing time. If you're planning a visit later in the day, I'd recommend arriving earlier to make sure everyone gets their f
+2026-04-21 16:02:53,635  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] User said: I meant on the weekends on Saturday.
+2026-04-21 16:02:54,319  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY rag_api=187ms  docs=7
+2026-04-21 16:02:54,320  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] Full messages sent to LLM (4 messages):
+2026-04-21 16:02:54,320  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 16:02:54,320  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[1] role=user content=Are kids allowed to come into the arcade after 8?
+2026-04-21 16:02:54,320  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[2] role=assistant content=Our park closes at 8 PM on weekdays. So, no, kids can't use the arcade past closing time. If you're planning a visit later in the day, I'd recommend arriving earlier to make sure everyone gets their full experience! Let me know if there's anything else you need.
+2026-04-21 16:02:54,320  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[3] role=user content=I meant on the weekends on Saturday.
+2026-04-21 16:02:54,320  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY prepare_voice_stream=671ms
+2026-04-21 16:02:55,707  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY silence_to_first_reply=2072ms
+2026-04-21 16:02:56,557  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] Assistant (full): Got it! On Saturdays, we’re open until 10 PM. So yes, kids can definitely enjoy the arcade during those hours. Just make sure to check in with us before heading over if you have any specific plans or 
+2026-04-21 16:03:23,348  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] User said: Under what site, it says the arcade closes at 11.
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY rag_api=198ms  docs=7
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] Full messages sent to LLM (6 messages):
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[0] role=system content=<identity>
+You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[1] role=user content=Are kids allowed to come into the arcade after 8?
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[2] role=assistant content=Our park closes at 8 PM on weekdays. So, no, kids can't use the arcade past closing time. If you're planning a visit later in the day, I'd recommend arriving earlier to make sure everyone gets their full experience! Let me know if there's anything else you need.
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[3] role=user content=I meant on the weekends on Saturday.
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[4] role=assistant content=Got it! On Saturdays, we’re open until 10 PM. So yes, kids can definitely enjoy the arcade during those hours. Just make sure to check in with us before heading over if you have any specific plans or questions. Anything else I can help with?
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d]   msg[5] role=user content=Under what site, it says the arcade closes at 11.
+2026-04-21 16:03:24,069  INFO      chatbot.voice_handler  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY prepare_voice_stream=708ms
+2026-04-21 16:03:25,438  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] LATENCY silence_to_first_reply=2089ms
+2026-04-21 16:03:26,962  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] Assistant (full): I'm not aware of any information stating that the arcade closes at 11 PM. Our official hours are until 10 PM on Saturdays and Sundays. If there's a specific source or promotion you're referring to, I 
+2026-04-21 16:03:38,974  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] Finalized abandoned call in DB
+2026-04-21 16:03:38,974  INFO      chatbot.server  [CAa314a3532cc542b7e8381dfda319c25d] Session log closed
