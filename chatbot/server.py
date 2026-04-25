@@ -1,22 +1,18 @@
 """
-AeroBot FastAPI server.
+AeroBot Twilio voice-call server.
 
 Endpoints
 ---------
-POST /api/chat          — non-streaming, full response JSON
-GET  /api/chat/stream   — SSE streaming (EventSource-compatible)
-POST /api/chat/reset    — clear a session's conversation history
-GET  /api/health        — health check (DB + env)
+POST /voice/inbound  — Twilio webhook; returns ConversationRelay TwiML
+POST /voice/action   — Twilio session-end webhook
+WS   /voice/ws       — ConversationRelay WebSocket (ASR ↔ LLM ↔ TTS)
+GET  /api/health     — health check
 
-Static
-------
-GET /          → chatbot/static/index.html  (test page)
-GET /widget    → chatbot/static/widget.html (embeddable iframe page)
-GET /static/*  → chatbot/static/           (CSS / JS assets)
+The RAG retrieval lives in the separate `core/rag/` service at $RAG_API_URL.
 
 Run
 ---
-    uvicorn chatbot.server:app --host 0.0.0.0 --port 8000 --reload
+    uvicorn chatbot.server:app --host 0.0.0.0 --port 8001 --reload
 """
 
 from __future__ import annotations
@@ -29,36 +25,30 @@ import sys
 import time
 import uuid
 from contextlib import asynccontextmanager
-from typing import Optional
+
 from dotenv import load_dotenv
 
 # Load .env before any other local imports so all env vars are available.
 load_dotenv()
 
-# Ensure repo root is importable (config.py, search.py, etc.).
+# Ensure repo root is importable for src.utils.* used by voice_handler.
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 
-import config  # noqa: E402  (loads DB pool, embedding config, etc.)
-import db
+import db  # noqa: E402
 
-# import mailer
-from fastapi import FastAPI, Form, Query, WebSocket, WebSocketDisconnect  # noqa: E402
+from fastapi import FastAPI, Form, WebSocket, WebSocketDisconnect  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
-from fastapi.responses import FileResponse, JSONResponse, Response  # noqa: E402
-from fastapi.staticfiles import StaticFiles  # noqa: E402
-from pydantic import BaseModel  # noqa: E402
-from sse_starlette.sse import EventSourceResponse  # noqa: E402
+from fastapi.responses import JSONResponse, Response  # noqa: E402
 
-from chatbot.chat_handler import handle_message  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
 from chatbot.voice_handler import (  # noqa: E402
-    _check_end_keywords,
-    _clean_for_tts,
     build_end_decision_from_definite,
     check_booking_capture_trigger,
+    check_end_keywords,
     classify_turn_for_end,
+    clean_for_tts,
     close_session_logger,
     get_session_logger,
     prepare_voice_stream,
@@ -73,7 +63,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-_STATIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 _LOG_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     os.environ.get("SESSION_LOG_DIR", "logs"),
@@ -126,41 +115,17 @@ async def _session_cleanup_loop() -> None:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("AeroBot server starting…")
-
+    logger.info("AeroBot voice server starting…")
     try:
         db.init_db()
         logger.info("SQLite call log DB initialized")
     except Exception as exc:
         logger.warning("db.init_db() failed: %s", exc)
 
-    # Verify database connectivity
-    try:
-        pool = config.get_db_pool()
-        conn = pool.getconn()
-        pool.putconn(conn)
-        logger.info("Database connection verified")
-    except Exception as exc:
-        logger.warning("Database connection failed on startup: %s", exc)
-
-    # Optional: run Google Sheets sync on startup
-    if os.environ.get("SYNC_ON_STARTUP", "").lower() == "true":
-        try:
-            import sync as sync_module  # noqa: PLC0415
-
-            logger.info("Running knowledge-base sync…")
-            await asyncio.to_thread(sync_module.sync)
-            logger.info("Sync complete")
-        except Exception as exc:
-            logger.error("Sync failed: %s", exc)
-
     cleanup_task = asyncio.create_task(_session_cleanup_loop())
-
-    yield  # ← server runs here
-
+    yield
     cleanup_task.cancel()
-    config.close_db_pool()
-    logger.info("AeroBot server stopped")
+    logger.info("AeroBot voice server stopped")
 
 
 # ---------------------------------------------------------------------------
@@ -168,8 +133,8 @@ async def lifespan(app: FastAPI):
 # ---------------------------------------------------------------------------
 
 app = FastAPI(
-    title="AeroBot API",
-    description="Customer chatbot for AeroSports Scarborough",
+    title="AeroBot Voice API",
+    description="Twilio voice-call backend for AeroSports Scarborough",
     version="1.0.0",
     lifespan=lifespan,
 )
@@ -184,147 +149,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Static files (CSS / JS)
-app.mount("/static", StaticFiles(directory=_STATIC_DIR), name="static")
-
-
-# ---------------------------------------------------------------------------
-# Request / Response models
-# ---------------------------------------------------------------------------
-
-
-class ChatRequest(BaseModel):
-    message: str
-    session_id: Optional[str] = None
-
-
-class ResetRequest(BaseModel):
-    session_id: str
-
-
-# ---------------------------------------------------------------------------
-# Routes — static pages
-# ---------------------------------------------------------------------------
-
-
-@app.get("/", include_in_schema=False)
-async def index():
-    return FileResponse(os.path.join(_STATIC_DIR, "index.html"))
-
-
-@app.get("/widget", include_in_schema=False)
-async def widget():
-    return FileResponse(os.path.join(_STATIC_DIR, "widget.html"))
-
-
-# ---------------------------------------------------------------------------
-# Routes — API
-# ---------------------------------------------------------------------------
-
-
-@app.post("/api/chat")
-async def chat_endpoint(body: ChatRequest):
-    """
-    Non-streaming chat endpoint.
-
-    Returns the full response once the LLM is done.
-    Useful for testing and non-streaming clients.
-    """
-    session_id = body.session_id or str(uuid.uuid4())
-    full_response = ""
-    sources: list = []
-
-    async for item in handle_message(session_id, body.message):
-        if item["type"] == "token":
-            full_response += item["content"]
-        elif item["type"] == "done":
-            sources = item["sources"]
-
-    return {
-        "response": full_response,
-        "session_id": session_id,
-        "sources": sources,
-    }
-
-
-@app.get("/api/chat/stream")
-async def chat_stream(
-    message: str = Query(..., max_length=500, description="User message"),
-    session_id: Optional[str] = Query(
-        None, description="Session ID (omit to start new session)"
-    ),
-):
-    """
-    SSE streaming chat endpoint.
-
-    Each SSE event carries JSON:
-        {"token": "<text>", "done": false, "session_id": "<id>"}
-
-    The final event has done=true and includes sources:
-        {"token": "", "done": true, "session_id": "<id>", "sources": [...]}
-    """
-    sid = session_id or str(uuid.uuid4())
-
-    async def _generator():
-        try:
-            async for item in handle_message(sid, message):
-                if item["type"] == "token":
-                    payload = json.dumps(
-                        {"token": item["content"], "done": False, "session_id": sid}
-                    )
-                    yield {"data": payload}
-                elif item["type"] == "done":
-                    payload = json.dumps(
-                        {
-                            "token": "",
-                            "done": True,
-                            "session_id": sid,
-                            "sources": item["sources"],
-                        }
-                    )
-                    yield {"data": payload}
-        except Exception as exc:
-            logger.error("SSE stream error: %s", exc)
-            payload = json.dumps(
-                {
-                    "token": "",
-                    "done": True,
-                    "session_id": sid,
-                    "error": str(exc),
-                    "sources": [],
-                }
-            )
-            yield {"data": payload}
-
-    return EventSourceResponse(_generator())
-
-
-@app.post("/api/chat/reset")
-async def reset_session(body: ResetRequest):
-    """Clear conversation history for the given session."""
-    conversation_store.clear(body.session_id)
-    return {"status": "ok", "session_id": body.session_id}
-
 
 @app.get("/api/health")
 async def health():
-    """Health check — reports DB connectivity and whether HF_TOKEN is configured."""
-    db_ok = False
-    try:
-        pool = config.get_db_pool()
-        conn = pool.getconn()
-        pool.putconn(conn)
-        db_ok = True
-    except Exception:
-        pass
-
-    hf_ok = bool(os.environ.get("HF_TOKEN"))
-
-    status = "ok" if (db_ok and hf_ok) else "degraded"
-    return JSONResponse(
-        content={"status": status, "db": db_ok, "hf_token_configured": hf_ok},
-        status_code=200 if status == "ok" else 503,
-    )
+    """Liveness check — used by uptime monitors and Twilio status checks."""
+    return JSONResponse(content={"status": "ok"}, status_code=200)
 
 
 # ---------------------------------------------------------------------------
@@ -406,6 +235,41 @@ async def _send_canned_to_twilio(ws: WebSocket, text: str) -> None:
     """
     await ws.send_text(json.dumps({"type": "text", "token": text, "last": False}))
     await ws.send_text(json.dumps({"type": "text", "token": "", "last": True}))
+
+
+def _log_message(call_sid: str, db_call_id: int | None, role: str, content: str) -> None:
+    """db.log_message wrapped in try/except so a logging failure never breaks a turn."""
+    if db_call_id is None:
+        return
+    try:
+        db.log_message(db_call_id, role, content)
+    except Exception as exc:
+        logger.error("[%s] db.log_message (%s) failed: %s", call_sid, role, exc)
+
+
+async def _run_capture_step(
+    websocket: WebSocket,
+    call_sid: str,
+    session: dict,
+    user_text: str,
+    next_mode: str,
+    canned: str,
+    log_msg: str,
+    capture_field: str | None = None,
+) -> None:
+    """
+    Common booking-capture transition: optionally store the field, advance the
+    state machine, log, send the canned reply, and persist both turns.
+    """
+    if capture_field is not None:
+        session["capture_data"][capture_field] = user_text
+    session["capture_mode"] = next_mode
+    db_call_id = session.get("db_call_id")
+    logger.info("[%s] %s", call_sid, log_msg)
+    await _send_canned_to_twilio(websocket, canned)
+    conversation_store.add(call_sid, "user", user_text)
+    conversation_store.add(call_sid, "assistant", canned)
+    _log_message(call_sid, db_call_id, "assistant", canned)
 
 
 async def _stream_llm_to_twilio(
@@ -552,114 +416,64 @@ async def voice_ws(websocket: WebSocket):
                 capture_mode = session.get("capture_mode", "none")
                 db_call_id = session.get("db_call_id")
 
-                # Log the user turn to the DB no matter what path we take
-                if db_call_id is not None:
-                    try:
-                        db.log_message(db_call_id, "user", user_text)
-                    except Exception as exc:
-                        logger.error(
-                            "[%s] db.log_message (user) failed: %s", call_sid, exc
-                        )
+                # Log the user turn to the DB no matter what path we take.
+                _log_message(call_sid, db_call_id, "user", user_text)
 
-                # --- Check for new capture trigger ---
+                # --- New capture trigger: enter the state machine ---
                 if capture_mode == "none" and check_booking_capture_trigger(user_text):
-                    session["capture_mode"] = "name"
                     session["capture_triggered_on"] = user_text
-                    canned = "Sure, I can take down some details so my manager can give you a call back. Can I get your name please?"
-                    logger.info(
-                        "[%s] Booking capture TRIGGERED. State → name", call_sid
+                    await _run_capture_step(
+                        websocket, call_sid, session, user_text,
+                        next_mode="name",
+                        canned="Sure, I can take down some details so my manager can give you a call back. Can I get your name please?",
+                        log_msg="Booking capture TRIGGERED. State → name",
                     )
-                    await _send_canned_to_twilio(websocket, canned)
-                    conversation_store.add(call_sid, "user", user_text)
-                    conversation_store.add(call_sid, "assistant", canned)
-                    if db_call_id is not None:
-                        try:
-                            db.log_message(db_call_id, "assistant", canned)
-                        except Exception as exc:
-                            logger.error(
-                                "[%s] db.log_message (assistant) failed: %s",
-                                call_sid,
-                                exc,
-                            )
                     continue
 
-                # --- Advance capture state if already in progress ---
+                # --- Advance the state machine ---
                 if capture_mode == "name":
-                    session["capture_data"]["name"] = user_text
-                    session["capture_mode"] = "phone"
-                    canned = (
-                        f"Thanks. And what's the best phone number to reach you at?"
+                    await _run_capture_step(
+                        websocket, call_sid, session, user_text,
+                        next_mode="phone",
+                        canned="Thanks. And what's the best phone number to reach you at?",
+                        log_msg="Captured name. State → phone",
+                        capture_field="name",
                     )
-                    logger.info("[%s] Captured name. State → phone", call_sid)
-                    await _send_canned_to_twilio(websocket, canned)
-                    conversation_store.add(call_sid, "user", user_text)
-                    conversation_store.add(call_sid, "assistant", canned)
-                    if db_call_id is not None:
-                        try:
-                            db.log_message(db_call_id, "assistant", canned)
-                        except Exception as exc:
-                            logger.error(
-                                "[%s] db.log_message (assistant) failed: %s",
-                                call_sid,
-                                exc,
-                            )
                     continue
 
                 if capture_mode == "phone":
-                    session["capture_data"]["phone"] = user_text
-                    session["capture_mode"] = "details"
-                    canned = (
-                        "Got it. And what would you like to change about your booking?"
+                    await _run_capture_step(
+                        websocket, call_sid, session, user_text,
+                        next_mode="details",
+                        canned="Got it. And what would you like to change about your booking?",
+                        log_msg="Captured phone. State → details",
+                        capture_field="phone",
                     )
-                    logger.info("[%s] Captured phone. State → details", call_sid)
-                    await _send_canned_to_twilio(websocket, canned)
-                    conversation_store.add(call_sid, "user", user_text)
-                    conversation_store.add(call_sid, "assistant", canned)
-                    if db_call_id is not None:
-                        try:
-                            db.log_message(db_call_id, "assistant", canned)
-                        except Exception as exc:
-                            logger.error(
-                                "[%s] db.log_message (assistant) failed: %s",
-                                call_sid,
-                                exc,
-                            )
                     continue
 
                 if capture_mode == "details":
+                    # Persist the booking-change row *before* the canned reply
+                    # so save_booking_change also flags the call with needs_human=1
+                    # while the caller is still listening.
                     session["capture_data"]["details"] = user_text
-                    session["capture_mode"] = "done"
-                    name = session["capture_data"]["name"]
-                    phone = session["capture_data"]["phone"]
-                    details = session["capture_data"]["details"]
-
-                    # Save to DB — this also flags the call with needs_human=1
                     if db_call_id is not None:
+                        cd = session["capture_data"]
                         try:
-                            db.save_booking_change(db_call_id, name, phone, details)
+                            db.save_booking_change(
+                                db_call_id, cd["name"], cd["phone"], cd["details"]
+                            )
                             logger.info("[%s] Booking change saved to DB", call_sid)
                         except Exception as exc:
                             logger.error(
                                 "[%s] db.save_booking_change failed: %s", call_sid, exc
                             )
-
-                    canned = "Perfect, I've got all that. My manager will give you a call back as soon as possible. Is there anything else I can help you with today?"
-                    logger.info(
-                        "[%s] Captured details. State → done. Handing back to LLM.",
-                        call_sid,
+                    await _run_capture_step(
+                        websocket, call_sid, session, user_text,
+                        next_mode="done",
+                        canned="Perfect, I've got all that. My manager will give you a call back as soon as possible. Is there anything else I can help you with today?",
+                        log_msg="Captured details. State → done. Handing back to LLM.",
+                        # capture_field intentionally None — already set above
                     )
-                    await _send_canned_to_twilio(websocket, canned)
-                    conversation_store.add(call_sid, "user", user_text)
-                    conversation_store.add(call_sid, "assistant", canned)
-                    if db_call_id is not None:
-                        try:
-                            db.log_message(db_call_id, "assistant", canned)
-                        except Exception as exc:
-                            logger.error(
-                                "[%s] db.log_message (assistant) failed: %s",
-                                call_sid,
-                                exc,
-                            )
                     continue
 
                 # ------------------------------------------------------
@@ -699,7 +513,7 @@ async def voice_ws(websocket: WebSocket):
                         await _stream_llm_to_twilio(ws, sid, msgs, segs, t_silence)
                         # Normal completion — clean for TTS and save
                         raw_joined = "".join(segs)
-                        full_reply = _clean_for_tts(raw_joined)
+                        full_reply = clean_for_tts(raw_joined)
                         if full_reply.strip():
                             conversation_store.add(sid, "assistant", full_reply)
                             logger.info(
@@ -714,22 +528,14 @@ async def voice_ws(websocket: WebSocket):
                         # --- DB log assistant turn + end-call detection ---
                         _sess = _voice_sessions.get(sid, {})
                         _db_call_id = _sess.get("db_call_id")
-                        _phone = _sess.get("phone_number", "unknown")
 
-                        if _db_call_id is not None and full_reply.strip():
-                            try:
-                                db.log_message(_db_call_id, "assistant", full_reply)
-                            except Exception as exc:
-                                logger.error(
-                                    "[%s] db.log_message (assistant) failed: %s",
-                                    sid,
-                                    exc,
-                                )
+                        if full_reply.strip():
+                            _log_message(sid, _db_call_id, "assistant", full_reply)
 
-                        # Pre-filter: keyword check on the user's last message
-                        _kw_result = _check_end_keywords(user_text)
+                        # Keyword pre-filter avoids the classifier LLM hop on
+                        # obvious goodbye turns; "maybe" hits run the classifier.
+                        _kw_result = check_end_keywords(user_text)
                         _end_decision = None
-
                         if _kw_result == "definite":
                             _end_decision = build_end_decision_from_definite(
                                 user_text, full_reply
@@ -756,26 +562,12 @@ async def voice_ws(websocket: WebSocket):
                                 logger.error("[%s] db.end_call failed: %s", sid, exc)
 
                             if _needs_human:
-                                try:
-                                    _row = db.get_call(_db_call_id)
-                                    _transcript = (
-                                        _row.get("transcript_json", "") if _row else ""
-                                    )
-                                    mailer.send_flag_alert(
-                                        _db_call_id,
-                                        _phone,
-                                        _summary,
-                                        _flag_reason or "",
-                                        _transcript,
-                                    )
-                                    logger.info("[%s] Flag alert email sent", sid)
-                                except Exception as exc:
-                                    logger.error(
-                                        "[%s] send_flag_alert failed: %s", sid, exc
-                                    )
+                                # TODO: hook up email when a `mailer` module exists.
+                                logger.info(
+                                    "[%s] needs_human=True — flagged in DB; email "
+                                    "alert skipped (mailer module not wired up)", sid
+                                )
 
-                            # Tell Twilio ConversationRelay to end the session.
-                            # This will trigger the /voice/action endpoint.
                             try:
                                 _handoff = json.dumps(
                                     {
@@ -786,10 +578,7 @@ async def voice_ws(websocket: WebSocket):
                                 )
                                 await ws.send_text(
                                     json.dumps(
-                                        {
-                                            "type": "end",
-                                            "handoffData": _handoff,
-                                        }
+                                        {"type": "end", "handoffData": _handoff}
                                     )
                                 )
                                 logger.info(
@@ -801,10 +590,9 @@ async def voice_ws(websocket: WebSocket):
                                 )
 
                     except asyncio.CancelledError:
-                        # Save whatever was generated before cancellation
-                        # so the conversation history doesn't have orphan
-                        # user messages with no assistant response.
-                        partial = _clean_for_tts("".join(segs))
+                        # Save whatever was generated before cancellation so
+                        # history doesn't have an orphan user turn.
+                        partial = clean_for_tts("".join(segs))
                         if partial.strip():
                             conversation_store.add(sid, "assistant", partial)
                             logger.info(
@@ -812,22 +600,10 @@ async def voice_ws(websocket: WebSocket):
                                 sid,
                                 partial[:200],
                             )
-                            _sess = _voice_sessions.get(sid, {})
-                            _db_call_id = _sess.get("db_call_id")
-                            if _db_call_id is not None:
-                                try:
-                                    db.log_message(
-                                        _db_call_id,
-                                        "assistant",
-                                        partial + " [INTERRUPTED]",
-                                    )
-                                except Exception as exc:
-                                    logger.error(
-                                        "[%s] db.log_message interrupt failed: %s",
-                                        sid,
-                                        exc,
-                                    )
-                        # Log partial output so the log file reflects what was actually spoken
+                            _db_call_id = _voice_sessions.get(sid, {}).get("db_call_id")
+                            _log_message(
+                                sid, _db_call_id, "assistant", partial + " [INTERRUPTED]"
+                            )
                         _pl = get_session_logger(sid)
                         if _pl is not None:
                             _pl.log_llm_response("".join(segs) + " [INTERRUPTED]")

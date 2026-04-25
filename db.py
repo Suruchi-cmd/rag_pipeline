@@ -105,8 +105,7 @@ def save_booking_change(
     Stores the three fields as a JSON object in booking_change_json and sets
     needs_human=1 with a flag_reason indicating a booking change request.
     """
-    import json as _json
-    payload = _json.dumps({"name": name, "phone": phone, "details": details})
+    payload = json.dumps({"name": name, "phone": phone, "details": details})
     with sqlite3.connect(db_path) as conn:
         conn.execute("PRAGMA foreign_keys = ON")
         conn.execute(
@@ -115,4 +114,3 @@ def save_booking_change(
             "WHERE id = ?",
             (payload, call_id),
         )
-        conn.commit()

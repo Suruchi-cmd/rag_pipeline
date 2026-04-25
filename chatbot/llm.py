@@ -28,7 +28,7 @@ _FALLBACK_MSG = (
     "at two eight nine, four five four, five five five five. Sorry about that!"
 )
 
-_OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+_OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://192.168.50.150:11434/v1")
 _MODEL = os.environ.get("LLM_MODEL", "phi4:latest")
 
 
