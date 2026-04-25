@@ -268,6 +268,44 @@ class RAGService:
             "message": f"Resync ({mode}) complete: {indexed} docs loaded, {count} vector rows",
         }
 
+    def reindex(self) -> dict:
+        """Reindex enriched data into vector store without re-running the pipeline.
+
+        Wipes the vector table first, then re-indexes from DATA_FOLDER.
+        """
+        logger.info("Reindex: dropping existing vector table (wipe-first)")
+        if not self.rag_repository.force_recreate_index():
+            return {
+                "documents_indexed": 0,
+                "document_count": self.rag_repository.get_document_count(),
+                "message": "Vector table wipe/recreate failed — aborting reindex",
+            }
+
+        target_folder = Path(settings.DATA_FOLDER)
+        md_files = list(target_folder.rglob("*.md")) if target_folder.exists() else []
+        if not md_files:
+            return {
+                "documents_indexed": 0,
+                "document_count": 0,
+                "message": f"No enriched markdown files found in {target_folder}",
+            }
+        documents = SimpleDirectoryReader(
+            input_files=[str(f) for f in md_files]
+        ).load_data()
+        ok = self.rag_repository.index_documents(documents)
+        count = self.rag_repository.get_document_count()
+        if ok:
+            return {
+                "documents_indexed": len(documents),
+                "document_count": count,
+                "message": f"Reindex complete: {len(documents)} docs loaded, {count} vector rows",
+            }
+        return {
+            "documents_indexed": 0,
+            "document_count": count,
+            "message": "Reindex failed — check logs for details",
+        }
+
     def retrieve(self, query_request: QueryRequest) -> list:
         """Vector search only — no LLM. Fast path for voice/real-time callers."""
         return self.rag_repository.retrieve(query_request)

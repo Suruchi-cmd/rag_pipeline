@@ -100,3 +100,11 @@ class ResyncResponse(BaseModel):
     documents_indexed: int = Field(..., description="Markdown files ingested")
     document_count: int = Field(..., description="Vector row count after re-index")
     message: str = Field(..., description="Human-readable status")
+
+
+class ReindexResponse(BaseModel):
+    """Response from /rag/reindex."""
+
+    documents_indexed: int = Field(..., description="Markdown files ingested")
+    document_count: int = Field(..., description="Vector row count after re-index")
+    message: str = Field(..., description="Human-readable status")

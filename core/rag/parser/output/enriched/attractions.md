@@ -1,27 +1,23 @@
-Welcome to AeroSports Scarborough! We offer a wide range of attractions suitable for all ages, ensuring there's something fun and exciting for everyone. Whether you're looking for thrilling rides, challenging obstacle courses, or energetic team games, we've got it covered. Many of our activities are included with any jump pass, making it easy for families to enjoy multiple attractions without additional costs.
+The Freestyle/Open Jump attraction features wall-to-wall trampolines where visitors can jump, flip, and freestyle. This main trampoline area includes interconnected trampolines for bouncing fun. It is available to all ages as long as a child can walk, and the activity is included with any jump pass.
 
-Our Freestyle/Open Jump area features wall-to-wall trampolines where guests can jump, flip, and freestyle. This main trampoline area is interconnected, allowing for endless bouncing fun. It's suitable for all ages—any child who can walk can join in the fun. The cost of jumping here is included with any jump pass you purchase.
+Rock Walls offer indoor rock climbing walls with different difficulty levels, allowing participants to test their strength and push their limits by climbing to the top. This attraction is also open to all ages and is included with any jump pass.
 
-Next up are our Rock Walls, which offer indoor rock climbing at various difficulty levels. Guests can test their strength and push their limits as they climb to the top. Like the trampolines, these walls are open to all ages, and the activity is also included in any jump pass pricing.
+Go Karting provides an exciting experience of indoor go kart racing on two tracks: a Main Track for taller riders and a Mini Track for younger kids. The karts are electric, and participants can race up to ten laps per race. To ride the Main Track, individuals must be at least fifty-two inches tall, while those riding the Mini Track must be at least thirty-six inches tall. Closed-toed shoes are required for safety. Go Karting is not included in the jump pass and requires a separate ticket or add-on.
 
-For those who love racing, we have Indoor Go Karting on two tracks: a Main Track for taller riders and a Mini Track for younger kids. The karts are electric, allowing up to ten laps per race. To ride on the Main Track, participants must be at least fifty-two inches tall, while the Mini Track requires riders to be at least thirty-six inches tall. Both tracks require closed-toed shoes. Go Karting is not included in any jump pass and has separate ticket pricing.
+The 360 Bicycle attraction offers a pedal-powered thrill ride where participants cycle through a full three hundred sixty-degree loop in the air, providing a unique experience not commonly found at most parks. This activity is available to all ages and is included with any jump pass.
 
-Our 360 Bicycle attraction offers a pedal-powered thrill ride where you cycle through a full three hundred sixty-degree loop in the air, providing an experience unique to our park. This ride is open to all ages and is included with any jump pass.
+Donut Slide and Carpet Slide provide high-speed sliding fun where visitors can grab a tube or carpet and race down giant slides. This attraction is suitable for all ages and is included with any jump pass.
 
-For high-speed sliding fun, we have the Donut Slide and Carpet Slide. Guests can grab a tube or carpet and race down these giant slides, making it great for all ages. These slides are also included in any jump pass pricing.
+Dodgeball takes place in a trampoline dodgeball arena, offering a high-energy team game that involves bouncing and throwing. It's great for groups and competitive fun, available to all ages, and included with any jump pass.
 
-The Dodgeball arena features trampoline dodgeball where you can bounce and throw in an energetic team game setting. This high-energy activity is perfect for groups looking for competitive fun and is included with any jump pass.
+Slam Basketball/Aero Slam features trampoline basketball hoops where participants can bounce and dunk like professionals. This attraction is suitable for all ages and is included with any jump pass.
 
-Slam Basketball or Aero Slam lets guests experience trampoline basketball hoops, allowing them to bounce and dunk like a pro. This attraction is suitable for all ages and comes at no additional cost when you have a jump pass.
+The Ninja Maze is an obstacle course maze filled with twists, turns, and challenges designed to test agility and ninja skills. It's open to all ages and included with any jump pass.
 
-Our Ninja Maze offers an obstacle course maze filled with twists, turns, and challenges designed to test your agility and ninja skills. It's open to all ages and included in any jump pass pricing.
+Jump Tower/Aero Drop offers an adrenaline-filled free-fall jump from above, where participants leap off the tower and land safely below. This attraction is great for thrill seekers of all ages and is included with any jump pass.
 
-For thrill seekers, the Jump Tower or Aero Drop provides an adrenaline-filled free-fall jump from above. Guests can leap off the tower and land safely below, making it a great attraction for those seeking excitement. This is also included with any jump pass.
+Ninja Warrior provides a full ninja warrior obstacle course to test strength, speed, and agility, inspired by the TV show and suitable for all skill levels. It's available to all ages and included with any jump pass.
 
-The Ninja Warrior course is a full obstacle challenge inspired by the popular TV show, testing your strength, speed, and agility. It's suitable for all skill levels and ages, and like many of our attractions, it’s included in any jump pass pricing.
+Laser Tag features a high-energy laser tag arena with immersive lighting, sound effects, and tactical gameplay. This fast-paced team game is designed for all ages but requires a separate ticket or add-on as it is not included in the jump pass.
 
-Our Laser Tag arena offers high-energy gameplay featuring immersive lighting, sound effects, and tactical team competition. This attraction is designed for fast-paced action and is suitable for all ages but requires a separate ticket or add-on purchase as it's not included with the jump pass.
-
-Lastly, we have Bazooka Ball—an action-packed arena where players use air-powered launchers to shoot soft foam balls at targets and opponents. Like Laser Tag, this attraction is open to all ages but requires a separate ticket or add-on since it’s not part of any jump pass package.
-
-We hope you enjoy your visit to AeroSports Scarborough! If you have any questions about our attractions or need assistance with booking, feel free to ask.
+Bazooka Ball offers an action-packed experience where players use air-powered launchers to shoot soft foam balls at targets and opponents. This attraction is suitable for all ages but requires a separate ticket or add-on, as it is not included with any jump pass.

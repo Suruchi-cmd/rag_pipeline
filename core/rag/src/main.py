@@ -14,7 +14,7 @@ if __package__ in (None, ""):
     if _PKG_PARENT not in sys.path:
         sys.path.insert(0, _PKG_PARENT)
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -23,12 +23,14 @@ from sqlalchemy import text
 from sqlmodel import SQLModel, create_engine
 
 from src.config import settings
+from src.dependencies import get_rag_service
 from src.history.routes import history_router
 from src.llm_config.dependencies import get_llm_config_service
 from src.llm_config.routes import llm_config_router
 from src.rag.repositories import RAGRepository
 from src.rag.routes import rag_router
-from src.schemas import APIInfoResponse, HealthCheckResponse
+from src.rag.services import RAGService
+from src.schemas import APIInfoResponse, HealthCheckResponse, ReindexResponse
 
 
 def setup_logging():
@@ -203,6 +205,19 @@ app.include_router(rag_router)
 app.include_router(llm_config_router)
 
 
+@app.post("/rag/reindex", response_model=ReindexResponse, tags=["RAG"])
+async def reindex_knowledge_base(
+    rag_service: RAGService = Depends(get_rag_service),
+) -> ReindexResponse:
+    """Reindex already-enriched data into the vector store.
+
+    Reads enriched markdown from DATA_FOLDER and inserts embeddings.
+    Does not re-download or re-run the enrichment pipeline.
+    """
+    result = rag_service.reindex()
+    return ReindexResponse(**result)
+
+
 @app.get("/files/download/{filename}")
 async def download_file(filename: str):
     if not re.match(r"^[a-zA-Z0-9._-]+$", filename):
@@ -304,6 +319,7 @@ async def root() -> APIInfoResponse:
             "rag": "/rag",
             "resync": "/rag/resync",
             "resync_raw": "/rag/resync-raw",
+            "reindex": "/rag/reindex",
             "history": "/history",
             "settings": "/settings/llm",
         },
