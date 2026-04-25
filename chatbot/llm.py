@@ -1,7 +1,8 @@
 """
 Local Ollama LLM client (llama3.1:8b).
 
-Uses the OpenAI-compatible API exposed by Ollama at localhost:11434.
+Uses the OpenAI-compatible API exposed by Ollama (host configurable via
+OLLAMA_BASE_URL — must end with /v1).
 Streaming via SSE for chat_handler, async streaming for voice_handler.
 
 Key design decisions:
@@ -13,23 +14,19 @@ Key design decisions:
 from __future__ import annotations
 
 import logging
-import os
 import re
 import time
 from typing import Generator
 
 from openai import AsyncOpenAI, OpenAI
 
+from chatbot.config import settings
+
 logger = logging.getLogger(__name__)
 
-_FALLBACK_MSG = (
-    "I'm so sorry, I'm having a little trouble on my end right now. "
-    "Can you try calling back in just a minute? Or you can reach us "
-    "at two eight nine, four five four, five five five five. Sorry about that!"
-)
-
-_OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://192.168.50.150:11434/v1")
-_MODEL = os.environ.get("LLM_MODEL", "phi4:latest")
+_FALLBACK_MSG = settings.fallback_message
+_OLLAMA_BASE_URL = settings.OLLAMA_BASE_URL
+_MODEL = settings.LLM_MODEL
 
 
 _client: OpenAI | None = None
@@ -60,16 +57,16 @@ def generate_response(messages: list[dict]) -> Generator[str, None, None]:
     """
     delay = 1.0
 
-    for attempt in range(3):
+    for attempt in range(settings.LLM_RETRIES):
         try:
             client = _make_client()
             stream = client.chat.completions.create(
                 model=_MODEL,
                 messages=messages,
                 stream=True,
-                max_tokens=1024,
-                temperature=0.3,
-                top_p=0.9,
+                max_tokens=settings.LLM_MAX_TOKENS,
+                temperature=settings.LLM_TEMPERATURE,
+                top_p=settings.LLM_TOP_P,
             )
             for chunk in stream:
                 if not chunk.choices:
@@ -83,11 +80,12 @@ def generate_response(messages: list[dict]) -> Generator[str, None, None]:
         except Exception as exc:
             resp = getattr(exc, "response", None)
             status = getattr(resp, "status_code", 0) if resp else 0
-            if status in (429, 503) and attempt < 2:
+            if status in (429, 503) and attempt < settings.LLM_RETRIES - 1:
                 logger.warning(
-                    "Ollama rate-limited (HTTP %s), retry %d/2 in %.1fs",
+                    "Ollama rate-limited (HTTP %s), retry %d/%d in %.1fs",
                     status,
                     attempt + 1,
+                    settings.LLM_RETRIES - 1,
                     delay,
                 )
                 time.sleep(delay)

@@ -39,6 +39,41 @@ class Settings(BaseSettings):
     WORKERS: int = Field(default=1)
     LOG_LEVEL: str = Field(default="info")
 
+    # Chat LLM tuning (passed to Ollama). Embedding model temperature is N/A.
+    LLM_TEMPERATURE: float = Field(default=0.3)
+
+    # Document chunking — used by SentenceSplitter when MarkdownNodeParser
+    # produces a node larger than CHUNK_SIZE.
+    CHUNK_SIZE: int = Field(default=1000)
+    CHUNK_OVERLAP: int = Field(default=200)
+
+    # Retrieval. We oversample (top_k * RETRIEVAL_OVERSAMPLE, capped at
+    # RETRIEVAL_MAX_K) and then trim to the requested top_k after rerank.
+    RETRIEVAL_OVERSAMPLE: int = Field(default=2)
+    RETRIEVAL_MAX_K: int = Field(default=15)
+    SIMILARITY_CUTOFF: float = Field(default=0.6)
+    RESPONSE_MODE: str = Field(default="compact")
+
+    # Resync subprocess (parser + optional LLM enrichment) timeouts in seconds.
+    PARSER_TIMEOUT_ENRICH: int = Field(default=1800)
+    PARSER_TIMEOUT_RAW: int = Field(default=300)
+
+    # Bootstrap DB wait — covers pgvector container cold start.
+    DB_WAIT_ATTEMPTS: int = Field(default=30)
+    DB_WAIT_DELAY: float = Field(default=2.0)
+
+    # CORS — comma-separated origin list; "*" allows all (dev only).
+    CORS_ORIGINS: str = Field(
+        default=(
+            "http://localhost:3000,http://localhost:8023,"
+            "http://127.0.0.1:3000,http://127.0.0.1:8023"
+        )
+    )
+
+    @property
+    def cors_origins_list(self) -> list[str]:
+        return [o.strip() for o in self.CORS_ORIGINS.split(",") if o.strip()]
+
     # RAG ingestion consumes the LLM-enriched, voicebot-friendly markdown
     # rather than the raw parser output. The enrichment pipeline lives in
     # `parser/src/enricher.py` and is run via `run_parsers.py --enrich`.

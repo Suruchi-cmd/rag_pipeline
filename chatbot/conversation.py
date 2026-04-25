@@ -8,13 +8,14 @@ In-memory conversation store keyed by session_id.
 
 from __future__ import annotations
 
-import os
 import threading
 import time
 from dataclasses import dataclass, field
 
-SESSION_TIMEOUT: int = 30 * 60  # 30 minutes
-MAX_CONVERSATION_TURNS: int = int(os.environ.get("MAX_CONVERSATION_TURNS", "30"))
+from chatbot.config import settings
+
+SESSION_TIMEOUT: int = settings.SESSION_TIMEOUT
+MAX_CONVERSATION_TURNS: int = settings.MAX_CONVERSATION_TURNS
 
 
 @dataclass

@@ -56,8 +56,12 @@ def setup_logging():
 logger = setup_logging()
 
 
-def wait_for_database(max_attempts: int = 30, delay: float = 2.0) -> None:
+def wait_for_database(
+    max_attempts: int | None = None, delay: float | None = None
+) -> None:
     """Poll the DB until it accepts connections (covers pgvector container boot)."""
+    max_attempts = max_attempts if max_attempts is not None else settings.DB_WAIT_ATTEMPTS
+    delay = delay if delay is not None else settings.DB_WAIT_DELAY
     engine = create_engine(settings.database_url, echo=False)
     last_err: Exception | None = None
     for attempt in range(1, max_attempts + 1):
@@ -171,13 +175,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://localhost:8023",
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:8023",
-        "https://aerosportsscb.share.zrok.io",
-    ],
+    allow_origins=settings.cors_origins_list,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

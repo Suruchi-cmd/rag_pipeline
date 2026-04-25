@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.13"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'win32'",
@@ -1423,6 +1423,12 @@ wheels = [
 ]
 
 [[package]]
+name = "openziti"
+version = "1.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/40/56/265f7b6f90b61ab4acac6557ced42021ce6a705b64d89ea918f17b43de11/openziti-1.6.0.tar.gz", hash = "sha256:fd0b022ac93b45add61ad31dd4d1836f87062537be465e9b4a09654cccc9f4b4", size = 37138, upload-time = "2026-02-10T17:29:22.36Z" }
+
+[[package]]
 name = "orjson"
 version = "3.11.8"
 source = { registry = "https://pypi.org/simple" }
@@ -1901,6 +1907,7 @@ dependencies = [
     { name = "sse-starlette" },
     { name = "twilio" },
     { name = "uvicorn", extra = ["standard"] },
+    { name = "zrok" },
 ]
 
 [package.metadata]
@@ -1925,6 +1932,7 @@ requires-dist = [
     { name = "sse-starlette", specifier = ">=3.3.4" },
     { name = "twilio", specifier = ">=9.10.5" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.46.0" },
+    { name = "zrok", specifier = ">=1.1.11" },
 ]
 
 [[package]]
@@ -2652,6 +2660,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/e1/19/3774d162f6732d1cfb0b47b4140a942a35ca82bb19b6db1f80e9e7bdc8f8/yarl-1.23.0-cp314-cp314t-win_amd64.whl", hash = "sha256:4503053d296bc6e4cbd1fad61cf3b6e33b939886c4f249ba7c78b602214fabe2", size = 97610, upload-time = "2026-03-01T22:07:45.773Z" },
     { url = "https://files.pythonhosted.org/packages/51/47/3fa2286c3cb162c71cdb34c4224d5745a1ceceb391b2bd9b19b668a8d724/yarl-1.23.0-cp314-cp314t-win_arm64.whl", hash = "sha256:44bb7bef4ea409384e3f8bc36c063d77ea1b8d4a5b2706956c0d6695f07dcc25", size = 86041, upload-time = "2026-03-01T22:07:49.026Z" },
     { url = "https://files.pythonhosted.org/packages/69/68/c8739671f5699c7dc470580a4f821ef37c32c4cb0b047ce223a7f115757f/yarl-1.23.0-py3-none-any.whl", hash = "sha256:a2df6afe50dea8ae15fa34c9f824a3ee958d785fd5d089063d960bae1daa0a3f", size = 48288, upload-time = "2026-03-01T22:07:51.388Z" },
+]
+
+[[package]]
+name = "zrok"
+version = "1.1.11"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "openziti" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e9/44/c3ef1b304a047f21969cf5e21afe3e101d2a22b9b65398113c83c33a6e01/zrok-1.1.11.tar.gz", hash = "sha256:b17759837a6ec57967b94394ae4e0c345c5f5b4d3748f679d16fb0ecf9081230", size = 87298, upload-time = "2026-02-03T19:05:54.142Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ac/4e/9464bde8d7006b246139588beaa73597db24f590c9f552ec867e181f02cf/zrok-1.1.11-py3-none-any.whl", hash = "sha256:1947d73e357077fbad4017871944db58164dc6f5a0d1464c928bef3598d6f729", size = 197981, upload-time = "2026-02-03T19:05:52.306Z" },
 ]
 
 [[package]]

@@ -16,16 +16,17 @@ Returned shape (per the /rag/retrieve endpoint):
 from __future__ import annotations
 
 import logging
-import os
 
 import httpx
 
+from chatbot.config import settings
+
 logger = logging.getLogger(__name__)
 
-_RAG_API_URL = os.environ.get("RAG_API_URL", "http://localhost:8000").rstrip("/")
+_RAG_API_URL = settings.RAG_API_URL.rstrip("/")
 
 # One AsyncClient reused across calls so we skip the TCP+TLS handshake per query.
-_client = httpx.AsyncClient(timeout=15.0)
+_client = httpx.AsyncClient(timeout=settings.RAG_HTTP_TIMEOUT)
 
 
 async def query_rag(query: str, top_k: int = 5) -> list[dict]:

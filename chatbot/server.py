@@ -42,6 +42,7 @@ from fastapi import FastAPI, Form, WebSocket, WebSocketDisconnect  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 from fastapi.responses import JSONResponse, Response  # noqa: E402
 
+from chatbot.config import settings  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
 from chatbot.voice_handler import (  # noqa: E402
     build_end_decision_from_definite,
@@ -65,7 +66,7 @@ logger = logging.getLogger(__name__)
 
 _LOG_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    os.environ.get("SESSION_LOG_DIR", "logs"),
+    settings.SESSION_LOG_DIR,
 )
 
 
@@ -105,9 +106,9 @@ def _close_session_log(call_sid: str, handler: logging.FileHandler) -> None:
 
 
 async def _session_cleanup_loop() -> None:
-    """Purge expired sessions every 5 minutes."""
+    """Purge expired sessions on a configurable interval."""
     while True:
-        await asyncio.sleep(5 * 60)
+        await asyncio.sleep(settings.SESSION_CLEANUP_INTERVAL)
         n = conversation_store.cleanup_expired()
         if n:
             logger.info("Cleaned up %d expired session(s)", n)
@@ -140,11 +141,9 @@ app = FastAPI(
 )
 
 # CORS — restrict origins in production via CHATBOT_CORS_ORIGINS env var.
-_cors_origins_raw = os.environ.get("CHATBOT_CORS_ORIGINS", "*")
-_cors_origins = [o.strip() for o in _cors_origins_raw.split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_cors_origins,
+    allow_origins=settings.cors_origins_list or ["*"],
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
@@ -160,9 +159,7 @@ async def health():
 # Voice routes (Twilio)
 # ---------------------------------------------------------------------------
 
-_BASE_URL = os.environ.get("BASE_URL", "").rstrip(
-    "/"
-)  # e.g. https://abc.ngrok-free.app
+_BASE_URL = settings.BASE_URL.rstrip("/")  # e.g. https://abc.ngrok-free.app
 
 
 @app.post("/voice/inbound", tags=["voice"])
@@ -180,15 +177,15 @@ async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
 <Response>
   <Connect action="{_BASE_URL}/voice/action">
     <ConversationRelay url="wss://{ws_host}/voice/ws"
-                    language="en-CA"
-                    transcriptionProvider="deepgram"
-                    ttsProvider="ElevenLabs"
-                    voice="uYXf8XasLslADfZ2MB4u"
-                       welcomeGreeting="Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?"
+                    language="{settings.TWILIO_LANGUAGE}"
+                    transcriptionProvider="{settings.TWILIO_ASR_PROVIDER}"
+                    ttsProvider="{settings.TWILIO_TTS_PROVIDER}"
+                    voice="{settings.TWILIO_VOICE_ID}"
+                       welcomeGreeting="{settings.welcome_greeting}"
                        dtmfDetection="true"
                        interruptByDtmf="false"
-                       interruptSensitivity="medium">
-        <Transcription hints="AeroSports, Aerosports, Aero Sports, Scarborough, Birchmount, aerosportsparks, Aero Slam, birthday, Aero Camp, Ninja Maze, Ninja Warrior, 360 Bicycle, Donut Slide, Carpet Slide, go kart, go karting, dual kart, Mini Track, Main Track, Premium Jump Pass, VIP Jump Pass, All Day Pass, 30 Day Pass, 90 Day Pass, Annual Pass, Premium Party, VIP Party, Ultimate Party, Toddler Time, PA Day Camp, March Break Camp, availability, Special Needs Program, Birds Eye Party Arena,jump tower, slam basketball, dodgeball, rock walls, waiver" />
+                       interruptSensitivity="{settings.TWILIO_INTERRUPT_SENSITIVITY}">
+        <Transcription hints="{settings.TWILIO_ASR_HINTS}" />
     </ConversationRelay>
   </Connect>
 </Response>"""
@@ -220,10 +217,8 @@ _voice_sessions: dict[str, dict] = {}
 # Twilio's ASR is already active at that point, so it can pick up the bot's
 # own voice and send it back as a PROMPT.  We skip any prompt that looks like
 # an echo of the greeting so it doesn't trigger an LLM response.
-_WELCOME_GREETING = (
-    "Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?"
-)
-_WELCOME_ECHO_PREFIX = "thank you for calling aerosports"
+_WELCOME_GREETING = settings.welcome_greeting
+_WELCOME_ECHO_PREFIX = settings.WELCOME_ECHO_PREFIX
 
 
 async def _send_canned_to_twilio(ws: WebSocket, text: str) -> None:

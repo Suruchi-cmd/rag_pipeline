@@ -1,71 +1,108 @@
 ```markdown
-# AeroSports Scarborough Understanding Document
+# AeroSports Scarborough Dataset Overview
 
-## Overview of Business and Dataset
-
-AeroSports Scarborough is an entertainment venue offering a variety of activities including trampolines, go-karting, birthday parties, camps, and more. The dataset comprises multiple workbooks detailing different aspects of the business operations such as pricing, policies, promotions, and voicebot scripts for customer interactions.
+AeroSports Scarborough is a recreational facility offering various activities such as trampolines, go-karting, laser tag, and birthday party packages. The dataset comprises multiple workbooks that collectively provide comprehensive information about the business's offerings, pricing, operational details, customer service scripts, and promotional campaigns.
 
 ## General Information
 
-- **Purpose**: Provides foundational details about AeroSports Scarborough.
-- **Key Entities**: Business name, address, contact information.
-- **Relationships**: Serves as a reference point connecting all other workbooks by providing essential business context.
+**Purpose:** This workbook provides an overview of AeroSports Scarborough, including its location, contact details, operating hours, and general policies.
+
+**Key Entities:**
+- Address
+- Phone number
+- Operating hours
+- Age restrictions
+- COVID-19 safety measures
+- Parking information
+
+**Relationships:** Serves as a foundational reference for other workbooks by providing essential business details that are referenced throughout the dataset.
 
 ## Jump Prices
 
-- **Purpose**: Outlines the pricing structure for various jump passes and additional activities like go-karting.
-- **Key Entities**: Pass types (Premium, VIP, All Day), prices, add-ons, height requirements.
-- **Relationships**: Links to "Passes" for detailed pass descriptions; connects with "Go Kart Overview" for activity pricing.
+**Purpose:** Details the pricing structure for various jump passes, including discounts and promotional offers.
 
-## Policies
+**Key Entities:**
+- Pass types (Premium, VIP, Ultimate)
+- Pricing
+- Discounts (e.g., 25% off for groups of 15+)
+- Promotional codes
 
-- **Purpose**: Details the rules and regulations governing customer behavior and safety at AeroSports.
-- **Key Entities**: Safety guidelines, age restrictions, cancellation policies.
-- **Relationships**: Supports "Waiver Info" by explaining why waivers are necessary; informs voicebot scripts in "Voice Call Scripts."
-
-## Promotions
-
-- **Purpose**: Lists current promotional offers available to customers.
-- **Key Entities**: Promotion codes, discount amounts, validity periods.
-- **Relationships**: Integrates with "Booking Redirect" and "Promo March Bday" for promotion application during bookings.
+**Relationships:** Links to the "Passes" workbook through pass descriptions and pricing details. Provides context for promotional campaigns in the "Promotions" workbook.
 
 ## Passes
 
-- **Purpose**: Describes the different types of passes available for purchase.
-- **Key Entities**: Pass names (Premium, VIP), duration, inclusions.
-- **Relationships**: Cross-references with "Jump Prices" for cost details; informs "Voice Call Scripts" for booking inquiries.
+**Purpose:** Describes different types of passes available, including their features and benefits.
+
+**Key Entities:**
+- Pass categories (Premium, VIP, Ultimate)
+- Features (e.g., jump time, additional activities)
+
+**Relationships:** Connects with "Jump Prices" for pricing details and "Promotions" for discount offers. Provides context for customer service scripts in "Voice Call Scripts."
+
+## Promotions
+
+**Purpose:** Outlines current promotional campaigns, including discounts and special offers.
+
+**Key Entities:**
+- Promotion types (e.g., birthday promotions)
+- Discount amounts
+- Validity periods
+- Booking requirements
+
+**Relationships:** References pass types from the "Passes" workbook and pricing details from "Jump Prices." Provides context for customer inquiries in "Voice Call Scripts."
+
+## Birthday Parties
+
+**Purpose:** Details the offerings and packages available for hosting birthday parties at AeroSports Scarborough.
+
+**Key Entities:**
+- Party packages (Premium, VIP, Ultimate)
+- Pricing per jumper
+- Inclusions (e.g., pizza, drinks)
+
+**Relationships:** Links to promotional codes in "Promotions" for discounts. Provides context for customer service interactions in "Voice Call Scripts."
+
+## Go Karting
+
+**Purpose:** Describes the go-karting options available, including track details and pricing.
+
+**Key Entities:**
+- Track types (Main, Mini)
+- Height requirements
+- Pricing
+
+**Relationships:** Connects with "Passes" for add-on pricing. Provides context for customer inquiries in "Voice Call Scripts."
 
 ## Voice Call Scripts
 
-- **Purpose**: Provides scripts for customer service interactions over the phone.
-- **Key Entities**: Greeting phrases, hold messages, transfer prompts, closing statements.
-- **Relationships**: Utilizes information from all other workbooks to provide accurate and comprehensive responses; references "Promo March Bday" for promotions.
+**Purpose:** Offers structured scripts for handling customer service calls, ensuring consistent communication.
+
+**Key Entities:**
+- Greeting and closing phrases
+- Information retrieval prompts
+- Transfer protocols
+
+**Relationships:** References information from all other workbooks to provide accurate responses. Ensures alignment with business policies and offerings.
 
 ## Shared Vocabulary
 
-- **Acronyms/Abbreviations**:
-  - "min" → "minutes" or "minimum"
-  - "$" → "dollars"
-  - "VIP" → "Very Important Pass"
-  - "Bday" → "Birthday"
-  - "AM/PM" → "Ante Meridiem/Post Meridiem"
-
-- **Domain Terms**:
-  - "Jump Time": Duration allowed on trampolines.
-  - "Add-on": Additional activity included with a pass.
+- **min**: "minutes" or "minimum" (context-dependent)
+- **$**: "dollars"
+- **AM/PM**: Time of day
+- **VIP**: Very Important Pass
+- **Aero Socks**: Required footwear for activities
 
 ## Cross-workbook Relationships
 
-- **Passes and Jump Prices**: Pass descriptions in "Passes" are detailed with pricing in "Jump Prices."
-- **Promotions and Voice Call Scripts**: Promotional codes from "Promotions" are used in "Voice Call Scripts" for customer inquiries.
-- **Policies and Waiver Info**: Safety guidelines in "Policies" justify the need for waivers, as explained in "Waiver Info."
+- **Passes and Jump Prices:** Pricing details in "Jump Prices" are linked to pass descriptions in "Passes."
+- **Promotions and Birthday Parties:** Promotional codes in "Promotions" apply to packages in "Birthday Parties."
+- **Go Karting and Passes:** Add-on pricing for go-karting is detailed in both "Go Karting" and "Passes."
+- **Voice Call Scripts:** Integrates information from all workbooks to provide comprehensive customer service responses.
 
 ## Voicebot Considerations
 
-- **Tables/Cryptic Codes**: Tables in "Jump Prices" and "Promotions" require simplification for voice delivery.
-- **Dense Markdown**: Information from workbooks like "Policies" needs to be condensed into clear, concise statements.
-- **Ambiguous Pronouns**: Ensure clarity by avoiding pronouns without explicit antecedents; specify entities directly.
-- **Rewriting Needs**: Dense sections in "Voice Call Scripts" should be rewritten for natural-sounding dialogue.
-
-This document serves as a comprehensive guide for understanding the interconnections and key elements within AeroSports Scarborough's dataset, facilitating effective customer interactions through voicebot enhancements.
+- **Tables and Codes:** Simplify tables and expand cryptic codes (e.g., promo codes) for clarity.
+- **Dense Markdown:** Break down dense sections into conversational language.
+- **Ambiguous Pronouns:** Clarify pronouns by specifying the subject they refer to.
+- **Rewriting Needs:** Heavy rewriting may be required to convert structured data into natural, engaging dialogue.
 ```

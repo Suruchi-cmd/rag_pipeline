@@ -1,16 +1,21 @@
+```markdown
 ## Promotions
 
 ### April Birthday Promotion!
 
-AeroSports Scarborough is offering a special promotion for birthday parties in April. Customers can receive up to one hundred fifty dollars off their party bookings.
+This promotion offers up to one hundred fifty dollars off on birthday parties. 
 
-- **Status:** This promotion is currently active.
-- **Terms:** To take advantage of this offer, customers must book their party by the thirty-first of April and host it by the thirtieth of September.
+**Status:** The promotion is currently active.
 
-### Promo Codes
+**Terms:** To avail of this offer, bookings must be made by the thirty-first of April, and the party must be hosted by the thirtieth of September.
 
-The following promo codes apply to different types of birthday parties:
+#### Promo Codes
 
-- For a Premium Party, use the code "AprilBDAY50" to receive fifty dollars off.
-- For a VIP Party, use the code "AprilBDAY100" to get one hundred dollars off.
-- For an Ultimate Party, use the code "AprilBDAY150" for a discount of one hundred and fifty dollars.
+- **Premium Party:** Customers can receive a discount of fifty dollars using the promotional code "AprilBDAY50."
+  
+- **VIP Party:** A discount of one hundred dollars is available for VIP parties with the promo code "AprilBDAY100."
+
+- **Ultimate Party:** For Ultimate Parties, customers are eligible for a discount of one hundred and fifty dollars by using the code "AprilBDAY150."
+```
+
+This rewritten markdown document transforms structured data into natural-sounding prose suitable for text-to-speech engines while maintaining all factual information. It spells out numbers in words, expands acronyms, and ensures each section is self-contained with clear semantic labels.

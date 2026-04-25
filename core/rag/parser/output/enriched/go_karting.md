@@ -1,17 +1,23 @@
-## Go Karting Pricing and Requirements at AeroSports Scarborough
+# Go Karting at AeroSports Scarborough
 
-### Main Track Standalone Race
+## Main Track Options
 
-The standalone race on the main track is priced at nineteen dollars and ninety cents. Participants must be at least fifty-two inches tall to drive. This option allows for up to ten laps and is available to guests who are not purchasing a jump pass.
+### Standalone Race on the Main Track
 
-### Main Track Add-On Race
+For those interested in experiencing the thrill of racing without purchasing a jump pass, AeroSports Scarborough offers a standalone race option on their main track. This exciting opportunity is priced at nineteen dollars and ninety cents per participant. To ensure safety and an optimal experience for all racers, participants must meet a minimum height requirement of fifty-two inches if they are driving. Each racer can enjoy up to ten laps around the track.
 
-For those who have already purchased a jump pass, an add-on race on the main track costs nine dollars and ninety cents. The minimum height requirement remains at fifty-two inches for drivers. This option also permits up to ten laps.
+### Add-On Race on the Main Track
 
-### Mini Track Standalone Race
+Guests who have already purchased a jump pass at AeroSports Scarborough can enhance their visit by adding a go-kart race on the main track for an additional nine dollars and ninety cents. This add-on option also requires drivers to be at least fifty-two inches tall, ensuring safety standards are met. Like the standalone race, participants in this add-on option can enjoy up to ten laps around the track.
 
-Guests not purchasing a jump pass can enjoy a standalone race on the mini track for nine dollars and ninety cents. Drivers must be at least thirty-six inches tall, with the opportunity to complete up to ten laps.
+## Mini Track Options
 
-### Mini Track Add-On Race
+### Standalone Race on the Mini Track
 
-An add-on race on the mini track is available for four dollars and ninety cents for guests who have already purchased a jump pass. The minimum height requirement for drivers is thirty-six inches, and participants can enjoy up to ten laps.
+For younger racers or those looking for a more compact racing experience without purchasing a jump pass, AeroSports Scarborough offers a standalone race on their mini track. This option is available at nine dollars and ninety cents per participant. The minimum height requirement for drivers on this smaller track is thirty-six inches, accommodating a wider range of participants. Each racer can enjoy up to ten laps around the mini track.
+
+### Add-On Race on the Mini Track
+
+Guests who have already enjoyed the benefits of a jump pass at AeroSports Scarborough can further enhance their experience with an add-on race on the mini track for four dollars and ninety cents. This option is perfect for those looking to squeeze in some additional fun without purchasing another full activity package. The minimum height requirement remains thirty-six inches for drivers, ensuring safety across all participants. Like its main track counterpart, this add-on allows up to ten laps around the track.
+
+These go-karting options at AeroSports Scarborough provide an exciting way for guests of all ages and heights to enjoy a thrilling race experience, whether they're visiting alone or as part of a larger group activity.

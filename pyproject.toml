@@ -25,4 +25,6 @@ dependencies = [
     "llama-index-vector-stores-postgres>=0.5.5",
     "sse-starlette>=3.3.4",
     "twilio>=9.10.5",
+    "zrok>=1.1.11",
+    "pydantic-settings>=2.14.0",
 ]

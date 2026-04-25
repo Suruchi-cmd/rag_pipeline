@@ -1,0 +1,38 @@
+2026-04-25 00:37:10,830  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Session log opened → /Users/suruchi/Documents/GitHub/rag_pipeline/logs/CA0ec2748b6b73eefb3979b0abd642a084.log
+2026-04-25 00:37:10,831  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] ConversationRelay connected from +14373612990
+2026-04-25 00:37:12,826  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User interrupted. Spoken so far: Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 00:37:12,827  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Assistant (truncated to spoken): Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 00:37:12,828  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User said: She has to be 2.
+2026-04-25 00:37:13,808  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY rag_api=975ms  docs=7
+2026-04-25 00:37:13,809  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY prepare_voice_stream=978ms
+2026-04-25 00:37:14,972  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User said: 2.
+2026-04-25 00:37:14,994  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] LLM stream cancelled (user interrupted)
+2026-04-25 00:37:17,477  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY rag_api=139ms  docs=7
+2026-04-25 00:37:17,477  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY prepare_voice_stream=2498ms
+2026-04-25 00:37:18,258  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY silence_to_first_reply=3286ms
+2026-04-25 00:37:18,471  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User interrupted. Spoken so far: 
+2026-04-25 00:37:18,472  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] LLM stream cancelled (user interrupted)
+2026-04-25 00:37:18,472  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Assistant (partial/cancelled): Oh okay, so you're looking for something suitable for a two-year-old?
+2026-04-25 00:37:19,683  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User said: But don't forget now. Hi. How are you?
+2026-04-25 00:37:20,518  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY rag_api=218ms  docs=7
+2026-04-25 00:37:20,519  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY prepare_voice_stream=820ms
+2026-04-25 00:37:21,261  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY silence_to_first_reply=1579ms
+2026-04-25 00:37:21,532  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Assistant (full): Hi! I'm doing well, thanks. How can I help you today?
+2026-04-25 00:37:28,004  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User said: Um, do you guys have go karting?
+2026-04-25 00:37:28,872  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY rag_api=383ms  docs=7
+2026-04-25 00:37:28,872  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY prepare_voice_stream=865ms
+2026-04-25 00:37:29,643  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY silence_to_first_reply=1639ms
+2026-04-25 00:37:30,314  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Assistant (full): Yeah, we do have go-karting at AeroSports Scarborough. There's a Main Track for taller riders and a Mini Track for younger kids. Do you know which track or package you're interested in?
+2026-04-25 00:37:42,320  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User said: No. I just want the prices.
+2026-04-25 00:37:43,224  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY rag_api=185ms  docs=7
+2026-04-25 00:37:43,224  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY prepare_voice_stream=899ms
+2026-04-25 00:37:44,157  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY silence_to_first_reply=1837ms
+2026-04-25 00:37:45,739  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Assistant (full): Sure thing! For standalone races, it's nineteen dollars and ninety cents per participant on the main track, with a height requirement of fifty-two inches. On the mini track, it's nine dollars and nine
+2026-04-25 00:38:13,296  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] User said: Okay. Thank you. Bye bye.
+2026-04-25 00:38:14,180  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY rag_api=193ms  docs=7
+2026-04-25 00:38:14,183  INFO      chatbot.voice_handler  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY prepare_voice_stream=882ms
+2026-04-25 00:38:15,087  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] LATENCY silence_to_first_reply=1793ms
+2026-04-25 00:38:15,623  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Assistant (full): You're welcome! If you have any more questions, feel free to call us at two eight nine, four five four, five five five five. Have a great day and goodbye!
+2026-04-25 00:38:15,627  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] End-call keyword DEFINITE match
+2026-04-25 00:38:15,629  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Sent end-session message to Twilio
+2026-04-25 00:38:24,086  INFO      chatbot.server  [CA0ec2748b6b73eefb3979b0abd642a084] Session log closed

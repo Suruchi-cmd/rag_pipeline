@@ -62,7 +62,7 @@ def run(
     enrich: bool = False,
     enrich_only: bool = False,
     model: str = "phi4:latest",
-    base_url: str = "https://aerollm.share.zrok.io",
+    base_url: str = "http://192.168.50.150:11434",
 ):
     print("=" * 60)
     print("AeroSports RAG — Sheet Parser")

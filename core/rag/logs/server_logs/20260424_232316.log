@@ -1,0 +1,295 @@
+2026-04-24 23:23:16,249 - __main__ - INFO - Logging initialized. Log file: logs/server_logs/20260424_232316.log
+2026-04-24 23:23:16,253 - __main__ - WARNING - Frontend dist directory not found - frontend will not be served
+2026-04-24 23:23:16,299 - __main__ - INFO - Starting Ultimate Advisor API bootstrap...
+2026-04-24 23:23:16,364 - __main__ - INFO - Database reachable (attempt 1)
+2026-04-24 23:23:16,389 - __main__ - INFO - pgvector extension ensured
+2026-04-24 23:23:16,417 - __main__ - INFO - Application tables ensured
+2026-04-24 23:23:16,436 - __main__ - INFO - LLMConfig active: phi4:latest @ http://192.168.50.150:11434
+2026-04-24 23:23:16,449 - src.rag.repositories - INFO - Models configured: LLM=phi4:latest, Embedding=embeddinggemma, Ollama=http://192.168.50.150:11434
+2026-04-24 23:23:16,611 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:23:16,634 - src.rag.repositories - INFO - Embedding dimension confirmed: 768
+2026-04-24 23:23:16,656 - src.rag.repositories - INFO - Database connection established
+2026-04-24 23:23:16,656 - src.rag.repositories - INFO - pgvector extension ensured
+2026-04-24 23:23:16,659 - src.rag.repositories - INFO - Vector store configured with table 'documents' (embed_dim=768)
+2026-04-24 23:23:16,659 - __main__ - INFO - RAGRepository initialized and attached to app.state
+2026-04-24 23:23:16,666 - __main__ - INFO - Vector store non-empty; skipping bootstrap ingest
+2026-04-24 23:23:16,666 - __main__ - INFO - Bootstrap complete — API ready
+2026-04-24 23:23:25,390 - __main__ - INFO - Request: GET / from 127.0.0.1
+2026-04-24 23:23:25,391 - __main__ - INFO - Response: 200 for GET / - 0.002s
+2026-04-24 23:23:25,414 - __main__ - INFO - Request: GET /favicon.ico from 127.0.0.1
+2026-04-24 23:23:25,416 - __main__ - INFO - Response: 404 for GET /favicon.ico - 0.002s
+2026-04-24 23:23:31,515 - __main__ - INFO - Request: GET /docs from 127.0.0.1
+2026-04-24 23:23:31,521 - __main__ - INFO - Response: 200 for GET /docs - 0.009s
+2026-04-24 23:23:31,832 - __main__ - INFO - Request: GET /openapi.json from 127.0.0.1
+2026-04-24 23:23:31,864 - __main__ - INFO - Response: 200 for GET /openapi.json - 0.032s
+2026-04-24 23:23:40,659 - __main__ - INFO - Request: GET /resync from 127.0.0.1
+2026-04-24 23:23:40,664 - __main__ - INFO - Response: 404 for GET /resync - 0.004s
+2026-04-24 23:24:00,149 - __main__ - INFO - Request: GET /docs from 127.0.0.1
+2026-04-24 23:24:00,151 - __main__ - INFO - Response: 200 for GET /docs - 0.002s
+2026-04-24 23:24:00,205 - __main__ - INFO - Request: GET /openapi.json from 127.0.0.1
+2026-04-24 23:24:00,206 - __main__ - INFO - Response: 200 for GET /openapi.json - 0.001s
+2026-04-24 23:24:12,974 - __main__ - INFO - Request: POST /rag/resync from 127.0.0.1
+2026-04-24 23:24:12,988 - src.rag.services - INFO - Resync: dropping existing vector table (wipe-first)
+2026-04-24 23:24:13,014 - src.rag.repositories - INFO - Dropped existing vector table 'documents'
+2026-04-24 23:24:13,060 - src.rag.repositories - INFO - Database connection established
+2026-04-24 23:24:13,063 - src.rag.repositories - INFO - pgvector extension ensured
+2026-04-24 23:24:13,074 - src.rag.repositories - INFO - Vector store configured with table 'documents' (embed_dim=768)
+2026-04-24 23:24:13,080 - src.rag.repositories - INFO - Vector table 'documents' not found (no rows to count yet)
+2026-04-24 23:24:13,082 - src.rag.services - INFO - Resync: vector table cleared (rows=0)
+2026-04-24 23:24:13,083 - src.rag.services - INFO - Resync: running parser+enrich (cwd=/Users/suruchi/Documents/GitHub/rag_pipeline/core/rag/parser, force=True, timeout=1800s)
+2026-04-24 23:24:15,122 - src.rag.services - INFO - [parser] ============================================================
+2026-04-24 23:24:15,123 - src.rag.services - INFO - [parser] AeroSports RAG — Sheet Parser
+2026-04-24 23:24:15,123 - src.rag.services - INFO - [parser] ============================================================
+2026-04-24 23:24:15,123 - src.rag.services - INFO - [parser] Checking for sheet updates…
+2026-04-24 23:24:15,123 - src.rag.services - INFO - [parser] 2026-04-24 23:24:15,122 [INFO] Fetching spreadsheet 1SGK35TNPDZ8ipEsCe9w1wCmFQNBOTWo1b0ZaWVIa14s
+2026-04-24 23:24:16,659 - src.rag.services - INFO - [parser] 2026-04-24 23:24:16,658 [INFO] Saved to /Users/suruchi/Documents/GitHub/rag_pipeline/core/rag/parser/data/1SGK35TNPDZ8ipEsCe9w1wCmFQNBOTWo1b0ZaWVIa14s.xlsx
+2026-04-24 23:24:16,661 - src.rag.services - INFO - [parser] Downloaded → /Users/suruchi/Documents/GitHub/rag_pipeline/core/rag/parser/data/1SGK35TNPDZ8ipEsCe9w1wCmFQNBOTWo1b0ZaWVIa14s.xlsx
+2026-04-24 23:24:16,661 - src.rag.services - INFO - [parser] Parsing 14 sheets → output/
+2026-04-24 23:24:16,984 - src.rag.services - INFO - [parser]   ✓  Location Info                   →  location_info.md
+2026-04-24 23:24:17,017 - src.rag.services - INFO - [parser]   ✓  Jump Prices                     →  jump_prices.md
+2026-04-24 23:24:17,049 - src.rag.services - INFO - [parser]   ✓  Go Karting                      →  go_karting.md
+2026-04-24 23:24:17,081 - src.rag.services - INFO - [parser]   ✓  Special Programs                →  special_programs.md
+2026-04-24 23:24:17,114 - src.rag.services - INFO - [parser]   ✓  Attractions                     →  attractions.md
+2026-04-24 23:24:17,189 - src.rag.services - INFO - [parser]   ✓  Birthday Parties                →  birthday_parties.md
+2026-04-24 23:24:17,228 - src.rag.services - INFO - [parser]   ✓  Group Bookings                  →  group_bookings.md
+2026-04-24 23:24:17,260 - src.rag.services - INFO - [parser]   ✓  Aero Camp                       →  aero_camp.md
+2026-04-24 23:24:17,293 - src.rag.services - INFO - [parser]   ✓  Passes                          →  passes.md
+2026-04-24 23:24:17,322 - src.rag.services - INFO - [parser]   ✓  Promotions                      →  promotions.md
+2026-04-24 23:24:17,380 - src.rag.services - INFO - [parser]   ✓  Park Rules                      →  park_rules.md
+2026-04-24 23:24:17,412 - src.rag.services - INFO - [parser]   ✓  FAQs                            →  faqs.md
+2026-04-24 23:24:17,440 - src.rag.services - INFO - [parser]   ✓  Voice Call Scripts              →  voice_call_scripts.md
+2026-04-24 23:24:17,469 - src.rag.services - INFO - [parser]   ✓  Chatbot Quick Replies           →  chatbot_quick_replies.md
+2026-04-24 23:24:17,469 - src.rag.services - INFO - [parser] Done. 14 files written to output/
+2026-04-24 23:24:17,505 - src.rag.services - INFO - [parser] ============================================================
+2026-04-24 23:24:17,505 - src.rag.services - INFO - [parser] AeroSports RAG — Enrichment (run_id=b16b1bdc)
+2026-04-24 23:24:17,505 - src.rag.services - INFO - [parser]   model      : phi4:latest
+2026-04-24 23:24:17,505 - src.rag.services - INFO - [parser]   input_dir  : output
+2026-04-24 23:24:17,505 - src.rag.services - INFO - [parser]   output_dir : output
+2026-04-24 23:24:17,505 - src.rag.services - INFO - [parser]   workbooks  : 14
+2026-04-24 23:24:17,505 - src.rag.services - INFO - [parser] ============================================================
+2026-04-24 23:24:17,509 - src.rag.services - INFO - [parser] [Step 1] Understanding phase — session=understanding-b16b1bdc
+2026-04-24 23:24:17,509 - src.rag.services - INFO - [parser]   ingesting  aero_camp.md (1,029 chars)
+2026-04-24 23:24:24,694 - src.rag.services - INFO - [parser] 2026-04-24 23:24:24,693 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:24:29,982 - src.rag.services - INFO - [parser]     note: ### Structured Note: `aero_camp.md`
+2026-04-24 23:24:29,983 - src.rag.services - INFO - [parser]   ingesting  attractions.md (3,313 chars)
+2026-04-24 23:24:44,150 - src.rag.services - INFO - [parser] 2026-04-24 23:24:44,148 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:24:50,070 - src.rag.services - INFO - [parser]     note: ### Structured Note: `attractions.md`
+2026-04-24 23:24:50,071 - src.rag.services - INFO - [parser]   ingesting  birthday_parties.md (4,775 chars)
+2026-04-24 23:25:07,293 - src.rag.services - INFO - [parser] 2026-04-24 23:25:07,292 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:25:14,287 - src.rag.services - INFO - [parser]     note: ### Structured Note: `birthday_parties.md`
+2026-04-24 23:25:14,288 - src.rag.services - INFO - [parser]   ingesting  chatbot_quick_replies.md (2,082 chars)
+2026-04-24 23:25:15,604 - src.rag.services - INFO - [parser] 2026-04-24 23:25:15,603 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:25:25,194 - src.rag.services - INFO - [parser]     note: ### Structured Note: `chatbot_quick_replies.md`
+2026-04-24 23:25:25,195 - src.rag.services - INFO - [parser]   ingesting  faqs.md (13,870 chars)
+2026-04-24 23:25:40,777 - src.rag.services - INFO - [parser] 2026-04-24 23:25:40,776 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:26:01,223 - src.rag.services - INFO - [parser]     note: ### FAQ Summary
+2026-04-24 23:26:01,225 - src.rag.services - INFO - [parser]   ingesting  go_karting.md (638 chars)
+2026-04-24 23:26:18,563 - src.rag.services - INFO - [parser] 2026-04-24 23:26:18,561 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:26:23,752 - src.rag.services - INFO - [parser]     note: # Go Karting Pricing Summary
+2026-04-24 23:26:23,753 - src.rag.services - INFO - [parser]   ingesting  group_bookings.md (2,365 chars)
+2026-04-24 23:26:25,115 - src.rag.services - INFO - [parser] 2026-04-24 23:26:25,112 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:26:35,095 - src.rag.services - INFO - [parser]     note: # Group Bookings Overview
+2026-04-24 23:26:35,100 - src.rag.services - INFO - [parser]   ingesting  jump_prices.md (1,281 chars)
+2026-04-24 23:27:03,208 - src.rag.services - INFO - [parser] 2026-04-24 23:27:03,207 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:27:09,957 - src.rag.services - INFO - [parser]     note: # Jump Prices Summary
+2026-04-24 23:27:09,957 - src.rag.services - INFO - [parser]   ingesting  location_info.md (866 chars)
+2026-04-24 23:27:20,719 - src.rag.services - INFO - [parser] 2026-04-24 23:27:20,719 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:27:27,057 - src.rag.services - INFO - [parser]     note: # AeroSports Scarborough — Location Information Summary
+2026-04-24 23:27:27,060 - src.rag.services - INFO - [parser]   ingesting  park_rules.md (2,080 chars)
+2026-04-24 23:27:28,509 - src.rag.services - INFO - [parser] 2026-04-24 23:27:28,505 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:27:37,169 - src.rag.services - INFO - [parser]     note: # Park Rules Summary
+2026-04-24 23:27:37,170 - src.rag.services - INFO - [parser]   ingesting  passes.md (484 chars)
+2026-04-24 23:27:51,789 - src.rag.services - INFO - [parser] 2026-04-24 23:27:51,788 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:27:56,785 - src.rag.services - INFO - [parser]     note: # Summary of AeroSports Scarborough Passes
+2026-04-24 23:27:56,786 - src.rag.services - INFO - [parser]   ingesting  promotions.md (369 chars)
+2026-04-24 23:27:58,203 - src.rag.services - INFO - [parser] 2026-04-24 23:27:58,202 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:28:02,152 - src.rag.services - INFO - [parser]     note: # Promotions Summary
+2026-04-24 23:28:02,155 - src.rag.services - INFO - [parser]   ingesting  special_programs.md (837 chars)
+2026-04-24 23:28:03,625 - src.rag.services - INFO - [parser] 2026-04-24 23:28:03,622 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:28:08,250 - src.rag.services - INFO - [parser]     note: # Special Programs Summary
+2026-04-24 23:28:08,252 - src.rag.services - INFO - [parser]   ingesting  voice_call_scripts.md (3,993 chars)
+2026-04-24 23:28:09,665 - src.rag.services - INFO - [parser] 2026-04-24 23:28:09,664 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:28:20,802 - src.rag.services - INFO - [parser]     note: # Voice Call Scripts Summary
+2026-04-24 23:28:20,803 - src.rag.services - INFO - [parser]   consolidating …
+2026-04-24 23:28:22,255 - src.rag.services - INFO - [parser] 2026-04-24 23:28:22,254 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:28:37,303 - src.rag.services - INFO - [parser]   wrote      output/data_understanding.md
+2026-04-24 23:28:37,304 - src.rag.services - INFO - [parser] [Step 2] Enrichment phase — 14 workbook(s)
+2026-04-24 23:28:37,304 - src.rag.services - INFO - [parser]   enriching  aero_camp.md
+2026-04-24 23:28:37,936 - src.rag.services - INFO - [parser] 2026-04-24 23:28:37,933 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:28:48,777 - src.rag.services - INFO - [parser] 2026-04-24 23:28:48,776 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:28:55,070 - src.rag.services - INFO - [parser]     -> output/enriched/aero_camp.md
+2026-04-24 23:28:55,071 - src.rag.services - INFO - [parser]   enriching  attractions.md
+2026-04-24 23:28:55,215 - src.rag.services - INFO - [parser] 2026-04-24 23:28:55,215 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:29:17,432 - src.rag.services - INFO - [parser] 2026-04-24 23:29:17,430 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:29:37,421 - src.rag.services - INFO - [parser]     -> output/enriched/attractions.md
+2026-04-24 23:29:37,422 - src.rag.services - INFO - [parser]   enriching  birthday_parties.md
+2026-04-24 23:29:37,967 - src.rag.services - INFO - [parser] 2026-04-24 23:29:37,966 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:29:53,501 - src.rag.services - INFO - [parser] 2026-04-24 23:29:53,500 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:30:14,412 - src.rag.services - INFO - [parser]     -> output/enriched/birthday_parties.md
+2026-04-24 23:30:14,413 - src.rag.services - INFO - [parser]   enriching  chatbot_quick_replies.md
+2026-04-24 23:30:15,103 - src.rag.services - INFO - [parser] 2026-04-24 23:30:15,103 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:30:36,405 - src.rag.services - INFO - [parser] 2026-04-24 23:30:36,403 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:30:47,153 - src.rag.services - INFO - [parser]     -> output/enriched/chatbot_quick_replies.md
+2026-04-24 23:30:47,156 - src.rag.services - INFO - [parser]   enriching  faqs.md
+2026-04-24 23:30:47,295 - src.rag.services - INFO - [parser] 2026-04-24 23:30:47,295 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:31:09,797 - src.rag.services - INFO - [parser] 2026-04-24 23:31:09,796 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:31:36,459 - src.rag.services - INFO - [parser]     -> output/enriched/faqs.md
+2026-04-24 23:31:36,464 - src.rag.services - INFO - [parser]   enriching  go_karting.md
+2026-04-24 23:31:37,127 - src.rag.services - INFO - [parser] 2026-04-24 23:31:37,127 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:31:56,124 - src.rag.services - INFO - [parser] 2026-04-24 23:31:56,123 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:32:03,377 - src.rag.services - INFO - [parser]     -> output/enriched/go_karting.md
+2026-04-24 23:32:03,380 - src.rag.services - INFO - [parser]   enriching  group_bookings.md
+2026-04-24 23:32:03,534 - src.rag.services - INFO - [parser] 2026-04-24 23:32:03,534 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:32:26,895 - src.rag.services - INFO - [parser] 2026-04-24 23:32:26,894 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:32:39,217 - src.rag.services - INFO - [parser]     -> output/enriched/group_bookings.md
+2026-04-24 23:32:39,220 - src.rag.services - INFO - [parser]   enriching  jump_prices.md
+2026-04-24 23:32:39,800 - src.rag.services - INFO - [parser] 2026-04-24 23:32:39,799 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:32:52,287 - src.rag.services - INFO - [parser] 2026-04-24 23:32:52,287 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:33:00,103 - src.rag.services - INFO - [parser]     -> output/enriched/jump_prices.md
+2026-04-24 23:33:00,104 - src.rag.services - INFO - [parser]   enriching  location_info.md
+2026-04-24 23:33:00,252 - src.rag.services - INFO - [parser] 2026-04-24 23:33:00,251 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:33:13,164 - src.rag.services - INFO - [parser] 2026-04-24 23:33:13,164 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:33:17,937 - src.rag.services - INFO - [parser]     -> output/enriched/location_info.md
+2026-04-24 23:33:17,938 - src.rag.services - INFO - [parser]   enriching  park_rules.md
+2026-04-24 23:33:18,087 - src.rag.services - INFO - [parser] 2026-04-24 23:33:18,086 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:33:41,282 - src.rag.services - INFO - [parser] 2026-04-24 23:33:41,280 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:33:52,590 - src.rag.services - INFO - [parser]     -> output/enriched/park_rules.md
+2026-04-24 23:33:52,593 - src.rag.services - INFO - [parser]   enriching  passes.md
+2026-04-24 23:33:53,224 - src.rag.services - INFO - [parser] 2026-04-24 23:33:53,223 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:34:17,384 - src.rag.services - INFO - [parser] 2026-04-24 23:34:17,383 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:34:21,433 - src.rag.services - INFO - [parser]     -> output/enriched/passes.md
+2026-04-24 23:34:21,433 - src.rag.services - INFO - [parser]   enriching  promotions.md
+2026-04-24 23:34:21,575 - src.rag.services - INFO - [parser] 2026-04-24 23:34:21,575 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:34:43,193 - src.rag.services - INFO - [parser] 2026-04-24 23:34:43,192 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:34:46,673 - src.rag.services - INFO - [parser]     -> output/enriched/promotions.md
+2026-04-24 23:34:46,673 - src.rag.services - INFO - [parser]   enriching  special_programs.md
+2026-04-24 23:34:46,786 - src.rag.services - INFO - [parser] 2026-04-24 23:34:46,786 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:35:00,314 - src.rag.services - INFO - [parser] 2026-04-24 23:35:00,313 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:35:05,252 - src.rag.services - INFO - [parser]     -> output/enriched/special_programs.md
+2026-04-24 23:35:05,255 - src.rag.services - INFO - [parser]   enriching  voice_call_scripts.md
+2026-04-24 23:35:05,461 - src.rag.services - INFO - [parser] 2026-04-24 23:35:05,461 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:35:20,774 - src.rag.services - INFO - [parser] 2026-04-24 23:35:20,772 [INFO] HTTP Request: POST http://192.168.50.150:11434/api/generate "HTTP/1.1 200 OK"
+2026-04-24 23:35:40,012 - src.rag.services - INFO - [parser]     -> output/enriched/voice_call_scripts.md
+2026-04-24 23:35:40,013 - src.rag.services - INFO - [parser] Done.
+2026-04-24 23:35:40,013 - src.rag.services - INFO - [parser]   understanding: output/data_understanding.md
+2026-04-24 23:35:40,013 - src.rag.services - INFO - [parser]   enriched:      14 / 14
+2026-04-24 23:35:40,013 - src.rag.services - INFO - [parser] ============================================================
+2026-04-24 23:35:40,013 - src.rag.services - INFO - [parser] ============================================================
+2026-04-24 23:35:40,275 - src.rag.services - INFO - Resync: re-indexing enriched markdown from /Users/suruchi/Documents/GitHub/rag_pipeline/core/rag/parser/output/enriched
+2026-04-24 23:35:40,574 - src.rag.repositories - INFO - Creating index from documents...
+2026-04-24 23:35:40,574 - src.rag.repositories - INFO - Number of documents to index: 14
+2026-04-24 23:35:40,574 - src.rag.repositories - INFO - Sanitized 14 documents
+2026-04-24 23:35:40,662 - src.rag.repositories - INFO - Parsing documents with MarkdownNodeParser...
+2026-04-24 23:35:40,666 - src.rag.repositories - INFO - Created 108 initial nodes from markdown structure
+2026-04-24 23:35:40,669 - src.rag.repositories - INFO - Final node count after chunking: 108
+2026-04-24 23:35:41,736 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:41,838 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:41,926 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,060 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,143 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,237 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,327 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,419 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,590 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,674 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,782 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,884 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:42,969 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,114 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,189 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,304 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,391 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,484 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,639 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,718 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,830 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:43,913 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,009 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,164 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,244 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,354 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,447 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,537 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,689 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,777 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:44,944 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,018 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,098 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,210 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,295 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,403 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,490 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,576 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,734 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,810 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:45,927 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,010 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,097 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,260 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,363 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,527 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,616 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,783 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:46,869 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:47,007 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:47,104 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:47,219 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:47,394 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:47,500 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:47,596 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:47,726 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,025 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,111 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,201 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,356 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,437 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,548 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,631 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,721 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,882 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:48,960 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,073 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,167 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,258 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,406 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,488 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,597 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,687 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,779 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:49,930 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,015 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,121 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,205 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,305 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,466 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,646 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,732 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,823 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:50,982 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,064 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,174 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,260 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,349 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,502 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,580 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,694 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,776 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:51,864 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,029 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,105 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,220 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,299 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,384 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,551 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,639 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,743 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,844 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:52,938 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:53,076 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:53,164 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:53,266 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:53,351 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:53,442 - httpx - INFO - HTTP Request: POST http://192.168.50.150:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-04-24 23:35:53,711 - src.rag.repositories - INFO - Documents indexed successfully - Created 0 text chunks
+2026-04-24 23:35:53,722 - __main__ - INFO - Response: 200 for POST /rag/resync - 700.749s
+2026-04-24 23:48:17,749 - __main__ - INFO - Ultimate Advisor API shutting down

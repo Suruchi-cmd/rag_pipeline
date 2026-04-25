@@ -1,17 +1,19 @@
-# Passes at AeroSports Scarborough
+# AeroSports Scarborough Passes Overview
+
+AeroSports Scarborough offers a variety of passes, each with specific validity periods and pricing structures designed to cater to different customer needs.
 
 ## All Day Pass
 
-The All Day Pass is valid until the end of the day on which it was purchased. It costs thirty-nine dollars and ninety cents, offering unlimited jump time throughout that entire day.
+The All Day Pass is valid until the end of the day on which it is purchased. This pass costs thirty-nine dollars and ninety cents and provides unlimited jump time for the entire day.
 
 ## 30 Day Pass
 
-The 30 Day Pass remains valid for thirty days from the date of purchase. Priced at forty-nine dollars and ninety cents plus applicable taxes, this pass allows sixty minutes of jump time per visit within those thirty days.
+For those looking at a longer-term option, the 30 Day Pass remains valid for thirty days from the date of purchase. The cost is forty-nine dollars and ninety cents plus applicable taxes. Each visit allows for sixty minutes of jumping time.
 
 ## 90 Day Pass
 
-For ninety dollars and ninety cents plus tax, the 90 Day Pass is valid for ninety days starting from the purchase date. It provides sixty minutes of jump time per visit during its validity period.
+The 90 Day Pass offers extended access to the facility, remaining valid for ninety days from the purchase date. It costs one hundred forty-nine dollars and ninety cents plus tax. Like the 30 Day Pass, it permits sixty minutes of jump time per visit.
 
 ## Annual Pass
 
-The Annual Pass costs three hundred sixty-four dollars and ninety cents plus tax and remains valid for one year, or three hundred sixty-five days, from the purchase date. This pass grants sixty minutes of jump time per visit throughout the entire year.
+For frequent visitors, the Annual Pass provides a year-long option, staying valid for three hundred sixty-five days from the purchase date. This pass is priced at three hundred sixty-four dollars and ninety cents plus tax, with each visit allowing sixty minutes of jumping time.

@@ -1,0 +1,62 @@
+2026-04-25 01:31:06,137  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Session log opened → /Users/suruchi/Documents/GitHub/rag_pipeline/logs/CA2a932782363faa984f4b29c1f8e42790.log
+2026-04-25 01:31:06,137  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] ConversationRelay connected from +14373612990
+2026-04-25 01:31:15,828  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: Hi, Maya. Can I get your phone number, please?
+2026-04-25 01:31:16,046  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=208ms  docs=7
+2026-04-25 01:31:16,046  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=209ms
+2026-04-25 01:31:18,302  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=2474ms
+2026-04-25 01:31:18,850  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): Oh sure! You can reach us at two eight nine-four-five-four-five-five-five-five. What else can I help with today?
+2026-04-25 01:31:27,596  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: Uh, what about your website?
+2026-04-25 01:31:28,202  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=209ms  docs=7
+2026-04-25 01:31:28,203  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=602ms
+2026-04-25 01:31:29,122  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=1527ms
+2026-04-25 01:31:29,478  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): Our website is https://www.aerosportsparks.ca. If you need more info or want to book something, that's the place to go! Anything else you'd like to know?
+2026-04-25 01:31:30,506  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User interrupted. Spoken so far: Our website is https://www.aerosportsparks.ca.
+2026-04-25 01:31:30,508  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (truncated to spoken): Our website is https://www.aerosportsparks.ca.
+2026-04-25 01:31:30,920  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: Our web?
+2026-04-25 01:31:31,797  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=227ms  docs=7
+2026-04-25 01:31:31,798  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=873ms
+2026-04-25 01:31:32,485  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=1564ms
+2026-04-25 01:31:32,835  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): Oh, our website is https://www.aerosportsparks.ca. Anything else you need help with today?
+2026-04-25 01:31:42,598  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: Is that a park with an s?
+2026-04-25 01:31:43,265  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=174ms  docs=7
+2026-04-25 01:31:43,265  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=663ms
+2026-04-25 01:31:43,934  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=1336ms
+2026-04-25 01:31:44,418  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): Yeah, it's AeroSports Scarborough. You can find more info on our site at https://www.aerosportsparks.ca. Need anything else?
+2026-04-25 01:31:57,648  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: Yeah. What about your prices?
+2026-04-25 01:31:58,701  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=195ms  docs=7
+2026-04-25 01:31:58,702  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=1051ms
+2026-04-25 01:31:59,573  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=1925ms
+2026-04-25 01:31:59,747  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): Which activity are you asking about? We have different passes and packages for various activities.
+2026-04-25 01:32:07,994  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: Just for entrance.
+2026-04-25 01:32:08,702  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=173ms  docs=7
+2026-04-25 01:32:08,702  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=697ms
+2026-04-25 01:32:09,566  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=1572ms
+2026-04-25 01:32:10,114  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): For just entering the park, we offer an All Day Pass at thirty-nine dollars and ninety cents plus tax. This gives unlimited access to attractions throughout the day. Anything else I can help with?
+2026-04-25 01:32:22,945  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: All attractions?
+2026-04-25 01:32:23,655  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=173ms  docs=7
+2026-04-25 01:32:23,656  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=705ms
+2026-04-25 01:32:24,550  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=1605ms
+2026-04-25 01:32:25,439  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): The All Day Jump Pass includes all core attractions except Go Karting, Laser Tag, Bazooka Ball, and Mini Golf. You can choose between Go Karting or Mini Golf and Laser Tag or Bazooka Ball as add-ons i
+2026-04-25 01:32:41,864  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: No. So how much is the go karting?
+2026-04-25 01:32:43,074  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=203ms  docs=7
+2026-04-25 01:32:43,075  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=1204ms
+2026-04-25 01:32:44,098  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=2234ms
+2026-04-25 01:32:44,964  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): For a standalone race on the main track, it's nineteen dollars and ninety cents plus tax per participant. If you already have a jump pass, you can add a race for four dollars and ninety cents plus tax
+2026-04-25 01:33:03,595  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: What about your birthday party prices?
+2026-04-25 01:33:04,695  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=161ms  docs=7
+2026-04-25 01:33:04,695  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=1094ms
+2026-04-25 01:33:05,691  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=2096ms
+2026-04-25 01:33:08,032  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): We offer three birthday party packages: Premium, VIP, and Ultimate. - The Premium Party is forty dollars and ninety cents per jumper, with a base price of three hundred ninety-nine dollars for at leas
+2026-04-25 01:33:45,423  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: No. Thank you.
+2026-04-25 01:33:46,184  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY rag_api=192ms  docs=7
+2026-04-25 01:33:46,185  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=754ms
+2026-04-25 01:33:47,157  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=1735ms
+2026-04-25 01:33:47,490  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): You're welcome! If you have any other questions later, feel free to reach out. Have a great day!
+2026-04-25 01:33:56,951  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] User said: Bye.
+2026-04-25 01:33:56,956  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] Skipping RAG — conversational message: Bye.
+2026-04-25 01:33:56,957  INFO      chatbot.voice_handler  [CA2a932782363faa984f4b29c1f8e42790] LATENCY prepare_voice_stream=1ms
+2026-04-25 01:33:57,314  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] LATENCY silence_to_first_reply=364ms
+2026-04-25 01:33:57,368  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Assistant (full): Goodbye! Take care!
+2026-04-25 01:33:57,370  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] End-call keyword DEFINITE match
+2026-04-25 01:33:57,372  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Sent end-session message to Twilio
+2026-04-25 01:34:00,045  INFO      chatbot.server  [CA2a932782363faa984f4b29c1f8e42790] Session log closed

@@ -38,7 +38,7 @@ class OllamaChat:
         system_prompt: str | None = None,
         temperature: float = 0.7,
         num_predict: int = -1,
-        base_url: str = "https://aerollm.share.zrok.io",
+        base_url: str = "http://192.168.50.150:11434",
     ):
         self.base_url = base_url
         self.model_name = model

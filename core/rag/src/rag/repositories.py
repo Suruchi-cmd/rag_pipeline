@@ -51,7 +51,7 @@ class RAGRepository:
                 model=self._llm_config.chat_model,
                 base_url=self._llm_config.ollama_base_url,
                 request_timeout=float(self._llm_config.request_timeout),
-                tempreature = 0.3,
+                temperature=settings.LLM_TEMPERATURE,
             )
             Settings.embed_model = OllamaEmbedding(
                 model_name=settings.EMBEDDING_MODEL,
@@ -96,6 +96,7 @@ class RAGRepository:
             model=llm_config.chat_model,
             base_url=llm_config.ollama_base_url,
             request_timeout=float(llm_config.request_timeout),
+            temperature=settings.LLM_TEMPERATURE,
         )
         Settings.embed_model = OllamaEmbedding(
             model_name=settings.EMBEDDING_MODEL,
@@ -176,7 +177,9 @@ class RAGRepository:
             )
 
             text_splitter = SentenceSplitter(
-                chunk_size=1000, chunk_overlap=200, separator=" "
+                chunk_size=settings.CHUNK_SIZE,
+                chunk_overlap=settings.CHUNK_OVERLAP,
+                separator=" ",
             )
 
             logger.info("Parsing documents with MarkdownNodeParser...")
@@ -189,7 +192,7 @@ class RAGRepository:
 
             final_nodes = []
             for node in initial_nodes:
-                if len(node.text) > 1000:
+                if len(node.text) > settings.CHUNK_SIZE:
                     temp_doc = Document(
                         text=node.text, metadata=node.metadata, id_=node.id_
                     )
@@ -259,8 +262,10 @@ class RAGRepository:
                     logger.error("Vector store not initialized")
                     raise ValueError("Vector store not initialized")
 
-            optimized_top_k = min(query_request.top_k * 2, 15)
-            print(optimized_top_k)
+            optimized_top_k = min(
+                query_request.top_k * settings.RETRIEVAL_OVERSAMPLE,
+                settings.RETRIEVAL_MAX_K,
+            )
 
             # customer_service_prompt_tmpl = (
             #     "Context information is below.\n"
@@ -289,7 +294,7 @@ class RAGRepository:
 
             # TODO : Check all the response_mode
             response_synthesizer = get_response_synthesizer(
-                response_mode="compact",
+                response_mode=settings.RESPONSE_MODE,
                 # summary_template=customer_service_prompt,
                 verbose=False,
             )
@@ -297,7 +302,7 @@ class RAGRepository:
             query_engine = self.index.as_query_engine(
                 similarity_top_k=optimized_top_k,
                 response_synthesizer=response_synthesizer,
-                similarity_cutoff=0.6,
+                similarity_cutoff=settings.SIMILARITY_CUTOFF,
             )
 
             response = query_engine.query(query_request.query)

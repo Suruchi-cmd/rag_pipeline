@@ -156,9 +156,12 @@ class RAGService:
             cmd.append("--force")
 
         # Enrichment is LLM-bound and scales with workbook count × model speed.
-        # 30 minutes gives headroom over current ~14-workbook runs. Raw-only
-        # parsing is fast (seconds) but we keep the same ceiling for simplicity.
-        PARSER_TIMEOUT = 1800 if enrich else 300
+        # Defaults give headroom over current ~14-workbook runs. Override via
+        # APP_PARSER_TIMEOUT_ENRICH / APP_PARSER_TIMEOUT_RAW if your model is
+        # slower or your workbook list grows.
+        PARSER_TIMEOUT = (
+            settings.PARSER_TIMEOUT_ENRICH if enrich else settings.PARSER_TIMEOUT_RAW
+        )
 
         logger.info(
             "Resync: running parser%s (cwd=%s, force=%s, timeout=%ss)",

@@ -27,6 +27,7 @@ _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 
+from chatbot.config import settings  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
 from chatbot.llm import _make_async_client  # noqa: E402
 from chatbot.rag_client import query_rag  # noqa: E402
@@ -34,9 +35,9 @@ from src.utils.pipeline_logger import PipelineLogger  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
-_TORONTO_TZ = ZoneInfo("America/Toronto")
-_VOICE_MODEL = os.environ.get("VOICE_LLM_MODEL", "phi4:latest")
-_FAST_MODEL = os.environ.get("VOICE_FAST_MODEL", "phi4:latest")
+_TZ = ZoneInfo(settings.TIMEZONE)
+_VOICE_MODEL = settings.VOICE_LLM_MODEL
+_FAST_MODEL = settings.VOICE_FAST_MODEL
 
 
 # ---------------------------------------------------------------------------
@@ -298,8 +299,8 @@ async def classify_turn_for_end(user_text: str, assistant_text: str) -> dict | N
             model=_FAST_MODEL,
             messages=[{"role": "user", "content": prompt}],
             stream=False,
-            max_tokens=150,
-            temperature=0.0,
+            max_tokens=settings.REWRITE_MAX_TOKENS,
+            temperature=settings.REWRITE_TEMPERATURE,
         )
         raw = (response.choices[0].message.content or "").strip()
         logger.info("Classifier raw output: %r", raw[:300])
@@ -389,7 +390,7 @@ async def _rewrite_query(user_message: str, conversation_history: list[dict]) ->
     if not conversation_history:
         return user_message
 
-    recent = conversation_history[-6:]
+    recent = conversation_history[-settings.REWRITE_HISTORY_TURNS:]
     history_lines = [
         f"{'User' if m['role'] == 'user' else 'Assistant'}: {m['content'][:300]}"
         for m in recent
@@ -403,8 +404,8 @@ async def _rewrite_query(user_message: str, conversation_history: list[dict]) ->
             model=_FAST_MODEL,
             messages=[{"role": "user", "content": prompt}],
             stream=False,
-            max_tokens=150,
-            temperature=0.0,
+            max_tokens=settings.REWRITE_MAX_TOKENS,
+            temperature=settings.REWRITE_TEMPERATURE,
         )
         rewritten = (response.choices[0].message.content or "").strip()
         if not rewritten or len(rewritten) > 500:
@@ -485,17 +486,18 @@ def _build_voice_messages(
         context_text = (
             "KNOWLEDGE BASE CONTEXT:\n\n"
             "No matching context was found for this query. "
-            "Direct the caller to phone 289-454-5555 or email events.scb@aerosportsparks.ca."
+            f"Direct the caller to phone {settings.BUSINESS_PHONE} "
+            f"or email {settings.BUSINESS_EMAIL}."
         )
 
-    now = datetime.now(_TORONTO_TZ)
+    now = datetime.now(_TZ)
     time_text = (
         f"CURRENT TIME: {now.strftime('%A, %B %d, %Y at %I:%M %p')} (Eastern Time)"
     )
 
     system_content = f"{VOICE_SYSTEM_PROMPT}\n\n{time_text}\n\n{context_text}"
     messages: list[dict] = [{"role": "system", "content": system_content}]
-    messages.extend(conversation_history[-20:])
+    messages.extend(conversation_history[-settings.LLM_HISTORY_TURNS:])
     messages.append({"role": "user", "content": user_message})
     return messages
 
@@ -532,7 +534,7 @@ async def prepare_voice_stream(call_sid: str, user_text: str) -> list[dict]:
         pl.log_refined_query(user_text, search_query)
 
         t_rag_start = time.perf_counter()
-        rag_docs = await query_rag(search_query, top_k=7)
+        rag_docs = await query_rag(search_query, top_k=settings.VOICE_TOP_K)
         t_rag_ms = (time.perf_counter() - t_rag_start) * 1000
         logger.info("[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs))
         pl.log_rag_results(rag_docs)
@@ -566,17 +568,17 @@ async def stream_voice_tokens(messages: list[dict]):
         model=_VOICE_MODEL,
         messages=messages,
         stream=True,
-        max_tokens=500,
-        temperature=0.3,
-        extra_body={"keep_alive": -1},
+        max_tokens=settings.VOICE_MAX_TOKENS,
+        temperature=settings.VOICE_TEMPERATURE,
+        extra_body={"keep_alive": settings.OLLAMA_KEEP_ALIVE},
     )
 
     buffer = ""
     first_chunk_sent = False
     word_count = 0
 
-    FIRST_FLUSH_WORDS = 8
-    FIRST_FLUSH_CHARS = 60
+    FIRST_FLUSH_WORDS = settings.TTS_FIRST_FLUSH_WORDS
+    FIRST_FLUSH_CHARS = settings.TTS_FIRST_FLUSH_CHARS
 
     async for chunk in stream:
         if not chunk.choices:
