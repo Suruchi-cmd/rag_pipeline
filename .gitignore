@@ -7,3 +7,6 @@ __pycache__/
 venv
 .venv
 logs/
+core/rag/parser/data/
+core/rag/parser/output/
+core/rag/parser/enrichment_memory.db

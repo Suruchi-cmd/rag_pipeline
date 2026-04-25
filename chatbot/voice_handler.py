@@ -390,7 +390,7 @@ async def _rewrite_query(user_message: str, conversation_history: list[dict]) ->
     if not conversation_history:
         return user_message
 
-    recent = conversation_history[-settings.REWRITE_HISTORY_TURNS:]
+    recent = conversation_history[-settings.REWRITE_HISTORY_TURNS :]
     history_lines = [
         f"{'User' if m['role'] == 'user' else 'Assistant'}: {m['content'][:300]}"
         for m in recent
@@ -497,7 +497,7 @@ def _build_voice_messages(
 
     system_content = f"{VOICE_SYSTEM_PROMPT}\n\n{time_text}\n\n{context_text}"
     messages: list[dict] = [{"role": "system", "content": system_content}]
-    messages.extend(conversation_history[-settings.LLM_HISTORY_TURNS:])
+    messages.extend(conversation_history[-settings.LLM_HISTORY_TURNS :])
     messages.append({"role": "user", "content": user_message})
     return messages
 
@@ -525,7 +525,9 @@ async def prepare_voice_stream(call_sid: str, user_text: str) -> list[dict]:
     pl.log_transcript(user_text)
 
     if _should_skip_rag(user_text, history):
-        logger.info("[%s] Skipping RAG — conversational message: %s", call_sid, user_text)
+        logger.info(
+            "[%s] Skipping RAG — conversational message: %s", call_sid, user_text
+        )
         rag_docs: list[dict] = []
         pl.log_refined_query(user_text, "__SKIPPED__")
         pl.log_rag_results([])
@@ -536,7 +538,9 @@ async def prepare_voice_stream(call_sid: str, user_text: str) -> list[dict]:
         t_rag_start = time.perf_counter()
         rag_docs = await query_rag(search_query, top_k=settings.VOICE_TOP_K)
         t_rag_ms = (time.perf_counter() - t_rag_start) * 1000
-        logger.info("[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs))
+        logger.info(
+            "[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs)
+        )
         pl.log_rag_results(rag_docs)
 
     messages = _build_voice_messages(user_text, rag_docs, history)

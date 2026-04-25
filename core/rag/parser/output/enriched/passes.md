@@ -1,19 +1,11 @@
-# AeroSports Scarborough Passes Overview
+At AeroSports Scarborough, we offer a variety of passes that cater to different visiting preferences and needs. Whether you're planning a single day's adventure or looking for long-term access, our pass options are designed to suit everyone from occasional visitors to frequent jumpers.
 
-AeroSports Scarborough offers a variety of passes, each with specific validity periods and pricing structures designed to cater to different customer needs.
+The All Day Pass is perfect if you want to enjoy unlimited trampoline time in just one visit. It costs thirty-nine dollars and ninety cents and remains valid until the end of the day on which it's purchased. This pass allows you to jump all day long, making it ideal for those who wish to make the most out of a single day at our facility.
 
-## All Day Pass
+For those looking to spread their visits over a month, we offer the 30 Day Pass. Priced at forty-nine dollars and ninety cents plus tax, this pass is valid for thirty days from the date of purchase. Each visit under this pass grants you sixty minutes of jump time, allowing you to enjoy our trampolines multiple times within that period.
 
-The All Day Pass is valid until the end of the day on which it is purchased. This pass costs thirty-nine dollars and ninety cents and provides unlimited jump time for the entire day.
+If you're planning more frequent visits over a longer span, consider our 90 Day Pass. This option costs one hundred and forty-nine dollars and ninety cents plus tax and is valid for ninety days from the purchase date. Similar to the 30 Day Pass, it provides sixty minutes of jump time per visit, giving you ample opportunity to enjoy our facilities throughout the three months.
 
-## 30 Day Pass
+For those who love jumping at AeroSports Scarborough and want year-round access, we have the Annual Pass. This pass costs three hundred and sixty-four dollars and ninety cents plus tax and is valid for three hundred and sixty-five days from purchase. Like the other passes, it offers sixty minutes of jump time per visit, ensuring you can enjoy our trampolines throughout the entire year.
 
-For those looking at a longer-term option, the 30 Day Pass remains valid for thirty days from the date of purchase. The cost is forty-nine dollars and ninety cents plus applicable taxes. Each visit allows for sixty minutes of jumping time.
-
-## 90 Day Pass
-
-The 90 Day Pass offers extended access to the facility, remaining valid for ninety days from the purchase date. It costs one hundred forty-nine dollars and ninety cents plus tax. Like the 30 Day Pass, it permits sixty minutes of jump time per visit.
-
-## Annual Pass
-
-For frequent visitors, the Annual Pass provides a year-long option, staying valid for three hundred sixty-five days from the purchase date. This pass is priced at three hundred sixty-four dollars and ninety cents plus tax, with each visit allowing sixty minutes of jumping time.
+Each pass provides a different level of access and duration to suit your lifestyle and visiting frequency, all while offering great value for those who love jumping at AeroSports Scarborough. If you have any questions about which pass might be best for you or need assistance with purchasing, feel free to ask!

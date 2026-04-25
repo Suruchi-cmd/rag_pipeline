@@ -1,61 +1,23 @@
-# Voice Call Scripts for AeroSports Scarborough
+Thank you for calling AeroSports Scarborough! How may I assist you today? We offer a variety of services including trampolines, go-karting, laser tag, and birthday party packages. Our offerings cater to different age groups and preferences, ensuring there's something exciting for everyone.
 
-## Greeting Script
+If you need some time while I retrieve information, please hold on one moment. Should your inquiry require more detailed assistance than I can provide, I will connect you with a team member who can help further. Thank you for calling AeroSports Scarborough! We look forward to seeing you and hope you have a wonderful day.
 
-When answering a call at AeroSports Scarborough, start with a warm and upbeat tone by saying, "Thank you for calling AeroSports Scarborough! How can I help you today?"
+Our location is at 1120 Birchmount Road in Scarborough, with the postal code M1K 5G4. Please feel free to visit us anytime during our operating hours: Sunday through Thursday from ten ante meridiem to eight post meridiem, and Friday and Saturday from ten ante meridiem to ten post meridiem.
 
-## Hold Message
+Regarding pricing, we offer a Premium Jump Pass for twenty-four dollars and ninety cents valid for ninety minutes. The VIP Jump Pass is priced at twenty-nine dollars and ninety cents for one hundred and twenty minutes. Additionally, there's an All Day Pass available for thirty-nine dollars and ninety cents, and the Ultimate Pass, which includes go-karting and laser tag among other activities, costs forty-nine dollars and ninety cents for one hundred and eighty minutes. Please note that all prices are plus tax. Aero Socks, required for trampoline activities, cost three dollars and ninety-nine cents but are reusable.
 
-If you need to retrieve information during the call, inform the caller with a friendly message: "One moment while I look that up for you."
+For birthday celebrations, we have three packages: the Premium Party starts at thirty-nine dollars and ninety cents per jumper with seventy-five minutes of jump time and forty-five minutes in a private party room; the VIP Party is priced at forty-four dollars and ninety cents per jumper, offering ninety minutes of jump time and sixty minutes in the party room. The Ultimate Party costs fifty-nine dollars and ninety cents per jumper, providing one hundred and twenty minutes of jump time, sixty minutes in the party room, plus go-karting for every participant. All packages include pizza and drinks with a minimum requirement of ten jumpers.
 
-## Transfer to Human Protocol
+Our go-karting tracks cater to different age groups: the main track is suitable for riders fifty-four inches or taller, costing nineteen dollars and ninety cents for a standalone race or nine dollars and ninety cents as an add-on if you have a jump pass. The mini track accommodates riders thirty-six inches or taller at nine dollars and ninety cents per standalone race or four dollars and ninety cents as an add-on. Each race allows up to ten laps, and remember, closed-toed shoes are required for safety.
 
-In situations where the inquiry is beyond your scope, use this script to transfer the caller to a team member: "Let me connect you with one of our team members who can help you with that. One moment please."
+To book your visit, you can do so online through our website aerosportsparks.ca, or I'd be happy to assist you with the booking process right now. Would you like to proceed?
 
-## Closing Script
+A signed waiver is necessary for everyone entering the park, including non-jumpers. You can conveniently fill out this form online ahead of time at our website to save time during check-in. For participants under eighteen years old, a parent or legal guardian must sign the waiver.
 
-Always conclude calls on a positive note by saying, "Thanks for calling AeroSports Scarborough! We look forward to seeing you. Have a great day!"
+For groups of fifteen or more, we offer a twenty-five percent discount with the code GROUPBOOKING25, reducing the price to approximately twenty-five dollars and forty-seven cents per person for one hundred and twenty minutes, including socks. Would you be interested in booking a group visit?
 
-## Address Information
+Currently, we have an April Birthday Promotion offering up to one hundred and fifty dollars off birthday parties. Use the code APRILBDAY50 for a discount of fifty dollars on a Premium party, APRILBDAY100 for one hundred dollars off a VIP party, or APRILBDAY150 for one hundred and fifty dollars off an Ultimate party. Please note that bookings must be made by April thirty-first and the event hosted by September thirtieth.
 
-When providing the address, speak clearly and slowly: "We are located at one thousand one hundred twenty Birchmount Road in Scarborough. The postal code is M1K 5G4."
+For children aged four to twelve years old, we offer AeroCamp with full-day sessions from eight-thirty ante meridiem to four-thirty post meridiem at sixty-nine dollars and ninety cents per day or two hundred and ninety-nine dollars and ninety cents for a full week. Half-day options are available for thirty-nine dollars and ninety cents. Activities include trampolines, games, challenges, crafts, and group activities. Early drop-off from seven-thirty ante meridiem and late pick-up past six post meridiem are available for ten dollars each.
 
-## Operating Hours Response
-
-Inform callers of the operating hours with clarity: "We are open Sunday through Thursday from ten AM to eight PM, and Friday and Saturday from ten AM to ten PM."
-
-## Price Overview for Jump Passes
-
-Offer a brief summary of jump pass prices and mention that further details can be provided upon request. Say, "Our Premium Jump Pass costs twenty-four dollars and ninety cents for ninety minutes, while the VIP Jump Pass is priced at twenty-nine dollars and ninety cents for one hundred and twenty minutes. We also offer an All Day Pass for thirty-nine dollars and ninety cents and an ultimate pass that includes go-karting and laser tag among other activities for forty-nine dollars and ninety cents for one hundred and eighty minutes. Please note all prices are plus tax, and Aero Socks are required at a cost of three dollars and ninety-nine cents but they are reusable."
-
-## Birthday Party Packages Overview
-
-Pause between each package description to ensure clarity: "We have three birthday party packages available. The Premium Party starts at thirty-nine dollars and ninety cents per jumper with seventy-five minutes of jump time and forty-five minutes in a private party room. The VIP Party is priced at forty-four dollars and ninety cents per jumper, offering ninety minutes of jump time and sixty minutes of room time. Lastly, the Ultimate Party costs fifty-nine dollars and ninety cents per jumper, which includes one hundred and twenty minutes of jump time, sixty minutes of room time, plus go-karting for every participant. All packages come with pizza and drinks included, requiring a minimum of ten jumpers."
-
-## Go-Karting Overview
-
-Clearly mention the height requirements: "We offer go-karting on two tracks. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents for a standalone race or nine dollars and ninety cents as an add-on if you have a jump pass already. For the mini track, which accommodates riders who are thirty-six inches or taller, it's priced at nine dollars and ninety cents standalone or four dollars and ninety cents as an add-on. Each race can last up to ten laps. Please remember that closed-toed shoes are required for go-karting."
-
-## Booking Assistance
-
-Guide callers toward booking by offering assistance: "You have the option to book online at our website, aerosportsparks.ca, or I can assist you with the process right now. Would you like to proceed?"
-
-## Waiver Information
-
-Emphasize the convenience of completing waivers online: "Everyone who enters the park needs a signed waiver, including non-jumpers. You have the option to fill it out online ahead of time at our website to save time during check-in. For anyone under eighteen years old, a parent or legal guardian must sign the waiver."
-
-## Group Booking Offer
-
-Highlight the savings for group bookings: "For groups of fifteen or more, we offer twenty-five percent off with the code GROUPBOOKING25. This discount brings the price down to approximately twenty-five dollars and forty-seven cents per person for one hundred and twenty minutes including socks. Would you like to book a group visit?"
-
-## April Birthday Promotion Details
-
-Share promotional details when applicable: "Currently, we have an April Birthday Promotion offering up to one hundred and fifty dollars off birthday parties. Use the code APRILBDAY50 for a discount of fifty dollars on a Premium party, APRILBDAY100 for one hundred dollars off a VIP party, or APRILBDAY150 for one hundred and fifty dollars off an Ultimate party. Please note that you need to book by April thirty-first and host your event by September thirtieth."
-
-## AeroCamp Overview
-
-Inform callers about the camp offerings: "We offer AeroCamp for children ages four to twelve years old. The full-day camp runs from eight-thirty AM to four-thirty PM, costing sixty-nine dollars and ninety cents per day or two hundred ninety-nine dollars and ninety cents for a full week. We also have half-day options available at thirty-nine dollars and ninety cents. Activities include trampolines, games, challenges, crafts, and group activities. Early drop-off from seven-thirty AM and late pick-up past six PM are available for an additional ten dollars each."
-
-## Cannot Answer Protocol
-
-When faced with questions you cannot answer, collect callback information: "That is a great question. I do not have that specific information right now, but I can arrange for someone from our team to get back to you. Can I get your name and phone number?"
+If you have a question I cannot answer at the moment, please don't worry. Could I take your name and phone number so someone from our team can get back to you with more information? Thank you!

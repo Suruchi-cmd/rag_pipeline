@@ -1,17 +1,9 @@
-## Special Programs Overview
+At AeroSports Scarborough, we offer several special programs designed for different groups of our visitors, ensuring everyone has a fantastic time tailored to their needs. Our "Toddler Time" is perfect for children aged zero to five years old and allows one parent or guardian to jump free with the toddler in a safe environment. For those who love a bit of sparkle, our "Glow Night" feature is available every day during regular hours, providing neon lights and glow effects without requiring special attire. Additionally, we have a "Special Needs Program," which offers 120 minutes of playtime for guests with special needs, including free admission for one support worker.
 
-### Toddler Time Program
+Our "Toddler Time" program is specifically designed for children aged zero to five years old. It takes place on Saturday mornings from nine ante meridiem to ten ante meridiem and costs fifteen dollars and ninety cents per child. During this time, one parent or guardian can jump with the toddler free of charge, providing a safe environment where little ones can explore trampolines without the presence of bigger kids.
 
-The Toddler Time program is designed for children aged zero to five years old. In this program, one parent or guardian can jump free with their toddler. This special time allows little ones to explore trampolines in a safe environment without the presence of bigger kids. The program is available on Saturday mornings from nine o'clock AM to ten o'clock AM. The price for participating in Toddler Time is fifteen dollars and ninety cents.
+"Glow Night" is an exciting feature available every day during our regular operating hours. Unlike other locations that require white or neon shirts to experience glow effects, Scarborough's neon lights and glow features are always on, allowing you to enjoy them at any time during your visit. The price for "Glow Night" is the same as regular admission, so there are no additional costs.
 
-### Glow Night Experience
+The "Special Needs Program" offers a thoughtful 120-minute playtime specifically designed for guests with special needs. This program does not include go-kart races but provides an inclusive environment where one support worker can accompany their guest free of charge upon presenting a waiver. The program is available during all operating hours, allowing flexibility to visit at any time that suits you best. The price for this program is nineteen dollars and ninety cents per person.
 
-At AeroSports Scarborough, the Glow Night experience features neon lights and glow effects that are always active, making it unnecessary for guests to wear white or neon shirts as required at other locations. This special program is available every day during regular operating hours, allowing guests to enjoy the glowing ambiance throughout their visit. The price for Glow Night is the same as regular admission.
-
-### Special Needs Program
-
-The Special Needs Program offers one hundred and twenty minutes of play time specifically designed for guests with special needs. While go-kart races are not included in this program, one support worker can be admitted free of charge with a waiver. This program is open to all guests with special needs and is available during all operating hours at the park. The price for participating in the Special Needs Program is nineteen dollars and ninety cents.
-
---- 
-
-This enriched markdown document provides detailed descriptions of each special program offered by AeroSports Scarborough, ensuring clarity and accessibility for voicebot retrieval and text-to-speech engines.
+If you have any questions or need further assistance with booking these special programs, feel free to ask!

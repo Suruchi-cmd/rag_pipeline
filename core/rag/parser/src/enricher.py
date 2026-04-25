@@ -86,60 +86,37 @@ grounding context for a downstream enrichment pass. It MUST include:
 Output ONLY the markdown document. No preamble, no trailing commentary."""
 
 
-ENRICHMENT_SYSTEM_PROMPT = """You are an expert technical writer specialising in converting
-structured business data into speech-friendly, retrieval-friendly prose for a voicebot that
-uses Retrieval-Augmented Generation (RAG).
+ENRICHMENT_SYSTEM_PROMPT = """You are a friendly, knowledgeable customer service representative at AeroSports Scarborough (a family entertainment park). Your job is to explain business information to customers clearly and helpfully — as if speaking to them face-to-face or over the phone.
 
-Your job is to take a workbook markdown document and rewrite it so every chunk is:
-  * Natural-sounding when read aloud by a text-to-speech engine.
-  * Self-contained for retrieval (no dangling pronouns, no "see above").
-  * Semantically labelled so a vector search can find the right passage.
+You will receive a document containing structured business data. Rewrite it as plain text only. No markdown headers, no bullet points, no asterisks, no dashes, no hash symbols. Use natural paragraphs only.
+
+Structure your response as follows:
+- First paragraph: A clear overview of what this section covers — what types or options are available at AeroSports Scarborough and who they suit.
+- Subsequent paragraphs: One paragraph per major item or section, explaining it in detail exactly as you would explain it to a customer standing in front of you.
 
 Apply ALL of the following transformations:
 
 1. NUMERIC / PRICE / DATE / TIME SPELL-OUT
-   - "$1,250.99" -> "one thousand two hundred fifty dollars and ninety-nine cents"
-   - "24.90" (price) -> "twenty-four dollars and ninety cents"
-   - "90 min" -> "ninety minutes"
-   - "2026-04-24" -> "April twenty-fourth, twenty twenty-six"
-   - Phone numbers, percentages, ages, capacities — all spoken form.
+   - "$19.90" → "nineteen dollars and ninety cents"
+   - "$1,250.99" → "one thousand two hundred and fifty dollars and ninety-nine cents"
+   - "90 min" → "ninety minutes"
+   - "52 inches" → "fifty-two inches"
+   - "2026-04-24" → "April twenty-fourth, twenty twenty-six"
+   - Phone numbers, percentages, ages, capacities — all spelled out in words.
 
 2. TABLE FLATTENING
-   - Convert every markdown table into natural-language paragraphs.
-   - One row often becomes one sentence or a short paragraph that mentions
-     every column by name: "The Premium Jump Pass, for ages six and up,
-     costs twenty-four dollars and ninety cents for ninety minutes..."
+   - Convert every table or bulleted list into natural-language sentences and paragraphs.
+   - Every data point must appear in a complete sentence. Example: "The Main Track standalone race costs nineteen dollars and ninety cents, requires drivers to be at least fifty-two inches tall, and gives you up to ten laps on the track."
 
 3. SYMBOL / UNIT / ACRONYM EXPANSION
-   - "%" -> "percent", "&" -> "and", "@" -> "at", "#" -> "number"
-   - "kg" -> "kilograms", "ft" -> "feet", "hrs" -> "hours", "min" -> "minutes"
+   - "%" → "percent", "&" → "and", "@" → "at", "#" → "number"
+   - "kg" → "kilograms", "ft" → "feet", "hrs" → "hours", "min" → "minutes" (or "minimum" depending on context)
 
+4. BE SPECIFIC — never vague. Do not use filler phrases like "exciting opportunity", "enhance your visit", or "perfect for those looking to". Say exactly what it is, what it costs, who it is for, and any requirements or conditions.
 
-4. CRYPTIC CODE REWRITING
-   - Where a code or ID has a known meaning (from the understanding doc),
-     replace it with a descriptive phrase; otherwise read it character by
-     character in a natural way.
+5. PRESERVE TRUTH — Do not invent or assume any numbers, prices, rules, or policies. Keep every price, duration, age range, height requirement, and rule exactly as given.
 
-5. SENTENCE & STRUCTURE REWRITES
-   - Break long dense sentences into short conversational ones.
-   - Replace markdown bullets with "First, ... Second, ... Finally, ..." flow
-     where natural. Keep genuinely list-like content as very short bullets
-     only when it aids clarity.
-   - Remove markdown artefacts that do not translate to speech (horizontal
-     rules, raw pipes, asterisks used for emphasis-only).
-
-6. SEMANTIC HEADERS & CONTEXT
-   - Each section starts with a retrieval-friendly header describing its
-     topic, e.g. "## Pricing for Open Jump passes at AeroSports Scarborough".
-   - Resolve pronouns and ambiguous references so the chunk stands alone.
-
-7. PRESERVE TRUTH
-   - Do NOT invent numbers, policies, or facts. If something is unclear,
-     keep the original phrasing inside the rewritten sentence.
-   - Keep every price, duration, age range, rule, and URL.
-
-Output ONLY the rewritten markdown. No preamble, no trailing commentary, no
-"Here is the enriched version:" framing."""
+Output ONLY plain text paragraphs. No markdown syntax of any kind. No preamble. No "Here is the explanation:" framing."""
 
 
 # ── Enricher ─────────────────────────────────────────────────────────────────
@@ -266,12 +243,19 @@ class Enricher:
 
         original = wb.read_text(encoding="utf-8")
         enrich_prompt = (
-            f"Now enrich the workbook `{wb.name}` below. Apply every transformation "
-            "listed in your system instructions. Preserve every fact. Output ONLY the "
-            "rewritten markdown document — no preamble, no trailing commentary.\n\n"
-            "----- ORIGINAL WORKBOOK MARKDOWN -----\n"
+            f"Now explain the data in `{wb.name}` to a customer. "
+            "Write as a customer service representative speaking directly to the customer. "
+            "Plain text paragraphs only — no markdown, no headers, no bullets, no asterisks. "
+            "First paragraph: overview of what types or options are available and who they suit. "
+            "Then one paragraph per major section or item with full specific details. "
+            "Spell out all numbers, prices, dates, and times in words. "
+            "Flatten all tables and lists into complete sentences. "
+            "Expand all symbols, units, and acronyms. "
+            "Be specific — state exact prices, heights, durations, and conditions. "
+            "Preserve every fact. Output ONLY the plain text explanation.\n\n"
+            "----- ORIGINAL DATA -----\n"
             f"{original}\n"
-            "----- END ORIGINAL -----"
+            "----- END DATA -----"
         )
         enriched = await self._enrichment_llm.achat_with_history(
             enrich_prompt, session_id=session_id, user_id=self.user_id

@@ -1,21 +1,5 @@
-```markdown
-## Promotions
+At AeroSports Scarborough, we have a fantastic promotion for those celebrating birthdays in April! Our April Birthday Promotion offers significant discounts on birthday parties, making it an excellent choice for families and friends looking to celebrate special occasions with us. This promotion is currently active, and you can take advantage of up to one hundred fifty dollars off your party booking.
 
-### April Birthday Promotion!
+To benefit from this offer, you need to book your party by the thirty-first of April and host it on or before the thirtieth of September. We have different levels of birthday parties available, each with its own discount code and savings amount. For a Premium Party, which is perfect for those looking for an enjoyable yet budget-friendly celebration, you can save fifty dollars using the promo code "AprilBDAY50." If you're aiming for something more exclusive, our VIP Party offers one hundred dollars off when you use the promo code "AprilBDAY100." Finally, for the ultimate birthday experience at AeroSports Scarborough, the Ultimate Party provides a discount of one hundred and fifty dollars with the promo code "AprilBDAY150."
 
-This promotion offers up to one hundred fifty dollars off on birthday parties. 
-
-**Status:** The promotion is currently active.
-
-**Terms:** To avail of this offer, bookings must be made by the thirty-first of April, and the party must be hosted by the thirtieth of September.
-
-#### Promo Codes
-
-- **Premium Party:** Customers can receive a discount of fifty dollars using the promotional code "AprilBDAY50."
-  
-- **VIP Party:** A discount of one hundred dollars is available for VIP parties with the promo code "AprilBDAY100."
-
-- **Ultimate Party:** For Ultimate Parties, customers are eligible for a discount of one hundred and fifty dollars by using the code "AprilBDAY150."
-```
-
-This rewritten markdown document transforms structured data into natural-sounding prose suitable for text-to-speech engines while maintaining all factual information. It spells out numbers in words, expands acronyms, and ensures each section is self-contained with clear semantic labels.
+These promotions are designed to make your celebration memorable while offering substantial savings. Whether you choose our Premium, VIP, or Ultimate Party options, we're here to ensure that your special day is filled with fun and excitement at AeroSports Scarborough! If you have any questions about booking or need further assistance, feel free to ask.

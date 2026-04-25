@@ -36,7 +36,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     # ── Public-facing URLs ──────────────────────────────────────────────
     BASE_URL: str = Field(
-        default="",
+        default="https://w9vm3f3crw21.share.zrok.io",
         description="Public HTTPS URL (zrok/ngrok) Twilio dials into.",
     )
     RAG_API_URL: str = Field(
@@ -50,7 +50,7 @@ class Settings(BaseSettings):
     # The RAG/enricher side uses LlamaIndex/LangChain native Ollama clients
     # which hit /api/* directly; those URLs must NOT include /v1.
     OLLAMA_BASE_URL: str = Field(
-        default="http://localhost:11434/v1",
+        default="http://192.168.50.150:11434/v1",
         description="Ollama OpenAI-compatible endpoint. Must end with /v1.",
     )
     OLLAMA_KEEP_ALIVE: int = Field(
@@ -66,13 +66,13 @@ class Settings(BaseSettings):
 
     # ── Sync chat client tuning (chatbot/llm.py) ────────────────────────
     LLM_MAX_TOKENS: int = Field(default=1024)
-    LLM_TEMPERATURE: float = Field(default=0.3)
+    LLM_TEMPERATURE: float = Field(default=0.2)
     LLM_TOP_P: float = Field(default=0.9)
     LLM_RETRIES: int = Field(default=3, description="Total attempts incl. first try.")
 
     # ── Voice streaming reply ───────────────────────────────────────────
     VOICE_MAX_TOKENS: int = Field(default=500)
-    VOICE_TEMPERATURE: float = Field(default=0.3)
+    VOICE_TEMPERATURE: float = Field(default=0.2)
     VOICE_TOP_K: int = Field(default=7, description="RAG top_k per voice turn.")
 
     # ── Rewrite + end-of-call classifier (small deterministic hops) ─────

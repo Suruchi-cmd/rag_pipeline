@@ -1,13 +1,7 @@
-# AeroSports Scarborough — Location Information
+Welcome to AeroSports Scarborough! We're located at one thousand one hundred and twenty Birchmount Road, Scarborough, Ontario, with the postal code M1K 5G4. If you need to reach us by phone, our number is two eight nine four five four five five five five. For park-specific inquiries, please use extension three. You can also email us at events.scb@aerosportsparks.ca for any event-related questions or concerns. Our contact managers are Scott and Rachit, who will be happy to assist you with your needs. Additionally, we have a website where you can find more information about our offerings: https://www.aerosportsparks.ca.
 
-## Contact Details
+Our hours of operation vary depending on the day of the week. From Sunday through Thursday, we're open from ten ante meridiem to eight post meridiem. On Fridays and Saturdays, our doors are open a bit later, from ten ante meridiem to ten post meridiem, allowing for more time to enjoy all that AeroSports Scarborough has to offer.
 
-AeroSports Scarborough is located at one thousand one hundred twenty Birchmount Road, Scarborough, Ontario, M1K 5G4. You can reach them by phone at two eight nine-four-five-four-five-five-five-five or by extension three for park inquiries. For event-related questions, email events.scb@aerosportsparks.ca. The contact manager is Scott or Rachit. More information about AeroSports Scarborough can be found on their website at https://www.aerosportsparks.ca.
+For those looking to book an experience or plan a birthday party with us, we have several important links available. You can make general bookings through this URL: https://ecom.roller.app/aerosportsscarborough/products/en/home. If you're planning a birthday celebration, please use our dedicated booking page at https://ecom.roller.app/aerosportsscarborough/birthdayparties/en/products. For safety and compliance purposes, waivers are required for all participants; these can be accessed and completed online at https://waiver.roller.app/aerosportsscarborough/. If you need directions to our location, we have a Google Maps link available here: https://g.page/AeroSports-scarborough. Lastly, if you're planning a birthday party with us, you might find it helpful to send out invitations through this link: https://aerosportsinvitation.netlify.app/invitationscarborough.
 
-## Operating Hours
-
-AeroSports Scarborough operates from ten in the morning to eight in the evening from Sunday through Thursday. On Fridays and Saturdays, they extend their hours until ten in the evening.
-
-## Useful Links
-
-For booking activities or parties, visit the main booking page at https://ecom.roller.app/aerosportsscarborough/products/en/home. If you are interested in organizing a birthday party, use this specific link: https://ecom.roller.app/aerosportsscarborough/birthdayparties/en/products. To access and complete necessary waivers, go to https://waiver.roller.app/aerosportsscarborough/. For directions or to view the location on Google Maps, visit https://g.page/AeroSports-scarborough. Birthday invitations can be created at https://aerosportsinvitation.netlify.app/invitationscarborough.
+If there's anything else you need or any other questions you have about visiting AeroSports Scarborough, feel free to ask!
