@@ -42,6 +42,7 @@ if _REPO_ROOT not in sys.path:
 
 import config  # noqa: E402  (loads DB pool, embedding config, etc.)
 import db
+
 # import mailer
 from fastapi import FastAPI, Form, Query, WebSocket, WebSocketDisconnect  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
@@ -249,7 +250,9 @@ async def chat_endpoint(body: ChatRequest):
 @app.get("/api/chat/stream")
 async def chat_stream(
     message: str = Query(..., max_length=500, description="User message"),
-    session_id: Optional[str] = Query(None, description="Session ID (omit to start new session)"),
+    session_id: Optional[str] = Query(
+        None, description="Session ID (omit to start new session)"
+    ),
 ):
     """
     SSE streaming chat endpoint.
@@ -283,7 +286,13 @@ async def chat_stream(
         except Exception as exc:
             logger.error("SSE stream error: %s", exc)
             payload = json.dumps(
-                {"token": "", "done": True, "session_id": sid, "error": str(exc), "sources": []}
+                {
+                    "token": "",
+                    "done": True,
+                    "session_id": sid,
+                    "error": str(exc),
+                    "sources": [],
+                }
             )
             yield {"data": payload}
 
@@ -322,7 +331,9 @@ async def health():
 # Voice routes (Twilio)
 # ---------------------------------------------------------------------------
 
-_BASE_URL = os.environ.get("BASE_URL", "").rstrip("/")  # e.g. https://abc.ngrok-free.app
+_BASE_URL = os.environ.get("BASE_URL", "").rstrip(
+    "/"
+)  # e.g. https://abc.ngrok-free.app
 
 
 @app.post("/voice/inbound", tags=["voice"])
@@ -343,8 +354,8 @@ async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
                     language="en-CA"
                     transcriptionProvider="deepgram"
                     ttsProvider="ElevenLabs"
-                    voice="7EzWGsX10sAS4c9m9cPf"
-                       welcomeGreeting="Thank you for calling AeroSports Scarborough, this is Rajan. How can I help you?"
+                    voice="uYXf8XasLslADfZ2MB4u"
+                       welcomeGreeting="Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?"
                        dtmfDetection="true"
                        interruptByDtmf="false"
                        interruptSensitivity="medium">
@@ -380,10 +391,10 @@ _voice_sessions: dict[str, dict] = {}
 # Twilio's ASR is already active at that point, so it can pick up the bot's
 # own voice and send it back as a PROMPT.  We skip any prompt that looks like
 # an echo of the greeting so it doesn't trigger an LLM response.
-_WELCOME_GREETING = "Thank you for calling AeroSports Scarborough, this is Rajan. How can I help you?"
+_WELCOME_GREETING = (
+    "Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?"
+)
 _WELCOME_ECHO_PREFIX = "thank you for calling aerosports"
-
-
 
 
 async def _send_canned_to_twilio(ws: WebSocket, text: str) -> None:
@@ -437,9 +448,7 @@ async def _stream_llm_to_twilio(
 
         # Stream completed normally — send end-of-turn marker so Twilio
         # knows the assistant is done speaking.
-        await ws.send_text(
-            json.dumps({"type": "text", "token": "", "last": True})
-        )
+        await ws.send_text(json.dumps({"type": "text", "token": "", "last": True}))
 
     except asyncio.CancelledError:
         # Interrupt arrived — stop streaming, do NOT send "last": true.
@@ -548,14 +557,18 @@ async def voice_ws(websocket: WebSocket):
                     try:
                         db.log_message(db_call_id, "user", user_text)
                     except Exception as exc:
-                        logger.error("[%s] db.log_message (user) failed: %s", call_sid, exc)
+                        logger.error(
+                            "[%s] db.log_message (user) failed: %s", call_sid, exc
+                        )
 
                 # --- Check for new capture trigger ---
                 if capture_mode == "none" and check_booking_capture_trigger(user_text):
                     session["capture_mode"] = "name"
                     session["capture_triggered_on"] = user_text
                     canned = "Sure, I can take down some details so my manager can give you a call back. Can I get your name please?"
-                    logger.info("[%s] Booking capture TRIGGERED. State → name", call_sid)
+                    logger.info(
+                        "[%s] Booking capture TRIGGERED. State → name", call_sid
+                    )
                     await _send_canned_to_twilio(websocket, canned)
                     conversation_store.add(call_sid, "user", user_text)
                     conversation_store.add(call_sid, "assistant", canned)
@@ -563,14 +576,20 @@ async def voice_ws(websocket: WebSocket):
                         try:
                             db.log_message(db_call_id, "assistant", canned)
                         except Exception as exc:
-                            logger.error("[%s] db.log_message (assistant) failed: %s", call_sid, exc)
+                            logger.error(
+                                "[%s] db.log_message (assistant) failed: %s",
+                                call_sid,
+                                exc,
+                            )
                     continue
 
                 # --- Advance capture state if already in progress ---
                 if capture_mode == "name":
                     session["capture_data"]["name"] = user_text
                     session["capture_mode"] = "phone"
-                    canned = f"Thanks. And what's the best phone number to reach you at?"
+                    canned = (
+                        f"Thanks. And what's the best phone number to reach you at?"
+                    )
                     logger.info("[%s] Captured name. State → phone", call_sid)
                     await _send_canned_to_twilio(websocket, canned)
                     conversation_store.add(call_sid, "user", user_text)
@@ -579,13 +598,19 @@ async def voice_ws(websocket: WebSocket):
                         try:
                             db.log_message(db_call_id, "assistant", canned)
                         except Exception as exc:
-                            logger.error("[%s] db.log_message (assistant) failed: %s", call_sid, exc)
+                            logger.error(
+                                "[%s] db.log_message (assistant) failed: %s",
+                                call_sid,
+                                exc,
+                            )
                     continue
 
                 if capture_mode == "phone":
                     session["capture_data"]["phone"] = user_text
                     session["capture_mode"] = "details"
-                    canned = "Got it. And what would you like to change about your booking?"
+                    canned = (
+                        "Got it. And what would you like to change about your booking?"
+                    )
                     logger.info("[%s] Captured phone. State → details", call_sid)
                     await _send_canned_to_twilio(websocket, canned)
                     conversation_store.add(call_sid, "user", user_text)
@@ -594,7 +619,11 @@ async def voice_ws(websocket: WebSocket):
                         try:
                             db.log_message(db_call_id, "assistant", canned)
                         except Exception as exc:
-                            logger.error("[%s] db.log_message (assistant) failed: %s", call_sid, exc)
+                            logger.error(
+                                "[%s] db.log_message (assistant) failed: %s",
+                                call_sid,
+                                exc,
+                            )
                     continue
 
                 if capture_mode == "details":
@@ -610,10 +639,15 @@ async def voice_ws(websocket: WebSocket):
                             db.save_booking_change(db_call_id, name, phone, details)
                             logger.info("[%s] Booking change saved to DB", call_sid)
                         except Exception as exc:
-                            logger.error("[%s] db.save_booking_change failed: %s", call_sid, exc)
+                            logger.error(
+                                "[%s] db.save_booking_change failed: %s", call_sid, exc
+                            )
 
                     canned = "Perfect, I've got all that. My manager will give you a call back as soon as possible. Is there anything else I can help you with today?"
-                    logger.info("[%s] Captured details. State → done. Handing back to LLM.", call_sid)
+                    logger.info(
+                        "[%s] Captured details. State → done. Handing back to LLM.",
+                        call_sid,
+                    )
                     await _send_canned_to_twilio(websocket, canned)
                     conversation_store.add(call_sid, "user", user_text)
                     conversation_store.add(call_sid, "assistant", canned)
@@ -621,7 +655,11 @@ async def voice_ws(websocket: WebSocket):
                         try:
                             db.log_message(db_call_id, "assistant", canned)
                         except Exception as exc:
-                            logger.error("[%s] db.log_message (assistant) failed: %s", call_sid, exc)
+                            logger.error(
+                                "[%s] db.log_message (assistant) failed: %s",
+                                call_sid,
+                                exc,
+                            )
                     continue
 
                 # ------------------------------------------------------
@@ -637,7 +675,9 @@ async def voice_ws(websocket: WebSocket):
                 except Exception as exc:
                     logger.error("[%s] prepare_voice_stream failed: %s", call_sid, exc)
                     await websocket.send_text(
-                        json.dumps({"type": "text", "token": _FALLBACK_MSG, "last": True})
+                        json.dumps(
+                            {"type": "text", "token": _FALLBACK_MSG, "last": True}
+                        )
                     )
                     conversation_store.add(call_sid, "assistant", _FALLBACK_MSG)
                     continue
@@ -662,7 +702,9 @@ async def voice_ws(websocket: WebSocket):
                         full_reply = _clean_for_tts(raw_joined)
                         if full_reply.strip():
                             conversation_store.add(sid, "assistant", full_reply)
-                            logger.info("[%s] Assistant (full): %s", sid, full_reply[:200])
+                            logger.info(
+                                "[%s] Assistant (full): %s", sid, full_reply[:200]
+                            )
                         # Steps 5 & 6 — log LLM output and final TTS text
                         _pl = get_session_logger(sid)
                         if _pl is not None:
@@ -678,18 +720,28 @@ async def voice_ws(websocket: WebSocket):
                             try:
                                 db.log_message(_db_call_id, "assistant", full_reply)
                             except Exception as exc:
-                                logger.error("[%s] db.log_message (assistant) failed: %s", sid, exc)
+                                logger.error(
+                                    "[%s] db.log_message (assistant) failed: %s",
+                                    sid,
+                                    exc,
+                                )
 
                         # Pre-filter: keyword check on the user's last message
                         _kw_result = _check_end_keywords(user_text)
                         _end_decision = None
 
                         if _kw_result == "definite":
-                            _end_decision = build_end_decision_from_definite(user_text, full_reply)
+                            _end_decision = build_end_decision_from_definite(
+                                user_text, full_reply
+                            )
                             logger.info("[%s] End-call keyword DEFINITE match", sid)
                         elif _kw_result == "maybe":
-                            logger.info("[%s] End-call keyword MAYBE — running classifier", sid)
-                            _end_decision = await classify_turn_for_end(user_text, full_reply)
+                            logger.info(
+                                "[%s] End-call keyword MAYBE — running classifier", sid
+                            )
+                            _end_decision = await classify_turn_for_end(
+                                user_text, full_reply
+                            )
 
                         if _end_decision is not None and _db_call_id is not None:
                             _summary = _end_decision["summary"]
@@ -697,36 +749,56 @@ async def voice_ws(websocket: WebSocket):
                             _flag_reason = _end_decision["flag_reason"] or None
 
                             try:
-                                db.end_call(_db_call_id, _summary, _needs_human, _flag_reason)
+                                db.end_call(
+                                    _db_call_id, _summary, _needs_human, _flag_reason
+                                )
                             except Exception as exc:
                                 logger.error("[%s] db.end_call failed: %s", sid, exc)
 
                             if _needs_human:
                                 try:
                                     _row = db.get_call(_db_call_id)
-                                    _transcript = _row.get("transcript_json", "") if _row else ""
+                                    _transcript = (
+                                        _row.get("transcript_json", "") if _row else ""
+                                    )
                                     mailer.send_flag_alert(
-                                        _db_call_id, _phone, _summary, _flag_reason or "", _transcript
+                                        _db_call_id,
+                                        _phone,
+                                        _summary,
+                                        _flag_reason or "",
+                                        _transcript,
                                     )
                                     logger.info("[%s] Flag alert email sent", sid)
                                 except Exception as exc:
-                                    logger.error("[%s] send_flag_alert failed: %s", sid, exc)
+                                    logger.error(
+                                        "[%s] send_flag_alert failed: %s", sid, exc
+                                    )
 
                             # Tell Twilio ConversationRelay to end the session.
                             # This will trigger the /voice/action endpoint.
                             try:
-                                _handoff = json.dumps({
-                                    "reasonCode": "bot-ended-call",
-                                    "reason": _summary,
-                                    "needs_human": _needs_human,
-                                })
-                                await ws.send_text(json.dumps({
-                                    "type": "end",
-                                    "handoffData": _handoff,
-                                }))
-                                logger.info("[%s] Sent end-session message to Twilio", sid)
+                                _handoff = json.dumps(
+                                    {
+                                        "reasonCode": "bot-ended-call",
+                                        "reason": _summary,
+                                        "needs_human": _needs_human,
+                                    }
+                                )
+                                await ws.send_text(
+                                    json.dumps(
+                                        {
+                                            "type": "end",
+                                            "handoffData": _handoff,
+                                        }
+                                    )
+                                )
+                                logger.info(
+                                    "[%s] Sent end-session message to Twilio", sid
+                                )
                             except Exception as exc:
-                                logger.error("[%s] Failed to send end message: %s", sid, exc)
+                                logger.error(
+                                    "[%s] Failed to send end message: %s", sid, exc
+                                )
 
                     except asyncio.CancelledError:
                         # Save whatever was generated before cancellation
@@ -735,14 +807,26 @@ async def voice_ws(websocket: WebSocket):
                         partial = _clean_for_tts("".join(segs))
                         if partial.strip():
                             conversation_store.add(sid, "assistant", partial)
-                            logger.info("[%s] Assistant (partial/cancelled): %s", sid, partial[:200])
+                            logger.info(
+                                "[%s] Assistant (partial/cancelled): %s",
+                                sid,
+                                partial[:200],
+                            )
                             _sess = _voice_sessions.get(sid, {})
                             _db_call_id = _sess.get("db_call_id")
                             if _db_call_id is not None:
                                 try:
-                                    db.log_message(_db_call_id, "assistant", partial + " [INTERRUPTED]")
+                                    db.log_message(
+                                        _db_call_id,
+                                        "assistant",
+                                        partial + " [INTERRUPTED]",
+                                    )
                                 except Exception as exc:
-                                    logger.error("[%s] db.log_message interrupt failed: %s", sid, exc)
+                                    logger.error(
+                                        "[%s] db.log_message interrupt failed: %s",
+                                        sid,
+                                        exc,
+                                    )
                         # Log partial output so the log file reflects what was actually spoken
                         _pl = get_session_logger(sid)
                         if _pl is not None:
@@ -755,7 +839,13 @@ async def voice_ws(websocket: WebSocket):
                             _pl.log_error(f"Stream error: {exc}", exc)
                         try:
                             await ws.send_text(
-                                json.dumps({"type": "text", "token": _FALLBACK_MSG, "last": True})
+                                json.dumps(
+                                    {
+                                        "type": "text",
+                                        "token": _FALLBACK_MSG,
+                                        "last": True,
+                                    }
+                                )
                             )
                             conversation_store.add(sid, "assistant", _FALLBACK_MSG)
                         except Exception:

@@ -5,7 +5,24 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "aiosqlite>=0.22.1",
+    "llama-index>=0.12.52",
     "llama-index-readers-file>=0.4.8",
     "pandas>=3.0.2",
+    "pymupdf>=1.27.2.3",
     "requests>=2.33.1",
+    "sqlalchemy>=2.0.0",
+    "langchain-core>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-ollama>=0.2.0",
+    "openpyxl>=3.1.0",
+    "uvicorn[standard]>=0.46.0",
+    "python-multipart>=0.0.26",
+    "fastapi>=0.136.1",
+    "sqlmodel>=0.0.38",
+    "llama-index-embeddings-ollama>=0.6.0",
+    "llama-index-llms-ollama>=0.6.2",
+    "llama-index-vector-stores-postgres>=0.5.5",
+    "sse-starlette>=3.3.4",
+    "twilio>=9.10.5",
 ]

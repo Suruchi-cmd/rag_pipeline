@@ -33,7 +33,7 @@ if _REPO_ROOT not in sys.path:
 
 from chatbot.conversation import conversation_store  # noqa: E402
 from chatbot.llm import _make_async_client  # noqa: E402
-from utils.pipeline_logger import PipelineLogger  # noqa: E402
+from src.utils.pipeline_logger import PipelineLogger  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
@@ -45,6 +45,7 @@ _booking_capture_state: dict[str, dict] = {}
 #                    "name": str | None,
 #                    "reason": str | None}}
 
+
 def start_booking_capture(call_sid: str) -> str:
     """Initialize capture state and return the first prompt to speak."""
     _booking_capture_state[call_sid] = {
@@ -54,8 +55,10 @@ def start_booking_capture(call_sid: str) -> str:
     }
     return "Oh okay, no problem. I can have someone from our team call you back to sort that out. Can I grab your name?"
 
+
 def get_booking_capture_state(call_sid: str) -> dict | None:
     return _booking_capture_state.get(call_sid)
+
 
 def advance_booking_capture(call_sid: str, user_text: str) -> tuple[str, bool]:
     """
@@ -89,11 +92,27 @@ def advance_booking_capture(call_sid: str, user_text: str) -> tuple[str, bool]:
 
     return ("", True)
 
+
 def finalize_booking_capture(call_sid: str) -> dict | None:
     """Pop the state and return the collected info for logging/callback queue."""
     return _booking_capture_state.pop(call_sid, None)
 
-_NAME_STOPWORDS = {"my", "name", "is", "it's", "its", "this", "the", "i'm", "im", "am", "uh", "um"}
+
+_NAME_STOPWORDS = {
+    "my",
+    "name",
+    "is",
+    "it's",
+    "its",
+    "this",
+    "the",
+    "i'm",
+    "im",
+    "am",
+    "uh",
+    "um",
+}
+
 
 def _extract_name(user_text: str) -> str:
     """
@@ -108,12 +127,11 @@ def _extract_name(user_text: str) -> str:
     # Take up to the first two remaining words, title-cased
     return " ".join(w.capitalize() for w in words[:2])
 
+
 # _VOICE_MODEL = os.environ.get("VOICE_LLM_MODEL", "qwen2.5:14b-instruct-q4_K_M")
 _FAST_MODEL = os.environ.get("VOICE_FAST_MODEL", "phi4:latest")
 
-_RAG_API_URL = os.environ.get(
-    "RAG_API_URL", "https://aeroscbadvisor.share.zrok.io"
-).rstrip("/")
+_RAG_API_URL = os.environ.get("RAG_API_URL", "http://localhost:8000").rstrip("/")
 
 # Persistent client — reuses TCP connection across calls instead of
 # opening a new connection (and TLS handshake) on every RAG query.
@@ -164,12 +182,13 @@ async def _query_rag_api(query: str, top_k: int = 5) -> list[dict]:
         logger.error("RAG API error: %s", exc)
         return []
 
+
 # ---------------------------------------------------------------------------
 # Voice-specific system prompt (replaces the web-chat SYSTEM_PROMPT)
 # ---------------------------------------------------------------------------
 
 # VOICE_SYSTEM_PROMPT = """\
-    
+
 # <identity>
 # You are Dan, a real staff member at AeroSports Scarborough trampoline park. You answer inbound phone calls. Callers should feel like they reached a friendly, competent person at the front desk, not an automated system.
 # </identity>
@@ -178,7 +197,7 @@ async def _query_rag_api(query: str, top_k: int = 5) -> list[dict]:
 
 # 1. YOU HAVE NO SYSTEM ACCESS. You cannot look up bookings, reservations, customer accounts, party details, or any historical data. You have no database, no CRM, no calendar access. NEVER say any of the following or anything similar:
 #    - "Let me look that up"
-#    - "Let me pull up your account"  
+#    - "Let me pull up your account"
 #    - "Let me check our system"
 #    - "I found your booking"
 #    - "I see you have a party booked for..."
@@ -207,10 +226,10 @@ async def _query_rag_api(query: str, top_k: int = 5) -> list[dict]:
 # <voice_rules>
 # This is a live voice call processed by a text-to-speech engine. Every word you produce will be spoken aloud. Follow these rules with zero exceptions:
 # - PRIMARY RULE: Write for the EAR, not the eye.
-# - DOLLAR AMOUNTS: Never use the "$" symbol. Always write out prices as they are spoken. 
+# - DOLLAR AMOUNTS: Never use the "$" symbol. Always write out prices as they are spoken.
 # - Example: "thirty nine ninety" or "forty four dollars."
 # - NUMBERS: Write out small numbers (one through ten) and use digits for larger ones, but ensure they are separated by spaces if they are part of a code or phone number.
-# - PUNCTUATION: Use only periods and commas. Periods create a long pause (breath), and commas create a short pause. 
+# - PUNCTUATION: Use only periods and commas. Periods create a long pause (breath), and commas create a short pause.
 # - AVOID: Never let a raw RAG snippet pass through with its original formatting. If the context says "$44.90," you MUST translate that to "forty four ninety" in your reply.
 # - NEVER use markdown, bold, asterisks, bullet points, numbered lists, or any formatting symbols.
 # - NEVER use special characters like dashes for lists, colons before lists, or parenthetical asides with brackets.
@@ -325,7 +344,7 @@ async def _query_rag_api(query: str, top_k: int = 5) -> list[dict]:
 
 VOICE_SYSTEM_PROMPT = """\
 <identity>
-You are Rajan, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like Dan would: "Sorry, I didn't quite catch that — what can I help you with?"
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
 </identity>
 
 <core_rules>
@@ -394,20 +413,53 @@ _VOICE_FALLBACK = (
 )
 
 _END_CALL_KEYWORDS_DEFINITE = [
-    "bye", "goodbye", "good bye", "that's all", "thats all", "thanks bye",
-    "thank you bye", "no thanks bye", "i'm good thanks", "im good thanks",
-    "that's everything", "thats everything", "i'll call back", "ill call back",
-    "i'll call later", "ill call later", "have a good one", "you too bye",
+    "bye",
+    "goodbye",
+    "good bye",
+    "that's all",
+    "thats all",
+    "thanks bye",
+    "thank you bye",
+    "no thanks bye",
+    "i'm good thanks",
+    "im good thanks",
+    "that's everything",
+    "thats everything",
+    "i'll call back",
+    "ill call back",
+    "i'll call later",
+    "ill call later",
+    "have a good one",
+    "you too bye",
 ]
 
 _END_CALL_KEYWORDS_MAYBE = [
-    "speak to a manager", "speak to manager", "talk to a manager", "talk to manager",
-    "speak to someone", "speak to a supervisor", "talk to a supervisor",
-    "human agent", "real person", "actual person", "a person",
-    "my booking", "my reservation", "my party", "i already booked",
-    "i booked", "my existing booking", "change my booking", "cancel my booking",
-    "reschedule", "refund", "complaint", "i want to complain",
-    "file a complaint", "unhappy with", "not happy with",
+    "speak to a manager",
+    "speak to manager",
+    "talk to a manager",
+    "talk to manager",
+    "speak to someone",
+    "speak to a supervisor",
+    "talk to a supervisor",
+    "human agent",
+    "real person",
+    "actual person",
+    "a person",
+    "my booking",
+    "my reservation",
+    "my party",
+    "i already booked",
+    "i booked",
+    "my existing booking",
+    "change my booking",
+    "cancel my booking",
+    "reschedule",
+    "refund",
+    "complaint",
+    "i want to complain",
+    "file a complaint",
+    "unhappy with",
+    "not happy with",
 ]
 
 # Strict subset of booking-change triggers — high confidence that the caller
@@ -451,7 +503,7 @@ _BOOKING_CAPTURE_TRIGGERS = [
     "party tomorrow",
     "booked for tomorrow",
     "my birthday party",
-    "my birthday booking"
+    "my birthday booking",
 ]
 
 # Messages that the LLM can answer from conversation history alone — no RAG needed.
@@ -568,10 +620,10 @@ def _clean_token_for_tts(token: str) -> str:
     backticks, dollar signs) but preserves leading/trailing whitespace so
     words don't get smashed together.
     """
-    token = re.sub(r"\*+", "", token)    # bold / italic asterisks
-    token = re.sub(r"#+", "", token)     # heading hashes
-    token = re.sub(r"`+", "", token)     # code backticks
-    token = re.sub(r"\$", "", token)     # dollar signs (prices spoken by number)
+    token = re.sub(r"\*+", "", token)  # bold / italic asterisks
+    token = re.sub(r"#+", "", token)  # heading hashes
+    token = re.sub(r"`+", "", token)  # code backticks
+    token = re.sub(r"\$", "", token)  # dollar signs (prices spoken by number)
     return token
 
 
@@ -586,14 +638,18 @@ def _clean_for_tts(text: str) -> str:
     text = re.sub(r"<think>.*", "", text, flags=re.DOTALL)
     # Strip orphaned </think> left by cancelled/interrupted streams
     text = re.sub(r"</think>", "", text)
-    text = re.sub(r"\*+", "", text)                               # bold / italic asterisks
-    text = re.sub(r"#+\s*", "", text)                             # ATX headings
-    text = re.sub(r"`+", "", text)                                # inline code / fences
-    text = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", text)        # [label](url) → label
+    text = re.sub(r"\*+", "", text)  # bold / italic asterisks
+    text = re.sub(r"#+\s*", "", text)  # ATX headings
+    text = re.sub(r"`+", "", text)  # inline code / fences
+    text = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", text)  # [label](url) → label
     text = re.sub(r"^\s*[-*]\s+", "", text, flags=re.MULTILINE)  # leading bullet dashes
     # Emojis — TTS reads these as their text description ("party popper", "glowing star")
-    text = re.sub(r"[\U00010000-\U0010FFFF]", "", text)          # supplementary plane (most emojis)
-    text = re.sub(r"[\u2600-\u27BF\uFE00-\uFE0F]", "", text)    # misc symbols + variation selectors
+    text = re.sub(
+        r"[\U00010000-\U0010FFFF]", "", text
+    )  # supplementary plane (most emojis)
+    text = re.sub(
+        r"[\u2600-\u27BF\uFE00-\uFE0F]", "", text
+    )  # misc symbols + variation selectors
     # Abbreviations → full words for natural TTS
     text = re.sub(r"\bmins?\b", "minutes", text, flags=re.IGNORECASE)
     text = re.sub(r"\bhrs?\b", "hours", text, flags=re.IGNORECASE)
@@ -674,10 +730,8 @@ async def classify_turn_for_end(user_text: str, assistant_text: str) -> dict | N
     """
     import json as _json
 
-    prompt = (
-        _CLASSIFIER_PROMPT
-        .replace("<<USER_TEXT>>", user_text[:500])
-        .replace("<<ASSISTANT_TEXT>>", assistant_text[:500])
+    prompt = _CLASSIFIER_PROMPT.replace("<<USER_TEXT>>", user_text[:500]).replace(
+        "<<ASSISTANT_TEXT>>", assistant_text[:500]
     )
 
     try:
@@ -827,7 +881,9 @@ async def handle_voice_message(call_sid: str, user_text: str) -> str:
     # from conversation history alone (e.g. "yes", "thanks", "hi")
     t_rag_ms = 0.0
     if _should_skip_rag(user_text, history):
-        logger.info("[%s] Skipping RAG — conversational message: %s", call_sid, user_text)
+        logger.info(
+            "[%s] Skipping RAG — conversational message: %s", call_sid, user_text
+        )
         rag_docs = []
         # Steps 2 & 3 — mark as skipped
         pl.log_refined_query(user_text, "__SKIPPED__")
@@ -840,7 +896,9 @@ async def handle_voice_message(call_sid: str, user_text: str) -> str:
         t_rag_start = time.perf_counter()
         rag_docs = await _query_rag_api(search_query, top_k=7)
         t_rag_ms = (time.perf_counter() - t_rag_start) * 1000
-        logger.info("[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs))
+        logger.info(
+            "[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs)
+        )
         # Step 3 — RAG results
         pl.log_rag_results(rag_docs)
 
@@ -849,9 +907,17 @@ async def handle_voice_message(call_sid: str, user_text: str) -> str:
     # Step 4 — full LLM context
     pl.log_llm_context(messages)
 
-    logger.info("[%s] Full messages sent to LLM (%d messages):", call_sid, len(messages))
+    logger.info(
+        "[%s] Full messages sent to LLM (%d messages):", call_sid, len(messages)
+    )
     for i, m in enumerate(messages):
-        logger.info("[%s]   msg[%d] role=%s content=%.300s", call_sid, i, m["role"], m["content"])
+        logger.info(
+            "[%s]   msg[%d] role=%s content=%.300s",
+            call_sid,
+            i,
+            m["role"],
+            m["content"],
+        )
 
     # Non-streaming async LLM call
     t_llm_start = time.perf_counter()
@@ -873,7 +939,13 @@ async def handle_voice_message(call_sid: str, user_text: str) -> str:
     pl.log_final_response(reply)
 
     t_total_ms = (time.perf_counter() - t_total_start) * 1000
-    logger.info("[%s] LATENCY total=%.0fms (rag=%.0fms + llm=%.0fms)", call_sid, t_total_ms, t_rag_ms, t_llm_ms)
+    logger.info(
+        "[%s] LATENCY total=%.0fms (rag=%.0fms + llm=%.0fms)",
+        call_sid,
+        t_total_ms,
+        t_rag_ms,
+        t_llm_ms,
+    )
 
     # Persist turn to the shared store (same TTL / trim logic applies)
     conversation_store.add(call_sid, "user", user_text)
@@ -908,7 +980,9 @@ async def prepare_voice_stream(
     # Skip RAG for simple acknowledgments/greetings the LLM can handle
     # from conversation history alone (e.g. "yes", "thanks", "hi")
     if _should_skip_rag(user_text, history):
-        logger.info("[%s] Skipping RAG — conversational message: %s", call_sid, user_text)
+        logger.info(
+            "[%s] Skipping RAG — conversational message: %s", call_sid, user_text
+        )
         rag_docs = []
         # Steps 2 & 3 — mark as skipped
         pl.log_refined_query(user_text, "__SKIPPED__")
@@ -921,7 +995,9 @@ async def prepare_voice_stream(
         t_rag_start = time.perf_counter()
         rag_docs = await _query_rag_api(search_query, top_k=7)
         t_rag_ms = (time.perf_counter() - t_rag_start) * 1000
-        logger.info("[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs))
+        logger.info(
+            "[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs)
+        )
         # Step 3 — RAG results
         pl.log_rag_results(rag_docs)
 
@@ -930,9 +1006,17 @@ async def prepare_voice_stream(
     # Step 4 — full LLM context
     pl.log_llm_context(messages)
 
-    logger.info("[%s] Full messages sent to LLM (%d messages):", call_sid, len(messages))
+    logger.info(
+        "[%s] Full messages sent to LLM (%d messages):", call_sid, len(messages)
+    )
     for i, m in enumerate(messages):
-        logger.info("[%s]   msg[%d] role=%s content=%.300s", call_sid, i, m["role"], m["content"])
+        logger.info(
+            "[%s]   msg[%d] role=%s content=%.300s",
+            call_sid,
+            i,
+            m["role"],
+            m["content"],
+        )
 
     # Record the user turn now; assistant turn is recorded by the caller
     # after streaming completes (or is interrupted).
@@ -1011,7 +1095,7 @@ _SENTENCE_END_RE = re.compile(r"([.!?]+(?:\s+|$))")
 #         max_tokens=500,
 #         temperature=0.3,
 #         # Keep the model focused on the voice prompt
-#         extra_body={"keep_alive": -1} 
+#         extra_body={"keep_alive": -1}
 #     )
 
 #     buffer = ""
@@ -1033,25 +1117,25 @@ _SENTENCE_END_RE = re.compile(r"([.!?]+(?:\s+|$))")
 #             match = _SENTENCE_END_RE.search(buffer)
 #             if not match:
 #                 break
-            
+
 #             # Extract the sentence including its punctuation
 #             end_idx = match.end()
 #             sentence = buffer[:end_idx].strip()
-            
+
 #             if sentence:
 #                 # 3. THE DOT FIX: Ensure there is exactly ONE space after the period
 #                 # and that the period is attached to the word before it.
 #                 if any(c.isalnum() for c in sentence):
-#                     # We add a space to force the TTS to "breathe" and recognize 
+#                     # We add a space to force the TTS to "breathe" and recognize
 #                     # the period as a stop, not a "dot".
 #                     yield f"{sentence} "
-            
+
 #             buffer = buffer[end_idx:]
 
 #     # 4. Flush remainder
 #     remainder = buffer.strip()
 #     if remainder:
-#         # Final safety check: if the model ended without punctuation, 
+#         # Final safety check: if the model ended without punctuation,
 #         # add a period so the TTS doesn't sound cut off.
 #         if remainder[-1] not in ".!?":
 #             remainder += "."
@@ -1083,8 +1167,8 @@ async def stream_voice_tokens(messages: list[dict]):
     word_count = 0
 
     # Thresholds for the first flush
-    FIRST_FLUSH_WORDS = 8        # flush after this many words if no punctuation yet
-    FIRST_FLUSH_CHARS = 60       # safety cap — flush if buffer gets long without breaks
+    FIRST_FLUSH_WORDS = 8  # flush after this many words if no punctuation yet
+    FIRST_FLUSH_CHARS = 60  # safety cap — flush if buffer gets long without breaks
 
     async for chunk in stream:
         if not chunk.choices:

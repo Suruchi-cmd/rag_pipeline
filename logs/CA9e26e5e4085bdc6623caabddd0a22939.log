@@ -1,0 +1,16 @@
+2026-04-24 20:47:14,790  INFO      chatbot.server  [CA9e26e5e4085bdc6623caabddd0a22939] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA9e26e5e4085bdc6623caabddd0a22939.log
+2026-04-24 20:47:14,790  INFO      chatbot.server  [CA9e26e5e4085bdc6623caabddd0a22939] ConversationRelay connected from +14373612990
+2026-04-24 20:47:24,875  INFO      chatbot.server  [CA9e26e5e4085bdc6623caabddd0a22939] User said: Hi. I wanted to know your prices for go karts.
+2026-04-24 20:47:25,515  INFO      chatbot.voice_handler  [CA9e26e5e4085bdc6623caabddd0a22939] LATENCY rag_api=633ms  docs=0
+2026-04-24 20:47:25,516  INFO      chatbot.voice_handler  [CA9e26e5e4085bdc6623caabddd0a22939] Full messages sent to LLM (2 messages):
+2026-04-24 20:47:25,516  INFO      chatbot.voice_handler  [CA9e26e5e4085bdc6623caabddd0a22939]   msg[0] role=system content=<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are abs
+2026-04-24 20:47:25,516  INFO      chatbot.voice_handler  [CA9e26e5e4085bdc6623caabddd0a22939]   msg[1] role=user content=Hi. I wanted to know your prices for go karts.
+2026-04-24 20:47:25,516  INFO      chatbot.voice_handler  [CA9e26e5e4085bdc6623caabddd0a22939] LATENCY prepare_voice_stream=635ms
+2026-04-24 20:47:26,879  ERROR     chatbot.server  [CA9e26e5e4085bdc6623caabddd0a22939] Stream error: Connection error.
+2026-04-24 20:47:39,866  INFO      chatbot.server  [CA9e26e5e4085bdc6623caabddd0a22939] Finalized abandoned call in DB
+2026-04-24 20:47:39,867  INFO      chatbot.server  [CA9e26e5e4085bdc6623caabddd0a22939] Session log closed

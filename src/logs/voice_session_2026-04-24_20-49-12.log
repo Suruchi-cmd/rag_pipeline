@@ -1,0 +1,294 @@
+# Voice Session Pipeline Log
+# call_sid : CA221f14e12c0607cc3624acfc1d70dc39
+# started  : 2026-04-24T20:49:12.051
+# log_file : /Users/Rajan/Documents/GitHub/rag_pipeline/src/logs/voice_session_2026-04-24_20-49-12.log
+
+[2026-04-24 20:49:12.051] [INCOMING_TRANSCRIPT] [Turn #1]
+────────────────────────────────────────────
+Hi. Can you tell me the prices for a go karts?
+────────────────────────────────────────────
+
+[2026-04-24 20:49:12.051] [REFINED_QUERY] [Turn #1]
+────────────────────────────────────────────
+Original : Hi. Can you tell me the prices for a go karts?
+Refined  : (unchanged)
+────────────────────────────────────────────
+
+[2026-04-24 20:49:12.934] [RAG_RESULTS] [Turn #1]
+────────────────────────────────────────────
+Retrieved 7 document(s):
+
+[1]  score=0.5385481761155376  source=go_karting.md
+### Standalone Race
+
+The standalone race on the main track costs nineteen dollars and ninety cents. Participants must be at least fifty-two inches tall to drive. This option allows up to ten laps and is available for guests who are not purchasing a jump pass.
+
+[2]  score=0.5248607397079468  source=birthday_parties.md
+### Best Value
+
+The Ultimate Party offers the most value with go karting alone worth nine dollars and ninety cents per jumper (ninety-nine dollars for ten kids), plus free socks valued at three dollars and ninety-nine cents each (thirty-nine dollars and ninety cents for ten), and waiving the fifty-dollar outside food fee. This equates to roughly one hundred eighty-nine dollars in extras for an additional one hundred fifty dollars compared to the VIP package.
+
+[3]  score=0.5223965048789978  source=go_karting.md
+### Standalone Race
+
+Guests not purchasing a jump pass can opt for a standalone race on the mini track, priced at nine dollars and ninety cents. Drivers must be at least thirty-six inches tall. This package includes up to ten laps.
+
+[4]  score=0.509883194572736  source=chatbot_quick_replies.md
+### Pricing Information
+
+**Sample question:** How much does it cost?
+
+**Response:** The cost for a ninety-minute Premium Jump Pass is twenty-four dollars and ninety cents, while a one hundred and twenty-minute VIP Jump Pass costs twenty-nine dollars and ninety cents. An All Day Pass is priced at thirty-nine dollars and ninety cents. AeroSports grip socks are required, costing three dollars and ninety-nine cents, but they are reusable. Please note that all prices include tax. Go-karting has separ…
+
+[5]  score=0.5097965002059937  source=birthday_parties.md
+## Add-Ons
+
+Birthday party add-ons available at AeroSports Scarborough include large pizzas (cheese, pepperoni, halal pepperoni, vegetarian, or Hawaiian) priced at twenty-five dollars each. Juice boxes are available in packs of ten for thirty dollars, and soft drink cans come in packs of ten for twenty dollars. Physical birthday invitations cost seventy-five cents each. An outside food fee is fifty dollars but is waived for the Ultimate Party. Go kart races can be added for nine dollars and nine…
+
+[6]  score=0.49606434989167325  source=jump_prices.md
+## Open Jump Passes
+
+The Premium Jump Pass, suitable for children aged six and older, costs twenty-four dollars and ninety cents for ninety minutes of access to all attractions except Go Karting, Laser Tag, Bazooka Ball, and Mini Golf. For those seeking more time, the VIP Jump Pass offers one hundred twenty minutes at a price of twenty-nine dollars and ninety cents, with the same exclusions.
+
+Children aged two to five can also enjoy these passes. The Premium Jump Pass for this age group is price…
+
+[7]  score=0.49600204801571746  source=voice_call_scripts.md
+## Go-Karting Overview
+
+We have two go-kart tracks available at AeroSports Scarborough. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents per standalone race, or nine dollars and ninety cents as an add-on if you already possess a jump pass. The mini track accommodates riders who are thirty-six inches or taller, with a standalone cost of nine dollars and ninety cents or four dollars and ninety cents as an add-on. Each race can la…
+────────────────────────────────────────────
+
+[2026-04-24 20:49:12.935] [LLM_CONTEXT] [Turn #1]
+────────────────────────────────────────────
+2 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Friday, April 24, 2026 at 08:49 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: go_karting.md)
+### Standalone Race
+
+The standalone race on the main track costs nineteen dollars and ninety cents. Participants must be at least fifty-two inches tall to drive. This option allows up to ten laps and is available for guests who are not purchasing a jump pass.
+
+[2] (source: birthday_parties.md)
+### Best Value
+
+The Ultimate Party offers the most value with go karting alone worth nine dollars and ninety cents per jumper (ninety-nine dollars for ten kids), plus free socks valued at three dollars and ninety-nine cents each (thirty-nine dollars and ninety cents for ten), and waiving the fifty-dollar outside food fee. This equates to roughly one hundred eighty-nine dollars in extras for an additional one hundred fifty dollars compared to the VIP package.
+
+[3] (source: go_karting.md)
+### Standalone Race
+
+Guests not purchasing a jump pass can opt for a standalone race on the mini track, priced at nine dollars and ninety cents. Drivers must be at least thirty-six inches tall. This package includes up to ten laps.
+
+[4] (source: chatbot_quick_replies.md)
+### Pricing Information
+
+**Sample question:** How much does it cost?
+
+**Response:** The cost for a ninety-minute Premium Jump Pass is twenty-four dollars and ninety cents, while a one hundred and twenty-minute VIP Jump Pass costs twenty-nine dollars and ninety cents. An All Day Pass is priced at thirty-nine dollars and ninety cents. AeroSports grip socks are required, costing three dollars and ninety-nine cents, but they are reusable. Please note that all prices include tax. Go-karting has separate pricing starting at nine dollars and ninety cents. Would you like to proceed with booking?
+
+[5] (source: birthday_parties.md)
+## Add-Ons
+
+Birthday party add-ons available at AeroSports Scarborough include large pizzas (cheese, pepperoni, halal pepperoni, vegetarian, or Hawaiian) priced at twenty-five dollars each. Juice boxes are available in packs of ten for thirty dollars, and soft drink cans come in packs of ten for twenty dollars. Physical birthday invitations cost seventy-five cents each. An outside food fee is fifty dollars but is waived for the Ultimate Party. Go kart races can be added for nine dollars and ninety cents per person, already included in the Ultimate Package. A late ordering fee of twenty dollars applies if ordered within twenty-four hours.
+
+[6] (source: jump_prices.md)
+## Open Jump Passes
+
+The Premium Jump Pass, suitable for children aged six and older, costs twenty-four dollars and ninety cents for ninety minutes of access to all attractions except Go Karting, Laser Tag, Bazooka Ball, and Mini Golf. For those seeking more time, the VIP Jump Pass offers one hundred twenty minutes at a price of twenty-nine dollars and ninety cents, with the same exclusions.
+
+Children aged two to five can also enjoy these passes. The Premium Jump Pass for this age group is priced at twenty-four dollars and ninety cents for ninety minutes, while the VIP Jump Pass costs twenty-nine dollars and ninety cents for one hundred twenty minutes, both excluding Go Karting, Laser Tag, Bazooka Ball, and Mini Golf.
+
+For those looking for an extended experience, the Ultimate Jump Pass is available to children aged six and older. Priced at forty-nine dollars and ninety cents, it provides one hundred eighty minutes of access to all core attractions. Additionally, jumpers can choose between Go Karting or Mini Golf and Laser Tag or Bazooka Ball.
+
+Children under two years old can enjoy the facilities for free as long as they are accompanied by a paying adult. The duration is the same as that of their accompanying parent's pass.
+
+For unlimited access throughout the day, the All Day Pass is available to all ages at thirty-nine dollars and ninety cents. This pass allows jumpers to enjoy all attractions without time restrictions.
+
+[7] (source: voice_call_scripts.md)
+## Go-Karting Overview
+
+We have two go-kart tracks available at AeroSports Scarborough. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents per standalone race, or nine dollars and ninety cents as an add-on if you already possess a jump pass. The mini track accommodates riders who are thirty-six inches or taller, with a standalone cost of nine dollars and ninety cents or four dollars and ninety cents as an add-on. Each race can last up to ten laps. Remember that closed-toed shoes are required for go-karting.
+
+
+--- msg[1]  role=user ---
+Hi. Can you tell me the prices for a go karts?
+────────────────────────────────────────────
+
+[2026-04-24 20:49:14.466] [ERROR] [Turn #1]
+────────────────────────────────────────────
+Stream error: Connection error.
+
+Traceback (most recent call last):
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/Rajan/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: All connection attempts failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/openai/_base_client.py", line 1529, in request
+    response = await self._client.send(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/Rajan/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: All connection attempts failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/chatbot/server.py", line 699, in _run_stream
+    await _stream_llm_to_twilio(ws, sid, msgs, segs, t_silence)
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/chatbot/server.py", line 434, in _stream_llm_to_twilio
+    async for token in stream_voice_tokens(messages):
+    ...<12 lines>...
+        segments.append(token)
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/chatbot/voice_handler.py", line 1156, in stream_voice_tokens
+    stream = await client.chat.completions.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 2585, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<48 lines>...
+    )
+    ^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/openai/_base_client.py", line 1794, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/.venv/lib/python3.13/site-packages/openai/_base_client.py", line 1561, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+────────────────────────────────────────────
+
+# session ended: 2026-04-24T20:49:22.991
