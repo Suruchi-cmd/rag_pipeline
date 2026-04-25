@@ -37,6 +37,7 @@ if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 
 import db  # noqa: E402
+import httpx  # noqa: E402
 
 from fastapi import FastAPI, Form, WebSocket, WebSocketDisconnect  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
@@ -44,6 +45,7 @@ from fastapi.responses import JSONResponse, Response  # noqa: E402
 
 from chatbot.config import settings  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
+from chatbot.mailer import send_human_handoff_alert  # noqa: E402
 from chatbot.voice_handler import (  # noqa: E402
     build_end_decision_from_definite,
     check_booking_capture_trigger,
@@ -55,7 +57,8 @@ from chatbot.voice_handler import (  # noqa: E402
     prepare_voice_stream,
     stream_voice_tokens,
 )
-from chatbot.llm import _FALLBACK_MSG  # noqa: E402
+from chatbot.llm import _FALLBACK_MSG, _make_async_client, close_llm_client  # noqa: E402
+from chatbot.rag_client import close_rag_client  # noqa: E402
 from twilio.twiml.voice_response import VoiceResponse  # noqa: E402
 
 logging.basicConfig(
@@ -109,7 +112,7 @@ async def _session_cleanup_loop() -> None:
     """Purge expired sessions on a configurable interval."""
     while True:
         await asyncio.sleep(settings.SESSION_CLEANUP_INTERVAL)
-        n = conversation_store.cleanup_expired()
+        n = await conversation_store.cleanup_expired()
         if n:
             logger.info("Cleaned up %d expired session(s)", n)
 
@@ -126,6 +129,19 @@ async def lifespan(app: FastAPI):
     cleanup_task = asyncio.create_task(_session_cleanup_loop())
     yield
     cleanup_task.cancel()
+    try:
+        await cleanup_task
+    except (asyncio.CancelledError, Exception):
+        pass
+    # Close shared HTTP clients so reload / shutdown doesn't leak sockets.
+    try:
+        await close_rag_client()
+    except Exception as exc:
+        logger.warning("close_rag_client failed: %s", exc)
+    try:
+        await close_llm_client()
+    except Exception as exc:
+        logger.warning("close_llm_client failed: %s", exc)
     logger.info("AeroBot voice server stopped")
 
 
@@ -151,8 +167,28 @@ app.add_middleware(
 
 @app.get("/api/health")
 async def health():
-    """Liveness check — used by uptime monitors and Twilio status checks."""
-    return JSONResponse(content={"status": "ok"}, status_code=200)
+    """Health check — probes Ollama + RAG; returns 503 if any dependency is down."""
+    checks: dict[str, str] = {"server": "ok"}
+
+    try:
+        client = _make_async_client()
+        await asyncio.wait_for(client.models.list(), timeout=3.0)
+        checks["ollama"] = "ok"
+    except Exception as exc:
+        checks["ollama"] = f"error: {exc.__class__.__name__}: {exc}"
+
+    try:
+        async with httpx.AsyncClient(timeout=3.0) as c:
+            r = await c.get(f"{settings.RAG_API_URL.rstrip('/')}/rag/health")
+            checks["rag"] = "ok" if r.status_code == 200 else f"status:{r.status_code}"
+    except Exception as exc:
+        checks["rag"] = f"error: {exc.__class__.__name__}: {exc}"
+
+    overall_ok = all(v == "ok" for v in checks.values())
+    return JSONResponse(
+        content={"status": "ok" if overall_ok else "degraded", **checks},
+        status_code=200 if overall_ok else 503,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -177,15 +213,16 @@ async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
 <Response>
   <Connect action="{_BASE_URL}/voice/action">
     <ConversationRelay url="wss://{ws_host}/voice/ws"
-                    language="{settings.TWILIO_LANGUAGE}"
-                    transcriptionProvider="{settings.TWILIO_ASR_PROVIDER}"
-                    ttsProvider="{settings.TWILIO_TTS_PROVIDER}"
-                    voice="{settings.TWILIO_VOICE_ID}"
                        welcomeGreeting="{settings.welcome_greeting}"
                        dtmfDetection="true"
                        interruptByDtmf="false"
-                       interruptSensitivity="{settings.TWILIO_INTERRUPT_SENSITIVITY}">
-        <Transcription hints="{settings.TWILIO_ASR_HINTS}" />
+                       interruptSensitivity="{settings.TWILIO_INTERRUPT_SENSITIVITY}"
+                       hints="{settings.TWILIO_ASR_HINTS}">
+        <Language code="{settings.TWILIO_LANGUAGE}"
+                  transcriptionProvider="{settings.TWILIO_ASR_PROVIDER}"
+                  speechModel="{settings.TWILIO_SPEECH_MODEL}"
+                  ttsProvider="{settings.TWILIO_TTS_PROVIDER}"
+                  voice="{settings.TWILIO_VOICE_ID}" />
     </ConversationRelay>
   </Connect>
 </Response>"""
@@ -262,8 +299,8 @@ async def _run_capture_step(
     db_call_id = session.get("db_call_id")
     logger.info("[%s] %s", call_sid, log_msg)
     await _send_canned_to_twilio(websocket, canned)
-    conversation_store.add(call_sid, "user", user_text)
-    conversation_store.add(call_sid, "assistant", canned)
+    await conversation_store.add(call_sid, "user", user_text)
+    await conversation_store.add(call_sid, "assistant", canned)
     _log_message(call_sid, db_call_id, "assistant", canned)
 
 
@@ -316,6 +353,114 @@ async def _stream_llm_to_twilio(
         raise
 
 
+async def _run_voice_stream(
+    ws: WebSocket,
+    call_sid: str,
+    messages: list[dict],
+    segments: list[str],
+    t_silence_end: float,
+    user_text: str,
+) -> None:
+    """
+    Drive the per-turn LLM stream end-to-end:
+      stream tokens → save assistant turn → end-of-call check → handoff if needed.
+
+    Lifted to module scope (rather than a per-turn closure inside voice_ws) so
+    it doesn't recapture WebSocket state on every prompt.
+    """
+    try:
+        await _stream_llm_to_twilio(ws, call_sid, messages, segments, t_silence_end)
+
+        raw_joined = "".join(segments)
+        full_reply = clean_for_tts(raw_joined)
+        if full_reply.strip():
+            await conversation_store.add(call_sid, "assistant", full_reply)
+            logger.info("[%s] Assistant (full): %s", call_sid, full_reply[:200])
+
+        pl = get_session_logger(call_sid)
+        if pl is not None:
+            pl.log_llm_response(raw_joined)
+            pl.log_final_response(full_reply)
+
+        sess = _voice_sessions.get(call_sid, {})
+        db_call_id = sess.get("db_call_id")
+
+        if full_reply.strip():
+            _log_message(call_sid, db_call_id, "assistant", full_reply)
+
+        # Keyword pre-filter avoids the classifier LLM hop on obvious goodbye
+        # turns; "maybe" hits run the classifier.
+        kw_result = check_end_keywords(user_text)
+        end_decision = None
+        if kw_result == "definite":
+            end_decision = build_end_decision_from_definite(user_text, full_reply)
+            logger.info("[%s] End-call keyword DEFINITE match", call_sid)
+        elif kw_result == "maybe":
+            logger.info("[%s] End-call keyword MAYBE — running classifier", call_sid)
+            end_decision = await classify_turn_for_end(user_text, full_reply)
+
+        if end_decision is not None and db_call_id is not None:
+            summary = end_decision["summary"]
+            needs_human = end_decision["needs_human"]
+            flag_reason = end_decision["flag_reason"] or None
+
+            try:
+                db.end_call(db_call_id, summary, needs_human, flag_reason)
+            except Exception as exc:
+                logger.error("[%s] db.end_call failed: %s", call_sid, exc)
+
+            if needs_human:
+                await send_human_handoff_alert(
+                    call_sid=call_sid,
+                    phone_number=sess.get("phone_number", "unknown"),
+                    summary=summary,
+                    flag_reason=flag_reason or "",
+                )
+
+            try:
+                handoff = json.dumps(
+                    {
+                        "reasonCode": "bot-ended-call",
+                        "reason": summary,
+                        "needs_human": needs_human,
+                    }
+                )
+                await ws.send_text(json.dumps({"type": "end", "handoffData": handoff}))
+                logger.info("[%s] Sent end-session message to Twilio", call_sid)
+            except Exception as exc:
+                logger.error("[%s] Failed to send end message: %s", call_sid, exc)
+
+    except asyncio.CancelledError:
+        partial = clean_for_tts("".join(segments))
+        if partial.strip():
+            await conversation_store.add(call_sid, "assistant", partial)
+            logger.info(
+                "[%s] Assistant (partial/cancelled): %s", call_sid, partial[:200]
+            )
+            db_call_id = _voice_sessions.get(call_sid, {}).get("db_call_id")
+            _log_message(
+                call_sid, db_call_id, "assistant", partial + " [INTERRUPTED]"
+            )
+        pl = get_session_logger(call_sid)
+        if pl is not None:
+            pl.log_llm_response("".join(segments) + " [INTERRUPTED]")
+            pl.log_final_response(partial + " [INTERRUPTED]")
+    except Exception as exc:
+        logger.error("[%s] Stream error: %s", call_sid, exc)
+        pl = get_session_logger(call_sid)
+        if pl is not None:
+            pl.log_error(f"Stream error: {exc}", exc)
+        try:
+            await ws.send_text(
+                json.dumps(
+                    {"type": "text", "token": _FALLBACK_MSG, "last": True}
+                )
+            )
+            await conversation_store.add(call_sid, "assistant", _FALLBACK_MSG)
+        except Exception:
+            pass
+
+
 @app.websocket("/voice/ws")
 async def voice_ws(websocket: WebSocket):
     """
@@ -361,7 +506,7 @@ async def voice_ws(websocket: WebSocket):
                     "db_call_id": db_call_id,
                     "phone_number": caller_from,
                     "capture_mode": "none",  # "none" | "name" | "phone" | "details" | "done"
-                    "capture_data": {"name": "", "phone": "", "details": ""},
+                    "capture_data": {"name": "", "details": ""},
                     "capture_triggered_on": "",
                 }
                 _session_log_handler = _open_session_log(call_sid)
@@ -429,20 +574,10 @@ async def voice_ws(websocket: WebSocket):
                 if capture_mode == "name":
                     await _run_capture_step(
                         websocket, call_sid, session, user_text,
-                        next_mode="phone",
-                        canned="Thanks. And what's the best phone number to reach you at?",
-                        log_msg="Captured name. State → phone",
-                        capture_field="name",
-                    )
-                    continue
-
-                if capture_mode == "phone":
-                    await _run_capture_step(
-                        websocket, call_sid, session, user_text,
                         next_mode="details",
-                        canned="Got it. And what would you like to change about your booking?",
-                        log_msg="Captured phone. State → details",
-                        capture_field="phone",
+                        canned="Thanks. And what is it you're looking to change?",
+                        log_msg="Captured name. State → details",
+                        capture_field="name",
                     )
                     continue
 
@@ -455,7 +590,10 @@ async def voice_ws(websocket: WebSocket):
                         cd = session["capture_data"]
                         try:
                             db.save_booking_change(
-                                db_call_id, cd["name"], cd["phone"], cd["details"]
+                                db_call_id,
+                                cd["name"],
+                                session.get("phone_number", ""),
+                                cd["details"],
                             )
                             logger.info("[%s] Booking change saved to DB", call_sid)
                         except Exception as exc:
@@ -488,7 +626,7 @@ async def voice_ws(websocket: WebSocket):
                             {"type": "text", "token": _FALLBACK_MSG, "last": True}
                         )
                     )
-                    conversation_store.add(call_sid, "assistant", _FALLBACK_MSG)
+                    await conversation_store.add(call_sid, "assistant", _FALLBACK_MSG)
                     continue
 
                 # Phase 2: Stream LLM tokens to Twilio inside an asyncio.Task
@@ -496,134 +634,15 @@ async def voice_ws(websocket: WebSocket):
                 # The segments list is shared so we can access partial output
                 # even if the task is cancelled mid-stream.
                 segments: list[str] = []
-
-                async def _run_stream(
-                    ws: WebSocket,
-                    sid: str,
-                    msgs: list[dict],
-                    segs: list[str],
-                    t_silence: float,
-                ):
-                    try:
-                        await _stream_llm_to_twilio(ws, sid, msgs, segs, t_silence)
-                        # Normal completion — clean for TTS and save
-                        raw_joined = "".join(segs)
-                        full_reply = clean_for_tts(raw_joined)
-                        if full_reply.strip():
-                            conversation_store.add(sid, "assistant", full_reply)
-                            logger.info(
-                                "[%s] Assistant (full): %s", sid, full_reply[:200]
-                            )
-                        # Steps 5 & 6 — log LLM output and final TTS text
-                        _pl = get_session_logger(sid)
-                        if _pl is not None:
-                            _pl.log_llm_response(raw_joined)
-                            _pl.log_final_response(full_reply)
-
-                        # --- DB log assistant turn + end-call detection ---
-                        _sess = _voice_sessions.get(sid, {})
-                        _db_call_id = _sess.get("db_call_id")
-
-                        if full_reply.strip():
-                            _log_message(sid, _db_call_id, "assistant", full_reply)
-
-                        # Keyword pre-filter avoids the classifier LLM hop on
-                        # obvious goodbye turns; "maybe" hits run the classifier.
-                        _kw_result = check_end_keywords(user_text)
-                        _end_decision = None
-                        if _kw_result == "definite":
-                            _end_decision = build_end_decision_from_definite(
-                                user_text, full_reply
-                            )
-                            logger.info("[%s] End-call keyword DEFINITE match", sid)
-                        elif _kw_result == "maybe":
-                            logger.info(
-                                "[%s] End-call keyword MAYBE — running classifier", sid
-                            )
-                            _end_decision = await classify_turn_for_end(
-                                user_text, full_reply
-                            )
-
-                        if _end_decision is not None and _db_call_id is not None:
-                            _summary = _end_decision["summary"]
-                            _needs_human = _end_decision["needs_human"]
-                            _flag_reason = _end_decision["flag_reason"] or None
-
-                            try:
-                                db.end_call(
-                                    _db_call_id, _summary, _needs_human, _flag_reason
-                                )
-                            except Exception as exc:
-                                logger.error("[%s] db.end_call failed: %s", sid, exc)
-
-                            if _needs_human:
-                                # TODO: hook up email when a `mailer` module exists.
-                                logger.info(
-                                    "[%s] needs_human=True — flagged in DB; email "
-                                    "alert skipped (mailer module not wired up)", sid
-                                )
-
-                            try:
-                                _handoff = json.dumps(
-                                    {
-                                        "reasonCode": "bot-ended-call",
-                                        "reason": _summary,
-                                        "needs_human": _needs_human,
-                                    }
-                                )
-                                await ws.send_text(
-                                    json.dumps(
-                                        {"type": "end", "handoffData": _handoff}
-                                    )
-                                )
-                                logger.info(
-                                    "[%s] Sent end-session message to Twilio", sid
-                                )
-                            except Exception as exc:
-                                logger.error(
-                                    "[%s] Failed to send end message: %s", sid, exc
-                                )
-
-                    except asyncio.CancelledError:
-                        # Save whatever was generated before cancellation so
-                        # history doesn't have an orphan user turn.
-                        partial = clean_for_tts("".join(segs))
-                        if partial.strip():
-                            conversation_store.add(sid, "assistant", partial)
-                            logger.info(
-                                "[%s] Assistant (partial/cancelled): %s",
-                                sid,
-                                partial[:200],
-                            )
-                            _db_call_id = _voice_sessions.get(sid, {}).get("db_call_id")
-                            _log_message(
-                                sid, _db_call_id, "assistant", partial + " [INTERRUPTED]"
-                            )
-                        _pl = get_session_logger(sid)
-                        if _pl is not None:
-                            _pl.log_llm_response("".join(segs) + " [INTERRUPTED]")
-                            _pl.log_final_response(partial + " [INTERRUPTED]")
-                    except Exception as exc:
-                        logger.error("[%s] Stream error: %s", sid, exc)
-                        _pl = get_session_logger(sid)
-                        if _pl is not None:
-                            _pl.log_error(f"Stream error: {exc}", exc)
-                        try:
-                            await ws.send_text(
-                                json.dumps(
-                                    {
-                                        "type": "text",
-                                        "token": _FALLBACK_MSG,
-                                        "last": True,
-                                    }
-                                )
-                            )
-                            conversation_store.add(sid, "assistant", _FALLBACK_MSG)
-                        except Exception:
-                            pass
-
                 task = asyncio.create_task(
-                    _run_stream(websocket, call_sid, messages, segments, t_silence_end)
+                    _run_voice_stream(
+                        websocket,
+                        call_sid,
+                        messages,
+                        segments,
+                        t_silence_end,
+                        user_text,
+                    )
                 )
                 session["current_task"] = task
 
@@ -655,14 +674,17 @@ async def voice_ws(websocket: WebSocket):
                     # with what Twilio actually spoke aloud.  This keeps
                     # conversation history accurate — the LLM sees what
                     # the user actually heard, not the full generation.
+                    # clean_for_tts strips any markdown / think-tags that
+                    # crept into the fragment before the interrupt fired.
                     if spoken_fragment.strip():
-                        conversation_store.replace_last_assistant(
-                            call_sid, spoken_fragment.strip()
+                        cleaned_fragment = clean_for_tts(spoken_fragment.strip())
+                        await conversation_store.replace_last_assistant(
+                            call_sid, cleaned_fragment
                         )
                         logger.info(
                             "[%s] Assistant (truncated to spoken): %s",
                             call_sid,
-                            spoken_fragment.strip()[:200],
+                            cleaned_fragment[:200],
                         )
 
             # ----------------------------------------------------------
@@ -691,7 +713,7 @@ async def voice_ws(websocket: WebSocket):
                         logger.info("[%s] Finalized abandoned call in DB", call_sid)
                 except Exception as exc:
                     logger.error("[%s] Cleanup db.end_call failed: %s", call_sid, exc)
-            conversation_store.clear(call_sid)
+            await conversation_store.clear(call_sid)
         if _session_log_handler and call_sid:
             _close_session_log(call_sid, _session_log_handler)
         if call_sid:

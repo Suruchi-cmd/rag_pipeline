@@ -1,10 +1,30 @@
+"""
+SQLite call log — calls, messages, booking_change.
+
+Concurrency
+-----------
+Uses WAL journal mode so multiple concurrent voice calls can write without
+serializing on a single global lock. `timeout=5.0` on connect sets the
+busy-timeout — concurrent writers wait up to 5s for a lock instead of
+raising `database is locked`.
+"""
+
 import json
 import sqlite3
 
 
+def _connect(db_path: str = "calls.db") -> sqlite3.Connection:
+    """Open a connection with WAL + busy-timeout + foreign keys."""
+    # timeout= sets sqlite's busy_timeout in seconds.
+    conn = sqlite3.connect(db_path, timeout=5.0)
+    conn.execute("PRAGMA foreign_keys = ON")
+    conn.execute("PRAGMA journal_mode = WAL")
+    conn.execute("PRAGMA synchronous = NORMAL")  # safe under WAL, faster than FULL
+    return conn
+
+
 def init_db(db_path: str = "calls.db") -> None:
-    with sqlite3.connect(db_path) as conn:
-        conn.execute("PRAGMA foreign_keys = ON")
+    with _connect(db_path) as conn:
         conn.execute("""
             CREATE TABLE IF NOT EXISTS calls (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -32,8 +52,7 @@ def init_db(db_path: str = "calls.db") -> None:
 
 
 def start_call(phone_number: str, db_path: str = "calls.db") -> int:
-    with sqlite3.connect(db_path) as conn:
-        conn.execute("PRAGMA foreign_keys = ON")
+    with _connect(db_path) as conn:
         cursor = conn.execute(
             "INSERT INTO calls (phone_number) VALUES (?)",
             (phone_number,)
@@ -42,8 +61,7 @@ def start_call(phone_number: str, db_path: str = "calls.db") -> int:
 
 
 def log_message(call_id: int, role: str, content: str, db_path: str = "calls.db") -> None:
-    with sqlite3.connect(db_path) as conn:
-        conn.execute("PRAGMA foreign_keys = ON")
+    with _connect(db_path) as conn:
         conn.execute(
             "INSERT INTO messages (call_id, role, content) VALUES (?, ?, ?)",
             (call_id, role, content)
@@ -57,8 +75,7 @@ def end_call(
     flag_reason: str | None,
     db_path: str = "calls.db"
 ) -> None:
-    with sqlite3.connect(db_path) as conn:
-        conn.execute("PRAGMA foreign_keys = ON")
+    with _connect(db_path) as conn:
         conn.row_factory = sqlite3.Row
         rows = conn.execute(
             "SELECT role, content, created_at FROM messages WHERE call_id = ? ORDER BY id",
@@ -83,8 +100,7 @@ def end_call(
 
 
 def get_call(call_id: int, db_path: str = "calls.db") -> dict | None:
-    with sqlite3.connect(db_path) as conn:
-        conn.execute("PRAGMA foreign_keys = ON")
+    with _connect(db_path) as conn:
         conn.row_factory = sqlite3.Row
         row = conn.execute("SELECT * FROM calls WHERE id = ?", (call_id,)).fetchone()
         if row is None:
@@ -106,8 +122,7 @@ def save_booking_change(
     needs_human=1 with a flag_reason indicating a booking change request.
     """
     payload = json.dumps({"name": name, "phone": phone, "details": details})
-    with sqlite3.connect(db_path) as conn:
-        conn.execute("PRAGMA foreign_keys = ON")
+    with _connect(db_path) as conn:
         conn.execute(
             "UPDATE calls SET booking_change_json = ?, needs_human = 1, "
             "flag_reason = COALESCE(flag_reason, 'booking change requested') "

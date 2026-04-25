@@ -366,6 +366,18 @@ class RAGRepository:
             )
             nodes = retriever.retrieve(query_request.query)
 
+            # Apply similarity cutoff post-hoc — as_retriever has no built-in
+            # cutoff (unlike as_query_engine). Mirrors the cutoff used in query()
+            # so /rag/retrieve doesn't ship low-relevance chunks to callers.
+            cutoff = settings.SIMILARITY_CUTOFF
+            before = len(nodes)
+            nodes = [n for n in nodes if (getattr(n, "score", None) or 0.0) >= cutoff]
+            if before != len(nodes):
+                logger.info(
+                    "Retrieve: %d/%d nodes passed similarity_cutoff %.2f",
+                    len(nodes), before, cutoff,
+                )
+
             source_documents = []
             for node in nodes:
                 node_metadata = node.metadata if hasattr(node, "metadata") else {}

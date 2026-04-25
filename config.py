@@ -71,7 +71,15 @@ class Settings(BaseSettings):
     LLM_RETRIES: int = Field(default=3, description="Total attempts incl. first try.")
 
     # ── Voice streaming reply ───────────────────────────────────────────
-    VOICE_MAX_TOKENS: int = Field(default=500)
+    VOICE_MAX_TOKENS: int = Field(
+        default=160,
+        description=(
+            "Hard ceiling on voice reply length. ~160 tokens ≈ two-to-three "
+            "natural sentences with light acknowledgment + answer + optional "
+            "follow-up. Lower (~100) for terser tone; raising past ~250 tends "
+            "to invite paragraph dumps regardless of system-prompt rules."
+        ),
+    )
     VOICE_TEMPERATURE: float = Field(default=0.2)
     VOICE_TOP_K: int = Field(default=7, description="RAG top_k per voice turn.")
 
@@ -127,6 +135,14 @@ class Settings(BaseSettings):
     # ── Twilio ConversationRelay TwiML attributes ───────────────────────
     TWILIO_LANGUAGE: str = Field(default="en-CA")
     TWILIO_ASR_PROVIDER: str = Field(default="deepgram")
+    TWILIO_SPEECH_MODEL: str = Field(
+        default="nova-3",
+        description=(
+            "Provider-specific speech model. Deepgram options: nova-3 (default, "
+            "best general), nova-2-phonecall (telephony-tuned), nova-2 (older). "
+            "Nova-3 generally best for proper-noun recognition."
+        ),
+    )
     TWILIO_TTS_PROVIDER: str = Field(default="ElevenLabs")
     TWILIO_VOICE_ID: str = Field(default="uYXf8XasLslADfZ2MB4u")
     TWILIO_INTERRUPT_SENSITIVITY: str = Field(default="medium")
