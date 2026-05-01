@@ -108,6 +108,28 @@ class Settings(BaseSettings):
     # ── HTTP ────────────────────────────────────────────────────────────
     RAG_HTTP_TIMEOUT: float = Field(default=15.0)
 
+    # ── Vector store (pgvector) ─────────────────────────────────────────
+    PG_HOST: str = Field(default="localhost")
+    PG_PORT: int = Field(default=5432)
+    PG_USER: str = Field(default="postgres")
+    PG_PASSWORD: str = Field(default="postgres")
+    PG_DATABASE: str = Field(default="aerobot")
+    VECTOR_TABLE_NAME: str = Field(default="knowledge_chunks")
+    EMBEDDING_MODEL: str = Field(default="embeddinggemma")
+    EMBED_DIM: int = Field(default=768)
+
+    @property
+    def ollama_embed_url(self) -> str:
+        """Ollama base URL without /v1 — for LlamaIndex native clients."""
+        return self.OLLAMA_BASE_URL.removesuffix("/v1")
+
+    @property
+    def pg_database_url(self) -> str:
+        return (
+            f"postgresql+psycopg2://{self.PG_USER}:{self.PG_PASSWORD}"
+            f"@{self.PG_HOST}:{self.PG_PORT}/{self.PG_DATABASE}"
+        )
+
     # ── Locale ──────────────────────────────────────────────────────────
     TIMEZONE: str = Field(
         default="America/Toronto",

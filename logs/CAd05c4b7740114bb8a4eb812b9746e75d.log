@@ -1,4 +1,0 @@
-2026-04-25 16:12:56,231  INFO      chatbot.server  [CAd05c4b7740114bb8a4eb812b9746e75d] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAd05c4b7740114bb8a4eb812b9746e75d.log
-2026-04-25 16:12:56,231  INFO      chatbot.server  [CAd05c4b7740114bb8a4eb812b9746e75d] ConversationRelay connected from +14374383992
-2026-04-25 16:12:58,055  INFO      chatbot.server  [CAd05c4b7740114bb8a4eb812b9746e75d] Finalized abandoned call in DB
-2026-04-25 16:12:58,055  INFO      chatbot.server  [CAd05c4b7740114bb8a4eb812b9746e75d] Session log closed

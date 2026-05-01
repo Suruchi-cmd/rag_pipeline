@@ -1,4 +1,0 @@
-2026-05-01 01:50:20,822  INFO      chatbot.routers.voice  [CA4480220a0c6f67c54803a393b522bcea] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA4480220a0c6f67c54803a393b522bcea.log
-2026-05-01 01:50:20,822  INFO      chatbot.routers.voice  [CA4480220a0c6f67c54803a393b522bcea] ConversationRelay connected from +14373612990
-2026-05-01 01:50:24,799  INFO      chatbot.routers.voice  [CA4480220a0c6f67c54803a393b522bcea] Finalised abandoned call
-2026-05-01 01:50:24,799  INFO      chatbot.routers.voice  [CA4480220a0c6f67c54803a393b522bcea] Session log closed

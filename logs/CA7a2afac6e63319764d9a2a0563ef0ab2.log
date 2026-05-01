@@ -1,9 +1,0 @@
-2026-04-30 19:54:16,126  INFO      chatbot.routers.voice  [CA7a2afac6e63319764d9a2a0563ef0ab2] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA7a2afac6e63319764d9a2a0563ef0ab2.log
-2026-04-30 19:54:16,126  INFO      chatbot.routers.voice  [CA7a2afac6e63319764d9a2a0563ef0ab2] ConversationRelay connected from +14374383992
-2026-04-30 19:54:24,913  INFO      chatbot.routers.voice  [CA7a2afac6e63319764d9a2a0563ef0ab2] User said: Hi. I think
-2026-04-30 19:54:26,249  INFO      chatbot.voice_handler  [CA7a2afac6e63319764d9a2a0563ef0ab2] LATENCY rag_api=1323ms  docs=7
-2026-04-30 19:54:26,249  INFO      chatbot.voice_handler  [CA7a2afac6e63319764d9a2a0563ef0ab2] LATENCY prepare_voice_stream=1324ms
-2026-04-30 19:54:28,551  INFO      chatbot.routers.voice  [CA7a2afac6e63319764d9a2a0563ef0ab2] LATENCY silence_to_first_reply=3638ms
-2026-04-30 19:54:28,676  INFO      chatbot.routers.voice  [CA7a2afac6e63319764d9a2a0563ef0ab2] Assistant (full): Thank you for calling AeroSports Scarborough! How can I help you today?
-2026-04-30 19:54:32,905  INFO      chatbot.routers.voice  [CA7a2afac6e63319764d9a2a0563ef0ab2] Finalised abandoned call
-2026-04-30 19:54:32,905  INFO      chatbot.routers.voice  [CA7a2afac6e63319764d9a2a0563ef0ab2] Session log closed

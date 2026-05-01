@@ -1,8 +1,0 @@
-2026-04-25 01:26:08,693  INFO      chatbot.server  [CA3d5a962abd9c6580d57c187a0358ce4d] Session log opened → /Users/suruchi/Documents/GitHub/rag_pipeline/logs/CA3d5a962abd9c6580d57c187a0358ce4d.log
-2026-04-25 01:26:08,693  INFO      chatbot.server  [CA3d5a962abd9c6580d57c187a0358ce4d] ConversationRelay connected from +14373612990
-2026-04-25 01:26:18,419  INFO      chatbot.server  [CA3d5a962abd9c6580d57c187a0358ce4d] User said: Hi. How how can I jump there?
-2026-04-25 01:26:19,404  INFO      chatbot.voice_handler  [CA3d5a962abd9c6580d57c187a0358ce4d] LATENCY rag_api=972ms  docs=7
-2026-04-25 01:26:19,405  INFO      chatbot.voice_handler  [CA3d5a962abd9c6580d57c187a0358ce4d] LATENCY prepare_voice_stream=977ms
-2026-04-25 01:26:19,635  ERROR     chatbot.server  [CA3d5a962abd9c6580d57c187a0358ce4d] Stream error: Error code: 404 - {'error': {'message': "model 'phi4:latest' not found", 'type': 'not_found_error', 'param': None, 'code': None}}
-2026-04-25 01:26:32,624  INFO      chatbot.server  [CA3d5a962abd9c6580d57c187a0358ce4d] Finalized abandoned call in DB
-2026-04-25 01:26:32,625  INFO      chatbot.server  [CA3d5a962abd9c6580d57c187a0358ce4d] Session log closed

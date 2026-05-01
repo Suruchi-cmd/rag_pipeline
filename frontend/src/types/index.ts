@@ -70,6 +70,14 @@ export interface Category {
   created_at: string
 }
 
+export interface KnowledgeChunk {
+  id: number
+  name: string
+  content: string
+  created_at: string
+  updated_at: string
+}
+
 export interface Turn {
   turn_number: number
   user: Message | null

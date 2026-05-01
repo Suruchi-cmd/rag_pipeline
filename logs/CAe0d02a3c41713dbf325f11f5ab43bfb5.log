@@ -1,8 +1,0 @@
-2026-04-25 11:28:42,078  INFO      chatbot.server  [CAe0d02a3c41713dbf325f11f5ab43bfb5] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAe0d02a3c41713dbf325f11f5ab43bfb5.log
-2026-04-25 11:28:42,078  INFO      chatbot.server  [CAe0d02a3c41713dbf325f11f5ab43bfb5] ConversationRelay connected from +14374383992
-2026-04-25 11:28:51,226  INFO      chatbot.server  [CAe0d02a3c41713dbf325f11f5ab43bfb5] User said: Hi. Do you guys have any body package?
-2026-04-25 11:28:51,671  INFO      chatbot.voice_handler  [CAe0d02a3c41713dbf325f11f5ab43bfb5] LATENCY rag_api=440ms  docs=7
-2026-04-25 11:28:51,672  INFO      chatbot.voice_handler  [CAe0d02a3c41713dbf325f11f5ab43bfb5] LATENCY prepare_voice_stream=441ms
-2026-04-25 11:28:53,201  ERROR     chatbot.server  [CAe0d02a3c41713dbf325f11f5ab43bfb5] Stream error: Connection error.
-2026-04-25 11:29:00,568  INFO      chatbot.server  [CAe0d02a3c41713dbf325f11f5ab43bfb5] Finalized abandoned call in DB
-2026-04-25 11:29:00,568  INFO      chatbot.server  [CAe0d02a3c41713dbf325f11f5ab43bfb5] Session log closed

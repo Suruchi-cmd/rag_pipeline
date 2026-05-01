@@ -22,7 +22,7 @@ _DEFAULT_CATEGORIES = [
 
 def init_db() -> None:
     from database.models import (  # noqa: F401
-        BookingChange, Call, CallClassification, Category, Message, RAGRetrieval,
+        BookingChange, Call, CallClassification, Category, KnowledgeChunk, Message, RAGRetrieval,
     )
     SQLModel.metadata.create_all(engine)
     _seed_categories()

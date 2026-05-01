@@ -1,8 +1,0 @@
-2026-04-30 16:35:07,975  INFO      chatbot.server  [CA16b447e6f68bbc6b4182cec1eb6493e2] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA16b447e6f68bbc6b4182cec1eb6493e2.log
-2026-04-30 16:35:07,976  INFO      chatbot.server  [CA16b447e6f68bbc6b4182cec1eb6493e2] ConversationRelay connected from +14373612990
-2026-04-30 16:35:15,281  INFO      chatbot.server  [CA16b447e6f68bbc6b4182cec1eb6493e2] User said: Hi, Maya. How are you?
-2026-04-30 16:35:16,111  INFO      chatbot.voice_handler  [CA16b447e6f68bbc6b4182cec1eb6493e2] LATENCY rag_api=825ms  docs=7
-2026-04-30 16:35:16,111  INFO      chatbot.voice_handler  [CA16b447e6f68bbc6b4182cec1eb6493e2] LATENCY prepare_voice_stream=826ms
-2026-04-30 16:35:17,569  ERROR     chatbot.server  [CA16b447e6f68bbc6b4182cec1eb6493e2] Stream error: Connection error.
-2026-04-30 16:35:21,018  INFO      chatbot.server  [CA16b447e6f68bbc6b4182cec1eb6493e2] Finalized abandoned call in DB
-2026-04-30 16:35:21,018  INFO      chatbot.server  [CA16b447e6f68bbc6b4182cec1eb6493e2] Session log closed

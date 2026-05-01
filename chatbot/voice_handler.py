@@ -3,7 +3,7 @@ Voice call handler for Twilio inbound calls.
 
 Pipeline per turn:
   1. Rewrite the caller utterance into a standalone search query (LLM).
-  2. POST that query to the local RAG API (http://localhost:8000/rag/retrieve).
+  2. Run vector search directly against pgvector (no external RAG service).
   3. Stream an LLM reply back, chunked at sentence boundaries for TTS.
 
 The booking-capture state machine and end-of-call classifier live alongside
@@ -30,7 +30,7 @@ if _REPO_ROOT not in sys.path:
 from chatbot.config import settings  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
 from chatbot.llm import _make_async_client  # noqa: E402
-from chatbot.rag_client import query_rag  # noqa: E402
+from chatbot.vector_store import vector_store  # noqa: E402
 from src.utils.pipeline_logger import PipelineLogger  # noqa: E402
 
 logger = logging.getLogger(__name__)
@@ -541,9 +541,9 @@ async def prepare_voice_stream(
         pl.log_refined_query(user_text, search_query)
 
         t_rag_start = time.perf_counter()
-        rag_docs = await query_rag(search_query, top_k=settings.VOICE_TOP_K)
+        rag_docs = await vector_store.retrieve(search_query, top_k=settings.VOICE_TOP_K)
         t_rag_ms = (time.perf_counter() - t_rag_start) * 1000
-        logger.info("[%s] LATENCY rag_api=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs))
+        logger.info("[%s] LATENCY vector_search=%.0fms  docs=%d", call_sid, t_rag_ms, len(rag_docs))
         pl.log_rag_results(rag_docs)
 
     messages = _build_voice_messages(user_text, rag_docs, history)

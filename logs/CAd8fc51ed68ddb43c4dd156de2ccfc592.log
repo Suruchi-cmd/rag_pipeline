@@ -1,9 +1,0 @@
-2026-04-25 15:43:46,008  INFO      chatbot.server  [CAd8fc51ed68ddb43c4dd156de2ccfc592] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAd8fc51ed68ddb43c4dd156de2ccfc592.log
-2026-04-25 15:43:46,008  INFO      chatbot.server  [CAd8fc51ed68ddb43c4dd156de2ccfc592] ConversationRelay connected from +16474498937
-2026-04-25 15:44:00,487  INFO      chatbot.server  [CAd8fc51ed68ddb43c4dd156de2ccfc592] User said: If we come right now, how long will we have to wait to go on the go karting?
-2026-04-25 15:44:00,836  INFO      chatbot.voice_handler  [CAd8fc51ed68ddb43c4dd156de2ccfc592] LATENCY rag_api=345ms  docs=0
-2026-04-25 15:44:00,836  INFO      chatbot.voice_handler  [CAd8fc51ed68ddb43c4dd156de2ccfc592] LATENCY prepare_voice_stream=346ms
-2026-04-25 15:44:01,104  INFO      chatbot.server  [CAd8fc51ed68ddb43c4dd156de2ccfc592] LATENCY silence_to_first_reply=616ms
-2026-04-25 15:44:01,744  INFO      chatbot.server  [CAd8fc51ed68ddb43c4dd156de2ccfc592] Assistant (full): I'm not sure about current wait times for go -karting — best thing is to call us at 289-454-5555 or email events.scb@aerosportsparks.ca. They can give you the latest info!
-2026-04-25 15:44:14,453  INFO      chatbot.server  [CAd8fc51ed68ddb43c4dd156de2ccfc592] Finalized abandoned call in DB
-2026-04-25 15:44:14,454  INFO      chatbot.server  [CAd8fc51ed68ddb43c4dd156de2ccfc592] Session log closed

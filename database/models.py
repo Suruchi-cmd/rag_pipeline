@@ -72,3 +72,13 @@ class CallClassification(SQLModel, table=True):
     call_id: int = Field(foreign_key="calls.id", index=True)
     category_id: int = Field(foreign_key="categories.id", index=True)
     classified_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class KnowledgeChunk(SQLModel, table=True):
+    __tablename__ = "knowledge_chunks"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    name: str = Field(index=True, unique=True)
+    content: str
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=datetime.utcnow)

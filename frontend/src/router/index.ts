@@ -3,7 +3,7 @@ import DashboardView from '@/views/DashboardView.vue'
 import CallsView from '@/views/CallsView.vue'
 import CallDetailView from '@/views/CallDetailView.vue'
 import CategoriesView from '@/views/CategoriesView.vue'
-import ResyncView from '@/views/ResyncView.vue'
+import KnowledgeView from '@/views/KnowledgeView.vue'
 
 export default createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +12,6 @@ export default createRouter({
     { path: '/calls', component: CallsView, meta: { title: 'All Calls' } },
     { path: '/calls/:id', component: CallDetailView, meta: { title: 'Call Detail' } },
     { path: '/categories', component: CategoriesView, meta: { title: 'Categories' } },
-    { path: '/resync', component: ResyncView, meta: { title: 'Resync Knowledge Base' } },
+    { path: '/knowledge', component: KnowledgeView, meta: { title: 'Knowledge Base' } },
   ],
 })

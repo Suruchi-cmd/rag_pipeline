@@ -7,7 +7,7 @@ from typing import Optional
 
 from sqlmodel import Session, func, select
 
-from database.models import BookingChange, Call, CallClassification, Category, Message, RAGRetrieval
+from database.models import BookingChange, Call, CallClassification, Category, KnowledgeChunk, Message, RAGRetrieval
 
 logger = logging.getLogger(__name__)
 
@@ -262,3 +262,48 @@ def list_calls_for_resync(session: Session) -> list[Call]:
             select(Call).where(Call.status.in_(["completed", "abandoned"]))  # type: ignore[attr-defined]
         ).all()
     )
+
+
+# ── Knowledge Chunks ───────────────────────────────────────────────────────────
+
+def list_chunks(session: Session) -> list[KnowledgeChunk]:
+    return list(session.exec(select(KnowledgeChunk).order_by(KnowledgeChunk.name)).all())
+
+
+def get_chunk(session: Session, chunk_id: int) -> Optional[KnowledgeChunk]:
+    return session.get(KnowledgeChunk, chunk_id)
+
+
+def create_chunk(session: Session, name: str, content: str) -> KnowledgeChunk:
+    now = datetime.utcnow()
+    chunk = KnowledgeChunk(name=name.strip(), content=content, created_at=now, updated_at=now)
+    session.add(chunk)
+    session.commit()
+    session.refresh(chunk)
+    return chunk
+
+
+def update_chunk(
+    session: Session, chunk_id: int, name: Optional[str], content: Optional[str]
+) -> Optional[KnowledgeChunk]:
+    chunk = session.get(KnowledgeChunk, chunk_id)
+    if chunk is None:
+        return None
+    if name is not None:
+        chunk.name = name.strip()
+    if content is not None:
+        chunk.content = content
+    chunk.updated_at = datetime.utcnow()
+    session.add(chunk)
+    session.commit()
+    session.refresh(chunk)
+    return chunk
+
+
+def delete_chunk(session: Session, chunk_id: int) -> bool:
+    chunk = session.get(KnowledgeChunk, chunk_id)
+    if chunk is None:
+        return False
+    session.delete(chunk)
+    session.commit()
+    return True
