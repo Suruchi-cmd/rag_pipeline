@@ -49,13 +49,13 @@ class Settings(BaseSettings):
     # under the /v1/* shim — so this URL must end with /v1.
     # The RAG/enricher side uses LlamaIndex/LangChain native Ollama clients
     # which hit /api/* directly; those URLs must NOT include /v1.
-    OLLAMA_BASE_URL: str = Field(
+    OLLAMA_URL_1: str = Field(
         default="http://192.168.50.150:11434/v1",
-        description="Ollama OpenAI-compatible endpoint. Must end with /v1.",
+        description="Primary Ollama OpenAI-compatible endpoint. Must end with /v1.",
     )
-    OLLAMA_REPHRASE_URL: str = Field(
+    OLLAMA_URL_2: str = Field(
         default="http://192.168.50.150:11434/v1",
-        description="Ollama endpoint used exclusively for query rewriting. Must end with /v1.",
+        description="Secondary Ollama endpoint for load balancing / fallback. Must end with /v1.",
     )
     OLLAMA_KEEP_ALIVE: int = Field(
         default=-1,
@@ -125,7 +125,7 @@ class Settings(BaseSettings):
     @property
     def ollama_embed_url(self) -> str:
         """Ollama base URL without /v1 — for LlamaIndex native clients."""
-        return self.OLLAMA_BASE_URL.removesuffix("/v1")
+        return self.OLLAMA_URL_1.removesuffix("/v1")
 
     @property
     def pg_database_url(self) -> str:

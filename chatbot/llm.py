@@ -1,20 +1,25 @@
 """
-Local Ollama LLM client (llama3.1:8b).
+Local Ollama LLM client.
 
-Uses the OpenAI-compatible API exposed by Ollama (host configurable via
-OLLAMA_BASE_URL — must end with /v1).
-Streaming via SSE for chat_handler, async streaming for voice_handler.
+Uses the OpenAI-compatible API exposed by Ollama (hosts configurable via
+OLLAMA_URL_1 / OLLAMA_URL_2 — both must end with /v1).
+
+Two Ollama instances are kept in a round-robin pool:
+- Concurrent calls naturally land on different instances.
+- If the selected instance fails, _get_fallback_async_client() returns the other.
 
 Key design decisions:
-- One sync OpenAI client for chat_handler (threading bridge).
-- One AsyncOpenAI client for voice_handler (native async streaming).
+- One sync OpenAI client (URL_1) for chat_handler threading bridge.
+- Async pool round-robins for voice_handler streaming + rewrite + classifier.
 - 3 attempts with exponential backoff on transient errors.
 """
 
 from __future__ import annotations
 
+import itertools
 import logging
 import re
+import threading
 import time
 from typing import Generator
 
@@ -25,35 +30,54 @@ from chatbot.config import settings
 logger = logging.getLogger(__name__)
 
 _FALLBACK_MSG = settings.fallback_message
-_OLLAMA_BASE_URL = settings.OLLAMA_BASE_URL
-_OLLAMA_REPHRASE_URL = settings.OLLAMA_REPHRASE_URL
 _MODEL = settings.LLM_MODEL
 
+# ── Sync client (chat_handler only) ────────────────────────────────────────
 
 _client: OpenAI | None = None
-_async_client: AsyncOpenAI | None = None
-_rephrase_client: AsyncOpenAI | None = None
 
 
 def _make_client() -> OpenAI:
     global _client
     if _client is None:
-        _client = OpenAI(base_url=_OLLAMA_BASE_URL, api_key="ollama")
+        _client = OpenAI(base_url=settings.OLLAMA_URL_1, api_key="ollama")
     return _client
 
 
+# ── Async round-robin pool ──────────────────────────────────────────────────
+
+_pool: list[AsyncOpenAI] = []
+_cycle: itertools.cycle | None = None
+_pool_lock = threading.Lock()
+
+
+def _init_pool() -> None:
+    global _pool, _cycle
+    _pool = [
+        AsyncOpenAI(base_url=settings.OLLAMA_URL_1, api_key="ollama"),
+        AsyncOpenAI(base_url=settings.OLLAMA_URL_2, api_key="ollama"),
+    ]
+    _cycle = itertools.cycle(_pool)
+
+
 def _make_async_client() -> AsyncOpenAI:
-    global _async_client
-    if _async_client is None:
-        _async_client = AsyncOpenAI(base_url=_OLLAMA_BASE_URL, api_key="ollama")
-    return _async_client
+    """Return next client in round-robin pool."""
+    with _pool_lock:
+        if not _pool:
+            _init_pool()
+        return next(_cycle)  # type: ignore[arg-type]
 
 
-def _make_rephrase_client() -> AsyncOpenAI:
-    global _rephrase_client
-    if _rephrase_client is None:
-        _rephrase_client = AsyncOpenAI(base_url=_OLLAMA_REPHRASE_URL, api_key="ollama")
-    return _rephrase_client
+def _get_fallback_async_client(current: AsyncOpenAI) -> AsyncOpenAI:
+    """Return the other client in the pool (fallback when current fails)."""
+    with _pool_lock:
+        for c in _pool:
+            if c is not current:
+                return c
+    return current
+
+
+# ── Sync streaming generator (chat_handler) ────────────────────────────────
 
 
 def generate_response(messages: list[dict]) -> Generator[str, None, None]:

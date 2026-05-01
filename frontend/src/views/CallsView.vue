@@ -138,6 +138,7 @@ import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useCallsStore } from '@/stores/calls'
 import { formatDate, formatDuration, truncate } from '@/utils/format'
+import { useEvents } from '@/composables/useEvents'
 import StatusBadge from '@/components/StatusBadge.vue'
 import CategoryBadge from '@/components/CategoryBadge.vue'
 import Spinner from '@/components/Spinner.vue'
@@ -152,6 +153,12 @@ import {
 
 const store = useCallsStore()
 const route = useRoute()
+
+// Refresh live when calls start or end
+useEvents({
+  call_started() { store.fetchCalls(); store.fetchStats() },
+  call_ended() { store.fetchCalls(); store.fetchStats() },
+})
 
 const localStatus = ref('')
 const localNeedsHuman = ref(false)

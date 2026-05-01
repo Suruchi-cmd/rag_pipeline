@@ -26,13 +26,23 @@
           <h2 class="font-semibold text-slate-900 text-sm">Recent Calls</h2>
           <span
             v-if="store.stats?.active_calls"
-            class="text-xs bg-green-100 text-green-700 font-medium px-2 py-0.5 rounded-full"
+            class="text-xs bg-green-100 text-green-700 font-medium px-2 py-0.5 rounded-full flex items-center gap-1"
           >
+            <span class="relative flex h-1.5 w-1.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" />
+              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500" />
+            </span>
             {{ store.stats.active_calls }} live
           </span>
         </div>
         <div class="flex items-center gap-3">
-          <span class="text-xs text-slate-400">Auto-refreshes every 30s</span>
+          <span class="text-xs text-slate-400 flex items-center gap-1">
+            <span
+              class="w-1.5 h-1.5 rounded-full inline-block"
+              :class="sseConnected ? 'bg-green-400' : 'bg-slate-300'"
+            />
+            {{ sseConnected ? 'Live' : 'Connecting…' }}
+          </span>
           <RouterLink to="/calls" class="text-xs text-indigo-600 font-medium hover:underline">
             View all →
           </RouterLink>
@@ -66,7 +76,8 @@
             v-for="call in recentCalls"
             :key="call.id"
             class="hover:bg-slate-50 cursor-pointer transition-colors"
-            @click="$router.push(`/calls/${call.id}`)"
+            :class="flashIds.has(call.id ?? -1) ? 'bg-green-50' : ''"
+            @click="call.id && $router.push(`/calls/${call.id}`)"
           >
             <td class="px-6 py-3.5 font-medium text-slate-900">
               {{ call.phone_number }}
@@ -96,10 +107,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, reactive, computed, onMounted, onUnmounted } from 'vue'
 import { useCallsStore } from '@/stores/calls'
-import { listCalls } from '@/api/calls'
+import { listCalls, getCall } from '@/api/calls'
 import { formatDate, formatDuration } from '@/utils/format'
+import { useEvents } from '@/composables/useEvents'
 import StatusBadge from '@/components/StatusBadge.vue'
 import Spinner from '@/components/Spinner.vue'
 import type { Call } from '@/types'
@@ -114,6 +126,8 @@ import {
 const store = useCallsStore()
 const recentCalls = ref<Call[]>([])
 const loading = ref(false)
+const sseConnected = ref(false)
+const flashIds = reactive(new Set<number>())
 
 const statCards = computed(() => [
   {
@@ -149,10 +163,61 @@ async function load() {
   }
 }
 
+function flashRow(callId: number) {
+  flashIds.add(callId)
+  setTimeout(() => flashIds.delete(callId), 2_000)
+}
+
+// SSE: react immediately to call events — no polling needed
+useEvents({
+  async call_started(data) {
+    sseConnected.value = true
+    // Fetch the newly created call record from DB
+    if (data.call_id) {
+      try {
+        const detail = await getCall(data.call_id)
+        const exists = recentCalls.value.some((c) => c.id === detail.call.id)
+        if (!exists) {
+          recentCalls.value = [detail.call, ...recentCalls.value].slice(0, 10)
+          flashRow(detail.call.id)
+        }
+      } catch {
+        // DB row may not be committed yet; fall back to a full reload
+        await load()
+      }
+    }
+    store.fetchStats()
+  },
+
+  call_ended(data) {
+    sseConnected.value = true
+    if (data.call_id == null) { store.fetchStats(); return }
+    const idx = recentCalls.value.findIndex((c) => c.id === data.call_id)
+    const existing = idx !== -1 ? recentCalls.value[idx] : undefined
+    if (idx !== -1 && existing) {
+      recentCalls.value[idx] = {
+        id: existing.id,
+        call_sid: existing.call_sid,
+        phone_number: existing.phone_number,
+        started_at: existing.started_at,
+        total_turns: existing.total_turns,
+        flag_reason: existing.flag_reason,
+        status: data.status as Call['status'],
+        needs_human: Boolean(data.needs_human),
+        summary: data.summary ?? existing.summary,
+        ended_at: new Date().toISOString(),
+      }
+      flashRow(data.call_id)
+    }
+    store.fetchStats()
+  },
+})
+
+// Fallback poll every 60 s to catch anything SSE might miss
 let timer: ReturnType<typeof setInterval>
 onMounted(() => {
   load()
-  timer = setInterval(load, 30_000)
+  timer = setInterval(load, 60_000)
 })
 onUnmounted(() => clearInterval(timer))
 </script>

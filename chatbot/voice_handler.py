@@ -29,7 +29,7 @@ if _REPO_ROOT not in sys.path:
 
 from chatbot.config import settings  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
-from chatbot.llm import _make_async_client, _make_rephrase_client  # noqa: E402
+from chatbot.llm import _get_fallback_async_client, _make_async_client  # noqa: E402
 from chatbot.vector_store import vector_store  # noqa: E402
 from src.utils.pipeline_logger import PipelineLogger  # noqa: E402
 
@@ -470,7 +470,7 @@ async def _rewrite_query(user_message: str, conversation_history: list[dict]) ->
     prompt = _REWRITE_PROMPT.format(chat_history=chat_history, question=user_message)
 
     try:
-        client = _make_rephrase_client()
+        client = _make_async_client()
         response = await client.chat.completions.create(
             model=_FAST_MODEL,
             messages=[{"role": "user", "content": prompt}],
@@ -649,14 +649,26 @@ async def stream_voice_tokens(messages: list[dict]):
         TTS pacing.
     """
     client = _make_async_client()
-    stream = await client.chat.completions.create(
-        model=_VOICE_MODEL,
-        messages=messages,
-        stream=True,
-        max_tokens=settings.VOICE_MAX_TOKENS,
-        temperature=settings.VOICE_TEMPERATURE,
-        extra_body={"keep_alive": settings.OLLAMA_KEEP_ALIVE},
-    )
+    try:
+        stream = await client.chat.completions.create(
+            model=_VOICE_MODEL,
+            messages=messages,
+            stream=True,
+            max_tokens=settings.VOICE_MAX_TOKENS,
+            temperature=settings.VOICE_TEMPERATURE,
+            extra_body={"keep_alive": settings.OLLAMA_KEEP_ALIVE},
+        )
+    except Exception as exc:
+        logger.warning("Primary Ollama failed, switching to fallback: %s", exc)
+        client = _get_fallback_async_client(client)
+        stream = await client.chat.completions.create(
+            model=_VOICE_MODEL,
+            messages=messages,
+            stream=True,
+            max_tokens=settings.VOICE_MAX_TOKENS,
+            temperature=settings.VOICE_TEMPERATURE,
+            extra_body={"keep_alive": settings.OLLAMA_KEEP_ALIVE},
+        )
 
     buffer = ""
     first_chunk_sent = False
