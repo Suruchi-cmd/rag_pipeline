@@ -1,0 +1,46 @@
+2026-04-25 14:32:31,326  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA80551e624a922bf2b5525fd5cc6a6325.log
+2026-04-25 14:32:31,326  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] ConversationRelay connected from +14374383992
+2026-04-25 14:32:39,343  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User said: Hi, Maya. How are you doing?
+2026-04-25 14:32:39,707  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY rag_api=360ms  docs=7
+2026-04-25 14:32:39,708  WARNING   chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:32:39,708  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY prepare_voice_stream=362ms
+2026-04-25 14:32:40,155  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY silence_to_first_reply=812ms
+2026-04-25 14:32:40,343  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (full): Hey there! I'm good, thanks. How can I help you today?
+2026-04-25 14:32:47,511  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User said: I want to book a birthday party at Edo's postcard.
+2026-04-25 14:32:48,664  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY rag_api=643ms  docs=7
+2026-04-25 14:32:48,664  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] RAG: 5/7 docs passed score threshold 0.50
+2026-04-25 14:32:48,664  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY prepare_voice_stream=1149ms
+2026-04-25 14:32:49,895  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY silence_to_first_reply=2384ms
+2026-04-25 14:32:50,803  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (full): Oh, it sounds like you're thinking of booking a birthday party with us here at AeroSports Scarborough instead. We have some great packages available: Premium, VIP, and Ultimate. Do you know how many k
+2026-04-25 14:33:07,782  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User said: Uh, I will be having more than 20 kids.
+2026-04-25 14:33:08,483  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY rag_api=335ms  docs=7
+2026-04-25 14:33:08,484  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:33:08,484  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY prepare_voice_stream=699ms
+2026-04-25 14:33:09,932  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY silence_to_first_reply=2150ms
+2026-04-25 14:33:16,658  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (full): If you're planning a party for more than 20 kids at AeroSports Scarborough, here are some key points and options to consider: 1. Birthday Party Packages: Premium Party: Starts at 39. 90 per jumper wit
+2026-04-25 14:34:55,503  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User said: Okay. Sounds good.
+2026-04-25 14:34:56,660  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY rag_api=611ms  docs=7
+2026-04-25 14:34:56,660  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:34:56,661  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY prepare_voice_stream=1155ms
+2026-04-25 14:34:58,047  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY silence_to_first_reply=2544ms
+2026-04-25 14:34:58,960  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (full): Great! If you have any more questions or need further assistance with planning your visit or booking a party at Aero Camp, feel free to ask. Whether it's about camp details, birthday packages, or anyt
+2026-04-25 14:35:01,737  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User said: But, um, do any of the who card team uh, the birthday package include go karting?
+2026-04-25 14:35:02,778  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY rag_api=509ms  docs=7
+2026-04-25 14:35:02,779  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:35:02,779  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY prepare_voice_stream=1040ms
+2026-04-25 14:35:04,142  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY silence_to_first_reply=2405ms
+2026-04-25 14:35:07,724  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (full): Yes, the Ultimate Birthday Party Package at AeroCamp includes go karting as part of its offerings. Each jumper in the Ultimate Package gets to enjoy one race on the go-karts. This is a key feature tha
+2026-04-25 14:35:16,675  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User interrupted. Spoken so far: Great!
+2026-04-25 14:35:16,675  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (truncated to spoken): Great!
+2026-04-25 14:35:16,675  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User said: Hello?
+2026-04-25 14:35:16,678  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] Skipping RAG — conversational message: Hello?
+2026-04-25 14:35:16,679  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY prepare_voice_stream=1ms
+2026-04-25 14:35:17,436  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY silence_to_first_reply=760ms
+2026-04-25 14:35:17,522  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (full): Hey there! How can I help you today?
+2026-04-25 14:35:20,801  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] User said: Hello?
+2026-04-25 14:35:20,804  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] Skipping RAG — conversational message: Hello?
+2026-04-25 14:35:20,805  INFO      chatbot.voice_handler  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY prepare_voice_stream=1ms
+2026-04-25 14:35:20,926  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] LATENCY silence_to_first_reply=125ms
+2026-04-25 14:35:21,226  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Assistant (full): Hi! How can I assist you today at AeroSports Scarborough? Let me know what you need.
+2026-04-25 14:35:25,147  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Finalized abandoned call in DB
+2026-04-25 14:35:25,147  INFO      chatbot.server  [CA80551e624a922bf2b5525fd5cc6a6325] Session log closed

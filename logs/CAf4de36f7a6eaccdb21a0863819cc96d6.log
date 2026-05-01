@@ -1,0 +1,97 @@
+2026-04-25 15:07:37,317  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAf4de36f7a6eaccdb21a0863819cc96d6.log
+2026-04-25 15:07:37,317  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] ConversationRelay connected from +14372449451
+2026-04-25 15:07:54,055  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Hi. Actually, I'm looking for a like, tickets or pass for a day. Do you have something like that includes everything in 1 single text?
+2026-04-25 15:07:54,449  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=389ms  docs=7
+2026-04-25 15:07:54,449  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 5/7 docs passed score threshold 0.50
+2026-04-25 15:07:54,449  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=391ms
+2026-04-25 15:07:56,122  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=2067ms
+2026-04-25 15:07:56,841  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): Yeah, we've got an All-Access Pass that lets you jump on all the trampolines and do go karting too. It's called the All-Access Pass. Want to know more about it?
+2026-04-25 15:07:57,296  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User interrupted. Spoken so far: Yeah,
+2026-04-25 15:07:57,296  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (truncated to spoken): Yeah,
+2026-04-25 15:07:57,296  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Hello?
+2026-04-25 15:07:57,301  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] Skipping RAG — conversational message: Hello?
+2026-04-25 15:07:57,301  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=0ms
+2026-04-25 15:07:57,887  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=591ms
+2026-04-25 15:07:58,492  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): How can I help you? Are you thinking about an all-day pass? We've got different options depending on how long you want to stay. Are you planning just a session or more of an all-day thing?
+2026-04-25 15:08:10,780  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Uh, maybe 2 hours.
+2026-04-25 15:08:11,593  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=376ms  docs=7
+2026-04-25 15:08:11,593  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 3/7 docs passed score threshold 0.50
+2026-04-25 15:08:11,593  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=811ms
+2026-04-25 15:08:12,546  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=1766ms
+2026-04-25 15:08:13,551  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): For two hours, the Premium Jump Pass is perfect. It's twenty-four dollars and ninety cents for ninety minutes, plus tax. If you want to stay longer than that, we also have a VIP Jump Pass for one hund
+2026-04-25 15:08:41,215  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Yeah. I would like to go for 1 20 minutes. Uh, but does it have everything?
+2026-04-25 15:08:42,301  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=302ms  docs=7
+2026-04-25 15:08:42,301  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 6/7 docs passed score threshold 0.50
+2026-04-25 15:08:42,301  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=1082ms
+2026-04-25 15:08:43,826  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=2611ms
+2026-04-25 15:08:43,890  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User interrupted. Spoken so far: 
+2026-04-25 15:08:43,891  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LLM stream cancelled (user interrupted)
+2026-04-25 15:08:43,891  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (partial/cancelled): Which attraction are you interested in visiting for 20 minutes?
+2026-04-25 15:08:48,326  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Included? Like, go karting and, like, those things have separate charges.
+2026-04-25 15:08:49,380  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=278ms  docs=7
+2026-04-25 15:08:49,380  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 15:08:49,381  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=1051ms
+2026-04-25 15:08:50,803  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=2477ms
+2026-04-25 15:08:52,212  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): Gotcha! So, the main attractions like wall-to-wall trampolines, rock walls, dodgeball, and others are included in your jump pass. But for some of the cool extras like Go Karting, Laser Tag, Bazooka Ba
+2026-04-25 15:08:52,786  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User interrupted. Spoken so far: the main attractions like wall-to-wall trampolines, rock walls, dodgeball,
+2026-04-25 15:08:52,787  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (truncated to spoken): the main attractions like wall-to-wall trampolines, rock walls, dodgeball,
+2026-04-25 15:08:52,787  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Hello?
+2026-04-25 15:08:52,790  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] Skipping RAG — conversational message: Hello?
+2026-04-25 15:08:52,791  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=0ms
+2026-04-25 15:08:53,469  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=682ms
+2026-04-25 15:08:54,090  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): and the foam pit are included in all our jump passes. If you're looking to add go-karting or other activities, those do have separate charges. Would you like more details on what's included with the j
+2026-04-25 15:09:07,998  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Yeah.
+2026-04-25 15:09:08,003  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] Skipping RAG — conversational message: Yeah.
+2026-04-25 15:09:08,003  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=0ms
+2026-04-25 15:09:08,449  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=452ms
+2026-04-25 15:09:09,138  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): The Premium Jump Pass includes access to wall-to-wall tr ampolines, rock walls, dodgeball, and the foam pit for ninety minutes. If you're interested in go-karting or other activities, they are separat
+2026-04-25 15:09:26,072  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Yeah. How much that would be?
+2026-04-25 15:09:26,730  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=292ms  docs=7
+2026-04-25 15:09:26,731  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 2/7 docs passed score threshold 0.50
+2026-04-25 15:09:26,731  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=655ms
+2026-04-25 15:09:27,886  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=1814ms
+2026-04-25 15:09:28,607  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): For go-karting on the Main Track as an add -on, it's nine dollars and ninety cents per person, plus tax. On the Mini Track, it's four dollars and ninety cents per person, plus tax. Let me know if you 
+2026-04-25 15:09:48,300  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Yeah. How how long track is? Like, how long would be the ride?
+2026-04-25 15:09:49,103  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=276ms  docs=7
+2026-04-25 15:09:49,104  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 2/7 docs passed score threshold 0.50
+2026-04-25 15:09:49,104  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=799ms
+2026-04-25 15:09:50,052  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=1752ms
+2026-04-25 15:09:50,729  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): The Main Track offers up to ten laps for each race, while the Mini Track also allows up to ten laps per race. Each lap gives you a fun racing experience. Let me know if there's anything else you'd lik
+2026-04-25 15:10:07,853  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Okay. What other activities we have up there? It doesn't go karting.
+2026-04-25 15:10:08,616  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=299ms  docs=7
+2026-04-25 15:10:08,617  WARNING   chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 15:10:08,617  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=761ms
+2026-04-25 15:10:09,557  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=1705ms
+2026-04-25 15:10:09,947  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User interrupted. Spoken so far: 
+2026-04-25 15:10:09,948  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LLM stream cancelled (user interrupted)
+2026-04-25 15:10:09,948  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (partial/cancelled): Besides the main attractions like wall-to-wall trampolines, rock walls, dodgeball, and the foam pit, we also offer a zip line for an additional fee.
+2026-04-25 15:10:12,088  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: That is not included in, like, jump pass.
+2026-04-25 15:10:12,747  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=198ms  docs=7
+2026-04-25 15:10:12,747  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 5/7 docs passed score threshold 0.50
+2026-04-25 15:10:12,747  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=656ms
+2026-04-25 15:10:14,183  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=2094ms
+2026-04-25 15:10:14,783  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): Right, the zip line requires a separate ticket or add-on purchase. It's not included with any of our jump passes. If you're interested, I can provide more details about it!
+2026-04-25 15:10:26,215  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Yeah. How much it would be?
+2026-04-25 15:10:26,875  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=287ms  docs=7
+2026-04-25 15:10:26,875  WARNING   chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 15:10:26,875  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=657ms
+2026-04-25 15:10:27,991  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=1776ms
+2026-04-25 15:10:29,029  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): The zip line is available for an additional fee , but I don't have the exact price here. For precise pricing and availability, it's best to call us at two eight nine, four five four, five five five fi
+2026-04-25 15:10:49,110  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Okay.
+2026-04-25 15:10:49,114  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] Skipping RAG — conversational message: Okay.
+2026-04-25 15:10:49,114  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=1ms
+2026-04-25 15:10:49,456  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY silence_to_first_reply=347ms
+2026-04-25 15:10:49,907  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (full): Great! If there's anything else you need help with or any other questions, feel free to ask. Otherwise, have fun planning your visit!
+2026-04-25 15:10:50,754  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User interrupted. Spoken so far: If there's anything else you need help with or any other questions,
+2026-04-25 15:10:50,755  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Assistant (truncated to spoken): If there's anything else you need help with or any other questions,
+2026-04-25 15:10:56,331  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Is there any other yeah, is there any other activity that is not included in Jumps?
+2026-04-25 15:10:57,169  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=373ms  docs=7
+2026-04-25 15:10:57,170  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 5/7 docs passed score threshold 0.50
+2026-04-25 15:10:57,170  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=835ms
+2026-04-25 15:10:57,357  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] User said: Jam files?
+2026-04-25 15:10:57,363  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] LLM stream cancelled (user interrupted)
+2026-04-25 15:10:57,880  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY rag_api=146ms  docs=7
+2026-04-25 15:10:57,880  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] RAG: 5/7 docs passed score threshold 0.50
+2026-04-25 15:10:57,881  INFO      chatbot.voice_handler  [CAf4de36f7a6eaccdb21a0863819cc96d6] LATENCY prepare_voice_stream=520ms
+2026-04-25 15:10:58,975  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Finalized abandoned call in DB
+2026-04-25 15:10:58,975  INFO      chatbot.server  [CAf4de36f7a6eaccdb21a0863819cc96d6] Session log closed

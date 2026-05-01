@@ -1,0 +1,1164 @@
+# Voice Session Pipeline Log
+# call_sid : CAce2f29ecac9300960c3ee405f4e2da6f
+# started  : 2026-04-25T13:28:21.008
+# log_file : /Users/Rajan/Documents/GitHub/rag_pipeline/src/logs/voice_session_2026-04-25_13-28-21.log
+
+[2026-04-25 13:28:21.008] [INCOMING_TRANSCRIPT] [Turn #1]
+────────────────────────────────────────────
+I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+────────────────────────────────────────────
+
+[2026-04-25 13:28:21.008] [REFINED_QUERY] [Turn #1]
+────────────────────────────────────────────
+Original : I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+Refined  : (unchanged)
+────────────────────────────────────────────
+
+[2026-04-25 13:28:21.389] [RAG_RESULTS] [Turn #1]
+────────────────────────────────────────────
+Retrieved 7 document(s):
+
+[1]  score=0.580367242119745  source=faqs.md
+Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand th…
+
+[2]  score=0.5111587199914076  source=faqs.md
+Let us know in advance so we can customize the plans.
+
+**Q: What is the cancellation/rescheduling policy?**
+
+A: Reschedule within 1 year, no charge. Cancel 14+ days: store gift card. Within 14 days: no refund.
+
+**Q: Can I upgrade or downgrade my package?**
+
+A: Must be 14+ days in advance, subject to availability.
+
+**Q: Are there rewards for hosting multiple parties?**
+
+A: Contact us about repeat booking discounts or rewards.
+
+## Aero Camp
+
+**Q: What's included in Aero Camp?**
+
+A: Supervised tram…
+
+[3]  score=0.4872396427905259  source=faqs.md
+Contact us to arrange a visit.
+
+**Q: Can I split the party cost?**
+
+A: Yes, payments can be split. Let us know in advance.
+
+**Q: Do you help with setup and cleanup?**
+
+A: Yes, staff assists with setup and handles cleanup.
+
+**Q: Are there options for non-jumpers?**
+
+A: Non-jumpers can enjoy the party room and food but not attractions. Don't count toward minimum.
+
+**Q: Can I book for twins or multiple children?**
+
+A: Yes!
+
+[4]  score=0.47805941104888916  source=voice_call_scripts.md
+Aero Socks are required and cost $3.99 but they are reusable so you can bring them back next time.
+
+*Note: Give a brief summary, offer to go deeper*
+
+## Birthday Overview
+
+> We have three birthday party packages. The Premium Party starts at $39.90 per jumper with 75 minutes of jump time and 45 minutes in a private party room. The VIP Party is $44.90 per jumper with 90 minutes of jump time and 60 minutes of room time. And the Ultimate Party is $59.90 per jumper with 120 minutes of jump time, 60 m…
+
+[5]  score=0.4772426628244719  source=special_programs.md
+No need for white or neon shirts like other locations.
+
+- **Availability:** Every day during regular hours
+- **Time:** During regular hours
+- **Price:** Same as regular admission
+
+## Special Needs Program
+
+120 minutes of play time, no go kart races included. One support worker admitted free with a waiver. Open to all guests with special needs.
+
+- **Availability:** All operating hours
+- **Time:** Anytime during park hours
+- **Price:** $19.90
+
+[6]  score=0.4665640870668948  source=park_rules.md
+We have plenty of seating throughout the facility.
+
+## Hiring Age
+
+We hire 16 years old and older.
+
+## Gift Cards
+
+Gift cards are available for purchase at the park or online. Jump cards never expire and can be used by different jumpers.
+
+[7]  score=0.46243137569053794  source=faqs.md
+**
+
+A: No, attractions are shared with other patrons. Your party room is private.
+
+**Q: Can I extend the jumping or party room time?**
+
+A: Additional time may be available for purchase based on availability.
+
+**Q: What if some guests don't show up?**
+
+A: The minimum jumper count for your package is still charged. Additional fees for extra arrivals.
+
+**Q: Can I request a specific party room?**
+
+A: We try to accommodate but cannot guarantee — based on availability.
+
+**Q: Is there an area for paren…
+────────────────────────────────────────────
+
+[2026-04-25 13:28:21.389] [LLM_CONTEXT] [Turn #1]
+────────────────────────────────────────────
+2 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Saturday, April 25, 2026 at 01:28 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: faqs.md)
+Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand the park rules before dropping them off.
+
+**Q: Do spectators have to pay to watch jumpers?**
+
+A: Non-jumpers are never charged admission. Only jumpers pay for general admission.
+
+**Q: Do you have food available to purchase?
+
+[2] (source: faqs.md)
+Let us know in advance so we can customize the plans.
+
+**Q: What is the cancellation/rescheduling policy?**
+
+A: Reschedule within 1 year, no charge. Cancel 14+ days: store gift card. Within 14 days: no refund.
+
+**Q: Can I upgrade or downgrade my package?**
+
+A: Must be 14+ days in advance, subject to availability.
+
+**Q: Are there rewards for hosting multiple parties?**
+
+A: Contact us about repeat booking discounts or rewards.
+
+## Aero Camp
+
+**Q: What's included in Aero Camp?**
+
+A: Supervised trampoline activities, games, challenges, crafts, contests, and group activities.
+
+**Q: Can I book individual days or must I book a full week?**
+
+A: You can book individual days or a full week. Both pricing options available.
+
+**Q: Is lunch included?**
+
+A: Lunch is not included but can be added for $9.90/day. You can also send a packed lunch.
+
+**Q: How do I register my child?**
+
+A: Register online or call the park. Spots fill up quickly — early registration recommended.
+
+**Q: What should my child bring?**
+
+A: Comfortable activewear, packed lunch/snacks (if not buying lunch combo), refillable water bottle.
+
+**Q: Is there supervision during camp?**
+
+A: Yes, trained staff supervise at all times.
+
+**Q: Can I add early drop-off or late pick-up last minute?**
+
+A: Yes, typically can be added with short notice. Notify camp team ASAP.
+
+**Q: What is the age requirement?**
+
+A: Campers must be 4-12 years old.
+
+**Q: Are waivers required for camp?**
+
+A: Yes, signed waiver required before attending. Complete online or at the park.
+
+**Q: When are PA Day Camps offered?**
+
+A: Available on all PA days per Catholic and Public Elementary School Boards. Check website or call.
+
+**Q: When is Summer Camp?**
+
+A: Runs during specific summer weeks. Dates announced closer to start.
+
+**Q: When is March Break Camp?**
+
+A: During official March Break for all elementary and secondary students.
+
+**Q: When is Winter Camp?**
+
+A: During winter holiday period. Dates posted closer to season.
+
+**Q: Can parents stay during camp?**
+
+A: We encourage drop-off for a smooth experience. Let us know if your child needs settling-in support.
+
+**Q: How are extended hours structured?**
+
+A: Supervised free play or quiet activities. Early drop-off from 7:30 AM. Late pick-up past 6PM (prices vary).
+
+**Q: Is there a lost and found?
+
+[3] (source: faqs.md)
+Contact us to arrange a visit.
+
+**Q: Can I split the party cost?**
+
+A: Yes, payments can be split. Let us know in advance.
+
+**Q: Do you help with setup and cleanup?**
+
+A: Yes, staff assists with setup and handles cleanup.
+
+**Q: Are there options for non-jumpers?**
+
+A: Non-jumpers can enjoy the party room and food but not attractions. Don't count toward minimum.
+
+**Q: Can I book for twins or multiple children?**
+
+A: Yes! 
+
+[4] (source: voice_call_scripts.md)
+Aero Socks are required and cost $3.99 but they are reusable so you can bring them back next time.
+
+*Note: Give a brief summary, offer to go deeper*
+
+## Birthday Overview
+
+> We have three birthday party packages. The Premium Party starts at $39.90 per jumper with 75 minutes of jump time and 45 minutes in a private party room. The VIP Party is $44.90 per jumper with 90 minutes of jump time and 60 minutes of room time. And the Ultimate Party is $59.90 per jumper with 120 minutes of jump time, 60 minutes of room time, plus go karting for every jumper. All packages include pizza and drinks. Minimum 10 jumpers. Would you like more details on any package?
+
+*Note: Pause between packages for clarity*
+
+## Gokart Overview
+
+> We have go karting on two tracks. The main track is for riders 54 inches or taller and costs $19.90 for a standalone race or $9.90 as an add-on if you already have a jump pass. The mini track is for riders 36 inches or taller and costs $9.90 standalone or $4.90 as an add-on. Each race is up to 10 laps. Just remember you need closed-toed shoes for go karting.
+
+*Note: Mention height requirements clearly*
+
+## Booking Redirect
+
+> You can book online at our website aerosportsparks.ca or I can help you with that right now. Would you like to proceed?
+
+*Note: Guide toward booking*
+
+## Waiver Info
+
+> Everyone who enters the park needs a signed waiver, including non-jumpers. You can fill it out online ahead of time at our website to save time at check-in. For anyone under 18, a parent or legal guardian must sign the waiver.
+
+*Note: Emphasize online waiver to reduce wait times*
+
+## Group Booking
+
+> For groups of 15 or more, we offer 25% off with the code GROUPBOOKING25. That brings the price down to about $25.47 per person for 120 minutes including socks. Would you like to book a group visit?
+
+*Note: Emphasize the savings*
+
+## Promo March Bday
+
+> Right now we have a April Birthday Promotion with up to $150 off birthday parties. Use code APRILBDAY50 for $50 off a Premium party, APRILBDAY100 for $100 off a VIP party, or APRILBDAY150 for $150 off an Ultimate party. You need to book by April 31st and host by September 30th.
+
+*Note: Only share if promo status is Active*
+
+## Camp Overview
+
+> We offer AeroCamp for kids ages 4 to 12. Full day camp runs from 8:30 AM to 4:30 PM and costs $69.90 per day or $299.90 for a full week. We also have half-day options for $39.90. Activities include trampolines, games, challenges, crafts, and group activities. Early drop-off from 7:30 AM and late pick-up past 6 PM are available for $10 each.
+
+*Note: Mention current camp availability if applicable*
+
+## Cannot Answer
+
+> That is a great question. I do not have that specific information right now, but I can have someone from our team get back to you. Can I get your name and phone number?
+
+*Note: Collect callback info when unsure*
+
+
+[5] (source: special_programs.md)
+No need for white or neon shirts like other locations.
+
+- **Availability:** Every day during regular hours
+- **Time:** During regular hours
+- **Price:** Same as regular admission
+
+## Special Needs Program
+
+120 minutes of play time, no go kart races included. One support worker admitted free with a waiver. Open to all guests with special needs.
+
+- **Availability:** All operating hours
+- **Time:** Anytime during park hours
+- **Price:** $19.90
+
+
+[6] (source: park_rules.md)
+We have plenty of seating throughout the facility.
+
+## Hiring Age
+
+We hire 16 years old and older.
+
+## Gift Cards
+
+Gift cards are available for purchase at the park or online. Jump cards never expire and can be used by different jumpers.
+
+
+[7] (source: faqs.md)
+**
+
+A: No, attractions are shared with other patrons. Your party room is private.
+
+**Q: Can I extend the jumping or party room time?**
+
+A: Additional time may be available for purchase based on availability.
+
+**Q: What if some guests don't show up?**
+
+A: The minimum jumper count for your package is still charged. Additional fees for extra arrivals.
+
+**Q: Can I request a specific party room?**
+
+A: We try to accommodate but cannot guarantee — based on availability.
+
+**Q: Is there an area for parents to wait?**
+
+A: Yes, parents can relax in our viewing area or common spaces.
+
+**Q: Can I bring outside decorations?**
+
+A: Yes, as long as they comply with policies. No confetti, piñatas, or silly string. $40 cleaning charge if used.
+
+**Q: What is the check-in process for party guests?**
+
+A: Staff assists with check-in. Ensure waivers completed beforehand. Wristbands provided.
+
+**Q: Can you accommodate dietary restrictions?**
+
+A: Yes, with advance notice. 
+
+
+--- msg[1]  role=user ---
+I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+────────────────────────────────────────────
+
+[2026-04-25 13:28:22.647] [LLM_RAW_RESPONSE] [Turn #1]
+────────────────────────────────────────────
+You can definitely walk-in and jump without a booking We don't require reservations for general admission. You're welcome to come on by during our operating hours and get started right away! Would you like me to tell you more about our current hours, or is there anything else I can help with? 
+────────────────────────────────────────────
+
+[2026-04-25 13:28:22.647] [FINAL_RESPONSE_TO_CALLER] [Turn #1]
+────────────────────────────────────────────
+You can definitely walk-in and jump without a booking We don't require reservations for general admission. You're welcome to come on by during our operating hours and get started right away! Would you like me to tell you more about our current hours, or is there anything else I can help with?
+────────────────────────────────────────────
+
+[2026-04-25 13:28:40.741] [INCOMING_TRANSCRIPT] [Turn #2]
+────────────────────────────────────────────
+What's the busiest time on weekend?
+────────────────────────────────────────────
+
+[2026-04-25 13:28:41.057] [REFINED_QUERY] [Turn #2]
+────────────────────────────────────────────
+Original : What's the busiest time on weekend?
+Refined  : What are the park's operating hours for a typical weekend?
+────────────────────────────────────────────
+
+[2026-04-25 13:28:56.062] [RAG_RESULTS] [Turn #2]
+────────────────────────────────────────────
+(no documents retrieved)
+────────────────────────────────────────────
+
+[2026-04-25 13:28:56.062] [LLM_CONTEXT] [Turn #2]
+────────────────────────────────────────────
+4 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Saturday, April 25, 2026 at 01:28 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+No matching context was found for this query. Direct the caller to phone 289-454-5555 or email events.scb@aerosportsparks.ca.
+
+--- msg[1]  role=user ---
+I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+
+--- msg[2]  role=assistant ---
+You can definitely walk-in and jump without a booking We don't require reservations for general admission. You're welcome to come on by during our operating hours and get started right away! Would you like me to tell you more about our current hours, or is there anything else I can help with?
+
+--- msg[3]  role=user ---
+What's the busiest time on weekend?
+────────────────────────────────────────────
+
+[2026-04-25 13:28:56.065] [INCOMING_TRANSCRIPT] [Turn #3]
+────────────────────────────────────────────
+Can you more tell me about more?
+────────────────────────────────────────────
+
+[2026-04-25 13:28:56.372] [REFINED_QUERY] [Turn #3]
+────────────────────────────────────────────
+Original : Can you more tell me about more?
+Refined  : What are the operating hours for general admission at the park?
+────────────────────────────────────────────
+
+[2026-04-25 13:29:11.376] [RAG_RESULTS] [Turn #3]
+────────────────────────────────────────────
+(no documents retrieved)
+────────────────────────────────────────────
+
+[2026-04-25 13:29:11.376] [LLM_CONTEXT] [Turn #3]
+────────────────────────────────────────────
+5 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Saturday, April 25, 2026 at 01:29 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+No matching context was found for this query. Direct the caller to phone 289-454-5555 or email events.scb@aerosportsparks.ca.
+
+--- msg[1]  role=user ---
+I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+
+--- msg[2]  role=assistant ---
+You can definitely walk-in and jump without a booking We don't require reservations for general admission. You're welcome to come on by during our operating hours and get started right away! Would you like me to tell you more about our current hours, or is there anything else I can help with?
+
+--- msg[3]  role=user ---
+What's the busiest time on weekend?
+
+--- msg[4]  role=user ---
+Can you more tell me about more?
+────────────────────────────────────────────
+
+[2026-04-25 13:29:11.379] [INCOMING_TRANSCRIPT] [Turn #4]
+────────────────────────────────────────────
+Tell me more about the park.
+────────────────────────────────────────────
+
+[2026-04-25 13:29:11.629] [REFINED_QUERY] [Turn #4]
+────────────────────────────────────────────
+Original : Tell me more about the park.
+Refined  : What are the operating hours and general admission policies for the park?
+────────────────────────────────────────────
+
+[2026-04-25 13:29:26.633] [RAG_RESULTS] [Turn #4]
+────────────────────────────────────────────
+(no documents retrieved)
+────────────────────────────────────────────
+
+[2026-04-25 13:29:26.633] [LLM_CONTEXT] [Turn #4]
+────────────────────────────────────────────
+6 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Saturday, April 25, 2026 at 01:29 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+No matching context was found for this query. Direct the caller to phone 289-454-5555 or email events.scb@aerosportsparks.ca.
+
+--- msg[1]  role=user ---
+I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+
+--- msg[2]  role=assistant ---
+You can definitely walk-in and jump without a booking We don't require reservations for general admission. You're welcome to come on by during our operating hours and get started right away! Would you like me to tell you more about our current hours, or is there anything else I can help with?
+
+--- msg[3]  role=user ---
+What's the busiest time on weekend?
+
+--- msg[4]  role=user ---
+Can you more tell me about more?
+
+--- msg[5]  role=user ---
+Tell me more about the park.
+────────────────────────────────────────────
+
+[2026-04-25 13:29:26.635] [INCOMING_TRANSCRIPT] [Turn #5]
+────────────────────────────────────────────
+Tell me more about the park.
+────────────────────────────────────────────
+
+[2026-04-25 13:29:26.896] [REFINED_QUERY] [Turn #5]
+────────────────────────────────────────────
+Original : Tell me more about the park.
+Refined  : What are the operating hours and general admission policies for the park?
+────────────────────────────────────────────
+
+[2026-04-25 13:29:41.486] [RAG_RESULTS] [Turn #5]
+────────────────────────────────────────────
+Retrieved 7 document(s):
+
+[1]  score=0.596538120198678  source=special_programs.md
+No need for white or neon shirts like other locations.
+
+- **Availability:** Every day during regular hours
+- **Time:** During regular hours
+- **Price:** Same as regular admission
+
+## Special Needs Program
+
+120 minutes of play time, no go kart races included. One support worker admitted free with a waiver. Open to all guests with special needs.
+
+- **Availability:** All operating hours
+- **Time:** Anytime during park hours
+- **Price:** $19.90
+
+[2]  score=0.5486225543764298  source=faqs.md
+Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand th…
+
+[3]  score=0.5258760922440375  source=faqs.md
+Let us know in advance so we can customize the plans.
+
+**Q: What is the cancellation/rescheduling policy?**
+
+A: Reschedule within 1 year, no charge. Cancel 14+ days: store gift card. Within 14 days: no refund.
+
+**Q: Can I upgrade or downgrade my package?**
+
+A: Must be 14+ days in advance, subject to availability.
+
+**Q: Are there rewards for hosting multiple parties?**
+
+A: Contact us about repeat booking discounts or rewards.
+
+## Aero Camp
+
+**Q: What's included in Aero Camp?**
+
+A: Supervised tram…
+
+[4]  score=0.5173213369026609  source=faqs.md
+**
+
+A: Yes! We have a fully stocked Snack Shack serving delicious treats.
+
+**Q: What days are the least busy?**
+
+A: Weekends are our busiest days. Mondays and Tuesdays are usually less busy.
+
+**Q: Can my small child come to the park?**
+
+A: As long as the child can walk, they can jump!
+
+**Q: Do you sell gift cards?
+
+[5]  score=0.5071484455047185  source=park_rules.md
+We have plenty of seating throughout the facility.
+
+## Hiring Age
+
+We hire 16 years old and older.
+
+## Gift Cards
+
+Gift cards are available for purchase at the park or online. Jump cards never expire and can be used by different jumpers.
+
+[6]  score=0.50436022851705  source=faqs.md
+**
+
+A: No, attractions are shared with other patrons. Your party room is private.
+
+**Q: Can I extend the jumping or party room time?**
+
+A: Additional time may be available for purchase based on availability.
+
+**Q: What if some guests don't show up?**
+
+A: The minimum jumper count for your package is still charged. Additional fees for extra arrivals.
+
+**Q: Can I request a specific party room?**
+
+A: We try to accommodate but cannot guarantee — based on availability.
+
+**Q: Is there an area for paren…
+
+[7]  score=0.4931528568267858  source=aero_camp.md
+# Aero Camp
+
+## Camp Programs
+
+| Program | Schedule | Price | Notes |
+|---------|----------|-------|-------|
+| PA Day Camp | 8:30AM - 4:30PM | Full Day: $69.90 |  |
+| Summer/Winter/March Break Camp | 8:30AM - 4:30PM | Full Day: $69.90 |  |
+| Summer/Winter/March Break Camp | 8:30AM - 4:30PM | Full Week: $299.90 |  |
+| Summer/Winter/March Break Camp | 8:30AM - 12:30PM | Half Day: $39.90 | AM option (summer camp only) |
+| Summer/Winter/March Break Camp | 12:30PM - 4:30PM | Half Day: $39.90 | PM opt…
+────────────────────────────────────────────
+
+[2026-04-25 13:29:41.486] [LLM_CONTEXT] [Turn #5]
+────────────────────────────────────────────
+7 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Saturday, April 25, 2026 at 01:29 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: special_programs.md)
+No need for white or neon shirts like other locations.
+
+- **Availability:** Every day during regular hours
+- **Time:** During regular hours
+- **Price:** Same as regular admission
+
+## Special Needs Program
+
+120 minutes of play time, no go kart races included. One support worker admitted free with a waiver. Open to all guests with special needs.
+
+- **Availability:** All operating hours
+- **Time:** Anytime during park hours
+- **Price:** $19.90
+
+
+[2] (source: faqs.md)
+Can they be filled out online?**
+
+A: Waivers are required for every guest to the park including non-jumpers. You can fill out the waiver online before you arrive to reduce check-in time. Children under 18 must have the waiver signed by a parent or legal guardian.
+
+**Q: Can I leave my child(ren) unattended?**
+
+A: Children under 12 cannot be dropped off without an adult present. While every child under 18 needs a parent or legal guardian to sign the waiver, please ensure all children understand the park rules before dropping them off.
+
+**Q: Do spectators have to pay to watch jumpers?**
+
+A: Non-jumpers are never charged admission. Only jumpers pay for general admission.
+
+**Q: Do you have food available to purchase?
+
+[3] (source: faqs.md)
+Let us know in advance so we can customize the plans.
+
+**Q: What is the cancellation/rescheduling policy?**
+
+A: Reschedule within 1 year, no charge. Cancel 14+ days: store gift card. Within 14 days: no refund.
+
+**Q: Can I upgrade or downgrade my package?**
+
+A: Must be 14+ days in advance, subject to availability.
+
+**Q: Are there rewards for hosting multiple parties?**
+
+A: Contact us about repeat booking discounts or rewards.
+
+## Aero Camp
+
+**Q: What's included in Aero Camp?**
+
+A: Supervised trampoline activities, games, challenges, crafts, contests, and group activities.
+
+**Q: Can I book individual days or must I book a full week?**
+
+A: You can book individual days or a full week. Both pricing options available.
+
+**Q: Is lunch included?**
+
+A: Lunch is not included but can be added for $9.90/day. You can also send a packed lunch.
+
+**Q: How do I register my child?**
+
+A: Register online or call the park. Spots fill up quickly — early registration recommended.
+
+**Q: What should my child bring?**
+
+A: Comfortable activewear, packed lunch/snacks (if not buying lunch combo), refillable water bottle.
+
+**Q: Is there supervision during camp?**
+
+A: Yes, trained staff supervise at all times.
+
+**Q: Can I add early drop-off or late pick-up last minute?**
+
+A: Yes, typically can be added with short notice. Notify camp team ASAP.
+
+**Q: What is the age requirement?**
+
+A: Campers must be 4-12 years old.
+
+**Q: Are waivers required for camp?**
+
+A: Yes, signed waiver required before attending. Complete online or at the park.
+
+**Q: When are PA Day Camps offered?**
+
+A: Available on all PA days per Catholic and Public Elementary School Boards. Check website or call.
+
+**Q: When is Summer Camp?**
+
+A: Runs during specific summer weeks. Dates announced closer to start.
+
+**Q: When is March Break Camp?**
+
+A: During official March Break for all elementary and secondary students.
+
+**Q: When is Winter Camp?**
+
+A: During winter holiday period. Dates posted closer to season.
+
+**Q: Can parents stay during camp?**
+
+A: We encourage drop-off for a smooth experience. Let us know if your child needs settling-in support.
+
+**Q: How are extended hours structured?**
+
+A: Supervised free play or quiet activities. Early drop-off from 7:30 AM. Late pick-up past 6PM (prices vary).
+
+**Q: Is there a lost and found?
+
+[4] (source: faqs.md)
+**
+
+A: Yes! We have a fully stocked Snack Shack serving delicious treats.
+
+**Q: What days are the least busy?**
+
+A: Weekends are our busiest days. Mondays and Tuesdays are usually less busy.
+
+**Q: Can my small child come to the park?**
+
+A: As long as the child can walk, they can jump!
+
+**Q: Do you sell gift cards?
+
+[5] (source: park_rules.md)
+We have plenty of seating throughout the facility.
+
+## Hiring Age
+
+We hire 16 years old and older.
+
+## Gift Cards
+
+Gift cards are available for purchase at the park or online. Jump cards never expire and can be used by different jumpers.
+
+
+[6] (source: faqs.md)
+**
+
+A: No, attractions are shared with other patrons. Your party room is private.
+
+**Q: Can I extend the jumping or party room time?**
+
+A: Additional time may be available for purchase based on availability.
+
+**Q: What if some guests don't show up?**
+
+A: The minimum jumper count for your package is still charged. Additional fees for extra arrivals.
+
+**Q: Can I request a specific party room?**
+
+A: We try to accommodate but cannot guarantee — based on availability.
+
+**Q: Is there an area for parents to wait?**
+
+A: Yes, parents can relax in our viewing area or common spaces.
+
+**Q: Can I bring outside decorations?**
+
+A: Yes, as long as they comply with policies. No confetti, piñatas, or silly string. $40 cleaning charge if used.
+
+**Q: What is the check-in process for party guests?**
+
+A: Staff assists with check-in. Ensure waivers completed beforehand. Wristbands provided.
+
+**Q: Can you accommodate dietary restrictions?**
+
+A: Yes, with advance notice. 
+
+[7] (source: aero_camp.md)
+# Aero Camp
+
+## Camp Programs
+
+| Program | Schedule | Price | Notes |
+|---------|----------|-------|-------|
+| PA Day Camp | 8:30AM - 4:30PM | Full Day: $69.90 |  |
+| Summer/Winter/March Break Camp | 8:30AM - 4:30PM | Full Day: $69.90 |  |
+| Summer/Winter/March Break Camp | 8:30AM - 4:30PM | Full Week: $299.90 |  |
+| Summer/Winter/March Break Camp | 8:30AM - 12:30PM | Half Day: $39.90 | AM option (summer camp only) |
+| Summer/Winter/March Break Camp | 12:30PM - 4:30PM | Half Day: $39.90 | PM option (summer camp only) |
+| Summer/Winter/March Break Camp |  | Half Day Week: $169.90 |  |
+
+## Add-Ons (Per Day)
+
+- **Lunch Combo:** $9.90
+- **Early Drop Off (from 7:30 AM):** $10.00
+- **Late Pick Up (past 6PM):** $10.00
+
+## Camp Details
+
+- **Age Requirement:** 4-12 years old
+- **Supervision:** Trained staff at all times
+- **Activities:** Trampoline, games, challenges, crafts, contests, group activities
+- **Waivers:** Required — complete online or at the park
+- **Registration:** Online via website or call the park directly
+
+
+
+--- msg[1]  role=user ---
+I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+
+--- msg[2]  role=assistant ---
+You can definitely walk-in and jump without a booking We don't require reservations for general admission. You're welcome to come on by during our operating hours and get started right away! Would you like me to tell you more about our current hours, or is there anything else I can help with?
+
+--- msg[3]  role=user ---
+What's the busiest time on weekend?
+
+--- msg[4]  role=user ---
+Can you more tell me about more?
+
+--- msg[5]  role=user ---
+Tell me more about the park.
+
+--- msg[6]  role=user ---
+Tell me more about the park.
+────────────────────────────────────────────
+
+# session ended: 2026-04-25T13:29:41.491

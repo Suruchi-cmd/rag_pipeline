@@ -1,0 +1,53 @@
+2026-04-25 14:27:34,827  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAec75971fba38a54a5d097d87fa44ca13.log
+2026-04-25 14:27:34,827  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] ConversationRelay connected from +14374383992
+2026-04-25 14:27:36,920  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User interrupted. Spoken so far: Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 14:27:36,921  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (truncated to spoken): Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 14:27:38,168  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: Thank you for calling.
+2026-04-25 14:27:38,529  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY rag_api=357ms  docs=7
+2026-04-25 14:27:38,529  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] RAG: 2/7 docs passed score threshold 0.50
+2026-04-25 14:27:38,529  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY prepare_voice_stream=358ms
+2026-04-25 14:27:39,035  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY silence_to_first_reply=866ms
+2026-04-25 14:27:39,230  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (full): You're welcome! How can I help you today?
+2026-04-25 14:27:40,504  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User interrupted. Spoken so far: How can I help you today?
+2026-04-25 14:27:40,504  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (truncated to spoken): How can I help you today?
+2026-04-25 14:27:41,599  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: You're welcome.
+2026-04-25 14:27:42,197  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY rag_api=322ms  docs=7
+2026-04-25 14:27:42,197  WARNING   chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:27:42,197  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY prepare_voice_stream=595ms
+2026-04-25 14:27:42,993  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY silence_to_first_reply=1394ms
+2026-04-25 14:27:43,447  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (full): No worries! What do you need assistance with? Whether it's about booking a birthday party or just some general info, I'm here to help.
+2026-04-25 14:27:53,422  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: I want to book a birthday party.
+2026-04-25 14:27:54,157  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY rag_api=364ms  docs=7
+2026-04-25 14:27:54,157  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:27:54,157  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY prepare_voice_stream=731ms
+2026-04-25 14:27:55,590  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY silence_to_first_reply=2168ms
+2026-04-25 14:27:55,631  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User interrupted. Spoken so far: 
+2026-04-25 14:27:55,632  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] LLM stream cancelled (user interrupted)
+2026-04-25 14:27:55,632  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (partial/cancelled): That sounds like a lot of fun!
+2026-04-25 14:27:55,735  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: And how long will be the room time and the room time?
+2026-04-25 14:27:56,445  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY rag_api=271ms  docs=7
+2026-04-25 14:27:56,445  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] RAG: 5/7 docs passed score threshold 0.50
+2026-04-25 14:27:56,445  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY prepare_voice_stream=707ms
+2026-04-25 14:27:57,946  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY silence_to_first_reply=2211ms
+2026-04-25 14:27:59,172  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (full): We have different party packages with varying jump times The Premium package includes forty-five minutes of jump time plus thirty minutes in a private room. The VIP package offers ninety minutes of ju
+2026-04-25 14:28:23,924  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: Okay. Thank you.
+2026-04-25 14:28:24,617  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY rag_api=291ms  docs=7
+2026-04-25 14:28:24,618  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:28:24,619  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY prepare_voice_stream=692ms
+2026-04-25 14:28:26,011  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY silence_to_first_reply=2087ms
+2026-04-25 14:28:26,420  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (full): You're welcome! If you have any more questions or need further assistance, feel free to ask. Have a great day! .
+2026-04-25 14:28:41,434  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: And what if I want to uh, have 1,000 people in my birthday party?
+2026-04-25 14:28:41,437  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Booking capture TRIGGERED. State → name
+2026-04-25 14:28:48,703  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: I'm Rosal.
+2026-04-25 14:28:48,708  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Captured name. State → details
+2026-04-25 14:28:55,267  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: No. I don't want to change anything.
+2026-04-25 14:28:55,271  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Booking change saved to DB
+2026-04-25 14:28:55,272  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Captured details. State → done. Handing back to LLM.
+2026-04-25 14:29:04,168  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] User said: No. That's fine.
+2026-04-25 14:29:05,030  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY rag_api=531ms  docs=7
+2026-04-25 14:29:05,031  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] RAG: 1/7 docs passed score threshold 0.50
+2026-04-25 14:29:05,031  INFO      chatbot.voice_handler  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY prepare_voice_stream=860ms
+2026-04-25 14:29:05,920  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] LATENCY silence_to_first_reply=1752ms
+2026-04-25 14:29:06,365  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Assistant (full): Great! Have a wonderful day, Rosal. If you have any more questions later on, don't hesitate to reach out. Bye for now!
+2026-04-25 14:29:13,486  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Finalized abandoned call in DB
+2026-04-25 14:29:13,487  INFO      chatbot.server  [CAec75971fba38a54a5d097d87fa44ca13] Session log closed

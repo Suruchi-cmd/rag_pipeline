@@ -1,0 +1,21 @@
+2026-04-25 13:28:08,086  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAce2f29ecac9300960c3ee405f4e2da6f.log
+2026-04-25 13:28:08,086  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] ConversationRelay connected from +16472697060
+2026-04-25 13:28:21,006  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] User said: I just want to inquire about the park. Can we walk in, or we do do we need a booking beforehand?
+2026-04-25 13:28:21,389  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY rag_api=382ms  docs=7
+2026-04-25 13:28:21,389  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY prepare_voice_stream=382ms
+2026-04-25 13:28:22,150  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY silence_to_first_reply=1144ms
+2026-04-25 13:28:22,646  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] Assistant (full): You can definitely walk-in and jump without a booking We don't require reservations for general admission. You're welcome to come on by during our operating hours and get started right away! Would you
+2026-04-25 13:28:40,735  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] User said: What's the busiest time on weekend?
+2026-04-25 13:28:56,061  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY rag_api=15004ms  docs=0
+2026-04-25 13:28:56,062  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY prepare_voice_stream=15321ms
+2026-04-25 13:28:56,062  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] User said: Can you more tell me about more?
+2026-04-25 13:29:11,376  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY rag_api=15004ms  docs=0
+2026-04-25 13:29:11,376  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY prepare_voice_stream=15311ms
+2026-04-25 13:29:11,377  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] User said: Tell me more about the park.
+2026-04-25 13:29:26,632  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY rag_api=15003ms  docs=0
+2026-04-25 13:29:26,633  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY prepare_voice_stream=15255ms
+2026-04-25 13:29:26,634  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] User said: Tell me more about the park.
+2026-04-25 13:29:41,485  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY rag_api=14588ms  docs=7
+2026-04-25 13:29:41,487  INFO      chatbot.voice_handler  [CAce2f29ecac9300960c3ee405f4e2da6f] LATENCY prepare_voice_stream=14851ms
+2026-04-25 13:29:41,491  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] Finalized abandoned call in DB
+2026-04-25 13:29:41,491  INFO      chatbot.server  [CAce2f29ecac9300960c3ee405f4e2da6f] Session log closed

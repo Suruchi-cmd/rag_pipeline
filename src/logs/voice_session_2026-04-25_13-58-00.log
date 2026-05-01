@@ -1,0 +1,362 @@
+# Voice Session Pipeline Log
+# call_sid : CAdac9b284f202137e5ab4daf1079a33f2
+# started  : 2026-04-25T13:58:00.457
+# log_file : /Users/Rajan/Documents/GitHub/rag_pipeline/src/logs/voice_session_2026-04-25_13-58-00.log
+
+[2026-04-25 13:58:00.457] [INCOMING_TRANSCRIPT] [Turn #1]
+────────────────────────────────────────────
+Hi. Do you guys have any birthday party packages?
+────────────────────────────────────────────
+
+[2026-04-25 13:58:00.457] [REFINED_QUERY] [Turn #1]
+────────────────────────────────────────────
+Original : Hi. Do you guys have any birthday party packages?
+Refined  : (unchanged)
+────────────────────────────────────────────
+
+[2026-04-25 13:58:01.049] [RAG_RESULTS] [Turn #1]
+────────────────────────────────────────────
+Retrieved 7 document(s):
+
+[1]  score=0.604334627548545  source=birthday_parties.md
+AeroSports Scarborough offers three birthday party packages: Premium, VIP, and Ultimate. 
+
+The Premium Party costs thirty-nine dollars and ninety cents per jumper with a minimum of ten jumpers required, at a base price of three hundred ninety-nine dollars. It includes seventy-five minutes on the trampoline courts followed by forty-five minutes in a private party room that fits twenty-five to thirty people. Food included is one large pizza for every five jumpers and one juice box per jumper. The …
+
+[2]  score=0.5932593699252493  source=voice_call_scripts.md
+Currently, we have an April Birthday Promotion offering up to one hundred and fifty dollars off birthday parties. Use the code APRILBDAY50 for a discount of fifty dollars on a Premium party, APRILBDAY100 for a hundred-dollar discount on a VIP party, or APRILBDAY150 for a one hundred and fifty-dollar discount on an Ultimate party. To qualify, you need to book by April thirty-first and host the event by September thirtieth.
+
+We offer AeroCamp for children aged four to twelve years old. The full-da…
+
+[3]  score=0.5549460318716835  source=promotions.md
+The April Birthday Promotion is currently active. To take advantage of this promotion, you must book by April thirty-first and host the event by September thirtieth. The promotion offers discounts on different types of parties. For a Premium Party, there is a discount of fifty dollars off with the promo code AprilBDAY50. A VIP Party comes with a discount of one hundred dollars off using the promo code AprilBDAY100. Lastly, an Ultimate Party can be discounted by one hundred and fifty dollars off …
+
+[4]  score=0.537499125301946  source=birthday_parties.md
+This amounts to roughly one hundred eighty-nine dollars in extras for one hundred fifty dollars more than VIP.
+
+Birthday party add-ons available include large pizzas (cheese, pepperoni, halal pepperoni, vegetarian, or Hawaiian) for twenty-five dollars each, juice boxes at thirty dollars for ten boxes, soft drink cans at twenty dollars for ten cans, physical birthday invitations at seventy-five cents each, and a go kart race add-on at nine dollars and ninety cents per person. The outside food fee…
+
+[5]  score=0.5291611202071104  source=faqs.md
+Yes, AeroSports socks are required at all locations. These jump socks are available for three dollars and ninety-nine cents plus tax. They are reusable, so it's recommended to keep them for future visits.
+
+Our trampolines have a weight limit of three hundred pounds.
+
+Waivers are necessary for every guest visiting the park, including those who do not participate in jumping activities. You can fill out the waiver online before your arrival to reduce check-in time. Children under eighteen years old…
+
+[6]  score=0.5247923702249123  source=voice_call_scripts.md
+Thank you for calling AeroSports Scarborough! How can I help you today? Use a warm, upbeat tone.
+
+One moment while I look that up for you. Use this phrase when retrieving information.
+
+Let me connect you with one of our team members who can help you with that. One moment please. This is used when the question is beyond what the AI can handle.
+
+Thanks for calling AeroSports Scarborough! We look forward to seeing you. Have a great day! Always end on a positive note.
+
+We are located at one thousand…
+
+[7]  score=0.4654956341836831  source=faqs.md
+If a child gets injured during their time at our park, trained staff will respond on-site immediately. Parents will be notified right away, and emergency protocols will be followed if the injury is serious.
+
+You can arrange to tour the facility before making your booking by contacting us directly. We'll help set up a convenient time for you to visit.
+
+Yes, splitting the party cost is possible. Please let us know in advance so we can accommodate this request.
+
+Our staff assists with both setup an…
+────────────────────────────────────────────
+
+[2026-04-25 13:58:01.050] [LLM_CONTEXT] [Turn #1]
+────────────────────────────────────────────
+2 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Saturday, April 25, 2026 at 01:58 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: birthday_parties.md)
+AeroSports Scarborough offers three birthday party packages: Premium, VIP, and Ultimate. 
+
+The Premium Party costs thirty-nine dollars and ninety cents per jumper with a minimum of ten jumpers required, at a base price of three hundred ninety-nine dollars. It includes seventy-five minutes on the trampoline courts followed by forty-five minutes in a private party room that fits twenty-five to thirty people. Food included is one large pizza for every five jumpers and one juice box per jumper. The birthday child receives a free glow t-shirt, digital invitations, and a free sixty-minute jump pass. All guest jumpers receive a free sixty-minute add-on pass. Go karting can be added on at nine dollars and ninety cents per person. There is no discount for socks, physical invitations are not included, and outside food requires a fifty-dollar fee. The total party duration is approximately two hours.
+
+The VIP Party costs forty-four dollars and ninety cents per jumper with the same minimum of ten jumpers required, at a base price of four hundred forty-nine dollars. It includes ninety minutes on the trampoline courts followed by sixty minutes in a private party room that fits twenty-five to thirty people. Food included is one large pizza for every five jumpers, plus one juice box and one water bottle per jumper. The birthday child receives a free glow t-shirt, digital invitations, and a free sixty-minute jump pass. All guest jumpers receive a free sixty-minute add-on pass. Socks are fifty percent off at two dollars instead of three dollars and ninety-nine cents. Go karting can be added on for nine dollars and ninety cents per person. Physical invitations are not included, and outside food requires a fifty-dollar fee. The total party duration is approximately two and a half hours.
+
+The Ultimate Party costs fifty-nine dollars and ninety cents per jumper with the same minimum of ten jumpers required, at a base price of five hundred ninety-nine dollars. It includes one hundred twenty minutes on the trampoline courts followed by sixty minutes in a private party room that fits twenty-five to thirty people. Food included is one large pizza for every five jumpers, plus one juice box or pop and one water bottle per jumper. The birthday child receives a free glow t-shirt, digital and physical invitations, and a free thirty-day jump pass. All guest jumpers receive a free sixty-minute add-on pass. Socks are free for all jumpers. Go karting is included with one race per jumper. The fifty-dollar outside food fee is waived. The total party duration is approximately three hours.
+
+Upgrading from Premium to VIP adds fifteen more minutes of jump time, fifteen more minutes of room time, a water bottle in addition to the juice box, and fifty percent off socks at two dollars instead of three dollars and ninety-nine cents. The cost difference is five dollars per jumper or fifty dollars for ten jumpers.
+
+Upgrading from VIP to Ultimate adds thirty more minutes of jump time, includes go karting for every jumper, provides free socks for all jumpers, offers free physical invitations, gives a free thirty-day pass for the birthday child instead of sixty minutes, waives the fifty-dollar outside food fee, and allows drinks to include pop as an option. The cost difference is fifteen dollars per jumper or one hundred fifty dollars for ten jumpers.
+
+The Ultimate Party offers the most value with go karting alone worth nine dollars and ninety cents per jumper, free socks at three dollars and ninety-nine cents per jumper, and a waived fifty-dollar outside food fee. This amounts to roughly one hundred eighty-nine dollars in extras for one hundred fifty dollars more than VIP.
+
+Birthday party add-ons available include large pizzas (cheese, pepperoni, halal pepperoni, vegetarian, or Hawaiian) for twenty-five dollars each, juice boxes at thirty dollars for ten boxes, soft drink cans at twenty dollars for ten cans, physical birthday invitations at seventy-five cents each, and a go kart race add-on at nine dollars and ninety cents per person. The outside food fee is fifty dollars but is waived for the Ultimate Party. A late ordering fee within twenty-four hours is twenty dollars.
+
+Terms and conditions include free rescheduling up to one year from the booking date. Cancellations with fourteen or more days notice receive a store gift card for the refund amount, while cancellations within fourteen days receive no refund. Package changes must be made fourteen or more days in advance and are subject to availability.
+
+[2] (source: voice_call_scripts.md)
+Currently, we have an April Birthday Promotion offering up to one hundred and fifty dollars off birthday parties. Use the code APRILBDAY50 for a discount of fifty dollars on a Premium party, APRILBDAY100 for a hundred-dollar discount on a VIP party, or APRILBDAY150 for a one hundred and fifty-dollar discount on an Ultimate party. To qualify, you need to book by April thirty-first and host the event by September thirtieth.
+
+We offer AeroCamp for children aged four to twelve years old. The full-day camp runs from eight-thirty in the morning until four-thirty in the afternoon at a cost of sixty-nine dollars and ninety cents per day or two hundred and ninety-nine dollars and ninety cents for a full week. We also have half-day options available for thirty-nine dollars and ninety cents. Activities include trampolines, games, challenges, crafts, and group activities. Early drop-off is available from seven-thirty in the morning and late pick-up past six o'clock in the evening for an additional ten dollars each.
+
+That is a great question. I do not have that specific information right now, but I can arrange for someone from our team to get back to you. Can I get your name and phone number?
+
+[3] (source: promotions.md)
+The April Birthday Promotion is currently active. To take advantage of this promotion, you must book by April thirty-first and host the event by September thirtieth. The promotion offers discounts on different types of parties. For a Premium Party, there is a discount of fifty dollars off with the promo code AprilBDAY50. A VIP Party comes with a discount of one hundred dollars off using the promo code AprilBDAY100. Lastly, an Ultimate Party can be discounted by one hundred and fifty dollars off with the promo code AprilBDAY150.
+
+[4] (source: birthday_parties.md)
+This amounts to roughly one hundred eighty-nine dollars in extras for one hundred fifty dollars more than VIP.
+
+Birthday party add-ons available include large pizzas (cheese, pepperoni, halal pepperoni, vegetarian, or Hawaiian) for twenty-five dollars each, juice boxes at thirty dollars for ten boxes, soft drink cans at twenty dollars for ten cans, physical birthday invitations at seventy-five cents each, and a go kart race add-on at nine dollars and ninety cents per person. The outside food fee is fifty dollars but is waived for the Ultimate Party. A late ordering fee within twenty-four hours is twenty dollars.
+
+Terms and conditions include free rescheduling up to one year from the booking date. Cancellations with fourteen or more days notice receive a store gift card for the refund amount, while cancellations within fourteen days receive no refund. Package changes must be made fourteen or more days in advance and are subject to availability. Waivers are required for all jumpers, with those under eighteen needing parental or guardian signatures valid for one year. Room supplies like plates, cups, and tablecloths are included. The jumping area is shared, but the party room is private. Prohibited items include piñatas, confetti, or silly string, which incur a forty-dollar cleaning charge if used. Food allergies or sensitivities should be advised in advance. All guests should arrive twenty minutes early for check-in. AeroSports is not responsible for lost or stolen items.
+
+[5] (source: faqs.md)
+Yes, AeroSports socks are required at all locations. These jump socks are available for three dollars and ninety-nine cents plus tax. They are reusable, so it's recommended to keep them for future visits.
+
+Our trampolines have a weight limit of three hundred pounds.
+
+Waivers are necessary for every guest visiting the park, including those who do not participate in jumping activities. You can fill out the waiver online before your arrival to reduce check-in time. Children under eighteen years old must have their waivers signed by a parent or legal guardian.
+
+Children under twelve years old cannot be left unattended at the park. While all children under eighteen need a parent or legal guardian to sign the waiver, it's important to ensure they understand the park rules before being dropped off.
+
+Non-jumpers are never charged admission; only those participating in jumping activities pay for general admission.
+
+Yes! We have a fully stocked Snack Shack serving delicious treats available for purchase.
+
+Weekends tend to be busier than weekdays at our park. Weekdays generally offer shorter wait times and less crowded conditions, making it easier to enjoy the attractions without long lines.
+
+The best time to visit is typically in the morning right when we open or later in the afternoon before closing. This timing helps avoid peak crowds that usually occur around midday.
+
+Yes, you can bring your own food into the park. However, please note that outside food and beverages are not allowed inside our attractions for safety reasons. You're welcome to enjoy your snacks in designated areas such as picnic spots or while waiting in line.
+
+Our birthday party packages include a private room with jump time included. The premium package does not include socks, but you can purchase them separately. The VIP package offers socks at fifty percent off, and the ultimate package includes free socks.
+
+Additional jumpers beyond the minimum required for your package can be added at the per-jumper price. Make sure that the total number of jumpers does not exceed the room capacity.
+
+Yes, additional jumping or party room time may be available for purchase based on availability.
+
+The minimum jumper count for your package is still charged even if some guests do not show up. There might also be additional fees for extra arrivals beyond what was initially planned.
+
+While we try to accommodate requests for specific party rooms, we cannot guarantee them as it depends on availability at the time of booking.
+
+Yes, there is an area designated for parents to wait while their children enjoy the party activities. Parents can relax in our viewing area or common spaces within the park.
+
+You are allowed to bring outside decorations as long as they comply with our policies. Please note that confetti, piñatas, and silly string are not permitted, and a cleaning charge of forty dollars will be applied if these items are used.
+
+The check-in process for party guests involves staff assistance. It's important to ensure all waivers are completed beforehand, and wristbands will be provided upon arrival.
+
+Yes, we can accommodate dietary restrictions with advance notice. Please contact us in advance to discuss your specific needs so that we can make the necessary arrangements.
+
+If your party runs late, it must adhere to the scheduled time as planned. Overages may result in additional fees being charged.
+
+The birthday child is included in the jumper count for the minimum required by your package.
+
+Digital invitations are included with every birthday party package. If you prefer physical invitations, they can be provided at a cost of seventy-five cents each.
+
+Yes, themed props or costumes that are safe and suitable for jumping activities are allowed.
+
+If a child gets injured during their time at our park, trained staff will respond on-site immediately. Parents will be notified right away, and emergency protocols will be followed if the injury is serious.
+
+You can arrange to tour the facility before making your booking by contacting us directly. We'll help set up a convenient time for you to visit.
+
+Yes, splitting the party cost is possible. Please let us know in advance so we can accommodate this request.
+
+Our staff assists with both setup and cleanup of birthday parties to ensure everything runs smoothly from start to finish.
+
+Non-jumpers are welcome to enjoy the party room and food but will not have access to jumping attractions. They do not count toward the minimum number required for your package.
+
+Yes, you can book our camp programs for twins or multiple children. Please inform us in advance so we can customize plans accordingly.
+
+If you need to reschedule your booking within one year of the original date, there is no charge.
+
+[6] (source: voice_call_scripts.md)
+Thank you for calling AeroSports Scarborough! How can I help you today? Use a warm, upbeat tone.
+
+One moment while I look that up for you. Use this phrase when retrieving information.
+
+Let me connect you with one of our team members who can help you with that. One moment please. This is used when the question is beyond what the AI can handle.
+
+Thanks for calling AeroSports Scarborough! We look forward to seeing you. Have a great day! Always end on a positive note.
+
+We are located at one thousand one hundred and twenty Birchmount Road in Scarborough. The postal code is M1K 5G4. Speak the address clearly and slowly.
+
+Our operating hours are from ten o'clock in the morning until eight o'clock in the evening, Sunday through Thursday, and from ten o'clock in the morning until ten o'clock in the evening on Friday and Saturday. Say times clearly with AM/PM.
+
+The Premium Jump Pass costs twenty-four dollars and ninety cents for ninety minutes, while the VIP Jump Pass is priced at twenty-nine dollars and ninety cents for one hundred and twenty minutes. We also offer an All Day Pass for thirty-nine dollars and ninety cents and an ultimate pass which includes go karting and laser tag for forty-nine dollars and ninety cents for one hundred and eighty minutes. Please note that all prices are plus tax. Aero Socks, required for participation, cost three dollars and ninety-nine cents but they are reusable so you can bring them back next time.
+
+We have three birthday party packages available. The Premium Party starts at thirty-nine dollars and ninety cents per jumper, offering seventy-five minutes of jump time and forty-five minutes in a private party room. The VIP Party is priced at forty-four dollars and ninety cents per jumper with ninety minutes of jump time and sixty minutes of room time. Lastly, the Ultimate Party costs fifty-nine dollars and ninety cents per jumper, providing one hundred and twenty minutes of jump time, sixty minutes of room time, plus go karting for every jumper. All packages include pizza and drinks, with a minimum requirement of ten jumpers. Would you like more details on any package?
+
+Go karting is available on two tracks at our facility. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents for a standalone race or nine dollars and ninety cents as an add-on if you already have a jump pass. The mini track accommodates riders who are thirty-six inches or taller, with a standalone cost of nine dollars and ninety cents or four dollars and ninety cents as an add-on. Each race allows up to ten laps. Remember that closed-toed shoes are required for go karting.
+
+You can book online at our website aerosportsparks.ca, or I can assist you with the booking process right now. Would you like to proceed?
+
+Everyone who enters the park needs a signed waiver, including non-jumpers. You have the option to fill it out online ahead of time on our website to save time at check-in. For anyone under eighteen years old, a parent or legal guardian must sign the waiver. Emphasize completing the waiver online to reduce wait times.
+
+For groups of fifteen or more people, we offer a twenty-five percent discount with the code GROUPBOOKING25, which brings the price down to approximately twenty-five dollars and forty-seven cents per person for one hundred and twenty minutes including socks. Would you like to book a group visit?
+
+Currently, we have an April Birthday Promotion offering up to one hundred and fifty dollars off birthday parties. Use the code APRILBDAY50 for a discount of fifty dollars on a Premium party, APRILBDAY100 for a hundred-dollar discount on a VIP party, or APRILBDAY150 for a one hundred and fifty-dollar discount on an Ultimate party. To qualify, you need to book by April thirty-first and host the event by September thirtieth.
+
+We offer AeroCamp for children aged four to twelve years old. The full-day camp runs from eight-thirty in the morning until four-thirty in the afternoon at a cost of sixty-nine dollars and ninety cents per day or two hundred and ninety-nine dollars and ninety cents for a full week. We also have half-day options available for thirty-nine dollars and ninety cents. Activities include trampolines, games, challenges, crafts, and group activities.
+
+[7] (source: faqs.md)
+If a child gets injured during their time at our park, trained staff will respond on-site immediately. Parents will be notified right away, and emergency protocols will be followed if the injury is serious.
+
+You can arrange to tour the facility before making your booking by contacting us directly. We'll help set up a convenient time for you to visit.
+
+Yes, splitting the party cost is possible. Please let us know in advance so we can accommodate this request.
+
+Our staff assists with both setup and cleanup of birthday parties to ensure everything runs smoothly from start to finish.
+
+Non-jumpers are welcome to enjoy the party room and food but will not have access to jumping attractions. They do not count toward the minimum number required for your package.
+
+Yes, you can book our camp programs for twins or multiple children. Please inform us in advance so we can customize plans accordingly.
+
+If you need to reschedule your booking within one year of the original date, there is no charge. If you cancel fourteen days or more before the scheduled event, a store gift card will be issued. Cancellations made within fourteen days of the event do not qualify for a refund.
+
+Upgrades or downgrades to your package must be done at least fourteen days in advance and are subject to availability.
+
+Yes, there may be rewards available for hosting multiple parties. Please contact us to learn more about repeat booking discounts or other incentives we might offer.
+
+Aero Camp includes supervised trampoline activities, games, challenges, crafts, contests, and group activities designed to keep campers engaged throughout the day.
+
+You can book individual days or a full week at Aero Camp, with both pricing options available for your convenience.
+
+Lunch is not included in the camp package but can be added for nine dollars and ninety cents per day. Alternatively, you may choose to send a packed lunch from home.
+
+To register your child for Aero Camp, you can do so online or by calling the park directly. Spots fill up quickly, so early registration is recommended.
+
+Your child should bring comfortable activewear suitable for physical activities, a packed lunch and snacks if not opting for the lunch combo, and a refillable water bottle to stay hydrated throughout the day.
+
+Yes, there will be trained staff supervising campers at all times to ensure their safety and enjoyment during camp activities.
+
+You can add early drop-off or late pick-up options last minute by notifying the camp team as soon as possible. We typically accommodate these requests with short notice.
+
+The age requirement for Aero Camp is four to twelve years old, ensuring that all participants are within a suitable range for the planned activities.
+
+A signed waiver is required before attending Aero Camp. You can complete this online or at the park upon arrival.
+
+PA Day Camps are offered on all PA days as per Catholic and Public Elementary School Boards' schedules. Check our website or call us to get more information about these specific dates.
+
+Summer Camp runs during specific weeks in the summer, with exact dates announced closer to the start of the season.
+
+March Break Camp is available during the official March Break period for all elementary and secondary students.
+
+Winter Camp takes place during the winter holiday period. The exact dates will be posted closer to the season.
+
+While we encourage parents to drop off their children at camp for a smooth experience, you can let us know if your child needs settling-in support upon arrival.
+
+Extended hours are structured with supervised free play or quiet activities. Early drop-off is available from 7:30 AM, and late pick-up can be arranged past 6 PM, though prices may vary depending on the timing.
+
+Yes, we have a lost and found area where items left behind by campers can be retrieved. We recommend labeling all personal belongings to facilitate this process if needed.
+
+Electronic devices are not allowed during camp activities to avoid distractions or potential damage. We recommend leaving them at home for your child's safety and full engagement in the camp experience.
+
+There will be rest periods throughout the day, including short breaks for rest, snacks, and lunch. During these times, quiet activities like crafts may also be offered to provide a balanced schedule for campers.
+
+If your child feels unwell during camp, we will notify you immediately. Our trained staff can handle minor first-aid situations, and emergency contacts provided at registration will be used if necessary.
+
+Behavioral issues are managed calmly by our staff. If further action is needed, parents will be informed to address the situation appropriately.
+
+
+--- msg[1]  role=user ---
+Hi. Do you guys have any birthday party packages?
+────────────────────────────────────────────
+
+[2026-04-25 13:58:07.763] [LLM_RAW_RESPONSE] [Turn #1]
+────────────────────────────────────────────
+Yes, we offer three different birthday party packages at AeroSports Scarborough:
+
+1. Premium Party: 
+   - Price: 39. 90 per jumper (minimum of 10 jumpers required)
+   - Includes:
+     - 75 minutes of jump time
+     - 45 minutes in a private party room
+     - Pizza and drinks
+
+2. VIP Party:
+   - Price: 44. 90 per jumper (minimum of 10 jumpers required)
+   - Includes:
+     - 90 minutes of jump time
+     - 60 minutes in a private party room
+     - Pizza and drinks
+
+3. Ultimate Party:
+   - Price: 59. 90 per jumper (minimum of 10 jumpers required)
+   - Includes:
+     - 120 minutes of jump time
+     - 60 minutes in a private party room
+     - Go karting for every jumper
+     - Pizza and drinks
+
+All packages include pizza and drinks, and there's an April Birthday Promotion offering discounts on these packages. Would you like more details or help with booking? 
+────────────────────────────────────────────
+
+[2026-04-25 13:58:07.763] [FINAL_RESPONSE_TO_CALLER] [Turn #1]
+────────────────────────────────────────────
+Yes, we offer three different birthday party packages at AeroSports Scarborough: 1. Premium Party:  Price: 39. 90 per jumper (minimum of 10 jumpers required) Includes: 75 minutes of jump time 45 minutes in a private party room Pizza and drinks 2. VIP Party: Price: 44. 90 per jumper (minimum of 10 jumpers required) Includes: 90 minutes of jump time 60 minutes in a private party room Pizza and drinks 3. Ultimate Party: Price: 59. 90 per jumper (minimum of 10 jumpers required) Includes: 120 minutes of jump time 60 minutes in a private party room Go karting for every jumper Pizza and drinks All packages include pizza and drinks, and there's an April Birthday Promotion offering discounts on these packages. Would you like more details or help with booking?
+────────────────────────────────────────────
+
+# session ended: 2026-04-25T13:58:17.506

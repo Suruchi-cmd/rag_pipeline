@@ -1,0 +1,24 @@
+2026-04-25 17:12:42,917  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA01ee6954727d93b4f72f8c9262358230.log
+2026-04-25 17:12:42,917  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] ConversationRelay connected from Anonymous
+2026-04-25 17:12:48,119  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] User said: Hello?
+2026-04-25 17:12:49,189  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY rag_api=1064ms  docs=0
+2026-04-25 17:12:49,190  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY prepare_voice_stream=1067ms
+2026-04-25 17:12:51,256  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] LATENCY silence_to_first_reply=3138ms
+2026-04-25 17:12:51,297  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] User interrupted. Spoken so far: 
+2026-04-25 17:12:51,298  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] LLM stream cancelled (user interrupted)
+2026-04-25 17:12:51,299  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] Assistant (partial/cancelled): Hey there!
+2026-04-25 17:12:53,108  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] User said: Hi. If we wanna come right now, are is there a space
+2026-04-25 17:12:53,309  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY rag_api=196ms  docs=0
+2026-04-25 17:12:53,309  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY prepare_voice_stream=197ms
+2026-04-25 17:12:53,434  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] LATENCY silence_to_first_reply=326ms
+2026-04-25 17:12:54,055  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] Assistant (full): Yeah, I can check that for you. For sure, give us a call at 289-454-5555 and our team will let you know if we have any spots available right away!
+2026-04-25 17:13:06,000  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] User said: Can I speak to a live assistant, please?
+2026-04-25 17:13:06,305  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY rag_api=301ms  docs=0
+2026-04-25 17:13:06,305  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY prepare_voice_stream=302ms
+2026-04-25 17:13:06,497  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] LATENCY silence_to_first_reply=497ms
+2026-04-25 17:13:06,973  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] Assistant (full): Sure thing! You can reach one of our team members by calling 289-454-5555. They'll be happy to help you out!
+2026-04-25 17:13:21,159  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] User said: Just call back. Request from Rachel. Is this
+2026-04-25 17:13:21,773  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY rag_api=298ms  docs=0
+2026-04-25 17:13:21,774  INFO      chatbot.voice_handler  [CA01ee6954727d93b4f72f8c9262358230] LATENCY prepare_voice_stream=611ms
+2026-04-25 17:13:21,782  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] Finalized abandoned call in DB
+2026-04-25 17:13:21,782  INFO      chatbot.server  [CA01ee6954727d93b4f72f8c9262358230] Session log closed

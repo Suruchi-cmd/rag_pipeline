@@ -1,0 +1,456 @@
+# Voice Session Pipeline Log
+# call_sid : CA0a849bcd7076060bb1bacb0a67cfc731
+# started  : 2026-04-30T19:29:33.918
+# log_file : /Users/Rajan/Documents/GitHub/rag_pipeline/src/logs/voice_session_2026-04-30_19-29-33.log
+
+[2026-04-30 19:29:33.918] [INCOMING_TRANSCRIPT] [Turn #1]
+────────────────────────────────────────────
+Hi. Uh, I wanted to know for the race for the go karting.
+────────────────────────────────────────────
+
+[2026-04-30 19:29:33.918] [REFINED_QUERY] [Turn #1]
+────────────────────────────────────────────
+Original : Hi. Uh, I wanted to know for the race for the go karting.
+Refined  : (unchanged)
+────────────────────────────────────────────
+
+[2026-04-30 19:29:35.265] [RAG_RESULTS] [Turn #1]
+────────────────────────────────────────────
+Retrieved 7 document(s):
+
+[1]  score=0.6120852925624931  source=go_karting.md
+## Main Track Options
+
+[2]  score=0.5969328524510363  source=go_karting.md
+## Mini Track Options
+
+[3]  score=0.5862197177148202  source=voice_call_scripts.md
+## Go-Karting Overview
+
+Clearly mention the height requirements: "We offer go-karting on two tracks. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents for a standalone race or nine dollars and ninety cents as an add-on if you have a jump pass already. For the mini track, which accommodates riders who are thirty-six inches or taller, it's priced at nine dollars and ninety cents standalone or four dollars and ninety cents as an ad…
+
+[4]  score=0.5612338446835382  source=go_karting.md
+# Go Karting at AeroSports Scarborough
+
+[5]  score=0.5486683682004125  source=go_karting.md
+### Standalone Race on the Main Track
+
+For those interested in experiencing the thrill of racing without purchasing a jump pass, AeroSports Scarborough offers a standalone race option on their main track. This exciting opportunity is priced at nineteen dollars and ninety cents per participant. To ensure safety and an optimal experience for all racers, participants must meet a minimum height requirement of fifty-two inches if they are driving. Each racer can enjoy up to ten laps around the track.
+
+[6]  score=0.5316617171966016  source=go_karting.md
+### Add-On Race on the Main Track
+
+Guests who have already purchased a jump pass at AeroSports Scarborough can enhance their visit by adding a go-kart race on the main track for an additional nine dollars and ninety cents. This add-on option also requires drivers to be at least fifty-two inches tall, ensuring safety standards are met. Like the standalone race, participants in this add-on option can enjoy up to ten laps around the track.
+
+[7]  score=0.5302099305516524  source=attractions.md
+## Go Karting Thrills
+
+Indoor go-kart racing at AeroSports Scarborough features two tracks: a Main Track designed for taller riders and a Mini Track suitable for younger children. The electric karts allow up to ten laps per race.
+
+- **Age/Height Requirements:** For the Main Track, participants must be at least fifty-two inches tall. For the Mini Track, they must be at least thirty-six inches tall. Closed-toed shoes are required.
+- **Included in Jump Pass:** No
+- **Pricing Details:** Go-karting r…
+────────────────────────────────────────────
+
+[2026-04-30 19:29:35.265] [LLM_CONTEXT] [Turn #1]
+────────────────────────────────────────────
+2 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Thursday, April 30, 2026 at 07:29 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: go_karting.md)
+## Main Track Options
+
+[2] (source: go_karting.md)
+## Mini Track Options
+
+[3] (source: voice_call_scripts.md)
+## Go-Karting Overview
+
+Clearly mention the height requirements: "We offer go-karting on two tracks. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents for a standalone race or nine dollars and ninety cents as an add-on if you have a jump pass already. For the mini track, which accommodates riders who are thirty-six inches or taller, it's priced at nine dollars and ninety cents standalone or four dollars and ninety cents as an add-on. Each race can last up to ten laps. Please remember that closed-toed shoes are required for go-karting."
+
+[4] (source: go_karting.md)
+# Go Karting at AeroSports Scarborough
+
+[5] (source: go_karting.md)
+### Standalone Race on the Main Track
+
+For those interested in experiencing the thrill of racing without purchasing a jump pass, AeroSports Scarborough offers a standalone race option on their main track. This exciting opportunity is priced at nineteen dollars and ninety cents per participant. To ensure safety and an optimal experience for all racers, participants must meet a minimum height requirement of fifty-two inches if they are driving. Each racer can enjoy up to ten laps around the track.
+
+[6] (source: go_karting.md)
+### Add-On Race on the Main Track
+
+Guests who have already purchased a jump pass at AeroSports Scarborough can enhance their visit by adding a go-kart race on the main track for an additional nine dollars and ninety cents. This add-on option also requires drivers to be at least fifty-two inches tall, ensuring safety standards are met. Like the standalone race, participants in this add-on option can enjoy up to ten laps around the track.
+
+[7] (source: attractions.md)
+## Go Karting Thrills
+
+Indoor go-kart racing at AeroSports Scarborough features two tracks: a Main Track designed for taller riders and a Mini Track suitable for younger children. The electric karts allow up to ten laps per race.
+
+- **Age/Height Requirements:** For the Main Track, participants must be at least fifty-two inches tall. For the Mini Track, they must be at least thirty-six inches tall. Closed-toed shoes are required.
+- **Included in Jump Pass:** No
+- **Pricing Details:** Go-karting requires a separate ticket or can be added as an add-on to your visit. Pricing details can be found on the dedicated Go Karting sheet.
+
+
+--- msg[1]  role=user ---
+Hi. Uh, I wanted to know for the race for the go karting.
+────────────────────────────────────────────
+
+[2026-04-30 19:29:39.213] [INCOMING_TRANSCRIPT] [Turn #2]
+────────────────────────────────────────────
+Hello?
+────────────────────────────────────────────
+
+[2026-04-30 19:29:39.213] [REFINED_QUERY] [Turn #2]
+────────────────────────────────────────────
+Original : Hello?
+Refined  : (not run — conversational message) (RAG skipped)
+────────────────────────────────────────────
+
+[2026-04-30 19:29:39.213] [RAG_RESULTS] [Turn #2]
+────────────────────────────────────────────
+(no documents retrieved)
+────────────────────────────────────────────
+
+[2026-04-30 19:29:39.213] [LLM_CONTEXT] [Turn #2]
+────────────────────────────────────────────
+3 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Thursday, April 30, 2026 at 07:29 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+No matching context was found for this query. Direct the caller to phone 289-454-5555 or email events.scb@aerosportsparks.ca.
+
+--- msg[1]  role=user ---
+Hi. Uh, I wanted to know for the race for the go karting.
+
+--- msg[2]  role=user ---
+Hello?
+────────────────────────────────────────────
+
+[2026-04-30 19:29:39.219] [LLM_RAW_RESPONSE] [Turn #2]
+────────────────────────────────────────────
+ [INTERRUPTED]
+────────────────────────────────────────────
+
+[2026-04-30 19:29:39.219] [FINAL_RESPONSE_TO_CALLER] [Turn #2]
+────────────────────────────────────────────
+ [INTERRUPTED]
+────────────────────────────────────────────
+
+[2026-04-30 19:29:40.557] [INCOMING_TRANSCRIPT] [Turn #3]
+────────────────────────────────────────────
+Can you hear me?
+────────────────────────────────────────────
+
+[2026-04-30 19:29:40.560] [LLM_RAW_RESPONSE] [Turn #3]
+────────────────────────────────────────────
+ [INTERRUPTED]
+────────────────────────────────────────────
+
+[2026-04-30 19:29:40.560] [FINAL_RESPONSE_TO_CALLER] [Turn #3]
+────────────────────────────────────────────
+ [INTERRUPTED]
+────────────────────────────────────────────
+
+[2026-04-30 19:29:43.076] [REFINED_QUERY] [Turn #3]
+────────────────────────────────────────────
+Original : Can you hear me?
+Refined  : What are the details or requirements for participating in a go-kart racing event?
+────────────────────────────────────────────
+
+[2026-04-30 19:29:43.860] [RAG_RESULTS] [Turn #3]
+────────────────────────────────────────────
+Retrieved 7 document(s):
+
+[1]  score=0.6924666945656136  source=voice_call_scripts.md
+## Go-Karting Overview
+
+Clearly mention the height requirements: "We offer go-karting on two tracks. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents for a standalone race or nine dollars and ninety cents as an add-on if you have a jump pass already. For the mini track, which accommodates riders who are thirty-six inches or taller, it's priced at nine dollars and ninety cents standalone or four dollars and ninety cents as an ad…
+
+[2]  score=0.6801775908681907  source=attractions.md
+## Go Karting Thrills
+
+Indoor go-kart racing at AeroSports Scarborough features two tracks: a Main Track designed for taller riders and a Mini Track suitable for younger children. The electric karts allow up to ten laps per race.
+
+- **Age/Height Requirements:** For the Main Track, participants must be at least fifty-two inches tall. For the Mini Track, they must be at least thirty-six inches tall. Closed-toed shoes are required.
+- **Included in Jump Pass:** No
+- **Pricing Details:** Go-karting r…
+
+[3]  score=0.6610453128814697  source=park_rules.md
+## Go Karting Footwear Requirement
+
+Participants must wear closed-toed shoes while engaging in go-karting activities.
+
+[4]  score=0.6585100700247251  source=go_karting.md
+## Main Track Options
+
+[5]  score=0.6559305191040039  source=go_karting.md
+## Mini Track Options
+
+[6]  score=0.6412372589111328  source=go_karting.md
+### Add-On Race on the Main Track
+
+Guests who have already purchased a jump pass at AeroSports Scarborough can enhance their visit by adding a go-kart race on the main track for an additional nine dollars and ninety cents. This add-on option also requires drivers to be at least fifty-two inches tall, ensuring safety standards are met. Like the standalone race, participants in this add-on option can enjoy up to ten laps around the track.
+
+[7]  score=0.6214946653240564  source=go_karting.md
+### Add-On Race on the Mini Track
+
+Guests who have already enjoyed the benefits of a jump pass at AeroSports Scarborough can further enhance their experience with an add-on race on the mini track for four dollars and ninety cents. This option is perfect for those looking to squeeze in some additional fun without purchasing another full activity package. The minimum height requirement remains thirty-six inches for drivers, ensuring safety across all participants. Like its main track counterpart, …
+────────────────────────────────────────────
+
+[2026-04-30 19:29:43.860] [LLM_CONTEXT] [Turn #3]
+────────────────────────────────────────────
+4 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+2. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+3. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+4. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Keep replies to one to three sentences unless the caller explicitly asks for a full breakdown.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: ask "Do you already know which package you'd like?" If not, explain the packages from the context. If yes, say "Perfect, let me connect you with our team to get that booked."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question — "Which activity are you asking about?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Thursday, April 30, 2026 at 07:29 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+[1] (source: voice_call_scripts.md)
+## Go-Karting Overview
+
+Clearly mention the height requirements: "We offer go-karting on two tracks. The main track is suitable for riders who are fifty-four inches or taller and costs nineteen dollars and ninety cents for a standalone race or nine dollars and ninety cents as an add-on if you have a jump pass already. For the mini track, which accommodates riders who are thirty-six inches or taller, it's priced at nine dollars and ninety cents standalone or four dollars and ninety cents as an add-on. Each race can last up to ten laps. Please remember that closed-toed shoes are required for go-karting."
+
+[2] (source: attractions.md)
+## Go Karting Thrills
+
+Indoor go-kart racing at AeroSports Scarborough features two tracks: a Main Track designed for taller riders and a Mini Track suitable for younger children. The electric karts allow up to ten laps per race.
+
+- **Age/Height Requirements:** For the Main Track, participants must be at least fifty-two inches tall. For the Mini Track, they must be at least thirty-six inches tall. Closed-toed shoes are required.
+- **Included in Jump Pass:** No
+- **Pricing Details:** Go-karting requires a separate ticket or can be added as an add-on to your visit. Pricing details can be found on the dedicated Go Karting sheet.
+
+[3] (source: park_rules.md)
+## Go Karting Footwear Requirement
+
+Participants must wear closed-toed shoes while engaging in go-karting activities.
+
+[4] (source: go_karting.md)
+## Main Track Options
+
+[5] (source: go_karting.md)
+## Mini Track Options
+
+[6] (source: go_karting.md)
+### Add-On Race on the Main Track
+
+Guests who have already purchased a jump pass at AeroSports Scarborough can enhance their visit by adding a go-kart race on the main track for an additional nine dollars and ninety cents. This add-on option also requires drivers to be at least fifty-two inches tall, ensuring safety standards are met. Like the standalone race, participants in this add-on option can enjoy up to ten laps around the track.
+
+[7] (source: go_karting.md)
+### Add-On Race on the Mini Track
+
+Guests who have already enjoyed the benefits of a jump pass at AeroSports Scarborough can further enhance their experience with an add-on race on the mini track for four dollars and ninety cents. This option is perfect for those looking to squeeze in some additional fun without purchasing another full activity package. The minimum height requirement remains thirty-six inches for drivers, ensuring safety across all participants. Like its main track counterpart, this add-on allows up to ten laps around the track.
+
+These go-karting options at AeroSports Scarborough provide an exciting way for guests of all ages and heights to enjoy a thrilling race experience, whether they're visiting alone or as part of a larger group activity.
+
+
+--- msg[1]  role=user ---
+Hi. Uh, I wanted to know for the race for the go karting.
+
+--- msg[2]  role=user ---
+Hello?
+
+--- msg[3]  role=user ---
+Can you hear me?
+────────────────────────────────────────────
+
+# session ended: 2026-04-30T19:29:43.877

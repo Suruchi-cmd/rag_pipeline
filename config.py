@@ -50,7 +50,7 @@ class Settings(BaseSettings):
     # The RAG/enricher side uses LlamaIndex/LangChain native Ollama clients
     # which hit /api/* directly; those URLs must NOT include /v1.
     OLLAMA_BASE_URL: str = Field(
-        default="http://localhost:11434/v1",
+        default="http://192.168.50.150:11434/v1",
         description="Ollama OpenAI-compatible endpoint. Must end with /v1.",
     )
     OLLAMA_KEEP_ALIVE: int = Field(

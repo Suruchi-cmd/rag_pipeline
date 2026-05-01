@@ -1,0 +1,29 @@
+2026-04-30 19:55:19,403  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA047ba8c78c92e333973f24380f134349.log
+2026-04-30 19:55:19,403  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] ConversationRelay connected from +14374383992
+2026-04-30 19:55:28,178  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] User said: Hi. I want to book a party to park.
+2026-04-30 19:55:29,395  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY rag_api=1212ms  docs=7
+2026-04-30 19:55:29,396  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY prepare_voice_stream=1213ms
+2026-04-30 19:55:30,246  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] LATENCY silence_to_first_reply=2068ms
+2026-04-30 19:55:31,975  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] Assistant (full): Sure thing! Do you already know which package you'd like for the party? We have three different birthday packages starting at thirty-nine dollars and ninety cents per participant, with each requiring 
+2026-04-30 19:55:59,967  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] User said: I like to book however.
+2026-04-30 19:56:02,269  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY rag_api=858ms  docs=7
+2026-04-30 19:56:02,269  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY prepare_voice_stream=2293ms
+2026-04-30 19:56:03,157  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] LATENCY silence_to_first_reply=3190ms
+2026-04-30 19:56:04,019  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] Assistant (full): Great! To get started with your booking, I'll connect you with our team who can assist further. Do you already have a package in mind, or would you like some help choosing one? Let me know so we can m
+2026-04-30 19:56:20,244  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] User said: I'd like to talk to the team. I'll talk to the team.
+2026-04-30 19:56:21,997  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY rag_api=733ms  docs=7
+2026-04-30 19:56:21,997  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY prepare_voice_stream=1744ms
+2026-04-30 19:56:22,908  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] LATENCY silence_to_first_reply=2663ms
+2026-04-30 19:56:23,438  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] Assistant (full): Perfect, let me connect you with our team to get that booked. They’ll be able to assist you further and answer any questions you might have about the packages or booking process. Have a great time pla
+2026-04-30 19:56:38,061  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] User said: Thank you.
+2026-04-30 19:56:38,071  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] Skipping RAG — conversational message: Thank you.
+2026-04-30 19:56:38,071  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY prepare_voice_stream=1ms
+2026-04-30 19:56:38,338  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] LATENCY silence_to_first_reply=276ms
+2026-04-30 19:56:38,605  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] Assistant (full): You're welcome! If you need anything else, feel free to reach out. Enjoy your day!
+2026-04-30 19:56:45,433  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] User said: ****. Bye.
+2026-04-30 19:56:46,781  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY rag_api=727ms  docs=7
+2026-04-30 19:56:46,782  INFO      chatbot.voice_handler  [CA047ba8c78c92e333973f24380f134349] LATENCY prepare_voice_stream=1339ms
+2026-04-30 19:56:47,514  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] LATENCY silence_to_first_reply=2081ms
+2026-04-30 19:56:47,655  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] Assistant (full): Bye! Take care and have a wonderful day!
+2026-04-30 19:56:47,661  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] End-call keyword DEFINITE
+2026-04-30 19:56:51,168  INFO      chatbot.routers.voice  [CA047ba8c78c92e333973f24380f134349] Session log closed

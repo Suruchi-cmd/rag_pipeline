@@ -1,0 +1,16 @@
+2026-04-25 17:17:26,270  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA23dab07fb970ddaeb8cfda7c020507d5.log
+2026-04-25 17:17:26,270  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] ConversationRelay connected from +14169858051
+2026-04-25 17:17:34,495  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] User said: I need to reschedule my booking.
+2026-04-25 17:17:34,500  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Booking capture TRIGGERED. State → name
+2026-04-25 17:17:42,649  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] User said: Tricia Gaskin.
+2026-04-25 17:17:42,652  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Captured name. State → details
+2026-04-25 17:17:48,171  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] User said: Mini kart booking.
+2026-04-25 17:17:48,175  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Booking change saved to DB
+2026-04-25 17:17:48,175  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Captured details. State → done. Handing back to LLM.
+2026-04-25 17:17:57,024  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] User said: No.
+2026-04-25 17:17:57,028  INFO      chatbot.voice_handler  [CA23dab07fb970ddaeb8cfda7c020507d5] Skipping RAG — conversational message: No.
+2026-04-25 17:17:57,028  INFO      chatbot.voice_handler  [CA23dab07fb970ddaeb8cfda7c020507d5] LATENCY prepare_voice_stream=1ms
+2026-04-25 17:17:57,637  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] LATENCY silence_to_first_reply=613ms
+2026-04-25 17:17:57,782  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Assistant (full): Alright, Tricia. Have a great day!
+2026-04-25 17:18:01,004  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Finalized abandoned call in DB
+2026-04-25 17:18:01,004  INFO      chatbot.server  [CA23dab07fb970ddaeb8cfda7c020507d5] Session log closed

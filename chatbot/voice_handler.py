@@ -507,14 +507,16 @@ def _build_voice_messages(
 # ---------------------------------------------------------------------------
 
 
-async def prepare_voice_stream(call_sid: str, user_text: str) -> list[dict]:
+async def prepare_voice_stream(
+    call_sid: str, user_text: str
+) -> tuple[list[dict], list[dict], str, bool]:
     """
     Run the per-turn pre-LLM pipeline:
       transcript → (rewrite + RAG retrieval) → assembled messages.
 
+    Returns (messages, rag_docs, rewritten_query, rag_skipped).
     Records the user turn in conversation_store; the assistant turn is
-    written by the caller after streaming finishes (it depends on how much
-    was actually spoken before any interruption).
+    written by the caller after streaming finishes.
     """
     t_start = time.perf_counter()
     user_text = user_text.strip()[:500]
@@ -524,13 +526,18 @@ async def prepare_voice_stream(call_sid: str, user_text: str) -> list[dict]:
 
     pl.log_transcript(user_text)
 
+    rag_skipped = False
+    rewritten_query = user_text
+
     if _should_skip_rag(user_text, history):
         logger.info("[%s] Skipping RAG — conversational message: %s", call_sid, user_text)
         rag_docs: list[dict] = []
+        rag_skipped = True
         pl.log_refined_query(user_text, "__SKIPPED__")
         pl.log_rag_results([])
     else:
         search_query = await _rewrite_query(user_text, history)
+        rewritten_query = search_query
         pl.log_refined_query(user_text, search_query)
 
         t_rag_start = time.perf_counter()
@@ -546,7 +553,7 @@ async def prepare_voice_stream(call_sid: str, user_text: str) -> list[dict]:
 
     t_ms = (time.perf_counter() - t_start) * 1000
     logger.info("[%s] LATENCY prepare_voice_stream=%.0fms", call_sid, t_ms)
-    return messages
+    return messages, rag_docs, rewritten_query, rag_skipped
 
 
 _SENTENCE_END_RE = re.compile(r"([.!?]+(?:\s+|$))")

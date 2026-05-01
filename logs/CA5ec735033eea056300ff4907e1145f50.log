@@ -1,0 +1,20 @@
+2026-04-25 15:54:46,337  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA5ec735033eea056300ff4907e1145f50.log
+2026-04-25 15:54:46,338  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] ConversationRelay connected from +14374383992
+2026-04-25 15:54:53,329  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] User said: Hi.
+2026-04-25 15:54:53,689  INFO      chatbot.voice_handler  [CA5ec735033eea056300ff4907e1145f50] LATENCY rag_api=355ms  docs=0
+2026-04-25 15:54:53,689  INFO      chatbot.voice_handler  [CA5ec735033eea056300ff4907e1145f50] LATENCY prepare_voice_stream=357ms
+2026-04-25 15:54:53,908  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] LATENCY silence_to_first_reply=578ms
+2026-04-25 15:54:53,909  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] Assistant (full): How can I help you?
+2026-04-25 15:54:53,956  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] User interrupted. Spoken so far: 
+2026-04-25 15:55:01,390  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] User said: I have a ticket that I purchased online, but I wasn't able to attend the park yesterday. Can I come in today?
+2026-04-25 15:55:02,219  INFO      chatbot.voice_handler  [CA5ec735033eea056300ff4907e1145f50] LATENCY rag_api=303ms  docs=0
+2026-04-25 15:55:02,219  INFO      chatbot.voice_handler  [CA5ec735033eea056300ff4907e1145f50] LATENCY prepare_voice_stream=826ms
+2026-04-25 15:55:02,739  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] LATENCY silence_to_first_reply=1349ms
+2026-04-25 15:55:03,132  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] Assistant (full): Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?
+2026-04-25 15:55:11,968  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] User said: My name is Scott.
+2026-04-25 15:55:12,477  INFO      chatbot.voice_handler  [CA5ec735033eea056300ff4907e1145f50] LATENCY rag_api=281ms  docs=0
+2026-04-25 15:55:12,477  INFO      chatbot.voice_handler  [CA5ec735033eea056300ff4907e1145f50] LATENCY prepare_voice_stream=504ms
+2026-04-25 15:55:13,088  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] LATENCY silence_to_first_reply=1121ms
+2026-04-25 15:55:13,599  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] Assistant (full): And just so I can let them know — what are you looking to change? Perfect, thanks Scott. Someone will give you a call back shortly to get that sorted. Have a good one!
+2026-04-25 15:55:27,127  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] Finalized abandoned call in DB
+2026-04-25 15:55:27,127  INFO      chatbot.server  [CA5ec735033eea056300ff4907e1145f50] Session log closed

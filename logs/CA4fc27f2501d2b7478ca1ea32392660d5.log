@@ -1,0 +1,12 @@
+2026-04-30 16:33:11,476  INFO      chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA4fc27f2501d2b7478ca1ea32392660d5.log
+2026-04-30 16:33:11,476  INFO      chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] ConversationRelay connected from +14373612990
+2026-04-30 16:33:19,107  INFO      chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] User said: Hi, Maya. How are you?
+2026-04-30 16:33:21,049  INFO      chatbot.voice_handler  [CA4fc27f2501d2b7478ca1ea32392660d5] LATENCY rag_api=1936ms  docs=7
+2026-04-30 16:33:21,049  INFO      chatbot.voice_handler  [CA4fc27f2501d2b7478ca1ea32392660d5] LATENCY prepare_voice_stream=1937ms
+2026-04-30 16:33:21,893  INFO      chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] User said: Okay.
+2026-04-30 16:33:21,899  INFO      chatbot.voice_handler  [CA4fc27f2501d2b7478ca1ea32392660d5] Skipping RAG — conversational message: Okay.
+2026-04-30 16:33:21,900  INFO      chatbot.voice_handler  [CA4fc27f2501d2b7478ca1ea32392660d5] LATENCY prepare_voice_stream=1ms
+2026-04-30 16:33:21,900  INFO      chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] LLM stream cancelled (user interrupted)
+2026-04-30 16:33:23,135  ERROR     chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] Stream error: Connection error.
+2026-04-30 16:33:30,771  INFO      chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] Finalized abandoned call in DB
+2026-04-30 16:33:30,772  INFO      chatbot.server  [CA4fc27f2501d2b7478ca1ea32392660d5] Session log closed

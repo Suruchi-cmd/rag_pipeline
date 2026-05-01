@@ -1,0 +1,44 @@
+2026-04-25 16:13:05,825  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA699edc7577847af752fe3ef1a4eb3466.log
+2026-04-25 16:13:05,825  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] ConversationRelay connected from +14374383992
+2026-04-25 16:13:14,150  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User said: Hey. What are the both the packages?
+2026-04-25 16:13:14,512  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY rag_api=359ms  docs=0
+2026-04-25 16:13:14,512  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY prepare_voice_stream=360ms
+2026-04-25 16:13:15,244  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY silence_to_first_reply=1095ms
+2026-04-25 16:13:15,707  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Assistant (full): Yeah, we've got three birthday party packages: Premium, VIP, and Ultimate. Do you have a rough idea of how many kids are coming?
+2026-04-25 16:13:25,619  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User said: 1,000,000 kids.
+2026-04-25 16:13:26,301  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY rag_api=272ms  docs=7
+2026-04-25 16:13:26,301  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 16:13:26,302  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY prepare_voice_stream=680ms
+2026-04-25 16:13:27,741  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY silence_to_first_reply=2122ms
+2026-04-25 16:13:28,656  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Assistant (full): I'm not sure what specific information or context you 're referring to with "1,000,000 kids." Could you please provide more details or clarify your question? If it's related to our services at AeroSpo
+2026-04-25 16:13:45,485  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User said: What about your jump passes?
+2026-04-25 16:13:46,247  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY rag_api=295ms  docs=2
+2026-04-25 16:13:46,247  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] RAG: 2/2 docs passed score threshold 0.50
+2026-04-25 16:13:46,248  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY prepare_voice_stream=760ms
+2026-04-25 16:13:47,021  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY silence_to_first_reply=1535ms
+2026-04-25 16:13:48,945  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Assistant (full): Sure! We have a few options for jump passes: The Premium Jump Pass is 24 dollars. 90 plus tax and lasts 90 minutes. - The VIP Jump Pass is 29 dollars. 90 plus tax and lasts 120 minutes. For those aged
+2026-04-25 16:14:22,761  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User said: Let's see.
+2026-04-25 16:14:23,550  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY rag_api=276ms  docs=2
+2026-04-25 16:14:23,550  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] RAG: 2/2 docs passed score threshold 0.50
+2026-04-25 16:14:23,550  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY prepare_voice_stream=786ms
+2026-04-25 16:14:24,325  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY silence_to_first_reply=1565ms
+2026-04-25 16:14:24,366  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User interrupted. Spoken so far: 
+2026-04-25 16:14:24,367  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LLM stream cancelled (user interrupted)
+2026-04-25 16:14:24,367  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Assistant (partial/cancelled): No worries!
+2026-04-25 16:14:25,319  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User said: Which has the free go kart?
+2026-04-25 16:14:25,476  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY rag_api=155ms  docs=0
+2026-04-25 16:14:25,477  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY prepare_voice_stream=155ms
+2026-04-25 16:14:25,821  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY silence_to_first_reply=502ms
+2026-04-25 16:14:26,347  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Assistant (full): The VIP Jump Pass includes a free go-kart ride on our main track. It lasts 120 minutes and costs 29 dollars. 90 plus tax. Does that sound like what you're looking for?
+2026-04-25 16:14:34,228  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User said: Hello?
+2026-04-25 16:14:34,230  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] Skipping RAG — conversational message: Hello?
+2026-04-25 16:14:34,231  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY prepare_voice_stream=1ms
+2026-04-25 16:14:34,379  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY silence_to_first_reply=151ms
+2026-04-25 16:14:34,500  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Assistant (full): Hey there! How can I help you today?
+2026-04-25 16:14:39,043  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] User said: Which of the rest has the free book?
+2026-04-25 16:14:39,323  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY rag_api=278ms  docs=0
+2026-04-25 16:14:39,324  INFO      chatbot.voice_handler  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY prepare_voice_stream=278ms
+2026-04-25 16:14:39,558  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] LATENCY silence_to_first_reply=515ms
+2026-04-25 16:14:40,158  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Assistant (full): I'm not sure about a package with a free book. Our current packages include jump passes and birthday party options, but none specifically mention a free book. If you have more details or another quest
+2026-04-25 16:14:52,374  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Finalized abandoned call in DB
+2026-04-25 16:14:52,375  INFO      chatbot.server  [CA699edc7577847af752fe3ef1a4eb3466] Session log closed

@@ -1,0 +1,50 @@
+2026-04-25 14:15:19,899  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAbffe935757cf3e05467344cb7894dbc4.log
+2026-04-25 14:15:19,899  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] ConversationRelay connected from +14374383992
+2026-04-25 14:15:22,424  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User interrupted. Spoken so far: Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 14:15:22,426  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (truncated to spoken): Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 14:15:22,676  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User said: For calling.
+2026-04-25 14:15:23,992  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY rag_api=1312ms  docs=7
+2026-04-25 14:15:23,992  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] RAG: 2/7 docs passed score threshold 0.50
+2026-04-25 14:15:23,992  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY prepare_voice_stream=1312ms
+2026-04-25 14:15:26,492  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY silence_to_first_reply=3816ms
+2026-04-25 14:15:26,921  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (full): Sure thing! You can reach us at two eight nine, four five four, five five five five. What else can I help with today?
+2026-04-25 14:15:27,204  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User interrupted. Spoken so far: Sure thing!
+2026-04-25 14:15:27,205  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (truncated to spoken): Sure thing!
+2026-04-25 14:15:27,205  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User said: Hello?
+2026-04-25 14:15:27,208  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] Skipping RAG — conversational message: Hello?
+2026-04-25 14:15:27,209  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY prepare_voice_stream=0ms
+2026-04-25 14:15:27,357  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY silence_to_first_reply=152ms
+2026-04-25 14:15:27,482  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (full): Hi there! How can I help you today?
+2026-04-25 14:15:31,917  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User said: Hi.
+2026-04-25 14:15:31,927  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] Skipping RAG — conversational message: Hi.
+2026-04-25 14:15:31,927  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY prepare_voice_stream=1ms
+2026-04-25 14:15:32,071  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY silence_to_first_reply=154ms
+2026-04-25 14:15:32,163  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (full): Hey! What do you need assistance with?
+2026-04-25 14:15:32,735  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User interrupted. Spoken so far: Hey!
+2026-04-25 14:15:32,735  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (truncated to spoken): Hey!
+2026-04-25 14:15:36,387  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User said: Do you guys have any slides
+2026-04-25 14:15:37,225  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY rag_api=438ms  docs=7
+2026-04-25 14:15:37,225  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] RAG: 5/7 docs passed score threshold 0.50
+2026-04-25 14:15:37,225  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY prepare_voice_stream=835ms
+2026-04-25 14:15:38,624  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY silence_to_first_reply=2237ms
+2026-04-25 14:15:39,601  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (full): Yes, we do! We have a variety of slides for all ages to enjoy. Whether it's a twisty slide or a straight drop, there's something fun for everyone at our park. Let me know if you need more details abou
+2026-04-25 14:15:54,753  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User said: Do you guys have any trampoline?
+2026-04-25 14:15:56,064  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY rag_api=391ms  docs=7
+2026-04-25 14:15:56,065  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:15:56,065  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY prepare_voice_stream=1308ms
+2026-04-25 14:15:57,444  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY silence_to_first_reply=2691ms
+2026-04-25 14:15:59,759  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (full): Yes, we do! Our Freestyle/Open Jump attraction features wall-to-wall trampolines where visitors can jump, flip, and freestyle. This main trampoline area includes interconnected trampolines for bouncin
+2026-04-25 14:16:39,705  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User said: Then what are the job passes you guys have?
+2026-04-25 14:16:41,111  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY rag_api=278ms  docs=7
+2026-04-25 14:16:41,111  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] RAG: 3/7 docs passed score threshold 0.50
+2026-04-25 14:16:41,111  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY prepare_voice_stream=1402ms
+2026-04-25 14:16:42,195  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY silence_to_first_reply=2490ms
+2026-04-25 14:16:44,072  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (full): We offer three types of Jump Passes: 1. Premium Jump Pass: This is for ninety minutes and costs nineteen dollars and ninety cents plus tax. 2. VIP Jump Pass: This gives you one hundred and twenty minu
+2026-04-25 14:17:17,333  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] User said: Do does any of these passes, uh, include Go kart as well?
+2026-04-25 14:17:18,846  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY rag_api=603ms  docs=7
+2026-04-25 14:17:18,846  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:17:18,847  INFO      chatbot.voice_handler  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY prepare_voice_stream=1512ms
+2026-04-25 14:17:20,359  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] LATENCY silence_to_first_reply=3025ms
+2026-04-25 14:17:21,471  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Assistant (full): The standard jump passes do not include Go Kart ing. However, the Ultimate Birthday Party Package includes free Go Kart Add-Ons for all guests. If you're interested in adding Go Karting to another typ
+2026-04-25 14:17:43,345  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Finalized abandoned call in DB
+2026-04-25 14:17:43,345  INFO      chatbot.server  [CAbffe935757cf3e05467344cb7894dbc4] Session log closed

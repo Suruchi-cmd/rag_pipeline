@@ -1,0 +1,55 @@
+2026-04-30 16:26:44,575 - __main__ - INFO - Logging initialized. Log file: logs/server_logs/20260430_162644.log
+2026-04-30 16:26:44,579 - __main__ - WARNING - Frontend dist directory not found - frontend will not be served
+2026-04-30 16:26:44,726 - __main__ - INFO - Starting Ultimate Advisor API bootstrap...
+2026-04-30 16:26:44,867 - __main__ - INFO - Database reachable (attempt 1)
+2026-04-30 16:26:44,892 - __main__ - INFO - pgvector extension ensured
+2026-04-30 16:26:44,918 - __main__ - INFO - Application tables ensured
+2026-04-30 16:26:44,939 - __main__ - INFO - LLMConfig active: phi4:latest @ https://aerollm.share.zrok.io
+2026-04-30 16:26:49,619 - src.rag.repositories - INFO - Models configured: LLM=phi4:latest, Embedding=qwen3-embedding:0.6b, Ollama=https://aerollm.share.zrok.io
+2026-04-30 16:26:50,925 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embed "HTTP/1.1 200 OK"
+2026-04-30 16:26:50,956 - src.rag.repositories - INFO - Embedding dimension confirmed: 1024
+2026-04-30 16:26:51,003 - src.rag.repositories - INFO - Database connection established
+2026-04-30 16:26:51,009 - src.rag.repositories - INFO - pgvector extension ensured
+2026-04-30 16:26:51,011 - src.rag.repositories - INFO - Vector store configured with table 'documents' (embed_dim=1024)
+2026-04-30 16:26:51,011 - __main__ - INFO - RAGRepository initialized and attached to app.state
+2026-04-30 16:26:51,022 - __main__ - INFO - Vector store non-empty; skipping bootstrap ingest
+2026-04-30 16:26:51,022 - __main__ - INFO - Bootstrap complete — API ready
+2026-04-30 16:26:54,920 - __main__ - INFO - Request: GET / from 127.0.0.1
+2026-04-30 16:26:54,921 - __main__ - INFO - Response: 200 for GET / - 0.001s
+2026-04-30 16:26:55,105 - __main__ - INFO - Request: GET /favicon.ico from 127.0.0.1
+2026-04-30 16:26:55,106 - __main__ - INFO - Response: 404 for GET /favicon.ico - 0.001s
+2026-04-30 16:26:58,148 - __main__ - INFO - Request: GET /docs from 127.0.0.1
+2026-04-30 16:26:58,149 - __main__ - INFO - Response: 200 for GET /docs - 0.002s
+2026-04-30 16:26:58,355 - __main__ - INFO - Request: GET /openapi.json from 127.0.0.1
+2026-04-30 16:26:58,385 - __main__ - INFO - Response: 200 for GET /openapi.json - 0.030s
+2026-04-30 16:27:06,518 - __main__ - INFO - Request: POST /rag/resync-raw from 127.0.0.1
+2026-04-30 16:27:06,522 - src.rag.services - INFO - Resync: dropping existing vector table (wipe-first)
+2026-04-30 16:27:06,535 - src.rag.repositories - INFO - Dropped existing vector table 'documents'
+2026-04-30 16:27:06,555 - src.rag.repositories - INFO - Database connection established
+2026-04-30 16:27:06,556 - src.rag.repositories - INFO - pgvector extension ensured
+2026-04-30 16:27:06,558 - src.rag.repositories - INFO - Vector store configured with table 'documents' (embed_dim=1024)
+2026-04-30 16:27:06,560 - src.rag.repositories - INFO - Vector table 'documents' not found (no rows to count yet)
+2026-04-30 16:27:06,560 - src.rag.services - INFO - Resync: vector table cleared (rows=0)
+2026-04-30 16:27:06,561 - src.rag.services - INFO - Resync: running parser (raw-only) (cwd=/Users/Rajan/Documents/GitHub/rag_pipeline/core/rag/parser, force=True, timeout=300s)
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser] Traceback (most recent call last):
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser]   File "/Users/Rajan/Documents/GitHub/rag_pipeline/core/rag/parser/run_parsers.py", line 19, in <module>
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser]     from src.enricher import Enricher
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser]   File "/Users/Rajan/Documents/GitHub/rag_pipeline/core/rag/parser/src/enricher.py", line 43, in <module>
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser]     _spec.loader.exec_module(_localllm)  # type: ignore[union-attr]
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser]     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser]   File "/Users/Rajan/Documents/GitHub/rag_pipeline/src/ai/localllm.py", line 3, in <module>
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser]     from langchain_community.chat_message_histories import SQLChatMessageHistory
+2026-04-30 16:27:08,170 - src.rag.services - INFO - [parser] ModuleNotFoundError: No module named 'langchain_community'
+2026-04-30 16:27:08,264 - src.rag.services - ERROR - Parser failed (rc=1). Last 9 lines:
+Traceback (most recent call last):
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/core/rag/parser/run_parsers.py", line 19, in <module>
+    from src.enricher import Enricher
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/core/rag/parser/src/enricher.py", line 43, in <module>
+    _spec.loader.exec_module(_localllm)  # type: ignore[union-attr]
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/Rajan/Documents/GitHub/rag_pipeline/src/ai/localllm.py", line 3, in <module>
+    from langchain_community.chat_message_histories import SQLChatMessageHistory
+ModuleNotFoundError: No module named 'langchain_community'
+2026-04-30 16:27:08,268 - src.rag.repositories - INFO - Vector table 'documents' not found (no rows to count yet)
+2026-04-30 16:27:08,270 - __main__ - INFO - Response: 200 for POST /rag/resync-raw - 1.753s
+2026-04-30 16:27:12,518 - __main__ - INFO - Ultimate Advisor API shutting down

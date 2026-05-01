@@ -1,0 +1,57 @@
+2026-04-25 14:23:18,316  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA6859e0cb67e7a8072085e40635ea421b.log
+2026-04-25 14:23:18,316  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] ConversationRelay connected from +14374383992
+2026-04-25 14:23:20,607  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User interrupted. Spoken so far: Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 14:23:20,610  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (truncated to spoken): Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-04-25 14:23:21,416  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: Thank you for calling.
+2026-04-25 14:23:22,658  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY rag_api=1238ms  docs=7
+2026-04-25 14:23:22,658  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] RAG: 2/7 docs passed score threshold 0.50
+2026-04-25 14:23:22,658  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY prepare_voice_stream=1238ms
+2026-04-25 14:23:25,163  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY silence_to_first_reply=3747ms
+2026-04-25 14:23:25,282  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (full): You're welcome! How can I help you today?
+2026-04-25 14:23:25,683  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User interrupted. Spoken so far: You're welcome!
+2026-04-25 14:23:25,684  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (truncated to spoken): You're welcome!
+2026-04-25 14:23:25,684  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: Hi.
+2026-04-25 14:23:25,687  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] Skipping RAG — conversational message: Hi.
+2026-04-25 14:23:25,688  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY prepare_voice_stream=1ms
+2026-04-25 14:23:25,844  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY silence_to_first_reply=160ms
+2026-04-25 14:23:26,010  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (full): Hey there! How can I help you?
+2026-04-25 14:23:31,470  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: I want to book a motor body.
+2026-04-25 14:23:32,314  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY rag_api=498ms  docs=7
+2026-04-25 14:23:32,315  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] RAG: 1/7 docs passed score threshold 0.50
+2026-04-25 14:23:32,315  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY prepare_voice_stream=842ms
+2026-04-25 14:23:33,113  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY silence_to_first_reply=1643ms
+2026-04-25 14:23:34,036  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (full): Oh, it sounds like you might be interested in our go karting tracks. We have two options: the main track for riders fifty-four inches or taller and the mini track for those thirty-six inches or taller
+2026-04-25 14:23:51,814  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: No. I want to book a birthday party.
+2026-04-25 14:23:52,885  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY rag_api=654ms  docs=7
+2026-04-25 14:23:52,886  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:23:52,886  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY prepare_voice_stream=1067ms
+2026-04-25 14:23:54,404  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY silence_to_first_reply=2591ms
+2026-04-25 14:23:58,012  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (full): Great! Booking a birthday party at AeroSports sounds like fun. We have three types of packages: Premium, VIP, and Ultimate. Each package includes jump time in a private room with different amenities. 
+2026-04-25 14:24:57,744  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: Uh, can you please repeat those, uh, promo code again?
+2026-04-25 14:24:58,810  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY rag_api=508ms  docs=7
+2026-04-25 14:24:58,810  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:24:58,810  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY prepare_voice_stream=1063ms
+2026-04-25 14:25:00,163  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY silence_to_first_reply=2420ms
+2026-04-25 14:25:02,116  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (full): Certainly! Here are the April Birthday Promotion codes: For a Premium Party, use the promo code: AprilBDAY50 for 50 off. - For a VIP Party, use the promo code: AprilBDAY100 for 100 off. - For an Ultim
+2026-04-25 14:25:34,451  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: Okay. And, um, does any of the birthday party include go kart racing?
+2026-04-25 14:25:35,386  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY rag_api=411ms  docs=7
+2026-04-25 14:25:35,386  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:25:35,386  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY prepare_voice_stream=931ms
+2026-04-25 14:25:36,770  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY silence_to_first_reply=2319ms
+2026-04-25 14:25:38,486  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (full): Yes, some of the AeroSports birthday parties do include go kart racing as an add-on option. Specifically: The Ultimate Birthday Party includes unlimited go karting for every jumper as part of its pack
+2026-04-25 14:26:14,485  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: Okay. And, um, will I get a party host for my birthday party?
+2026-04-25 14:26:14,492  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Booking capture TRIGGERED. State → name
+2026-04-25 14:26:27,081  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: Now will I get a um, party host for my birthday party?
+2026-04-25 14:26:27,085  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Captured name. State → details
+2026-04-25 14:26:36,709  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: No. Will I get a a party host that will help me to celebrate the birthday party?
+2026-04-25 14:26:36,714  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Booking change saved to DB
+2026-04-25 14:26:36,714  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Captured details. State → done. Handing back to LLM.
+2026-04-25 14:26:47,972  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] User said: No. That's all I'm Thank you.
+2026-04-25 14:26:48,908  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY rag_api=479ms  docs=7
+2026-04-25 14:26:48,908  WARNING   chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:26:48,909  INFO      chatbot.voice_handler  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY prepare_voice_stream=933ms
+2026-04-25 14:26:49,945  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] LATENCY silence_to_first_reply=1973ms
+2026-04-25 14:26:50,271  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Assistant (full): You're welcome! Have a great day and we look forward to helping make your birthday party special. Bye for now!
+2026-04-25 14:26:50,275  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] End-call keyword DEFINITE match
+2026-04-25 14:26:50,277  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Sent end-session message to Twilio
+2026-04-25 14:26:56,815  INFO      chatbot.server  [CA6859e0cb67e7a8072085e40635ea421b] Session log closed

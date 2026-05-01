@@ -1,0 +1,91 @@
+2026-04-25 14:40:37,420  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAa238400a30fe3a9c59c5c39f1c2bfb0e.log
+2026-04-25 14:40:37,420  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] ConversationRelay connected from +14374383992
+2026-04-25 14:40:45,106  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Hi.
+2026-04-25 14:40:46,305  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=1194ms  docs=7
+2026-04-25 14:40:46,305  WARNING   chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:40:46,305  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=1195ms
+2026-04-25 14:40:46,679  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Maya. How are you doing today?
+2026-04-25 14:40:46,686  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LLM stream cancelled (user interrupted)
+2026-04-25 14:40:48,839  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=303ms  docs=7
+2026-04-25 14:40:48,839  WARNING   chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:40:48,839  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=2156ms
+2026-04-25 14:40:49,639  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=2959ms
+2026-04-25 14:40:49,864  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): Hey there! I'm good, thanks. How can I help you today?
+2026-04-25 14:40:56,266  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Uh, are you guys open today?
+2026-04-25 14:40:57,227  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=700ms  docs=7
+2026-04-25 14:40:57,227  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: 2/7 docs passed score threshold 0.50
+2026-04-25 14:40:57,227  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=955ms
+2026-04-25 14:40:58,222  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=1956ms
+2026-04-25 14:40:58,357  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): Yeah, we're open until ten tonight. What can I do for you?
+2026-04-25 14:41:06,303  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Um, what are the hours of operation?
+2026-04-25 14:41:07,268  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=531ms  docs=7
+2026-04-25 14:41:07,268  WARNING   chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:41:07,268  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=961ms
+2026-04-25 14:41:07,974  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=1671ms
+2026-04-25 14:41:08,586  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): We're open Monday to Thursday from ten in the morning until eight at night, Friday and Saturday from ten in the morning until ten at night, and Sunday from ten in the morning until nine at night. Anyt
+2026-04-25 14:41:21,853  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: No.
+2026-04-25 14:41:21,857  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Skipping RAG — conversational message: No.
+2026-04-25 14:41:21,857  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=1ms
+2026-04-25 14:41:22,062  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=209ms
+2026-04-25 14:41:22,626  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): Alright, if you have any more questions later, feel free to give us a call at two eight nine, four five four, five five five five. Have a great day!
+2026-04-25 14:41:23,902  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User interrupted. Spoken so far: if you have any more questions later,
+2026-04-25 14:41:23,902  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (truncated to spoken): if you have any more questions later,
+2026-04-25 14:41:29,300  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: And what about what about your go karting? Is it open all the time?
+2026-04-25 14:41:30,763  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=416ms  docs=7
+2026-04-25 14:41:30,763  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: 1/7 docs passed score threshold 0.50
+2026-04-25 14:41:30,763  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=1459ms
+2026-04-25 14:41:31,487  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=2187ms
+2026-04-25 14:41:31,823  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): Go karting is available during our regular park hours If you need details on pricing or height requirements for specific tracks, just let me know!
+2026-04-25 14:41:44,911  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Okay. What are what are your high requirements then?
+2026-04-25 14:41:45,669  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=274ms  docs=7
+2026-04-25 14:41:45,669  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: 4/7 docs passed score threshold 0.50
+2026-04-25 14:41:45,669  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=734ms
+2026-04-25 14:41:46,975  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=2064ms
+2026-04-25 14:41:47,503  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): For the Main Track, riders must be at least fifty-four inches tall. The Mini Track requires a minimum of thirty-six inches. Anything else you'd like to know about go karting?
+2026-04-25 14:42:03,218  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: I'm looking with Gokali. Do you guys have a baju kabob?
+2026-04-25 14:42:04,541  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=376ms  docs=7
+2026-04-25 14:42:04,541  WARNING   chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:42:04,541  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=1320ms
+2026-04-25 14:42:05,202  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=1984ms
+2026-04-25 14:42:06,153  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): Hmm, I'm not sure what "baju kabob" is — could you mean something specific? If it's about food options at the park, we don't serve kabobs, but there are snacks and drinks available. Let me know if tha
+2026-04-25 14:42:22,936  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: No. I'm talking about baju caball.
+2026-04-25 14:42:23,864  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=348ms  docs=7
+2026-04-25 14:42:23,864  WARNING   chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:42:23,864  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=925ms
+2026-04-25 14:42:24,804  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=1868ms
+2026-04-25 14:42:25,335  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): I’m sorry, I didn’t quite catch that — what can I help you with? If it's related to something specific at the park, feel free to ask!
+2026-04-25 14:42:38,355  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Uh, no. I'm talking about a mini golf. Do you guys have mini golf?
+2026-04-25 14:42:39,087  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=341ms  docs=7
+2026-04-25 14:42:39,087  WARNING   chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: all 7 docs below threshold 0.50 — keeping top-1
+2026-04-25 14:42:39,087  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=728ms
+2026-04-25 14:42:40,094  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=1739ms
+2026-04-25 14:42:41,197  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): I’m not sure if we offer mini golf here — our main attractions are trampolines and go karting. If you're interested in those or any other activities, let me know! Otherwise, for more details on what's
+2026-04-25 14:43:06,010  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Um, I know, uh, your website showed that you guys are mini golf and bachuca ball at Jackson.
+2026-04-25 14:43:06,890  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=366ms  docs=7
+2026-04-25 14:43:06,890  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: 2/7 docs passed score threshold 0.50
+2026-04-25 14:43:06,890  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=875ms
+2026-04-25 14:43:07,930  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=1920ms
+2026-04-25 14:43:09,086  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): Oh, okay! It sounds like there might be some confusion about our locations or offerings. For the most accurate information on what's available at each of our parks, it’s best to check directly with us
+2026-04-25 14:43:29,229  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Okay.
+2026-04-25 14:43:29,235  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Skipping RAG — conversational message: Okay.
+2026-04-25 14:43:29,235  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=0ms
+2026-04-25 14:43:29,569  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=340ms
+2026-04-25 14:43:29,733  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User interrupted. Spoken so far: 
+2026-04-25 14:43:29,734  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LLM stream cancelled (user interrupted)
+2026-04-25 14:43:29,734  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (partial/cancelled): Great!
+2026-04-25 14:43:34,077  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Want to book a birthday party. Can you get my details and ask 1 of your uh, employees to call give me a callback?
+2026-04-25 14:43:35,314  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=668ms  docs=7
+2026-04-25 14:43:35,314  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:43:35,314  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=1234ms
+2026-04-25 14:43:36,875  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=2798ms
+2026-04-25 14:43:38,179  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (full): Of course! I'd be happy to help arrange that for you. Could you please provide the following details: Your full name The best phone number to reach you at A preferred time or times when you would like
+2026-04-25 14:44:18,485  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User said: Yeah. My name is Razon, r a j a n.
+2026-04-25 14:44:19,557  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY rag_api=533ms  docs=7
+2026-04-25 14:44:19,557  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] RAG: 7/7 docs passed score threshold 0.50
+2026-04-25 14:44:19,557  INFO      chatbot.voice_handler  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY prepare_voice_stream=1068ms
+2026-04-25 14:44:21,177  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LATENCY silence_to_first_reply=2692ms
+2026-04-25 14:44:21,331  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] User interrupted. Spoken so far: 
+2026-04-25 14:44:21,332  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] LLM stream cancelled (user interrupted)
+2026-04-25 14:44:21,333  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Assistant (partial/cancelled): Hello Razon! How can I assist you today?
+2026-04-25 14:44:25,866  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Finalized abandoned call in DB
+2026-04-25 14:44:25,866  INFO      chatbot.server  [CAa238400a30fe3a9c59c5c39f1c2bfb0e] Session log closed

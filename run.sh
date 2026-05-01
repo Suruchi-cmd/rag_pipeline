@@ -2,11 +2,13 @@
 cd "$(dirname "$0")"
 source .venv/bin/activate
 
-HOST="${HOST:-0.0.0.0}"
-PORT="${PORT:-3232}"
+export OLLAMA_KEEP_ALIVE=-1
 
-echo "Starting AeroBot voice server..."
-echo "Host: $HOST | Port: $PORT"
+# Build frontend if dist is missing
+if [ ! -d "frontend/dist" ]; then
+    echo "Building frontend..."
+    cd frontend && npm run build-only && cd ..
+fi
 
-export OLLAMA_KEEP_ALIVE=-1  # never unload
-uvicorn chatbot.server:app --host "$HOST" --port "$PORT"
+echo "Starting AeroBot on http://localhost:3232 ..."
+python main.py

@@ -1,0 +1,15 @@
+2026-04-30 19:29:23,585  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CA0a849bcd7076060bb1bacb0a67cfc731.log
+2026-04-30 19:29:23,585  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] ConversationRelay connected from +14374383992
+2026-04-30 19:29:33,912  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] User said: Hi. Uh, I wanted to know for the race for the go karting.
+2026-04-30 19:29:35,265  INFO      chatbot.voice_handler  [CA0a849bcd7076060bb1bacb0a67cfc731] LATENCY rag_api=1347ms  docs=7
+2026-04-30 19:29:35,265  INFO      chatbot.voice_handler  [CA0a849bcd7076060bb1bacb0a67cfc731] LATENCY prepare_voice_stream=1348ms
+2026-04-30 19:29:39,206  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] User said: Hello?
+2026-04-30 19:29:39,213  INFO      chatbot.voice_handler  [CA0a849bcd7076060bb1bacb0a67cfc731] Skipping RAG — conversational message: Hello?
+2026-04-30 19:29:39,213  INFO      chatbot.voice_handler  [CA0a849bcd7076060bb1bacb0a67cfc731] LATENCY prepare_voice_stream=0ms
+2026-04-30 19:29:39,218  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] LLM stream cancelled (user interrupted)
+2026-04-30 19:29:40,554  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] User said: Can you hear me?
+2026-04-30 19:29:40,560  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] LLM stream cancelled (user interrupted)
+2026-04-30 19:29:43,860  INFO      chatbot.voice_handler  [CA0a849bcd7076060bb1bacb0a67cfc731] LATENCY rag_api=784ms  docs=7
+2026-04-30 19:29:43,860  INFO      chatbot.voice_handler  [CA0a849bcd7076060bb1bacb0a67cfc731] LATENCY prepare_voice_stream=3303ms
+2026-04-30 19:29:43,876  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] Finalised abandoned call
+2026-04-30 19:29:43,876  INFO      chatbot.routers.voice  [CA0a849bcd7076060bb1bacb0a67cfc731] Session log closed

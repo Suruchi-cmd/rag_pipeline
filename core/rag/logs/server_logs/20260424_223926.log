@@ -1,9 +1,0 @@
-2026-04-24 22:39:26,372 - __main__ - INFO - Logging initialized. Log file: logs/server_logs/20260424_223926.log
-2026-04-24 22:39:26,383 - __main__ - WARNING - Frontend dist directory not found - frontend will not be served
-2026-04-24 22:39:27,570 - __main__ - INFO - Starting Ultimate Advisor API bootstrap...
-2026-04-24 22:39:27,737 - __main__ - INFO - Database reachable (attempt 1)
-2026-04-24 22:39:27,791 - __main__ - INFO - pgvector extension ensured
-2026-04-24 22:39:27,841 - __main__ - INFO - Application tables ensured
-2026-04-24 22:39:27,896 - src.llm_config.repositories - INFO - Seeded LLMConfig: phi4:latest @ http://192.168.50.150:11434
-2026-04-24 22:39:27,897 - __main__ - INFO - LLMConfig active: phi4:latest @ http://192.168.50.150:11434
-2026-04-24 22:39:27,925 - src.rag.repositories - INFO - Models configured: LLM=phi4:latest, Embedding=embeddinggemma, Ollama=http://192.168.50.150:11434

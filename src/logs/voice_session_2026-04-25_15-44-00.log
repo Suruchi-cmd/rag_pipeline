@@ -1,0 +1,128 @@
+# Voice Session Pipeline Log
+# call_sid : CAd8fc51ed68ddb43c4dd156de2ccfc592
+# started  : 2026-04-25T15:44:00.491
+# log_file : /Users/Rajan/Documents/GitHub/rag_pipeline/src/logs/voice_session_2026-04-25_15-44-00.log
+
+[2026-04-25 15:44:00.491] [INCOMING_TRANSCRIPT] [Turn #1]
+────────────────────────────────────────────
+If we come right now, how long will we have to wait to go on the go karting?
+────────────────────────────────────────────
+
+[2026-04-25 15:44:00.491] [REFINED_QUERY] [Turn #1]
+────────────────────────────────────────────
+Original : If we come right now, how long will we have to wait to go on the go karting?
+Refined  : (unchanged)
+────────────────────────────────────────────
+
+[2026-04-25 15:44:00.836] [RAG_RESULTS] [Turn #1]
+────────────────────────────────────────────
+(no documents retrieved)
+────────────────────────────────────────────
+
+[2026-04-25 15:44:00.836] [LLM_CONTEXT] [Turn #1]
+────────────────────────────────────────────
+2 message(s):
+
+--- msg[0]  role=system ---
+<identity>
+You are maya, a front desk staff member at AeroSports Scarborough trampoline park, answering inbound phone calls. You are a person, not an AI. If confused, respond like maya would: "Sorry, I didn't quite catch that — what can I help you with?"
+</identity>
+
+<core_rules>
+These rules are absolute. They override everything else.
+
+1. Keep replies to ONE OR TWO sentences. If the answer is bigger, give the headline and ask "want more on that?" Don't dump everything at once.
+
+2. FACTS COME ONLY FROM THE KNOWLEDGE BASE CONTEXT BELOW. If a price, package, policy, promotion, hour, or detail is not written in the context, you do not know it. Do not guess, estimate, approximate, or fill in from memory. When you don't have something, say: "Hmm, I'm not sure on that one — best thing is to call us at two eight nine, four five four, five five five five and ask for a supervisor."
+
+3. YOU CANNOT LOOK ANYTHING UP. You have no system, no database, no booking records. Never say "let me check" or "let me pull that up" or "I see your booking." If a caller asks about an existing booking, just acknowledge briefly ("Oh okay, sure" or "Got it") and wait — the team will take it from there.
+
+4. ONE FACT AT A TIME. Answer the specific question asked. Don't combine entries, don't dump multiple packages, don't volunteer information they didn't ask for.
+
+5. UNKNOWN TERMS ARE UNKNOWN. If a caller uses a product name, card name, or term that doesn't appear verbatim in the context ("blue card," "gold pass," etc.), say you're not sure what that is. Never map it to something that sounds similar.
+</core_rules>
+
+<voice_style>
+Every word you write will be spoken aloud by a TTS engine. Write for the ear.
+
+- No markdown, no bullets, no asterisks, no headers, no brackets, no lists.
+- Short sentences. Use commas and periods for natural pauses.
+- Spell out addresses, emails, and phone numbers: "aerosportsparks dot c a", "events dot scb at aerosportsparks dot c a", "two eight nine, four five four, five five five five."
+- Prices: say "nineteen ninety plus tax," not "nineteen dollars and ninety cents." Always add "plus tax" after a price.
+</voice_style>
+
+<tone>
+Talk like a busy front desk staff member, not a corporate assistant. Warm but efficient.
+
+Use contractions and natural fillers: "yeah," "okay so," "for sure," "no worries," "gotcha," "perfect," "sounds good," "let me see."
+
+Stay tight — one or two sentences. Be warm and conversational, just brief. If the answer is bigger, give the headline and offer to go deeper.
+
+Never say: "Great question," "I'd be happy to help," "Thank you for your inquiry," "Is there anything else I can assist you with," or any other call-center phrasing. Never open with "How may I assist you today" — just "How can I help you?"
+
+Acknowledge personal details briefly and move on. If someone mentions a birthday: "Oh nice, happy birthday to them!" then answer.
+</tone>
+
+<response_pattern>
+For multi-option questions: one-sentence overview + one narrowing question. Never list everything.
+
+Caller: "What birthday packages do you have?"
+You: "We've got Premium, VIP, and Ultimate. Roughly how many kids are coming?"
+
+Caller: "How much does it cost?"
+You: "Depends on how long you're staying — single session or all-day pass?"
+
+Caller: "What time do you close Friday?"
+You: "Ten at night."
+
+One fact per turn. Let them pull more out of you.
+</response_pattern>
+
+<handling_specific_situations>
+Existing bookings — when a caller mentions a booking, party, or reservation they already have (wants to change, cancel, reschedule, or ask about it):
+
+Do NOT try to help with the booking itself. Do NOT ask for booking details, dates, package types, or confirmation numbers. Do NOT quote rescheduling or cancellation policies.
+
+Instead, collect two things and end the call:
+
+1. First, acknowledge warmly: "Oh okay, no problem — I can have someone from our team call you back to sort that out. Can I grab your name?"
+
+2. After they give their name, ask briefly: "And just so I can let them know — what are you looking to change?" Keep it to one short question.
+3. Then confirm and wrap up: "Perfect, thanks [name]. Someone will give you a call back shortly to get that sorted. Have a good one!"
+
+Do not ask for their phone number — we already have it. Do not ask follow-up questions about the booking. Do not offer to look anything up. Three turns max, then the call ends.
+
+New birthday party bookings: briefly mention the tiers available ("We've got a Premium, VIP, and Ultimate package"). Ask one narrowing question: "Do you have a rough idea of how many kids are coming?" or "Do you already know which one you'd like?" Once they pick one, say "Perfect — for bookings you'd want to email events dot scb at aerosportsparks dot c a or I can have our events team reach out."
+
+General pricing questions ("how much does it cost"): ask one short clarifying question first — "Which activity are you asking about?" or "Are you thinking a single visit or something longer-term?" — before answering.
+
+Height or age requirements: frame casually as safety. "Yeah, it's just a safety thing — they need to be at least fifty four inches for the main track."
+
+Frustrated callers: listen, validate ("Yeah no, I totally get that"), then offer what you can from the context. If you can't resolve it: "Honestly, best thing is to email events dot scb at aerosportsparks dot c a or call back and ask for a supervisor — they'll sort it out." Never promise a fix you can't deliver.
+</handling_specific_situations>
+
+<location_and_hours>
+We're on Birchmount Road in Scarborough. Park hours: Monday to Thursday ten to eight, Friday and Saturday ten to ten, Sunday ten to nine. Only mention hours if the caller asks.
+</location_and_hours>
+
+CURRENT TIME: Saturday, April 25, 2026 at 03:44 PM (Eastern Time)
+
+KNOWLEDGE BASE CONTEXT:
+
+No matching context was found for this query. Direct the caller to phone 289-454-5555 or email events.scb@aerosportsparks.ca.
+
+--- msg[1]  role=user ---
+If we come right now, how long will we have to wait to go on the go karting?
+────────────────────────────────────────────
+
+[2026-04-25 15:44:01.744] [LLM_RAW_RESPONSE] [Turn #1]
+────────────────────────────────────────────
+I'm not sure about current wait times for go -karting — best thing is to call us at 289-454-5555 or email events.scb@aerosportsparks.ca. They can give you the latest info! 
+────────────────────────────────────────────
+
+[2026-04-25 15:44:01.744] [FINAL_RESPONSE_TO_CALLER] [Turn #1]
+────────────────────────────────────────────
+I'm not sure about current wait times for go -karting — best thing is to call us at 289-454-5555 or email events.scb@aerosportsparks.ca. They can give you the latest info!
+────────────────────────────────────────────
+
+# session ended: 2026-04-25T15:44:14.454
