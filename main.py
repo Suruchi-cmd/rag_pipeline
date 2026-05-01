@@ -3,8 +3,8 @@ AeroBot — API + voice server entry point.
 
 Usage
 -----
-    python main.py          # API on port 3232
-    cd frontend && npm run dev  # frontend on port 5173
+    cd frontend && npm run build   # build SPA into frontend/dist
+    python main.py                 # serves API + frontend on port 3232
 """
 
 from __future__ import annotations
@@ -12,10 +12,13 @@ from __future__ import annotations
 import asyncio
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from api.events import router as events_router
 from api.routers.calls import router as calls_router
@@ -79,6 +82,35 @@ app.include_router(events_router)
 @app.get("/api/health", tags=["health"])
 async def health():
     return {"status": "ok"}
+
+
+# ── Frontend (SPA) ────────────────────────────────────────────────────────────
+
+_FRONTEND_DIST = Path(__file__).parent / "frontend" / "dist"
+
+if _FRONTEND_DIST.is_dir():
+    app.mount(
+        "/assets",
+        StaticFiles(directory=_FRONTEND_DIST / "assets"),
+        name="assets",
+    )
+
+    _INDEX_HTML = _FRONTEND_DIST / "index.html"
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def spa_fallback(full_path: str):
+        if full_path.startswith(("api/", "voice/")):
+            raise HTTPException(status_code=404)
+        candidate = (_FRONTEND_DIST / full_path).resolve()
+        if (
+            full_path
+            and candidate.is_file()
+            and _FRONTEND_DIST.resolve() in candidate.parents
+        ):
+            return FileResponse(candidate)
+        return FileResponse(_INDEX_HTML)
+else:
+    logger.warning("frontend/dist not found — run `npm run build` to enable SPA serving")
 
 
 # ── Dev runner ─────────────────────────────────────────────────────────────────
