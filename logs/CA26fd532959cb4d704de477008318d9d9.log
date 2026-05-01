@@ -1,0 +1,41 @@
+2026-05-01 02:22:42,054  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA26fd532959cb4d704de477008318d9d9.log
+2026-05-01 02:22:42,054  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] ConversationRelay connected from +14373612990
+2026-05-01 02:22:44,319  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User interrupted. Spoken: Thank you for calling AeroSports Scarborough, this is Maya. How can I help you?
+2026-05-01 02:22:45,748  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User said: Thank you for
+2026-05-01 02:22:45,867  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY rag_api=68ms  docs=5
+2026-05-01 02:22:45,867  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY prepare_voice_stream=68ms
+2026-05-01 02:22:46,128  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] LATENCY silence_to_first_reply=380ms
+2026-05-01 02:22:46,241  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Assistant (full): You're welcome! How can I help you today?
+2026-05-01 02:22:54,160  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User said: What's up?
+2026-05-01 02:22:54,642  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY rag_api=49ms  docs=5
+2026-05-01 02:22:54,642  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY prepare_voice_stream=466ms
+2026-05-01 02:22:55,273  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] LATENCY silence_to_first_reply=1113ms
+2026-05-01 02:22:55,465  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Assistant (full): Hey there! What can I assist you with at AeroSports Scarborough today?
+2026-05-01 02:23:02,570  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User said: Do you guys have will kart?
+2026-05-01 02:23:02,990  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY rag_api=55ms  docs=5
+2026-05-01 02:23:02,990  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY prepare_voice_stream=416ms
+2026-05-01 02:23:03,639  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] LATENCY silence_to_first_reply=1068ms
+2026-05-01 02:23:04,293  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Assistant (full): Yeah, we do have go-karting here. It’s separate from the jump pass activities like trampolines and ninja courses. If you want more details or to book a session, let me know!
+2026-05-01 02:23:10,050  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User interrupted. Spoken: If you want more details or to book a session, let me know!
+2026-05-01 02:23:14,534  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User said: No. That's do you guys have
+2026-05-01 02:23:14,965  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY rag_api=54ms  docs=5
+2026-05-01 02:23:14,965  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY prepare_voice_stream=415ms
+2026-05-01 02:23:15,618  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] LATENCY silence_to_first_reply=1084ms
+2026-05-01 02:23:15,681  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User interrupted. Spoken: 
+2026-05-01 02:23:15,681  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] LLM stream cancelled (user interrupted)
+2026-05-01 02:23:15,696  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Assistant (partial/cancelled): Oh, got it!
+2026-05-01 02:23:19,128  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User said: how do I see it? Do you guys have laser tags or Dipping Dots?
+2026-05-01 02:23:19,873  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY rag_api=58ms  docs=5
+2026-05-01 02:23:19,873  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY prepare_voice_stream=731ms
+2026-05-01 02:23:20,755  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] LATENCY silence_to_first_reply=1627ms
+2026-05-01 02:23:21,694  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Assistant (full): We've got a high-energy laser tag arena here at AeroSports Scarborough. It’s not included in the jump pass and requires a separate ticket or can be added as an add-on. As for Dipping Dots, we don’t of
+2026-05-01 02:23:40,468  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User said: No. Like, Dipping Dog food.
+2026-05-01 02:23:40,911  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY rag_api=62ms  docs=5
+2026-05-01 02:23:40,911  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY prepare_voice_stream=440ms
+2026-05-01 02:23:41,669  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] LATENCY silence_to_first_reply=1201ms
+2026-05-01 02:23:42,478  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Assistant (full): Ah, I see! We don't sell pet food like Dipping Dog here at AeroSports Scarborough. Our focus is on fun activities and sports for people. If you're looking for something specific or have any other ques
+2026-05-01 02:24:01,758  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] User said: Sleeping dog.
+2026-05-01 02:24:02,354  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY rag_api=55ms  docs=5
+2026-05-01 02:24:02,354  INFO      chatbot.voice_handler  [CA26fd532959cb4d704de477008318d9d9] LATENCY prepare_voice_stream=581ms
+2026-05-01 02:24:02,374  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Finalised abandoned call
+2026-05-01 02:24:02,374  INFO      chatbot.routers.voice  [CA26fd532959cb4d704de477008318d9d9] Session log closed

@@ -1,0 +1,135 @@
+2026-05-01 01:21:52,267 - __main__ - INFO - Logging initialized. Log file: logs/server_logs/20260501_012152.log
+2026-05-01 01:21:52,272 - __main__ - WARNING - Frontend dist directory not found - frontend will not be served
+2026-05-01 01:21:52,286 - __main__ - INFO - Starting Ultimate Advisor API bootstrap...
+2026-05-01 01:21:52,293 - __main__ - INFO - Database reachable (attempt 1)
+2026-05-01 01:21:52,324 - __main__ - INFO - pgvector extension ensured
+2026-05-01 01:21:52,339 - __main__ - INFO - Application tables ensured
+2026-05-01 01:21:52,349 - src.llm_config.repositories - INFO - Seeded LLMConfig: phi4:latest @ http://localhost:11434
+2026-05-01 01:21:52,349 - __main__ - INFO - LLMConfig active: phi4:latest @ http://localhost:11434
+2026-05-01 01:21:52,356 - src.rag.repositories - INFO - Models configured: LLM=phi4:latest, Embedding=qwen3-embedding:0.6b, Ollama=http://localhost:11434
+2026-05-01 01:22:01,706 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:01,707 - src.rag.repositories - INFO - Embedding dimension confirmed: 1024
+2026-05-01 01:22:01,715 - src.rag.repositories - INFO - Database connection established
+2026-05-01 01:22:01,715 - src.rag.repositories - INFO - pgvector extension ensured
+2026-05-01 01:22:01,717 - src.rag.repositories - INFO - Vector store configured with table 'documents' (embed_dim=1024)
+2026-05-01 01:22:01,717 - __main__ - INFO - RAGRepository initialized and attached to app.state
+2026-05-01 01:22:01,719 - src.rag.repositories - INFO - Vector table 'documents' not found (no rows to count yet)
+2026-05-01 01:22:01,719 - __main__ - INFO - Bootstrap ingest: 14 enriched markdown files from /home/aeroscbserver/Documents/rag_pipeline/core/rag/parser/output/enriched
+2026-05-01 01:22:02,185 - src.rag.repositories - INFO - Creating index from documents...
+2026-05-01 01:22:02,185 - src.rag.repositories - INFO - Number of documents to index: 14
+2026-05-01 01:22:02,185 - src.rag.repositories - INFO - Sanitized 14 documents
+2026-05-01 01:22:02,244 - src.rag.repositories - INFO - Parsing documents with MarkdownNodeParser...
+2026-05-01 01:22:02,247 - src.rag.repositories - INFO - Created 108 initial nodes from markdown structure
+2026-05-01 01:22:02,248 - src.rag.repositories - INFO - Final node count after chunking: 108
+2026-05-01 01:22:02,309 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,367 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,413 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,457 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,502 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,545 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,591 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,634 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,680 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,724 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,770 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,813 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,856 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,898 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,942 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:02,986 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,033 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,077 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,122 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,165 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,211 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,261 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,303 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,348 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,410 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,453 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,502 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,549 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,599 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,643 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,687 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,732 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,777 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,821 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,871 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,922 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:03,966 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,008 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,053 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,103 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,150 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,195 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,242 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,288 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,333 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,381 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,425 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,468 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,518 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,560 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,619 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,669 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,711 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,758 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,802 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,845 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,888 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,931 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:04,974 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,019 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,065 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,110 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,151 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,195 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,238 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,285 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,333 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,375 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,417 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,462 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,507 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,556 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,599 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,642 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,688 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,731 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,778 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,823 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,870 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,917 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:05,961 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,004 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,045 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,088 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,132 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,176 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,221 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,268 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,314 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,355 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,404 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,453 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,497 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,547 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,594 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,638 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,685 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,735 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,804 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,848 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,893 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,937 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:06,985 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:07,029 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:07,073 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:07,117 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:07,161 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:07,204 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:22:07,295 - src.rag.repositories - INFO - Documents indexed successfully - Created 0 text chunks
+2026-05-01 01:22:07,295 - __main__ - INFO - Bootstrap ingest succeeded
+2026-05-01 01:22:07,295 - __main__ - INFO - Bootstrap complete — API ready
+2026-05-01 01:22:07,295 - __main__ - INFO - Ultimate Advisor API shutting down

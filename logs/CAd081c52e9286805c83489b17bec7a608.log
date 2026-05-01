@@ -1,0 +1,20 @@
+2026-05-01 02:21:35,611  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CAd081c52e9286805c83489b17bec7a608.log
+2026-05-01 02:21:35,611  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] ConversationRelay connected from +14373612990
+2026-05-01 02:21:43,696  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] User said: Do you guys have go go cards?
+2026-05-01 02:21:44,704  INFO      chatbot.voice_handler  [CAd081c52e9286805c83489b17bec7a608] LATENCY rag_api=991ms  docs=5
+2026-05-01 02:21:44,704  INFO      chatbot.voice_handler  [CAd081c52e9286805c83489b17bec7a608] LATENCY prepare_voice_stream=992ms
+2026-05-01 02:21:47,110  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] LATENCY silence_to_first_reply=3413ms
+2026-05-01 02:21:48,038  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] Assistant (full): I'm not sure what "go go cards" are. If you mean something like a jump pass or gift card, we do offer those! For more details on our options, it's best to call us at two eight nine, four five four, fi
+2026-05-01 02:21:55,959  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] User interrupted. Spoken: it's best to call us at two eight nine, four five four, five five five five and ask for a supervisor. They can help sort it out for you.
+2026-05-01 02:21:57,334  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] User said: No. I want to make a full card.
+2026-05-01 02:21:58,685  INFO      chatbot.voice_handler  [CAd081c52e9286805c83489b17bec7a608] LATENCY rag_api=701ms  docs=5
+2026-05-01 02:21:58,685  INFO      chatbot.voice_handler  [CAd081c52e9286805c83489b17bec7a608] LATENCY prepare_voice_stream=1338ms
+2026-05-01 02:21:59,427  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] LATENCY silence_to_first_reply=2094ms
+2026-05-01 02:22:00,277  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] Assistant (full): Gotcha! We have different passes available. Do you already know which package you'd like? If not, let me explain the options: we offer various passes with specific validity periods and pricing structu
+2026-05-01 02:22:18,014  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] User said: No. I want go kart tickets.
+2026-05-01 02:22:18,748  INFO      chatbot.voice_handler  [CAd081c52e9286805c83489b17bec7a608] LATENCY rag_api=52ms  docs=5
+2026-05-01 02:22:18,748  INFO      chatbot.voice_handler  [CAd081c52e9286805c83489b17bec7a608] LATENCY prepare_voice_stream=721ms
+2026-05-01 02:22:19,548  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] LATENCY silence_to_first_reply=1534ms
+2026-05-01 02:22:20,873  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] Assistant (full): Sure thing! Go-karting requires a separate ticket or can be added as an add-on if you have a jump pass. For a standalone race on the main track, it's priced at nineteen ninety plus tax per participant
+2026-05-01 02:22:28,171  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] Finalised abandoned call
+2026-05-01 02:22:28,171  INFO      chatbot.routers.voice  [CAd081c52e9286805c83489b17bec7a608] Session log closed

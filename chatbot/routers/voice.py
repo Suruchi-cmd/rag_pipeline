@@ -190,21 +190,20 @@ async def voice_inbound(CallSid: str = Form(...), From: str = Form(default="")):
 <Response>
   <Connect action="{base}/voice/action">
     <ConversationRelay url="wss://{ws_host}/voice/ws"
-                    language="{settings.TWILIO_LANGUAGE}"
-                    transcriptionProvider="{settings.TWILIO_ASR_PROVIDER}"
-                    ttsProvider="{settings.TWILIO_TTS_PROVIDER}"
-                    voice="{settings.TWILIO_VOICE_ID}"
+                       language="{settings.TWILIO_LANGUAGE}"
+                       transcriptionProvider="{settings.TWILIO_ASR_PROVIDER}"
+                       speechModel="{settings.TWILIO_SPEECH_MODEL}"
+                       ttsProvider="{settings.TWILIO_TTS_PROVIDER}"
+                       voice="{settings.TWILIO_VOICE_ID}"
                        welcomeGreeting="{settings.welcome_greeting}"
                        dtmfDetection="true"
-                       interruptByDtmf="false"
-                       interruptSensitivity="{settings.TWILIO_INTERRUPT_SENSITIVITY}">
-        <Transcription hints="{settings.TWILIO_ASR_HINTS}" />
-    </ConversationRelay>
+                       interruptible="speech"
+                       interruptSensitivity="{settings.TWILIO_INTERRUPT_SENSITIVITY}"
+                       hints="{settings.TWILIO_ASR_HINTS}" />
   </Connect>
 </Response>"""
     return Response(content=twiml, media_type="text/xml")
-
-
+    
 @router.post("/voice/action")
 async def voice_action():
     """Called by Twilio when the ConversationRelay session ends."""

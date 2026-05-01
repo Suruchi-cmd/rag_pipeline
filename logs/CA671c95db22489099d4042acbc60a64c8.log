@@ -1,0 +1,19 @@
+2026-05-01 01:30:11,292  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] Session log opened → /home/aeroscbserver/Documents/rag_pipeline/logs/CA671c95db22489099d4042acbc60a64c8.log
+2026-05-01 01:30:11,292  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] ConversationRelay connected from +14373612990
+2026-05-01 01:30:21,341  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] User said: Hi, Maria. Uh, what kind of activities do you guys have at the park?
+2026-05-01 01:30:21,544  INFO      chatbot.voice_handler  [CA671c95db22489099d4042acbc60a64c8] LATENCY rag_api=152ms  docs=7
+2026-05-01 01:30:21,544  INFO      chatbot.voice_handler  [CA671c95db22489099d4042acbc60a64c8] LATENCY prepare_voice_stream=152ms
+2026-05-01 01:30:24,057  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] LATENCY silence_to_first_reply=2716ms
+2026-05-01 01:30:25,400  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] Assistant (full): Hey there! At AeroSports Scarborough, we've got loads to keep everyone entertained. You can bounce around on our wall-to-wall trampolines, tackle a ninja warrior course or maze, climb some rock walls,
+2026-05-01 01:30:50,042  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] User said: Okay. So what should I do if I want Go Kart?
+2026-05-01 01:30:51,217  INFO      chatbot.voice_handler  [CA671c95db22489099d4042acbc60a64c8] LATENCY rag_api=706ms  docs=7
+2026-05-01 01:30:51,217  INFO      chatbot.voice_handler  [CA671c95db22489099d4042acbc60a64c8] LATENCY prepare_voice_stream=1160ms
+2026-05-01 01:30:52,107  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] LATENCY silence_to_first_reply=2065ms
+2026-05-01 01:30:53,239  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] Assistant (full): If you're interested in go-karting, it's a separate activity from your jump pass. You can either purchase a separate ticket or add it as an add-on to your visit. For pricing details and how to book, j
+2026-05-01 01:31:17,106  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] User said: So do you have prices for laser tag?
+2026-05-01 01:31:17,656  INFO      chatbot.voice_handler  [CA671c95db22489099d4042acbc60a64c8] LATENCY rag_api=69ms  docs=7
+2026-05-01 01:31:17,656  INFO      chatbot.voice_handler  [CA671c95db22489099d4042acbc60a64c8] LATENCY prepare_voice_stream=502ms
+2026-05-01 01:31:18,531  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] LATENCY silence_to_first_reply=1425ms
+2026-05-01 01:31:19,636  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] Assistant (full): For sure! Laser Tag requires a separate ticket or can be added as an add-on to your visit. I don't have the exact price, but it's best to check our main booking page at https://ecom. roller.app/aerosp
+2026-05-01 01:31:31,782  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] Finalised abandoned call
+2026-05-01 01:31:31,783  INFO      chatbot.routers.voice  [CA671c95db22489099d4042acbc60a64c8] Session log closed

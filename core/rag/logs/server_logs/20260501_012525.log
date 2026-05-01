@@ -1,0 +1,34 @@
+2026-05-01 01:25:25,598 - __main__ - INFO - Logging initialized. Log file: logs/server_logs/20260501_012525.log
+2026-05-01 01:25:25,603 - __main__ - WARNING - Frontend dist directory not found - frontend will not be served
+2026-05-01 01:25:25,617 - __main__ - INFO - Starting Ultimate Advisor API bootstrap...
+2026-05-01 01:25:25,628 - __main__ - INFO - Database reachable (attempt 1)
+2026-05-01 01:25:25,635 - __main__ - INFO - pgvector extension ensured
+2026-05-01 01:25:25,645 - __main__ - INFO - Application tables ensured
+2026-05-01 01:25:25,654 - __main__ - INFO - LLMConfig active: phi4:latest @ http://localhost:11434
+2026-05-01 01:25:25,661 - src.rag.repositories - INFO - Models configured: LLM=phi4:latest, Embedding=qwen3-embedding:0.6b, Ollama=http://localhost:11434
+2026-05-01 01:25:25,713 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:25:25,713 - src.rag.repositories - INFO - Embedding dimension confirmed: 1024
+2026-05-01 01:25:25,719 - src.rag.repositories - INFO - Database connection established
+2026-05-01 01:25:25,719 - src.rag.repositories - INFO - pgvector extension ensured
+2026-05-01 01:25:25,720 - src.rag.repositories - INFO - Vector store configured with table 'documents' (embed_dim=1024)
+2026-05-01 01:25:25,720 - __main__ - INFO - RAGRepository initialized and attached to app.state
+2026-05-01 01:25:25,722 - __main__ - INFO - Vector store non-empty; skipping bootstrap ingest
+2026-05-01 01:25:25,722 - __main__ - INFO - Bootstrap complete — API ready
+2026-05-01 01:25:45,457 - __main__ - INFO - Request: GET / from 127.0.0.1
+2026-05-01 01:25:45,458 - __main__ - INFO - Response: 200 for GET / - 0.001s
+2026-05-01 01:25:51,509 - __main__ - INFO - Request: GET /docs from 127.0.0.1
+2026-05-01 01:25:51,509 - __main__ - INFO - Response: 200 for GET /docs - 0.000s
+2026-05-01 01:25:52,421 - __main__ - INFO - Request: GET /openapi.json from 127.0.0.1
+2026-05-01 01:25:52,438 - __main__ - INFO - Response: 200 for GET /openapi.json - 0.017s
+2026-05-01 01:26:11,914 - __main__ - INFO - Request: POST /rag/query from 127.0.0.1
+2026-05-01 01:26:11,918 - src.rag.repositories - INFO - Vector store contains 108 documents
+2026-05-01 01:26:11,918 - src.rag.repositories - INFO - Index not initialized, creating from vector store...
+2026-05-01 01:26:11,977 - src.rag.repositories - INFO - ✓ Index successfully created from vector store
+2026-05-01 01:26:12,018 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2026-05-01 01:26:12,072 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 01:26:18,489 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-05-01 01:26:18,490 - src.rag.repositories - INFO - Query executed successfully
+2026-05-01 01:26:18,545 - src.history.repositories - INFO - Created query history with ID: b13fdf4f-94b5-49b4-83f1-e63f58bcb1a8
+2026-05-01 01:26:18,550 - src.history.services - INFO - Saved query history with ID: b13fdf4f-94b5-49b4-83f1-e63f58bcb1a8
+2026-05-01 01:26:18,551 - __main__ - INFO - Response: 200 for POST /rag/query - 6.637s
+2026-05-01 01:26:36,308 - __main__ - INFO - Ultimate Advisor API shutting down

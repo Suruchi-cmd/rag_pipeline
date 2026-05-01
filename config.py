@@ -72,8 +72,8 @@ class Settings(BaseSettings):
 
     # ── Voice streaming reply ───────────────────────────────────────────
     VOICE_MAX_TOKENS: int = Field(default=500)
-    VOICE_TEMPERATURE: float = Field(default=0.3)
-    VOICE_TOP_K: int = Field(default=7, description="RAG top_k per voice turn.")
+    VOICE_TEMPERATURE: float = Field(default=0.1)
+    VOICE_TOP_K: int = Field(default=5, description="RAG top_k per voice turn.")
 
     # ── Rewrite + end-of-call classifier (small deterministic hops) ─────
     REWRITE_MAX_TOKENS: int = Field(default=150)
@@ -125,10 +125,12 @@ class Settings(BaseSettings):
         return [o.strip() for o in self.CHATBOT_CORS_ORIGINS.split(",") if o.strip()]
 
     # ── Twilio ConversationRelay TwiML attributes ───────────────────────
-    TWILIO_LANGUAGE: str = Field(default="en-CA")
+    TWILIO_LANGUAGE: str = Field(default="en")
     TWILIO_ASR_PROVIDER: str = Field(default="deepgram")
     TWILIO_TTS_PROVIDER: str = Field(default="ElevenLabs")
     TWILIO_VOICE_ID: str = Field(default="uYXf8XasLslADfZ2MB4u")
+    TWILIO_SPEECH_MODEL: str = Field(default="nova-3-general")
+
     TWILIO_INTERRUPT_SENSITIVITY: str = Field(default="medium")
 
     # Long ASR-hints string. Pulled out so the operations team can update
@@ -143,7 +145,7 @@ class Settings(BaseSettings):
             "Premium Party, VIP Party, Ultimate Party, Toddler Time, PA Day Camp, "
             "March Break Camp, availability, Special Needs Program, "
             "Birds Eye Party Arena, jump tower, slam basketball, dodgeball, "
-            "rock walls, waiver"
+            "rock walls, waiver, dippin dots"
         ),
     )
 
