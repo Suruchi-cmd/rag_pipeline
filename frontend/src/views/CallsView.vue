@@ -74,6 +74,7 @@
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Status</th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Duration</th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Turns</th>
+              <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Avg / req</th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Started</th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Categories</th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Summary</th>
@@ -98,6 +99,7 @@
               </td>
               <td class="px-4 py-3.5 text-slate-600">{{ formatDuration(call.started_at, call.ended_at) }}</td>
               <td class="px-4 py-3.5 text-slate-600">{{ call.total_turns }}</td>
+              <td class="px-4 py-3.5 text-slate-600 whitespace-nowrap">{{ formatAvgTurn(call.avg_turn_ms) }}</td>
               <td class="px-4 py-3.5 text-slate-500 whitespace-nowrap">{{ formatDate(call.started_at) }}</td>
               <td class="px-4 py-3.5">
                 <div class="flex flex-wrap gap-1">
@@ -137,7 +139,7 @@
 import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useCallsStore } from '@/stores/calls'
-import { formatDate, formatDuration, truncate } from '@/utils/format'
+import { formatAvgTurn, formatDate, formatDuration, truncate } from '@/utils/format'
 import { useEvents } from '@/composables/useEvents'
 import StatusBadge from '@/components/StatusBadge.vue'
 import CategoryBadge from '@/components/CategoryBadge.vue'

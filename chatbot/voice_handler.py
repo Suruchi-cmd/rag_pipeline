@@ -29,7 +29,7 @@ if _REPO_ROOT not in sys.path:
 
 from chatbot.config import settings  # noqa: E402
 from chatbot.conversation import conversation_store  # noqa: E402
-from chatbot.llm import _get_fallback_async_client, _make_async_client  # noqa: E402
+from chatbot.llm import get_session_client, swap_session_client  # noqa: E402
 from chatbot.vector_store import vector_store  # noqa: E402
 from src.utils.pipeline_logger import PipelineLogger  # noqa: E402
 
@@ -358,14 +358,16 @@ Last bot reply: <<ASSISTANT_TEXT>>
 JSON:"""
 
 
-async def classify_turn_for_end(user_text: str, assistant_text: str) -> dict | None:
+async def classify_turn_for_end(
+    call_sid: str, user_text: str, assistant_text: str
+) -> dict | None:
     """Return an end-call decision dict, or None to keep the call going."""
     prompt = _CLASSIFIER_PROMPT.replace("<<USER_TEXT>>", user_text[:500]).replace(
         "<<ASSISTANT_TEXT>>", assistant_text[:500]
     )
 
     try:
-        client = _make_async_client()
+        client = get_session_client(call_sid)
         response = await client.chat.completions.create(
             model=_FAST_MODEL,
             messages=[{"role": "user", "content": prompt}],
@@ -456,7 +458,9 @@ Output ONLY the rewritten standalone question.\
 """
 
 
-async def _rewrite_query(user_message: str, conversation_history: list[dict]) -> str:
+async def _rewrite_query(
+    call_sid: str, user_message: str, conversation_history: list[dict]
+) -> str:
     """Rewrite a follow-up into a self-contained query. Falls back on error."""
     if not conversation_history:
         return user_message
@@ -470,7 +474,7 @@ async def _rewrite_query(user_message: str, conversation_history: list[dict]) ->
     prompt = _REWRITE_PROMPT.format(chat_history=chat_history, question=user_message)
 
     try:
-        client = _make_async_client()
+        client = get_session_client(call_sid)
         response = await client.chat.completions.create(
             model=_FAST_MODEL,
             messages=[{"role": "user", "content": prompt}],
@@ -609,7 +613,7 @@ async def prepare_voice_stream(
         pl.log_refined_query(user_text, "__SKIPPED__")
         pl.log_rag_results([])
     else:
-        search_query = await _rewrite_query(user_text, history)
+        search_query = await _rewrite_query(call_sid, user_text, history)
         rewritten_query = search_query
         pl.log_refined_query(user_text, search_query)
 
@@ -637,7 +641,7 @@ async def prepare_voice_stream(
 _SENTENCE_END_RE = re.compile(r"([.!?]+(?:\s+|$))")
 
 
-async def stream_voice_tokens(messages: list[dict]):
+async def stream_voice_tokens(call_sid: str, messages: list[dict]):
     """
     Yield TTS-safe text chunks from the LLM.
 
@@ -648,7 +652,7 @@ async def stream_voice_tokens(messages: list[dict]):
       - Subsequent chunks: flush on sentence boundaries (. ! ?) for natural
         TTS pacing.
     """
-    client = _make_async_client()
+    client = get_session_client(call_sid)
     try:
         stream = await client.chat.completions.create(
             model=_VOICE_MODEL,
@@ -659,8 +663,10 @@ async def stream_voice_tokens(messages: list[dict]):
             extra_body={"keep_alive": settings.OLLAMA_KEEP_ALIVE},
         )
     except Exception as exc:
-        logger.warning("Primary Ollama failed, switching to fallback: %s", exc)
-        client = _get_fallback_async_client(client)
+        logger.warning(
+            "[%s] Pinned Ollama failed, swapping to fallback: %s", call_sid, exc
+        )
+        client = swap_session_client(call_sid)
         stream = await client.chat.completions.create(
             model=_VOICE_MODEL,
             messages=messages,

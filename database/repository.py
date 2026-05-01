@@ -54,6 +54,15 @@ def end_call(
     session.commit()
 
 
+def update_avg_turn_ms(session: Session, call_id: int, avg_turn_ms: float) -> None:
+    call = session.get(Call, call_id)
+    if call is None:
+        return
+    call.avg_turn_ms = avg_turn_ms
+    session.add(call)
+    session.commit()
+
+
 def list_calls(
     session: Session,
     offset: int = 0,

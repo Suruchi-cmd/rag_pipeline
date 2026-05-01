@@ -36,3 +36,9 @@ export function formatDuration(startedAt: string, endedAt: string | null): strin
 export function truncate(str: string, max: number): string {
   return str.length > max ? `${str.slice(0, max)}…` : str
 }
+
+export function formatAvgTurn(ms: number | null | undefined): string {
+  if (ms == null) return '—'
+  const s = ms / 1000
+  return s >= 1 ? `${s.toFixed(2)}s / request` : `${Math.round(ms)}ms / request`
+}

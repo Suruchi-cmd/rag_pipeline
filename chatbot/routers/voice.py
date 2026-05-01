@@ -29,7 +29,7 @@ if _REPO_ROOT not in sys.path:
 
 from chatbot.config import settings
 from chatbot.conversation import conversation_store
-from chatbot.llm import _FALLBACK_MSG
+from chatbot.llm import _FALLBACK_MSG, release_session_client
 from chatbot.voice_handler import (
     build_end_decision_from_definite,
     check_booking_capture_trigger,
@@ -49,6 +49,7 @@ from database.repository import (
     end_call,
     get_call_by_id,
     save_booking_change,
+    update_avg_turn_ms,
 )
 from database.session import engine
 
@@ -247,15 +248,18 @@ async def _stream_llm_to_twilio(
     messages: list[dict],
     segments: list[str],
     t_silence_end: float = 0.0,
+    ttfr_holder: list[float] | None = None,
 ) -> None:
     try:
         first_token = True
-        async for token in stream_voice_tokens(messages):
+        async for token in stream_voice_tokens(call_sid, messages):
             if first_token:
                 first_token = False
                 if t_silence_end:
                     ttfr_ms = (time.perf_counter() - t_silence_end) * 1000
                     logger.info("[%s] LATENCY silence_to_first_reply=%.0fms", call_sid, ttfr_ms)
+                    if ttfr_holder is not None:
+                        ttfr_holder.append(ttfr_ms)
             await ws.send_text(json.dumps({"type": "text", "token": token, "last": False}))
             segments.append(token)
 
@@ -299,6 +303,8 @@ async def voice_ws(websocket: WebSocket):
                     "capture_data": {"name": "", "phone": "", "details": ""},
                     "capture_triggered_on": "",
                     "turn_number": 0,
+                    "turn_count": 0,
+                    "total_turn_ms": 0.0,
                 }
                 _session_log_handler = _open_session_log(call_sid)
                 logger.info("[%s] ConversationRelay connected from %s", call_sid, caller_from)
@@ -414,8 +420,12 @@ async def voice_ws(websocket: WebSocket):
                     _call_id: int | None = call_id,
                     _user_text: str = user_text,
                 ):
+                    _ttfr_holder: list[float] = []
                     try:
-                        await _stream_llm_to_twilio(ws, sid, msgs, segs, t_silence)
+                        await _stream_llm_to_twilio(
+                            ws, sid, msgs, segs, t_silence, _ttfr_holder
+                        )
+
                         raw_joined = "".join(segs)
                         full_reply = clean_for_tts(raw_joined)
                         if full_reply.strip():
@@ -430,7 +440,7 @@ async def voice_ws(websocket: WebSocket):
                         if full_reply.strip():
                             _db_log_message(_call_id, "assistant", full_reply, _turn_num)
 
-                        # End-of-call detection
+                        # End-of-call detection (NOT included in per-turn timing)
                         _kw = check_end_keywords(_user_text)
                         _end = None
                         if _kw == "definite":
@@ -438,7 +448,7 @@ async def voice_ws(websocket: WebSocket):
                             logger.info("[%s] End-call keyword DEFINITE", sid)
                         elif _kw == "maybe":
                             logger.info("[%s] End-call keyword MAYBE — classifying", sid)
-                            _end = await classify_turn_for_end(_user_text, full_reply)
+                            _end = await classify_turn_for_end(sid, _user_text, full_reply)
 
                         if _end is not None:
                             _db_end_call(
@@ -491,6 +501,14 @@ async def voice_ws(websocket: WebSocket):
                         except Exception:
                             pass
 
+                    finally:
+                        _sess = _voice_sessions.get(sid)
+                        if _sess is not None and _ttfr_holder:
+                            _sess["turn_count"] = _sess.get("turn_count", 0) + 1
+                            _sess["total_turn_ms"] = (
+                                _sess.get("total_turn_ms", 0.0) + _ttfr_holder[0]
+                            )
+
                 task = asyncio.create_task(
                     _run_stream(websocket, call_sid, messages, segments, t_silence_end)
                 )
@@ -524,6 +542,20 @@ async def voice_ws(websocket: WebSocket):
     finally:
         if call_sid:
             session = _voice_sessions.pop(call_sid, {})
+            _turns = session.get("turn_count", 0)
+            _avg_ms = (session.get("total_turn_ms", 0.0) / _turns) if _turns else None
+            if _avg_ms is not None:
+                logger.info(
+                    "[%s] Call summary — %d request(s), avg %.2fs per request",
+                    call_sid, _turns, _avg_ms / 1000,
+                )
+                _call_id_for_avg = session.get("call_id")
+                if _call_id_for_avg is not None:
+                    try:
+                        with Session(engine) as s:
+                            update_avg_turn_ms(s, _call_id_for_avg, _avg_ms)
+                    except Exception as exc:
+                        logger.error("[%s] update_avg_turn_ms failed: %s", call_sid, exc)
             current_task = session.get("current_task")
             if current_task and not current_task.done():
                 current_task.cancel()
@@ -550,3 +582,4 @@ async def voice_ws(websocket: WebSocket):
             _close_session_log(call_sid, _session_log_handler)
         if call_sid:
             close_session_logger(call_sid)
+            release_session_client(call_sid)

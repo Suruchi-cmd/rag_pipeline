@@ -47,6 +47,14 @@
             <MessageSquareIcon :size="13" />
             {{ detail.call.total_turns }} turns
           </span>
+          <span
+            v-if="detail.call.avg_turn_ms != null"
+            class="flex items-center gap-1.5"
+            title="Average time spent generating an answer — from when the caller stopped talking to when the bot starts replying"
+          >
+            <GaugeIcon :size="13" />
+            {{ formatAvgTurn(detail.call.avg_turn_ms) }}
+          </span>
         </div>
       </div>
     </div>
@@ -265,7 +273,7 @@
 import { ref, computed, onMounted, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import { getCall } from '@/api/calls'
-import { formatDateFull, formatDuration, truncate } from '@/utils/format'
+import { formatAvgTurn, formatDateFull, formatDuration, truncate } from '@/utils/format'
 import StatusBadge from '@/components/StatusBadge.vue'
 import CategoryBadge from '@/components/CategoryBadge.vue'
 import Spinner from '@/components/Spinner.vue'
@@ -283,6 +291,7 @@ import {
   Zap as ZapIcon,
   AlertCircle as AlertCircleIcon,
   CalendarCheck as CalendarCheckIcon,
+  Gauge as GaugeIcon,
 } from 'lucide-vue-next'
 
 const route = useRoute()
@@ -343,6 +352,7 @@ const metaRows = computed(() => {
     { label: 'Started', value: formatDateFull(c.started_at) },
     { label: 'Duration', value: formatDuration(c.started_at, c.ended_at) },
     { label: 'Turns', value: String(c.total_turns) },
+    { label: 'Avg / request', value: formatAvgTurn(c.avg_turn_ms) },
   ]
 })
 

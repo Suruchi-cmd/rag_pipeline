@@ -19,6 +19,7 @@ class Call(SQLModel, table=True):
     needs_human: bool = Field(default=False)
     flag_reason: Optional[str] = None
     total_turns: int = Field(default=0)
+    avg_turn_ms: Optional[float] = Field(default=None)
 
 
 class Message(SQLModel, table=True):

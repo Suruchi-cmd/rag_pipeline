@@ -196,12 +196,7 @@ useEvents({
     const existing = idx !== -1 ? recentCalls.value[idx] : undefined
     if (idx !== -1 && existing) {
       recentCalls.value[idx] = {
-        id: existing.id,
-        call_sid: existing.call_sid,
-        phone_number: existing.phone_number,
-        started_at: existing.started_at,
-        total_turns: existing.total_turns,
-        flag_reason: existing.flag_reason,
+        ...existing,
         status: data.status as Call['status'],
         needs_human: Boolean(data.needs_human),
         summary: data.summary ?? existing.summary,

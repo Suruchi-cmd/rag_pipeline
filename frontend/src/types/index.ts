@@ -9,6 +9,7 @@ export interface Call {
   needs_human: boolean
   flag_reason: string | null
   total_turns: number
+  avg_turn_ms: number | null
 }
 
 export interface Message {
