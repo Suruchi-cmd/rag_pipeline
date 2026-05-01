@@ -1,0 +1,31 @@
+2026-04-30 20:20:48,707  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] Session log opened → /Users/Rajan/Documents/GitHub/rag_pipeline/logs/CAb56a42c6c3c16140676626c7860fa23d.log
+2026-04-30 20:20:48,707  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] ConversationRelay connected from +14374383992
+2026-04-30 20:20:55,940  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] User said: Hi, Maya. How are you?
+2026-04-30 20:20:56,952  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY rag_api=1000ms  docs=7
+2026-04-30 20:20:56,952  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY prepare_voice_stream=1001ms
+2026-04-30 20:20:59,380  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY silence_to_first_reply=3439ms
+2026-04-30 20:20:59,540  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] Assistant (full): I'm good, thanks! How can I help you today?
+2026-04-30 20:21:07,190  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] User said: I'm okay as well. That's so gross.
+2026-04-30 20:21:08,476  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY rag_api=764ms  docs=7
+2026-04-30 20:21:08,477  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY prepare_voice_stream=1279ms
+2026-04-30 20:21:09,103  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY silence_to_first_reply=1913ms
+2026-04-30 20:21:09,577  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] Assistant (full): Oh no, sorry to hear that. If there’s anything specific you need or want to talk about, just let me know how I can assist you.
+2026-04-30 20:21:21,642  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] User said: Okay. Sure. No problem. I would like to buy 5 book card in tickets right now.
+2026-04-30 20:21:22,960  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY rag_api=896ms  docs=7
+2026-04-30 20:21:22,961  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY prepare_voice_stream=1313ms
+2026-04-30 20:21:23,646  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY silence_to_first_reply=2005ms
+2026-04-30 20:21:24,845  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] Assistant (full): Got it! Do you already know which package you'd like for the birthday party? If not, we have a few options: Premium Jump Pass, VIP Jump Pass, All Day Pass, and an ultimate pass that includes go-kartin
+2026-04-30 20:21:29,084  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] User interrupted. Spoken: we have a few options:
+2026-04-30 20:21:34,469  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] User said: No. Not not Go Kart Go karting. I know. I don't want birthday party tickets.
+2026-04-30 20:21:36,040  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY rag_api=662ms  docs=7
+2026-04-30 20:21:36,041  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY prepare_voice_stream=1567ms
+2026-04-30 20:21:36,728  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY silence_to_first_reply=2259ms
+2026-04-30 20:21:37,687  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] Assistant (full): Gotcha, you're looking for jump passes. Do you already know which package you'd like? We offer a Premium Jump Pass, VIP Jump Pass, All Day Pass, and an ultimate pass that includes go-karting and laser
+2026-04-30 20:21:44,283  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] User interrupted. Spoken: We offer a Premium Jump Pass, VIP Jump Pass, All Day Pass,
+2026-04-30 20:21:47,070  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] User said: Okay. Sure. Thank you so much. Bye bye. I don't wanna talk to you right now.
+2026-04-30 20:21:49,005  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY rag_api=837ms  docs=7
+2026-04-30 20:21:49,006  INFO      chatbot.voice_handler  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY prepare_voice_stream=1930ms
+2026-04-30 20:21:49,930  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] LATENCY silence_to_first_reply=2860ms
+2026-04-30 20:21:50,235  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] Assistant (full): No worries at all! If you have any questions later, feel free to reach out. Have a great day!
+2026-04-30 20:21:50,241  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] End-call keyword DEFINITE
+2026-04-30 20:21:56,208  INFO      chatbot.routers.voice  [CAb56a42c6c3c16140676626c7860fa23d] Session log closed

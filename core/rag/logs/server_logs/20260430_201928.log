@@ -1,0 +1,36 @@
+2026-04-30 20:19:28,441 - __main__ - INFO - Logging initialized. Log file: logs/server_logs/20260430_201928.log
+2026-04-30 20:19:28,445 - __main__ - WARNING - Frontend dist directory not found - frontend will not be served
+2026-04-30 20:19:28,472 - __main__ - INFO - Starting Ultimate Advisor API bootstrap...
+2026-04-30 20:19:28,577 - __main__ - INFO - Database reachable (attempt 1)
+2026-04-30 20:19:28,592 - __main__ - INFO - pgvector extension ensured
+2026-04-30 20:19:28,609 - __main__ - INFO - Application tables ensured
+2026-04-30 20:19:28,625 - __main__ - INFO - LLMConfig active: phi4:latest @ https://aerollm.share.zrok.io
+2026-04-30 20:19:28,653 - src.rag.repositories - INFO - Models configured: LLM=phi4:latest, Embedding=qwen3-embedding:0.6b, Ollama=https://aerollm.share.zrok.io
+2026-04-30 20:19:30,186 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:19:30,413 - src.rag.repositories - INFO - Embedding dimension confirmed: 1024
+2026-04-30 20:19:30,433 - src.rag.repositories - INFO - Database connection established
+2026-04-30 20:19:30,434 - src.rag.repositories - INFO - pgvector extension ensured
+2026-04-30 20:19:30,436 - src.rag.repositories - INFO - Vector store configured with table 'documents' (embed_dim=1024)
+2026-04-30 20:19:30,436 - __main__ - INFO - RAGRepository initialized and attached to app.state
+2026-04-30 20:19:30,440 - __main__ - INFO - Vector store non-empty; skipping bootstrap ingest
+2026-04-30 20:19:30,440 - __main__ - INFO - Bootstrap complete — API ready
+2026-04-30 20:20:55,963 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:20:56,718 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:20:56,949 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'Hi, Maya. How are you?'
+2026-04-30 20:20:56,949 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.987s
+2026-04-30 20:21:07,716 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:21:08,280 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:21:08,472 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'What is considered "so gross" in the context of ou'
+2026-04-30 20:21:08,474 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.757s
+2026-04-30 20:21:22,067 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:21:22,903 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:21:22,957 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'How can I purchase five Ultimate Passes for AeroSp'
+2026-04-30 20:21:22,958 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.891s
+2026-04-30 20:21:35,381 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:21:35,877 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:21:36,038 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'I need to purchase five Ultimate Passes for AeroSp'
+2026-04-30 20:21:36,039 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.658s
+2026-04-30 20:21:48,172 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:21:48,727 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:21:49,000 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'I need information on purchasing 5 book card ticke'
+2026-04-30 20:21:49,003 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.831s

@@ -30,3 +30,16 @@
 2026-04-30 19:56:46,596 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
 2026-04-30 19:56:46,774 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'How can I connect with the team at AeroSports Scar'
 2026-04-30 19:56:46,779 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.720s
+2026-04-30 20:05:47,709 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:05:49,208 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:05:49,399 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'Meyer?'
+2026-04-30 20:05:49,400 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 1.692s
+2026-04-30 20:05:51,477 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:05:51,984 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:05:52,205 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'How can I book a birthday party at AeroSports Scar'
+2026-04-30 20:05:52,206 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.728s
+2026-04-30 20:05:59,005 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-04-30 20:05:59,372 - httpx - INFO - HTTP Request: POST https://aerollm.share.zrok.io/api/embeddings "HTTP/1.1 200 OK"
+2026-04-30 20:05:59,539 - src.rag.repositories - INFO - Retrieve executed: 7 docs for 'What are the available birthday party packages at '
+2026-04-30 20:05:59,540 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.536s
+2026-04-30 20:19:15,345 - __main__ - INFO - Ultimate Advisor API shutting down
