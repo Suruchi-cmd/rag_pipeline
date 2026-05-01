@@ -26,11 +26,13 @@ logger = logging.getLogger(__name__)
 
 _FALLBACK_MSG = settings.fallback_message
 _OLLAMA_BASE_URL = settings.OLLAMA_BASE_URL
+_OLLAMA_REPHRASE_URL = settings.OLLAMA_REPHRASE_URL
 _MODEL = settings.LLM_MODEL
 
 
 _client: OpenAI | None = None
 _async_client: AsyncOpenAI | None = None
+_rephrase_client: AsyncOpenAI | None = None
 
 
 def _make_client() -> OpenAI:
@@ -45,6 +47,13 @@ def _make_async_client() -> AsyncOpenAI:
     if _async_client is None:
         _async_client = AsyncOpenAI(base_url=_OLLAMA_BASE_URL, api_key="ollama")
     return _async_client
+
+
+def _make_rephrase_client() -> AsyncOpenAI:
+    global _rephrase_client
+    if _rephrase_client is None:
+        _rephrase_client = AsyncOpenAI(base_url=_OLLAMA_REPHRASE_URL, api_key="ollama")
+    return _rephrase_client
 
 
 def generate_response(messages: list[dict]) -> Generator[str, None, None]:

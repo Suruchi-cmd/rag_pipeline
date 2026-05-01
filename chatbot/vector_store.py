@@ -54,7 +54,9 @@ class VectorStore:
             model_name=settings.EMBEDDING_MODEL,
             base_url=settings.ollama_embed_url,
         )
-        logger.info("Embed model: %s (dim=%s)", settings.EMBEDDING_MODEL, self._embed_dim)
+        logger.info(
+            "Embed model: %s (dim=%s)", settings.EMBEDDING_MODEL, self._embed_dim
+        )
 
     def _setup_pg(self) -> None:
         self.engine = create_engine(settings.pg_database_url, echo=False)
@@ -86,6 +88,10 @@ class VectorStore:
 
     async def retrieve(self, query: str, top_k: int = 5) -> list[dict]:
         """Vector search. Returns list[dict] matching existing rag_docs format."""
+        print(f"--" * 20)
+        print(f"Incoming Query: {query}")
+        print(f"--" * 20)
+
         if not self._ready:
             logger.warning("VectorStore not ready — returning empty results")
             return []

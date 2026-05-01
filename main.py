@@ -41,6 +41,7 @@ async def lifespan(app: FastAPI):
     logger.info("AeroBot starting…")
     init_db()
     logger.info("Database initialised")
+    await asyncio.to_thread(vector_store.initialize)
     cleanup_task = asyncio.create_task(session_cleanup_loop())
     yield
     cleanup_task.cancel()

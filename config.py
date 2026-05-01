@@ -53,6 +53,10 @@ class Settings(BaseSettings):
         default="http://192.168.50.150:11434/v1",
         description="Ollama OpenAI-compatible endpoint. Must end with /v1.",
     )
+    OLLAMA_REPHRASE_URL: str = Field(
+        default="http://192.168.50.150:11434/v1",
+        description="Ollama endpoint used exclusively for query rewriting. Must end with /v1.",
+    )
     OLLAMA_KEEP_ALIVE: int = Field(
         default=-1,
         description="Seconds to keep model loaded; -1 = never unload.",
@@ -62,7 +66,7 @@ class Settings(BaseSettings):
     # and end-of-call classifier without touching the main reply model.
     LLM_MODEL: str = Field(default="phi4:latest")
     VOICE_LLM_MODEL: str = Field(default="phi4:latest")
-    VOICE_FAST_MODEL: str = Field(default="phi4:latest")
+    VOICE_FAST_MODEL: str = Field(default="phi4:latest")  # for reprhase
 
     # ── Sync chat client tuning (chatbot/llm.py) ────────────────────────
     LLM_MAX_TOKENS: int = Field(default=1024)
