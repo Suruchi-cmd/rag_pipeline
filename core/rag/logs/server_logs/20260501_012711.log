@@ -102,3 +102,72 @@
 2026-05-01 02:27:50,657 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
 2026-05-01 02:27:50,660 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'What is the appropriate way to conclude a conversa'
 2026-05-01 02:27:50,660 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.045s
+2026-05-01 02:44:42,104 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 02:44:43,064 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 02:44:43,067 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'I wanted to book a birthday party with you.'
+2026-05-01 02:44:43,067 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.963s
+2026-05-01 02:45:02,878 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 02:45:03,584 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 02:45:03,588 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'Does AeroSports Scarborough offer go-karting as pa'
+2026-05-01 02:45:03,588 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.710s
+2026-05-01 02:46:54,820 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 02:46:54,877 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 02:46:54,880 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'Do you guys have Dipping Dots?'
+2026-05-01 02:46:54,880 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.060s
+2026-05-01 02:50:29,912 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 02:50:29,967 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 02:50:29,970 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'What is the price for go karts?'
+2026-05-01 02:50:29,970 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.058s
+2026-05-01 10:54:40,761 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:54:41,702 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:54:41,705 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'Hi, Maya. Are you guys open today?'
+2026-05-01 10:54:41,705 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.944s
+2026-05-01 10:54:54,270 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:54:54,991 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:54:54,995 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'What steps do I need to follow to book a visit or '
+2026-05-01 10:54:54,995 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.725s
+2026-05-01 10:54:56,380 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:54:56,428 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:54:56,431 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'What are the details and options available for boo'
+2026-05-01 10:54:56,432 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.051s
+2026-05-01 10:55:10,190 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:55:10,238 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:55:10,241 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'What are the details and options for booking a cus'
+2026-05-01 10:55:10,242 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.052s
+2026-05-01 10:55:16,953 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:55:16,999 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:55:17,002 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'How can I book a customizable package for corporat'
+2026-05-01 10:55:17,002 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.049s
+2026-05-01 10:55:36,875 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:55:36,927 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:55:36,930 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'I need to book an art-related event or activity at'
+2026-05-01 10:55:36,930 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.055s
+2026-05-01 10:55:46,261 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:55:46,310 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:55:46,312 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'How can I book a corporate or team party at AeroSp'
+2026-05-01 10:55:46,312 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.052s
+2026-05-01 10:55:48,592 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:55:48,641 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:55:48,644 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'What are the details and process for obtaining a "'
+2026-05-01 10:55:48,644 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.052s
+2026-05-01 10:55:50,150 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:55:50,195 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:55:50,198 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'I need to obtain a blue card after booking a corpo'
+2026-05-01 10:55:50,198 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.048s
+2026-05-01 10:56:06,799 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:56:06,846 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:56:06,849 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'What information or assistance is needed regarding'
+2026-05-01 10:56:06,849 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.051s
+2026-05-01 10:56:27,542 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:56:27,592 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:56:27,595 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'Are there any options or packages available for us'
+2026-05-01 10:56:27,595 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.054s
+2026-05-01 10:56:54,945 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:56:54,993 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:56:54,997 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'Does AeroSports Scarborough offer attractions such'
+2026-05-01 10:56:54,998 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.053s
+2026-05-01 10:57:15,618 - __main__ - INFO - Request: POST /rag/retrieve from 127.0.0.1
+2026-05-01 10:57:15,664 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-05-01 10:57:15,667 - src.rag.repositories - INFO - Retrieve executed: 5 docs for 'Does AeroSports Scarborough offer a 360 bicycle ri'
+2026-05-01 10:57:15,667 - __main__ - INFO - Response: 200 for POST /rag/retrieve - 0.050s
+2026-05-01 11:30:29,432 - __main__ - INFO - Ultimate Advisor API shutting down

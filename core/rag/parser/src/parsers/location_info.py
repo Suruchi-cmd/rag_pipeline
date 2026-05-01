@@ -4,11 +4,16 @@ import pandas as pd
 from .base import BaseParser
 
 
-_SECTION_LABELS = {
-    "contact": "Contact Information",
-    "hours": "Hours of Operation",
-    "links": "Important Links",
-}
+_LINK_KEYWORDS = ("url", "link", "maps", "waiver", "invitation")
+
+
+def _section_for(field: str) -> str:
+    f = field.lower()
+    if f.startswith("hours"):
+        return "Hours of Operation"
+    if any(k in f for k in _LINK_KEYWORDS):
+        return "Important Links"
+    return "Contact Information"
 
 
 class LocationInfoParser(BaseParser):
@@ -18,20 +23,21 @@ class LocationInfoParser(BaseParser):
     def to_markdown(self) -> str:
         lines = ["# AeroSports Scarborough — Location Info", ""]
 
-        for chunk_id, group in self.df.groupby("chunk_id", sort=False):
-            chunk_key = self.val(chunk_id).lower()
-            section = next(
-                (label for key, label in _SECTION_LABELS.items() if key in chunk_key),
-                self.val(chunk_id),
-            )
+        sections: dict[str, list[tuple[str, str]]] = {}
+        for _, row in self.df.iterrows():
+            field = self.val(row.get("field", ""))
+            value = self.val(row.get("value", ""))
+            if not field or not value:
+                continue
+            sections.setdefault(_section_for(field), []).append((field, value))
+
+        for section in ("Contact Information", "Hours of Operation", "Important Links"):
+            entries = sections.get(section)
+            if not entries:
+                continue
             lines += [f"## {section}", ""]
-
-            for _, row in group.iterrows():
-                field = self.val(row.get("field", ""))
-                value = self.val(row.get("value", ""))
-                if field and value:
-                    lines.append(f"- **{field}:** {value}")
-
+            for field, value in entries:
+                lines.append(f"- **{field}:** {value}")
             lines.append("")
 
         return "\n".join(lines)

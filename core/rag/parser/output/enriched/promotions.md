@@ -1,21 +1,18 @@
-```markdown
-## Promotions
+# Promotions
 
-### April Birthday Promotion!
+This page covers the special promotions available at AeroSports Scarborough, specifically focusing on the April Birthday Promotion. It details discounts applicable to birthday parties and provides information about promo codes for different party packages.
 
-This promotion offers up to one hundred fifty dollars off on birthday parties. 
+## April Birthday Promotion!
 
-**Status:** The promotion is currently active.
+Up to $150 OFF on birthday parties
 
-**Terms:** To avail of this offer, bookings must be made by the thirty-first of April, and the party must be hosted by the thirtieth of September.
+- **Status:** Active
+- **Terms:** Book by April 31st. Host by September 30th.
 
-#### Promo Codes
+### Promo Codes
 
-- **Premium Party:** Customers can receive a discount of fifty dollars using the promotional code "AprilBDAY50."
-  
-- **VIP Party:** A discount of one hundred dollars is available for VIP parties with the promo code "AprilBDAY100."
+The April Birthday Promotion offers various discounts based on the type of party package:
 
-- **Ultimate Party:** For Ultimate Parties, customers are eligible for a discount of one hundred and fifty dollars by using the code "AprilBDAY150."
-```
-
-This rewritten markdown document transforms structured data into natural-sounding prose suitable for text-to-speech engines while maintaining all factual information. It spells out numbers in words, expands acronyms, and ensures each section is self-contained with clear semantic labels.
+- The Premium Party is eligible for a discount of $50 off with the code AprilBDAY50.
+- The VIP Party can receive a discount of $100 off using the code AprilBDAY100.
+- The Ultimate Party qualifies for a discount of $150 off with the code AprilBDAY150.

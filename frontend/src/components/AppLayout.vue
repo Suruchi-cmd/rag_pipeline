@@ -81,6 +81,7 @@ import {
   Flag,
   Activity,
   Tag,
+  RefreshCw,
   Calendar as CalendarIcon,
 } from 'lucide-vue-next'
 import axios from 'axios'
@@ -93,6 +94,7 @@ const navItems = computed(() => [
   { label: 'Dashboard', to: '/', icon: LayoutDashboard, exact: true, badge: null },
   { label: 'All Calls', to: '/calls', icon: Phone, exact: false, badge: null },
   { label: 'Categories', to: '/categories', icon: Tag, exact: true, badge: null },
+  { label: 'Resync Data', to: '/resync', icon: RefreshCw, exact: true, badge: null },
   {
     label: 'Needs Follow-up',
     to: { path: '/calls', query: { needs_human: 'true' } },

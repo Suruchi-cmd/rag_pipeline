@@ -18,20 +18,16 @@ class AeroCampParser(BaseParser):
         df = self.df.reset_index(drop=True)
         lines = ["# Aero Camp", ""]
 
-        # Find the row indices of the two section dividers
-        addon_idx = df.index[
-            df.iloc[:, 1].astype(str).str.strip() == "ADD-ONS (PER DAY)"
-        ]
-        detail_idx = df.index[
-            df.iloc[:, 1].astype(str).str.strip() == "CAMP DETAILS"
-        ]
+        program_col = df["program"].astype(str).str.strip()
+        addon_idx = df.index[program_col == "ADD-ONS (PER DAY)"]
+        detail_idx = df.index[program_col == "CAMP DETAILS"]
 
         end_programs = addon_idx[0] if len(addon_idx) else len(df)
         end_addons = detail_idx[0] if len(detail_idx) else len(df)
 
         # ---- Section 1: Camp Programs (rows before ADD-ONS divider) ----
-        programs_df = df.loc[:end_programs - 1]
-        programs_df = programs_df[programs_df["chunk_id"].notna()]
+        programs_df = df.loc[: end_programs - 1]
+        programs_df = programs_df[programs_df["program"].notna()]
 
         if not programs_df.empty:
             lines += ["## Camp Programs", ""]
@@ -46,31 +42,31 @@ class AeroCampParser(BaseParser):
                     lines.append(f"| {program} | {schedule} | {price} | {notes} |")
             lines.append("")
 
-        # ---- Section 2: Add-Ons (rows between ADD-ONS and CAMP DETAILS dividers) ----
+        # ---- Section 2: Add-Ons ----
         if len(addon_idx):
             # skip the divider row (+1) and the embedded column-header row (+2)
             addon_rows = df.loc[addon_idx[0] + 2 : end_addons - 1]
-            addon_rows = addon_rows[addon_rows["chunk_id"].notna()]
+            addon_rows = addon_rows[addon_rows["program"].notna()]
 
             if not addon_rows.empty:
                 lines += ["## Add-Ons (Per Day)", ""]
                 for _, row in addon_rows.iterrows():
-                    add_on = self.val(row.iloc[1])   # 'program' col repurposed
-                    price = self.val(row.iloc[2])    # 'schedule' col repurposed
+                    add_on = self.val(row.get("program", ""))
+                    price = self.val(row.get("schedule", ""))
                     if add_on and price:
                         lines.append(f"- **{add_on}:** {price}")
                 lines.append("")
 
-        # ---- Section 3: Camp Details (rows after CAMP DETAILS divider) ----
+        # ---- Section 3: Camp Details ----
         if len(detail_idx):
-            detail_rows = df.loc[detail_idx[0] + 2:]   # skip divider + header
-            detail_rows = detail_rows[detail_rows["chunk_id"].notna()]
+            detail_rows = df.loc[detail_idx[0] + 2 :]  # skip divider + header
+            detail_rows = detail_rows[detail_rows["program"].notna()]
 
             if not detail_rows.empty:
                 lines += ["## Camp Details", ""]
                 for _, row in detail_rows.iterrows():
-                    field = self.val(row.iloc[1])   # 'program' col repurposed
-                    value = self.val(row.iloc[2])   # 'schedule' col repurposed
+                    field = self.val(row.get("program", ""))
+                    value = self.val(row.get("schedule", ""))
                     if field and value:
                         lines.append(f"- **{field}:** {value}")
                 lines.append("")

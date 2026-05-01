@@ -35,3 +35,9 @@
 **Sample question:** Is it safe for my kids?
 
 **Response:** Safety is our top priority. We have trained staff, park rules posted throughout, and a 300 pound weight limit on trampolines. All jumpers need a signed waiver. Kids under 10 must have an adult present. Spectators are always free and we have comfy seating and free Wi-Fi for parents.
+
+## How To Visit
+
+**Sample question:** How can I visit or jump at the park?
+
+**Response:** It’s simple! Just purchase a jump pass online or walk in anytime. We offer 90-minute, 120-minute, and All Day jump passes. When you arrive, check in at the front desk, sign your waiver (or complete it online in advance), and get your AeroSports grip socks. Then you’re all set to start jumping and enjoy all the attractions!

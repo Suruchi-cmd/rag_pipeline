@@ -1,17 +1,31 @@
-## Special Programs Overview
+```markdown
+# Special Programs
 
-### Toddler Time Program
+At AeroSports Scarborough, we offer unique experiences tailored for different age groups and needs. This page covers special programs such as Toddler Time, Glow Night, and a Special Needs Program.
 
-The Toddler Time program is designed for children aged zero to five years old. In this program, one parent or guardian can jump free with their toddler. This special time allows little ones to explore trampolines in a safe environment without the presence of bigger kids. The program is available on Saturday mornings from nine o'clock AM to ten o'clock AM. The price for participating in Toddler Time is fifteen dollars and ninety cents.
+## Toddler Time
 
-### Glow Night Experience
+Ages 0 to 5 ONLY. One parent or guardian jumps free with the toddler. Great for little ones to explore trampolines in a safe environment without bigger kids around.
 
-At AeroSports Scarborough, the Glow Night experience features neon lights and glow effects that are always active, making it unnecessary for guests to wear white or neon shirts as required at other locations. This special program is available every day during regular operating hours, allowing guests to enjoy the glowing ambiance throughout their visit. The price for Glow Night is the same as regular admission.
+- **Availability:** Saturday Mornings
+- **Time:** 9am to 10am
+- **Price:** $15.90
 
-### Special Needs Program
+## Glow Night
 
-The Special Needs Program offers one hundred and twenty minutes of play time specifically designed for guests with special needs. While go-kart races are not included in this program, one support worker can be admitted free of charge with a waiver. This program is open to all guests with special needs and is available during all operating hours at the park. The price for participating in the Special Needs Program is nineteen dollars and ninety cents.
+Scarborough has glow in the dark at all times. Neon lights and glow effects are always on. No need for white or neon shirts like other locations.
 
---- 
+- **Availability:** Every day during regular hours
+- **Time:** During regular hours
+- **Price:** Same as regular admission
 
-This enriched markdown document provides detailed descriptions of each special program offered by AeroSports Scarborough, ensuring clarity and accessibility for voicebot retrieval and text-to-speech engines.
+## Special Needs Program
+
+120 minutes of play time, no go kart races included. One support worker admitted free with a waiver. Open to all guests with special needs.
+
+- **Availability:** All operating hours
+- **Time:** Anytime during park hours
+- **Price:** $19.90
+```
+
+This rewritten document includes a summary paragraph and converts the markdown tables into natural-language paragraphs, while preserving all other content as specified.

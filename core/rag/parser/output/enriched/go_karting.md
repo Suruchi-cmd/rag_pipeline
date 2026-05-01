@@ -1,23 +1,39 @@
-# Go Karting at AeroSports Scarborough
+# Go Karting
 
-## Main Track Options
+At AeroSports Scarborough, we offer exciting go-karting experiences on both the Main Track and Mini Track. This page covers details about standalone and add-on races, including pricing, minimum height requirements for drivers, and specific notes regarding lap limits and jump pass purchases.
 
-### Standalone Race on the Main Track
+## Main Track
 
-For those interested in experiencing the thrill of racing without purchasing a jump pass, AeroSports Scarborough offers a standalone race option on their main track. This exciting opportunity is priced at nineteen dollars and ninety cents per participant. To ensure safety and an optimal experience for all racers, participants must meet a minimum height requirement of fifty-two inches if they are driving. Each racer can enjoy up to ten laps around the track.
+### Standalone Race
 
-### Add-On Race on the Main Track
+- **Price:** $19.90
+- **Minimum Height:** 52 inches (driver)
+- **Notes:** Up to 10 laps. For guests NOT purchasing a jump pass.
 
-Guests who have already purchased a jump pass at AeroSports Scarborough can enhance their visit by adding a go-kart race on the main track for an additional nine dollars and ninety cents. This add-on option also requires drivers to be at least fifty-two inches tall, ensuring safety standards are met. Like the standalone race, participants in this add-on option can enjoy up to ten laps around the track.
+The standalone race on the Main Track costs $19.90, with a minimum height requirement of 52 inches for the driver. It allows up to 10 laps and is available for guests who are not purchasing a jump pass.
 
-## Mini Track Options
+### Add-On Race
 
-### Standalone Race on the Mini Track
+- **Price:** $9.90
+- **Minimum Height:** 52 inches (driver)
+- **Notes:** Up to 10 laps. For guests who HAVE already purchased a jump pass.
 
-For younger racers or those looking for a more compact racing experience without purchasing a jump pass, AeroSports Scarborough offers a standalone race on their mini track. This option is available at nine dollars and ninety cents per participant. The minimum height requirement for drivers on this smaller track is thirty-six inches, accommodating a wider range of participants. Each racer can enjoy up to ten laps around the mini track.
+The add-on race on the Main Track is priced at $9.90, with a minimum height requirement of 52 inches for the driver. It allows up to 10 laps and is available for guests who have already purchased a jump pass.
 
-### Add-On Race on the Mini Track
+## Mini Track
 
-Guests who have already enjoyed the benefits of a jump pass at AeroSports Scarborough can further enhance their experience with an add-on race on the mini track for four dollars and ninety cents. This option is perfect for those looking to squeeze in some additional fun without purchasing another full activity package. The minimum height requirement remains thirty-six inches for drivers, ensuring safety across all participants. Like its main track counterpart, this add-on allows up to ten laps around the track.
+### Standalone Race
 
-These go-karting options at AeroSports Scarborough provide an exciting way for guests of all ages and heights to enjoy a thrilling race experience, whether they're visiting alone or as part of a larger group activity.
+- **Price:** $9.90
+- **Minimum Height:** 36 inches
+- **Notes:** Up to 10 laps. For guests NOT purchasing a jump pass.
+
+The standalone race on the Mini Track costs $9.90, with a minimum height requirement of 36 inches for the driver. It allows up to 10 laps and is available for guests who are not purchasing a jump pass.
+
+### Add-On Race
+
+- **Price:** $4.90
+- **Minimum Height:** 36 inches
+- **Notes:** Up to 10 laps. For guests who HAVE already purchased a jump pass.
+
+The add-on race on the Mini Track is priced at $4.90, with a minimum height requirement of 36 inches for the driver. It allows up to 10 laps and is available for guests who have already purchased a jump pass.

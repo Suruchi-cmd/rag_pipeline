@@ -8,7 +8,7 @@
 | 6+ | VIP Jump Pass | $29.90 | 120 min | Includes access to all attractions except Go Karting,Laser tag, bazooka ball, mini golf |
 | 2 to 5 | Premium Jump Pass | $24.90 | 90 min | Includes access to all attractions except Go Karting,Laser tag, bazooka ball, mini golf |
 | 2 to 5 | VIP Jump Pass | $29.90 | 120 min | Includes access to all attractions except Go Karting,Laser tag, bazooka ball, mini golf |
-| 6+ | Ultimate Jump Pass | 49.9 | 180 min | Includes access to all core attractions , you can choose one of go kart or mini golf and laser tag or bazooka ball |
+| 6+ | Ultimate Jump Pass | 49.9 | 180 min | Includes access to all core attractions , you can choose either mini golf and bazooka ball or go karting and laser tag |
 | Under 2 | Any Pass | Free | Same as parent | A paying adult is required to accompany the child |
 | All | All Day Pass | $39.90 | All Day | Jump all day long with unlimited access to attractions |
 

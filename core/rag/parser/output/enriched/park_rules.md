@@ -1,67 +1,67 @@
-# Park Rules Overview
+# Park Rules
 
-This section outlines the rules and regulations that visitors must follow while enjoying the facilities at AeroSports Scarborough, including requirements for socks, spectator policies, toddler supervision, weight limits on trampolines, waiver procedures, refund policies, pricing details, go-karting guidelines, child supervision, food restrictions, Wi-Fi availability, hiring age, and gift card information.
+This page outlines the rules and guidelines for visitors to AeroSports Scarborough, covering various aspects such as attire requirements, age restrictions, waiver policies, pricing details, and more. It provides essential information on what is expected from both jumpers and spectators within the park.
 
-## Socks Requirement
+## Socks
 
-All participants using the park's attractions must wear AeroSports Socks. These socks are priced at three dollars and ninety-nine cents each and can be reused multiple times.
+All jumpers are required to wear AeroSports Socks on all park attractions. The socks cost $3.99 and are reusable.
 
-## Spectator Policy
+## Spectators
 
-Individuals who remain in the park to watch their children or provide supervision do not need to pay an entry fee, as they are considered spectators.
+Adults or individuals staying to watch their kids or supervise are counted as spectators and do not need to pay.
 
-## Toddler Supervision
+## Toddlers Under 2
 
-Toddlers under two years old must always have a parent present. The accompanying parent is required to purchase an adult jump ticket for individuals aged six and older.
+Toddlers under 2 must have a parent with them who has purchased an adult jump ticket for ages 6 and up.
 
-## Trampoline Weight Limit
+## Weight Limit
 
-The trampolines at the park have a weight limit of three hundred pounds, ensuring safety for all users.
+Trampolines have a 300 pound weight limit.
 
-## Liability Waivers
+## Waivers
 
-A completed liability waiver must be on file for every jumper. Minors under eighteen years old need their waivers signed by a parent or legal guardian. Visitors can fill out the waiver online at the specified URL or complete it directly at the park.
+All jumpers must have a completed liability waiver on file. Anyone under 18 must have the waiver signed by a parent or legal guardian. Fill out the waiver online at [waiver.roller.app/aerosportsscarborough](http://waiver.roller.app/aerosportsscarborough) or complete it on site.
 
-## Photo ID Requirement
+## Photo ID
 
-Individuals aged eighteen and older may sign their own waiver if they provide a valid photo identification card that includes both a photograph and date of birth.
+Anyone 18 or older can sign the waiver for themselves with a valid photo ID that includes a picture and date of birth.
 
-## Refunds and Rescheduling Policy
+## Refunds and Rescheduling
 
-All purchases are final, with no refunds available. However, rescheduling is permitted free of charge for reservations made at least twenty-four hours in advance. This policy does not apply to changes in birthday party schedules.
+All purchases are final and non-refundable. Rescheduling is free of charge and can be done 24 hours or more before the reservation date. This does not apply to birthday party schedule changes.
 
-## Pricing Information
+## Prices
 
-All prices displayed include the Harmonized Sales Tax (HST).
+All prices shown are plus HST.
 
-## Go Karting Footwear Requirement
+## Go Karting Shoes
 
-Participants must wear closed-toed shoes while engaging in go-karting activities.
+Closed-toed shoes are required for Go Karting.
 
-## Go Karting Height Restrictions
+## Go Karting Height
 
-Height restrictions are enforced for go-karting. The Main Track requires participants to be at least fifty-four inches tall, whereas the Mini Track has a minimum height requirement of thirty-six inches.
+Height restrictions apply for Go Karting. The Main Track requires a height of 54 inches, while the Mini Track requires a height of 36 inches.
 
-## Go Kart Ticket Options
+## Go Kart Standalone vs Add-On
 
-There are two types of go-kart tickets: stand-alone and add-on. Stand-alone tickets are available for guests who do not have a jump pass, while add-ons are offered to those who already possess a jump pass.
+Stand-alone Go Kart tickets are for guests NOT purchasing a jump pass. Go Kart Add-Ons are for guests who HAVE already purchased a jump pass.
 
-## Child Supervision Rules
+## Child Supervision
 
-Children under ten years old cannot be left unattended in the park without an adult present. Additionally, all minors under eighteen must have their liability waiver signed by a parent or legal guardian.
+Children under 10 cannot be dropped off without an adult. All children under 18 need a parent or legal guardian to sign the waiver.
 
-## Food Policy
+## Food
 
-Visitors are not permitted to bring outside food into the park, with exceptions for certain birthday party packages. The Snack Shack offers various options such as pizza, slushies, candy, drinks, and other treats.
+Outside food is not allowed in the park except with certain birthday party packages. The Snack Shack sells pizza, slushies, candy, drinks, and other treats.
 
-## Wi-Fi Access
+## Wi-Fi
 
-Complimentary Wi-Fi is available throughout the facility, providing ample seating areas for parents to stay connected while their children enjoy the attractions.
+Complimentary Wi-Fi is available for parents. We have plenty of seating throughout the facility.
 
-## Hiring Age Requirement
+## Hiring Age
 
-The park hires individuals who are sixteen years old or older.
+We hire individuals who are 16 years old and older.
 
-## Gift Card Availability
+## Gift Cards
 
-Gift cards can be purchased both at the park and online. Jump cards do not expire and may be used by different participants over time.
+Gift cards are available for purchase at the park or online. Jump cards never expire and can be used by different jumpers.

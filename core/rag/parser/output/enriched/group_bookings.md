@@ -1,43 +1,41 @@
-# Group Bookings Overview
+# Group Bookings
 
-## General Information on Group Bookings
+At AeroSports Scarborough, we offer a variety of group booking options for jumpers, corporate events, school trips, fundraising activities, and facility rentals. This page covers the details of these offerings, including pricing, discounts, contact information, and included amenities.
 
-For group bookings at AeroSports Scarborough, a minimum of fifteen jumpers is required to qualify for the group booking benefits. A discount code named GROUPBOOKING25 provides a twenty-five percent discount for groups consisting of fifteen or more jumpers. When making a reservation, a deposit amounting to twenty-five percent of the total cost is necessary.
+## Group Bookings
 
-The pricing for one hundred and twenty minutes of jumping time per jumper is set at twenty-five dollars and forty-seven cents. This discounted rate reflects a twenty-five percent reduction from the original price of thirty-three dollars and eighty-nine cents. The breakdown of this original price includes ninety minutes of jump time priced at twenty-nine dollars and ninety cents, with Aero Socks costing an additional three dollars and ninety-nine cents.
-
-Pricing remains consistent for both weekdays and weekends. Included in the group booking is jump time along with Aero Socks. However, go-karting activities are not covered under this rate and can be added separately if desired.
+- **Minimum Group Size:** 15 jumpers *(Note: Applies to all group bookings)*
+- **Discount Code:** GROUPBOOKING25 *(Note: 25% off for 15 or more jumpers)*
+- **Deposit Required:** 25% *(Note: Required at time of booking)*
+- The 120-minute pricing is $25.47 per jumper, which includes a 25% discount on the original price of $33.89. This discounted rate breaks down to $29.90 for 120 minutes plus socks costing $3.99.
+- **Weekday vs Weekend Pricing:** Same *(Note: Pricing is the same for weekdays and weekends)*
+- Included in group bookings are jump time and Aero Socks, with add-on options available at an extra cost.
+- Go Karting is not included in the group rate but can be added on separately.
 
 ## Corporate & Team Parties
 
-AeroSports Scarborough offers corporate and team parties suitable for various occasions such as team-building events, milestone celebrations, and employee rewards. These gatherings take place in an energetic environment featuring trampoline courts, obstacle courses, and more. Customizable packages are available to cater to specific needs.
-
-For booking a corporate event, interested parties can call 289-454-5555 or send an email to events.scb@aerosportsparks.ca for further assistance and package details.
+- **Corporate & Team Parties:** Available for team-building, milestone celebrations, and employee rewards *(Note: Energetic environment with trampoline courts, obstacle courses, and more)*
+- For corporate bookings, call 289-454-5555 or email events.scb@aerosportsparks.ca. Customizable packages are available.
 
 ## School and Field Trips
 
-Schools, church groups, sports teams, and youth organizations are welcome to arrange school and field trips at AeroSports Scarborough. These activities require a minimum of fifteen participants and focus on promoting active play and teamwork within a safe environment. The facilities include trampoline courts and obstacle courses among other attractions.
-
-To book a school trip, contact can be made via phone call to 289-454-5555 or through email at events.scb@aerosportsparks.ca for more information and assistance with arrangements.
+- **School and Field Trips:** Available for schools, church groups, sports teams, and youth organizations *(Note: Minimum 15 people. Promotes active play and teamwork in a safe environment.)*
+- To book school trips, call 289-454-5555 or email events.scb@aerosportsparks.ca. Access to trampoline courts, obstacle courses, and more is included.
 
 ## Fundraising Events
 
-Organizations looking to host fundraising events have the opportunity to do so at AeroSports Scarborough. During such events, the hosting organization earns twenty percent of the night's sales from jump time activities. This option is ideal for schools, teams, troops, and community organizations seeking to raise funds in a fun setting.
-
-For organizing a fundraiser, interested parties should call 289-454-5555 or email events.scb@aerosportsparks.ca to discuss customizable packages that include promotional support.
+- **Fundraising Events:** Host a fundraiser at AeroSports. Your organization earns 20% of the night's jump time sales. *(Note: Great for schools, teams, troops, and community organizations)*
+- For fundraising event bookings, call 289-454-5555 or email events.scb@aerosportsparks.ca. Customizable packages with promotional support are included.
 
 ## Facility Rentals
 
-AeroSports Scarborough offers facility rentals for exclusive access to the entire venue. The rental fee is four thousand dollars per sixty minutes from Monday to Thursday, and five thousand dollars per sixty minutes during weekends. These rentals accommodate up to two hundred and twenty jumpers with private access and dedicated staff on-site.
-
-Included in the facility rental are jump socks, all party rooms, and cutlery. However, food and catering services incur additional costs. Unlimited go-karting is also included as part of the facility rental package.
+- The cost for a 60-minute facility rental on weekdays (Monday to Thursday) is $4000, offering exclusive access to the entire facility.
+- For weekends (Friday to Sunday), the 60-minute facility rental costs $5000, also providing exclusive access to the entire facility.
+- The facility can accommodate up to 220 jumpers and offers private access with dedicated staff on-site.
+- Included in the facility rental are jump socks, all party rooms, and cutlery. Food and catering are available at an additional cost.
+- Unlimited go karting is included with the facility rental.
 
 ## Room Rentals
 
-For those interested in renting specific areas within AeroSports Scarborough, several options are available:
-
-- Party Rooms (1, 2, 3, or 4) can be rented for one hundred dollars per forty-five minutes. Each room accommodates between twenty-five to thirty people.
-  
-- The Birds Eye Party Arena is available for two hundred dollars per forty-five minutes and has a capacity of eighty people.
-
-These rental options provide flexibility for hosting various events within the facility.
+- The Party Room (1, 2, 3, or 4) costs $100 per 45 minutes and can accommodate 25 to 30 people.
+- The Birds Eye Party Arena is priced at $200 per 45 minutes and has a capacity of 80 people.

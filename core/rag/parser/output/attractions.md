@@ -86,12 +86,25 @@ High-energy laser tag arena featuring immersive lighting, sound effects, and tac
 
 - **Age/Height Requirements:** All ages
 - **Included in Jump Pass:** No
-- **Pricing:** Separate ticket or add-on.
+- **Pricing:** Separate ticket or add-on. ( $4.90 as an add on if you have a jump pass and $9.90 as a standalone ticket)
 
-## Bazooka Ball
+## Bazooka Ball or Bajoka Ball
 
 Action-packed bazooka ball arena where players use air-powered launchers to shoot soft foam balls at targets and opponents.
 
 - **Age/Height Requirements:** All ages
 - **Included in Jump Pass:** No
-- **Pricing:** Separate ticket or add-on.
+- **Pricing:** Separate ticket or add-on. ( $4.90 as an add on if you have a jump pass and $9.90 as a standalone ticket)
+
+## Mini Golf
+
+Mini golf focuses solely on putting. Players aim to complete a series of 9 using a putter to hit a ball into a cup with the lowest score possible, usually navigating artificial obstacles.
+
+- **Age/Height Requirements:** All ages
+- **Included in Jump Pass:** No
+- **Pricing:** Separate ticket or add-on. ( $9.90 as an add on if you have a jump pass and $14.90 as a standalone ticket)
+
+## Golf Simulator
+
+- **Age/Height Requirements:** All ages
+- **Included in Jump Pass:** No

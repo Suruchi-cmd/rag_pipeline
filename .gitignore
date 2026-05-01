@@ -6,3 +6,6 @@ __pycache__/
 .DS_Store
 venv
 .venv
+logs/
+core/rag/logs
+core/rag/parser/data

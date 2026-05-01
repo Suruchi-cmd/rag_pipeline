@@ -62,7 +62,7 @@ def run(
     enrich: bool = False,
     enrich_only: bool = False,
     model: str = "phi4:latest",
-    base_url: str = "http://192.168.50.150:11434",
+    base_url: str = "https://aerollm.share.zrok.io",
 ):
     print("=" * 60)
     print("AeroSports RAG — Sheet Parser")
@@ -131,7 +131,7 @@ def main():
         "--model", default="phi4:latest", help="Ollama model for enrichment"
     )
     parser.add_argument(
-        "--base-url", default="http://192.168.50.150:11434", help="Ollama base URL"
+        "--base-url", default="https://aerollm.share.zrok.io", help="Ollama base URL"
     )
     args = parser.parse_args()
     run(

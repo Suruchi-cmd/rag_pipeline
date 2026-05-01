@@ -32,7 +32,7 @@
 
 ## Hours Response
 
-> We are open Sunday through Thursday from 10 AM to 8 PM, and Friday and Saturday from 10 AM to 10 PM.
+> We are open ....
 
 *Note: Say times clearly with AM/PM*
 
@@ -44,7 +44,7 @@
 
 ## Birthday Overview
 
-> We have three birthday party packages. The Premium Party starts at $39.90 per jumper with 75 minutes of jump time and 45 minutes in a private party room. The VIP Party is $44.90 per jumper with 90 minutes of jump time and 60 minutes of room time. And the Ultimate Party is $59.90 per jumper with 120 minutes of jump time, 60 minutes of room time, plus go karting for every jumper. All packages include pizza and drinks. Minimum 10 jumpers. Would you like more details on any package?
+> We have three birthday party packages. The Premium Party starts at $39.90 per jumper with 75 minutes of jump time and 45 minutes in a private party room. The VIP Party is $49.90 per jumper with 90 minutes of jump time and 60 minutes of room time. And the Ultimate Party is $59.90 per jumper with 120 minutes of jump time, 60 minutes of room time, plus go karting for every jumper. All packages include pizza and drinks. Minimum 10 jumpers.
 
 *Note: Pause between packages for clarity*
 
