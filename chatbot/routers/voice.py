@@ -150,14 +150,60 @@ def _fire_classification(call_id: int | None) -> None:
     asyncio.create_task(_classify_bg(call_id))
 
 
+FOLLOWUP_EMAIL_CATEGORIES = {"Birthday Parties"}
+
+
 async def _classify_bg(call_id: int) -> None:
     # Small delay so DB writes and session cleanup finish before we touch Ollama.
     await asyncio.sleep(3)
+    matched: list[str] = []
     try:
         from chatbot.classifier import classify_and_store
-        await classify_and_store(call_id)
+        matched = await classify_and_store(call_id)
     except Exception as exc:
         logger.error("Background classification failed for call %d: %s", call_id, exc)
+
+    try:
+        await _maybe_send_followup(call_id, matched)
+    except Exception as exc:
+        logger.error("Follow-up email check failed for call %d: %s", call_id, exc)
+
+
+async def _maybe_send_followup(call_id: int, matched_categories: list[str]) -> None:
+    """Send a follow-up email if the call is flagged or hits a watched category."""
+    from chatbot.summarizer import summarize_call
+    from database.repository import get_messages
+    from src.email_service import send_followup_email
+
+    triggered_category = next(
+        (c for c in matched_categories if c in FOLLOWUP_EMAIL_CATEGORIES), None
+    )
+
+    with Session(engine) as s:
+        call = get_call_by_id(s, call_id)
+        messages_rows = get_messages(s, call_id) if call else []
+
+    if call is None:
+        return
+
+    if not call.needs_human and triggered_category is None:
+        return
+
+    if call.needs_human:
+        reason = call.flag_reason or "needs human"
+    else:
+        reason = f"category: {triggered_category}"
+
+    msg_dicts = [{"role": m.role, "content": m.content} for m in messages_rows]
+    summary = await summarize_call(msg_dicts)
+
+    await asyncio.to_thread(
+        send_followup_email,
+        call.call_sid,
+        call.phone_number,
+        summary,
+        reason,
+    )
 
 
 # ── Session cleanup (exported so main.py lifespan can schedule it) ─────────────

@@ -9,3 +9,6 @@ venv
 logs/
 core/rag/logs
 core/rag/parser/data
+src/oauths
+src/oauths/scarborough_gmail_token.json
+src/oauths/scarborough_credentials.json

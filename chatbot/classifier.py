@@ -89,8 +89,12 @@ async def classify_call(
         return []
 
 
-async def classify_and_store(call_id: int) -> None:
-    """Fetch transcript + categories from DB, classify, persist results."""
+async def classify_and_store(call_id: int) -> list[str]:
+    """Fetch transcript + categories from DB, classify, persist results.
+
+    Returns the list of matched category names (empty if nothing matched
+    or the call had no transcript).
+    """
     from database.models import Category
     from database.repository import get_messages, list_categories, upsert_call_classifications
     from database.session import engine
@@ -102,7 +106,7 @@ async def classify_and_store(call_id: int) -> None:
 
     if not messages_rows or not categories:
         logger.debug("classify_and_store: nothing to classify for call %d", call_id)
-        return
+        return []
 
     msg_dicts = [{"role": m.role, "content": m.content} for m in messages_rows]
     category_names = [c.name for c in categories]
@@ -114,3 +118,4 @@ async def classify_and_store(call_id: int) -> None:
         upsert_call_classifications(session, call_id, matched_ids)
 
     logger.info("Call %d → %d categories: %s", call_id, len(matched_ids), matched_names)
+    return matched_names
