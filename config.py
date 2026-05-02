@@ -157,7 +157,7 @@ class Settings(BaseSettings):
     TWILIO_VOICE_ID: str = Field(default="uYXf8XasLslADfZ2MB4u")
     TWILIO_SPEECH_MODEL: str = Field(default="nova-3-general")
 
-    TWILIO_INTERRUPT_SENSITIVITY: str = Field(default="medium")
+    TWILIO_INTERRUPT_SENSITIVITY: str = Field(default="high")
 
     # Long ASR-hints string. Pulled out so the operations team can update
     # park-specific terms without redeploying. Single-line; commas separate.
