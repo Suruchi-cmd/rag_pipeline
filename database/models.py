@@ -83,3 +83,27 @@ class KnowledgeChunk(SQLModel, table=True):
     content: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class Prompt(SQLModel, table=True):
+    __tablename__ = "prompts"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    slug: str = Field(index=True, unique=True)
+    name: str
+    description: Optional[str] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class PromptVersion(SQLModel, table=True):
+    __tablename__ = "prompt_versions"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    prompt_id: int = Field(foreign_key="prompts.id", index=True)
+    version_no: int
+    label: Optional[str] = Field(default=None)
+    content: str
+    is_active: bool = Field(default=False, index=True)
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=datetime.utcnow)

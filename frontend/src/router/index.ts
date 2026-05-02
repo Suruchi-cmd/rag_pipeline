@@ -4,6 +4,7 @@ import CallsView from '@/views/CallsView.vue'
 import CallDetailView from '@/views/CallDetailView.vue'
 import CategoriesView from '@/views/CategoriesView.vue'
 import KnowledgeView from '@/views/KnowledgeView.vue'
+import PromptsView from '@/views/PromptsView.vue'
 
 export default createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,5 +14,6 @@ export default createRouter({
     { path: '/calls/:id', component: CallDetailView, meta: { title: 'Call Detail' } },
     { path: '/categories', component: CategoriesView, meta: { title: 'Categories' } },
     { path: '/knowledge', component: KnowledgeView, meta: { title: 'Knowledge Base' } },
+    { path: '/prompts', component: PromptsView, meta: { title: 'Prompts' } },
   ],
 })

@@ -24,6 +24,7 @@ from api.events import router as events_router
 from api.routers.calls import router as calls_router
 from api.routers.categories import router as categories_router
 from api.routers.knowledge import router as knowledge_router
+from api.routers.prompts import router as prompts_router
 from chatbot.routers.voice import router as voice_router
 from chatbot.routers.voice import session_cleanup_loop
 from chatbot.vector_store import vector_store
@@ -76,6 +77,7 @@ app.include_router(voice_router)
 app.include_router(calls_router)
 app.include_router(categories_router)
 app.include_router(knowledge_router)
+app.include_router(prompts_router)
 app.include_router(events_router)
 
 

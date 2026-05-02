@@ -85,3 +85,31 @@ export interface Turn {
   assistant: Message | null
   rag: RAGRetrieval | null
 }
+
+export interface PromptVersion {
+  id: number
+  prompt_id: number
+  version_no: number
+  label: string | null
+  content: string
+  is_active: boolean
+  created_at: string
+  updated_at: string
+}
+
+export interface PromptSummary {
+  id: number
+  slug: string
+  name: string
+  description: string | null
+  created_at: string
+  updated_at: string
+  active_version_id: number | null
+  active_version_no: number | null
+  active_version_label: string | null
+  version_count: number
+}
+
+export interface PromptDetail extends PromptSummary {
+  versions: PromptVersion[]
+}

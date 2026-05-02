@@ -7,7 +7,17 @@ from typing import Optional
 
 from sqlmodel import Session, func, select
 
-from database.models import BookingChange, Call, CallClassification, Category, KnowledgeChunk, Message, RAGRetrieval
+from database.models import (
+    BookingChange,
+    Call,
+    CallClassification,
+    Category,
+    KnowledgeChunk,
+    Message,
+    Prompt,
+    PromptVersion,
+    RAGRetrieval,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -316,3 +326,218 @@ def delete_chunk(session: Session, chunk_id: int) -> bool:
     session.delete(chunk)
     session.commit()
     return True
+
+
+# ── Prompts ───────────────────────────────────────────────────────────────────
+
+def list_prompts(session: Session) -> list[Prompt]:
+    return list(session.exec(select(Prompt).order_by(Prompt.id)).all())
+
+
+def get_prompt(session: Session, prompt_id: int) -> Optional[Prompt]:
+    return session.get(Prompt, prompt_id)
+
+
+def get_prompt_by_slug(session: Session, slug: str) -> Optional[Prompt]:
+    return session.exec(select(Prompt).where(Prompt.slug == slug)).first()
+
+
+def create_prompt(
+    session: Session,
+    slug: str,
+    name: str,
+    description: Optional[str],
+    initial_content: str,
+) -> Prompt:
+    now = datetime.utcnow()
+    prompt = Prompt(
+        slug=slug.strip(),
+        name=name.strip(),
+        description=(description or None),
+        created_at=now,
+        updated_at=now,
+    )
+    session.add(prompt)
+    session.commit()
+    session.refresh(prompt)
+    version = PromptVersion(
+        prompt_id=prompt.id,
+        version_no=1,
+        content=initial_content,
+        is_active=True,
+        created_at=now,
+        updated_at=now,
+    )
+    session.add(version)
+    session.commit()
+    return prompt
+
+
+def update_prompt_meta(
+    session: Session,
+    prompt_id: int,
+    name: Optional[str],
+    description: Optional[str],
+) -> Optional[Prompt]:
+    prompt = session.get(Prompt, prompt_id)
+    if prompt is None:
+        return None
+    if name is not None:
+        prompt.name = name.strip()
+    if description is not None:
+        prompt.description = description or None
+    prompt.updated_at = datetime.utcnow()
+    session.add(prompt)
+    session.commit()
+    session.refresh(prompt)
+    return prompt
+
+
+def delete_prompt(session: Session, prompt_id: int) -> bool:
+    prompt = session.get(Prompt, prompt_id)
+    if prompt is None:
+        return False
+    for v in session.exec(
+        select(PromptVersion).where(PromptVersion.prompt_id == prompt_id)
+    ).all():
+        session.delete(v)
+    session.delete(prompt)
+    session.commit()
+    return True
+
+
+def list_prompt_versions(session: Session, prompt_id: int) -> list[PromptVersion]:
+    return list(
+        session.exec(
+            select(PromptVersion)
+            .where(PromptVersion.prompt_id == prompt_id)
+            .order_by(PromptVersion.version_no.desc())  # type: ignore[attr-defined]
+        ).all()
+    )
+
+
+def get_prompt_version(session: Session, version_id: int) -> Optional[PromptVersion]:
+    return session.get(PromptVersion, version_id)
+
+
+def get_active_version(session: Session, prompt_id: int) -> Optional[PromptVersion]:
+    return session.exec(
+        select(PromptVersion)
+        .where(PromptVersion.prompt_id == prompt_id, PromptVersion.is_active == True)  # noqa: E712
+    ).first()
+
+
+def get_active_prompt_content(session: Session, slug: str) -> Optional[str]:
+    prompt = get_prompt_by_slug(session, slug)
+    if prompt is None:
+        return None
+    version = get_active_version(session, prompt.id)
+    return version.content if version else None
+
+
+def add_prompt_version(
+    session: Session,
+    prompt_id: int,
+    content: str,
+    activate: bool = False,
+    label: Optional[str] = None,
+) -> Optional[PromptVersion]:
+    prompt = session.get(Prompt, prompt_id)
+    if prompt is None:
+        return None
+    last = session.exec(
+        select(PromptVersion)
+        .where(PromptVersion.prompt_id == prompt_id)
+        .order_by(PromptVersion.version_no.desc())  # type: ignore[attr-defined]
+    ).first()
+    next_no = (last.version_no + 1) if last else 1
+    now = datetime.utcnow()
+    version = PromptVersion(
+        prompt_id=prompt_id,
+        version_no=next_no,
+        label=(label.strip() or None) if label else None,
+        content=content,
+        is_active=False,
+        created_at=now,
+        updated_at=now,
+    )
+    session.add(version)
+    session.commit()
+    session.refresh(version)
+    if activate:
+        set_active_version(session, prompt_id, version.id)
+        session.refresh(version)
+    prompt.updated_at = now
+    session.add(prompt)
+    session.commit()
+    return version
+
+
+def update_prompt_version(
+    session: Session,
+    version_id: int,
+    content: Optional[str] = None,
+    label: Optional[str] = None,
+    set_label: bool = False,
+) -> Optional[PromptVersion]:
+    version = session.get(PromptVersion, version_id)
+    if version is None:
+        return None
+    if content is not None:
+        version.content = content
+    if set_label:
+        version.label = (label.strip() or None) if label else None
+    version.updated_at = datetime.utcnow()
+    session.add(version)
+    prompt = session.get(Prompt, version.prompt_id)
+    if prompt is not None:
+        prompt.updated_at = version.updated_at
+        session.add(prompt)
+    session.commit()
+    session.refresh(version)
+    return version
+
+
+def set_active_version(
+    session: Session,
+    prompt_id: int,
+    version_id: int,
+) -> Optional[PromptVersion]:
+    target = session.get(PromptVersion, version_id)
+    if target is None or target.prompt_id != prompt_id:
+        return None
+    for v in session.exec(
+        select(PromptVersion).where(PromptVersion.prompt_id == prompt_id)
+    ).all():
+        new_state = v.id == version_id
+        if v.is_active != new_state:
+            v.is_active = new_state
+            session.add(v)
+    prompt = session.get(Prompt, prompt_id)
+    if prompt is not None:
+        prompt.updated_at = datetime.utcnow()
+        session.add(prompt)
+    session.commit()
+    session.refresh(target)
+    return target
+
+
+def delete_prompt_version(
+    session: Session,
+    version_id: int,
+) -> tuple[bool, str]:
+    version = session.get(PromptVersion, version_id)
+    if version is None:
+        return False, "not_found"
+    if version.is_active:
+        return False, "active_version"
+    remaining = session.exec(
+        select(func.count(PromptVersion.id)).where(
+            PromptVersion.prompt_id == version.prompt_id
+        )
+    ).one()
+    if remaining <= 1:
+        return False, "last_version"
+    session.delete(version)
+    session.commit()
+    return True, "ok"
