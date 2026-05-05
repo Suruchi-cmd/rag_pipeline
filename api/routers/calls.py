@@ -3,11 +3,13 @@ from __future__ import annotations
 import json
 from typing import Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Body, Depends, HTTPException, Query
 from sqlmodel import Session
 
 from database.repository import (
     batch_get_categories,
+    delete_call,
+    delete_calls,
     get_booking_change,
     get_call_by_id,
     get_call_categories,
@@ -41,6 +43,25 @@ def api_list_calls(
         {**c.model_dump(), "categories": categories_by_call.get(c.id, [])}
         for c in calls
     ]
+
+
+@router.post("/bulk-delete")
+def api_bulk_delete_calls(
+    payload: dict = Body(...),
+    session: Session = Depends(get_session),
+):
+    ids = payload.get("ids") or []
+    if not isinstance(ids, list) or not all(isinstance(i, int) for i in ids):
+        raise HTTPException(status_code=400, detail="ids must be a list of integers")
+    deleted = delete_calls(session, ids)
+    return {"deleted": deleted}
+
+
+@router.delete("/{call_id}")
+def api_delete_call(call_id: int, session: Session = Depends(get_session)):
+    if not delete_call(session, call_id):
+        raise HTTPException(status_code=404, detail="Call not found")
+    return {"deleted": 1}
 
 
 @router.get("/{call_id}")

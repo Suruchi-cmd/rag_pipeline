@@ -5,10 +5,6 @@ Pipeline per turn:
   1. Rewrite the caller utterance into a standalone search query (LLM).
   2. Run vector search directly against pgvector (no external RAG service).
   3. Stream an LLM reply back, chunked at sentence boundaries for TTS.
-
-The booking-capture state machine and end-of-call classifier live alongside
-the streaming entry points because the WebSocket handler in server.py drives
-both flows from the same import surface.
 """
 
 from __future__ import annotations
@@ -128,49 +124,6 @@ _END_CALL_KEYWORDS_MAYBE = [
     "not happy with",
 ]
 
-# High-confidence triggers that the caller wants to modify an existing booking.
-# server.py uses these to bypass the LLM and start a name/phone/details capture.
-_BOOKING_CAPTURE_TRIGGERS = [
-    "change my booking",
-    "change my party",
-    "change my reservation",
-    "cancel my booking",
-    "cancel my party",
-    "cancel my reservation",
-    "reschedule my",
-    "modify my booking",
-    "modify my party",
-    "update my booking",
-    "update my party",
-    "my existing booking",
-    "change the booking",
-    "change the time of my",
-    "move my party",
-    "move my booking",
-    "change my kid's party",
-    "change my daughter's party",
-    "change my son's party",
-    "change my child's party",
-    "i booked a party",
-    "i already booked",
-    "we already booked",
-    "change the time",
-    "change time for",
-    "change time of",
-    "move the time",
-    "i have a booking",
-    "i have a party",
-    "i have my booking",
-    "i have my party",
-    "i have my birthday",
-    "i have my birth",  # ASR often drops "day"
-    "booking tomorrow",
-    "party tomorrow",
-    "booked for tomorrow",
-    "my birthday party",
-    "my birthday booking",
-]
-
 # Pure acknowledgments / greetings — answerable from history alone, no RAG.
 _SKIP_RAG_RE = re.compile(
     r"^\s*(yes|yeah|yep|yup|sure|okay|ok|no|nope|nah|thanks|thank you|"
@@ -193,13 +146,6 @@ def check_end_keywords(user_text: str) -> str:
         if kw in lowered:
             return "maybe"
     return "none"
-
-
-def check_booking_capture_trigger(user_text: str) -> bool:
-    lowered = user_text.lower().strip()
-    if not lowered:
-        return False
-    return any(trigger in lowered for trigger in _BOOKING_CAPTURE_TRIGGERS)
 
 
 async def classify_turn_for_end(

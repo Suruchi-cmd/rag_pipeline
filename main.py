@@ -25,6 +25,7 @@ from api.routers.calls import router as calls_router
 from api.routers.categories import router as categories_router
 from api.routers.knowledge import router as knowledge_router
 from api.routers.prompts import router as prompts_router
+from chatbot.llm import warmup_models
 from chatbot.routers.voice import router as voice_router
 from chatbot.routers.voice import session_cleanup_loop
 from chatbot.vector_store import vector_store
@@ -46,6 +47,9 @@ async def lifespan(app: FastAPI):
     init_db()
     logger.info("Database initialised")
     await asyncio.to_thread(vector_store.initialize)
+    # Pre-load Ollama voice models so the first inbound call doesn't pay
+    # the cold-start cost. Detached so startup isn't blocked if Ollama is slow.
+    asyncio.create_task(warmup_models())
     cleanup_task = asyncio.create_task(session_cleanup_loop())
     yield
     cleanup_task.cancel()

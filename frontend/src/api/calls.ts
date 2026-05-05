@@ -28,3 +28,12 @@ export async function getStats(): Promise<Stats> {
   const { data } = await client.get<Stats>('/api/calls/stats')
   return data
 }
+
+export async function deleteCall(id: number): Promise<void> {
+  await client.delete(`/api/calls/${id}`)
+}
+
+export async function bulkDeleteCalls(ids: number[]): Promise<{ deleted: number }> {
+  const { data } = await client.post<{ deleted: number }>('/api/calls/bulk-delete', { ids })
+  return data
+}

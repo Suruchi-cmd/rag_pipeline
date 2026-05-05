@@ -49,6 +49,33 @@
       </div>
     </div>
 
+    <!-- Bulk action bar -->
+    <div
+      v-if="store.selectedIds.size > 0"
+      class="bg-indigo-50 border border-indigo-200 rounded-xl px-5 py-3 flex items-center justify-between"
+    >
+      <div class="text-sm text-indigo-900">
+        <span class="font-semibold">{{ store.selectedIds.size }}</span>
+        {{ store.selectedIds.size === 1 ? 'call' : 'calls' }} selected
+      </div>
+      <div class="flex items-center gap-2">
+        <button
+          class="text-sm text-indigo-700 hover:text-indigo-900 px-3 py-1.5 rounded-lg hover:bg-indigo-100 transition-colors"
+          @click="store.clearSelection()"
+        >
+          Clear
+        </button>
+        <button
+          class="flex items-center gap-1.5 px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+          :disabled="store.deleting"
+          @click="confirmDelete"
+        >
+          <Trash2Icon :size="14" />
+          {{ store.deleting ? 'Deleting…' : 'Delete' }}
+        </button>
+      </div>
+    </div>
+
     <!-- Table -->
     <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div v-if="store.loading" class="py-12">
@@ -70,6 +97,15 @@
         <table class="w-full text-sm">
           <thead class="bg-slate-50 border-b border-slate-100">
             <tr>
+              <th class="px-4 py-3 w-10">
+                <input
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer"
+                  :checked="allSelected"
+                  :indeterminate.prop="someSelected"
+                  @change="toggleAll"
+                />
+              </th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-6 py-3">Caller</th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Status</th>
               <th class="text-left text-xs font-semibold text-slate-500 uppercase tracking-wider px-4 py-3">Duration</th>
@@ -86,8 +122,17 @@
               v-for="call in store.calls"
               :key="call.id"
               class="hover:bg-slate-50 cursor-pointer transition-colors group"
+              :class="store.selectedIds.has(call.id) ? 'bg-indigo-50/40' : ''"
               @click="$router.push(`/calls/${call.id}`)"
             >
+              <td class="px-4 py-3.5" @click.stop>
+                <input
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer"
+                  :checked="store.selectedIds.has(call.id)"
+                  @change="store.toggleSelected(call.id)"
+                />
+              </td>
               <td class="px-6 py-3.5">
                 <div class="flex items-center gap-2">
                   <span class="font-medium text-slate-900">{{ call.phone_number }}</span>
@@ -136,9 +181,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useCallsStore } from '@/stores/calls'
+import { useToasts } from '@/composables/useToasts'
 import { formatAvgTurn, formatDate, formatDuration, truncate } from '@/utils/format'
 import { useEvents } from '@/composables/useEvents'
 import StatusBadge from '@/components/StatusBadge.vue'
@@ -151,10 +197,49 @@ import {
   RefreshCw as RefreshCwIcon,
   AlertCircle as AlertCircleIcon,
   PhoneOff as PhoneOffIcon,
+  Trash2 as Trash2Icon,
 } from 'lucide-vue-next'
 
 const store = useCallsStore()
 const route = useRoute()
+const { push: pushToast } = useToasts()
+
+const allSelected = computed(
+  () => store.calls.length > 0 && store.selectedIds.size === store.calls.length,
+)
+const someSelected = computed(
+  () => store.selectedIds.size > 0 && store.selectedIds.size < store.calls.length,
+)
+
+function toggleAll() {
+  if (allSelected.value) store.clearSelection()
+  else store.selectAll()
+}
+
+async function confirmDelete() {
+  const n = store.selectedIds.size
+  if (n === 0) return
+  const ok = window.confirm(
+    `Delete ${n} ${n === 1 ? 'call' : 'calls'}? This will also remove all associated messages, RAG retrievals, and booking changes. This cannot be undone.`,
+  )
+  if (!ok) return
+  try {
+    const deleted = await store.deleteSelected()
+    pushToast({
+      kind: 'ended',
+      title: 'Calls deleted',
+      body: `${deleted} ${deleted === 1 ? 'call' : 'calls'} removed.`,
+      ttl: 4000,
+    })
+  } catch {
+    pushToast({
+      kind: 'error',
+      title: 'Delete failed',
+      body: 'Could not delete the selected calls.',
+      ttl: 5000,
+    })
+  }
+}
 
 // Refresh live when calls start or end
 useEvents({

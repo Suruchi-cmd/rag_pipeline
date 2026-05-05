@@ -25,6 +25,7 @@ Key design decisions:
 
 from __future__ import annotations
 
+import asyncio
 import itertools
 import logging
 import re
@@ -130,6 +131,46 @@ def release_session_client(call_sid: str) -> None:
     """Drop the session→client pin when the call ends."""
     with _pool_lock:
         _session_clients.pop(call_sid, None)
+
+
+async def warmup_models() -> None:
+    """Pre-load the voice models into Ollama VRAM at server startup.
+
+    Fires a 1-token completion against each distinct voice model with the
+    configured keep_alive so weights stay loaded. Run once from the FastAPI
+    lifespan — it's not call-scoped and never blocks the inbound webhook.
+    Failures are logged and swallowed.
+    """
+    t_start = time.perf_counter()
+    with _pool_lock:
+        if not _pool:
+            _init_pool()
+        clients = list(_pool)
+
+    models = {settings.VOICE_LLM_MODEL, settings.VOICE_FAST_MODEL}
+
+    async def _warm(client: AsyncOpenAI, model: str) -> None:
+        await client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": "hi"}],
+            max_tokens=1,
+            temperature=0.0,
+            extra_body={"keep_alive": settings.OLLAMA_KEEP_ALIVE},
+        )
+
+    tasks = [_warm(c, m) for c in clients for m in models]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+    elapsed_ms = (time.perf_counter() - t_start) * 1000
+    failures = sum(1 for r in results if isinstance(r, Exception))
+    for r in results:
+        if isinstance(r, Exception):
+            logger.warning("Ollama warmup error (non-fatal): %s", r)
+    logger.info(
+        "Ollama warmup done in %.0fms (%d call(s), %d failure(s))",
+        elapsed_ms,
+        len(tasks),
+        failures,
+    )
 
 
 # ── Sync streaming generator (chat_handler) ────────────────────────────────

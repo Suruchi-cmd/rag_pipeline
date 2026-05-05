@@ -88,6 +88,33 @@ def list_calls(
     return list(session.exec(stmt).all())
 
 
+def delete_call(session: Session, call_id: int) -> bool:
+    call = session.get(Call, call_id)
+    if call is None:
+        return False
+    for row in session.exec(select(Message).where(Message.call_id == call_id)).all():
+        session.delete(row)
+    for row in session.exec(select(RAGRetrieval).where(RAGRetrieval.call_id == call_id)).all():
+        session.delete(row)
+    for row in session.exec(select(BookingChange).where(BookingChange.call_id == call_id)).all():
+        session.delete(row)
+    for row in session.exec(
+        select(CallClassification).where(CallClassification.call_id == call_id)
+    ).all():
+        session.delete(row)
+    session.delete(call)
+    session.commit()
+    return True
+
+
+def delete_calls(session: Session, call_ids: list[int]) -> int:
+    deleted = 0
+    for cid in call_ids:
+        if delete_call(session, cid):
+            deleted += 1
+    return deleted
+
+
 def get_call_stats(session: Session) -> dict:
     total = session.exec(select(func.count(Call.id))).one()
     flagged = session.exec(

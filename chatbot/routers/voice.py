@@ -32,7 +32,6 @@ from chatbot.conversation import conversation_store
 from chatbot.llm import _FALLBACK_MSG, release_session_client
 from chatbot.voice_handler import (
     build_end_decision_from_definite,
-    check_booking_capture_trigger,
     check_end_keywords,
     classify_turn_for_end,
     clean_for_tts,
@@ -48,7 +47,6 @@ from database.repository import (
     create_call,
     end_call,
     get_call_by_id,
-    save_booking_change,
     update_avg_turn_ms,
 )
 from database.session import engine
@@ -261,33 +259,6 @@ async def voice_action():
 
 # ── WebSocket helpers ──────────────────────────────────────────────────────────
 
-async def _send_canned(ws: WebSocket, text: str) -> None:
-    await ws.send_text(json.dumps({"type": "text", "token": text, "last": False}))
-    await ws.send_text(json.dumps({"type": "text", "token": "", "last": True}))
-
-
-async def _run_capture_step(
-    ws: WebSocket,
-    call_sid: str,
-    session: dict,
-    user_text: str,
-    next_mode: str,
-    canned: str,
-    log_msg: str,
-    capture_field: str | None = None,
-) -> None:
-    if capture_field is not None:
-        session["capture_data"][capture_field] = user_text
-    session["capture_mode"] = next_mode
-    call_id = session.get("call_id")
-    turn_num = session.get("turn_number", 0)
-    logger.info("[%s] %s", call_sid, log_msg)
-    await _send_canned(ws, canned)
-    conversation_store.add(call_sid, "user", user_text)
-    conversation_store.add(call_sid, "assistant", canned)
-    _db_log_message(call_id, "assistant", canned, turn_num)
-
-
 async def _stream_llm_to_twilio(
     ws: WebSocket,
     call_sid: str,
@@ -345,9 +316,6 @@ async def voice_ws(websocket: WebSocket):
                     "current_task": None,
                     "call_id": call_id,
                     "phone_number": caller_from,
-                    "capture_mode": "none",
-                    "capture_data": {"name": "", "phone": "", "details": ""},
-                    "capture_triggered_on": "",
                     "turn_number": 0,
                     "turn_count": 0,
                     "total_turn_ms": 0.0,
@@ -383,61 +351,8 @@ async def voice_ws(websocket: WebSocket):
                 if prev_task and not prev_task.done():
                     prev_task.cancel()
 
-                capture_mode = session.get("capture_mode", "none")
-
                 # Log user turn to DB regardless of which path we take
                 _db_log_message(call_id, "user", user_text, turn_num)
-
-                # ── Booking-capture state machine ───────────────────────────────
-                if capture_mode == "none" and check_booking_capture_trigger(user_text):
-                    session["capture_triggered_on"] = user_text
-                    await _run_capture_step(
-                        websocket, call_sid, session, user_text,
-                        next_mode="name",
-                        canned="Sure, I can take down some details so my manager can give you a call back. Can I get your name please?",
-                        log_msg="Booking capture TRIGGERED. State → name",
-                    )
-                    continue
-
-                if capture_mode == "name":
-                    await _run_capture_step(
-                        websocket, call_sid, session, user_text,
-                        next_mode="phone",
-                        canned="Thanks. And what's the best phone number to reach you at?",
-                        log_msg="Captured name. State → phone",
-                        capture_field="name",
-                    )
-                    continue
-
-                if capture_mode == "phone":
-                    await _run_capture_step(
-                        websocket, call_sid, session, user_text,
-                        next_mode="details",
-                        canned="Got it. And what would you like to change about your booking?",
-                        log_msg="Captured phone. State → details",
-                        capture_field="phone",
-                    )
-                    continue
-
-                if capture_mode == "details":
-                    session["capture_data"]["details"] = user_text
-                    if call_id is not None:
-                        cd = session["capture_data"]
-                        try:
-                            with Session(engine) as s:
-                                save_booking_change(
-                                    s, call_id, cd["name"], cd["phone"], cd["details"]
-                                )
-                            logger.info("[%s] Booking change saved to DB", call_sid)
-                        except Exception as exc:
-                            logger.error("[%s] save_booking_change failed: %s", call_sid, exc)
-                    await _run_capture_step(
-                        websocket, call_sid, session, user_text,
-                        next_mode="done",
-                        canned="Perfect, I've got all that. My manager will give you a call back as soon as possible. Is there anything else I can help you with today?",
-                        log_msg="Captured details. State → done.",
-                    )
-                    continue
 
                 # ── LLM path ────────────────────────────────────────────────────
                 try:
